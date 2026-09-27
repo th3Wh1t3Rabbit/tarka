@@ -17,14 +17,15 @@ const markdownFiles = [join(root, 'README.md'), ...walk(join(root, 'docs')).filt
 const requests = JSON.parse(readFileSync(join(root, 'docs/data/requests.json'), 'utf8'))
 const records = JSON.parse(readFileSync(join(root, 'docs/data/records.json'), 'utf8'))
 const scriptCoverage = JSON.parse(readFileSync(join(root, 'docs/script/SCRIPT_EXPLORER_COVERAGE.json'), 'utf8'))
+const scriptIndex = JSON.parse(readFileSync(join(root, 'docs/script/SCRIPT_EXPLORER_INDEX.json'), 'utf8'))
 const manifest = JSON.parse(readFileSync(join(root, 'docs-site/build-manifest.json'), 'utf8'))
 const figures = walk(join(root, 'docs/assets/terminal')).filter((p) => extname(p).toLowerCase() === '.png')
 
-if (markdownFiles.length !== 147) fail(`Expected 147 canonical Markdown pages, found ${markdownFiles.length}`)
+if (markdownFiles.length !== 148) fail(`Expected 148 canonical Markdown pages, found ${markdownFiles.length}`)
 if (requests.length !== 101) fail(`Expected 101 request records, found ${requests.length}`)
 if (records.length !== 227) fail(`Expected 227 compiled records, found ${records.length}`)
 if (figures.length !== 17) fail(`Expected 17 terminal-reference figures, found ${figures.length}`)
-if (manifest.pages !== 147 || manifest.request_pages !== 101 || manifest.compiled_records !== 227) {
+if (manifest.pages !== 148 || manifest.request_pages !== 101 || manifest.compiled_records !== 227) {
   fail('Generated documentation manifest counts do not match the canonical library')
 }
 if (scriptCoverage.result !== 'PASS') fail('Script Explorer coverage receipt is not PASS')
@@ -34,6 +35,14 @@ if (scriptCoverage.invariants?.unexplainedOmissions?.length) fail('Script Explor
 if (scriptCoverage.invariants?.expectedWorldRouteCount !== scriptCoverage.invariants?.actualWorldRouteCount) fail('Script Explorer world route count drift')
 if (scriptCoverage.invariants?.expectedInventoryRouteCount !== scriptCoverage.invariants?.actualInventoryRouteCount) fail('Script Explorer inventory route count drift')
 if (manifest.script_explorer_result !== 'PASS' || manifest.script_explorer_unexplained_omissions !== 0) fail('Generated site is not bound to PASS Script Explorer coverage')
+if (!/^[0-9a-f]{40}$/.test(scriptIndex.generatedFromCommit ?? '') || scriptIndex.generatedFromCommit !== scriptCoverage.generatedFromCommit) fail('Script Explorer source commit receipt mismatch')
+if (scriptIndex.hotspots?.length !== 27 || scriptIndex.hotspots.some((entry) => !entry.displayName || !entry.sceneId)) fail('Script Explorer hotspot display metadata is incomplete')
+if (scriptIndex.inventoryItems?.length !== 15 || scriptIndex.inventoryItems.some((entry) => !entry.displayName || !entry.lookAtAuthorityRouteIds?.length)) fail('Script Explorer inventory display metadata is incomplete')
+if (scriptIndex.inventoryItems.some((entry) => Object.hasOwn(entry, 'description'))) fail('Script Explorer published an untrusted inventory description')
+for (const [path, expectedHash] of Object.entries(scriptIndex.sourceHashes ?? {})) {
+  const source = join(root, path)
+  if (!existsSync(source) || sha256(source) !== expectedHash) fail(`Script Explorer source authority hash mismatch: ${path}`)
+}
 for (const name of ['SCRIPT_EXPLORER_INDEX.json', 'SCRIPT_EXPLORER_COVERAGE.json']) {
   const source = join(root, 'docs/script', name)
   const copy = join(root, 'docs-site/docs/script', name)
@@ -52,6 +61,18 @@ for (const file of [...markdownFiles, ...walk(join(root, 'docs-site')).filter((p
   const text = readFileSync(file, 'utf8')
   for (const [pattern, label] of forbidden) if (pattern.test(text)) fail(`${label} in ${relative(root, file)}`)
 }
+
+for (const file of markdownFiles.filter((path) => path.includes('/docs/script/'))) {
+  const text = readFileSync(file, 'utf8')
+  if (/\bundefined\b/i.test(text)) fail(`Literal undefined in ${relative(root, file)}`)
+  if (/^#{1,6}\s*$/m.test(text)) fail(`Empty heading in ${relative(root, file)}`)
+  if (/Scene:\s*``/.test(text)) fail(`Empty scene field in ${relative(root, file)}`)
+  if (/\[object Object\]/i.test(text)) fail(`Object coercion placeholder in ${relative(root, file)}`)
+}
+const worldMarkdown = readFileSync(join(root, 'docs/script/world-routes.md'), 'utf8')
+const inventoryMarkdown = readFileSync(join(root, 'docs/script/inventory-routes.md'), 'utf8')
+if ((worldMarkdown.match(/^## /gm) ?? []).length !== 27) fail('Script Explorer does not contain exactly 27 hotspot headings')
+if ((inventoryMarkdown.match(/^## /gm) ?? []).length !== 15) fail('Script Explorer does not contain exactly 15 inventory headings')
 
 const linkPattern = /!?\[[^\]]*\]\(([^)\s]+)(?:\s+['"][^'"]*['"])?\)/g
 for (const file of markdownFiles) {
@@ -110,9 +131,23 @@ const stable = {
   documentation: 'https://docs.tarka-meridian.workers.dev/',
   repository: 'https://github.com/th3Wh1t3Rabbit/tarka',
   downloads: 'https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian',
+  xPost: 'https://x.com/th3Wh1t3Rabbit/status/2104292991699681304',
 }
 for (const [key, url] of Object.entries(stable)) if (releaseLinks[key]?.url !== url) fail(`Stable ${key} URL changed or is missing`)
 if (!existsSync(join(root, 'docs-site/404.html'))) fail('Generated 404 page is missing')
+const navigation = JSON.parse(readFileSync(join(root, 'scripts/docs/navigation.json'), 'utf8'))
+const explorerGroup = navigation.find(([name]) => name === 'SCRIPT EXPLORER · SPOILERS')
+if (!explorerGroup || explorerGroup[1].length !== 8) fail('First-class Script Explorer navigation is missing or incomplete')
+for (const required of ['docs/script/index.md', 'docs/script/story.md', 'docs/script/world-routes.md', 'docs/script/inventory-routes.md', 'docs/script/dialogue-routes.md', 'docs/script/actions-and-endings.md', 'docs/script/coverage.md', 'docs/script/how-to-read.md']) {
+  if (!explorerGroup?.[1].some(([path]) => path === required)) fail(`Script Explorer navigation is missing ${required}`)
+}
+for (const required of ['README.md', 'docs/creator-note.md', 'docs/competition/evidence-map.md', 'docs/competition/submission-snapshot.md']) {
+  const text = readFileSync(join(root, required), 'utf8')
+  if (!text.includes('docs/script/index.md') && !text.includes('script/index.md') && !text.includes('../script/index.md')) fail(`Script Explorer entry point missing from ${required}`)
+}
+const submissionSnapshot = JSON.parse(readFileSync(join(root, 'docs/competition/SUBMISSION_SNAPSHOT.json'), 'utf8'))
+if (submissionSnapshot.publicLinks?.xPost !== stable.xPost || submissionSnapshot.publicSubmissionStatus !== 'SUBMITTED') fail('Submission snapshot X link/status mismatch')
+if (!existsSync(join(root, 'docs-site/docs/competition/SUBMISSION_SNAPSHOT.json'))) fail('Generated submission snapshot JSON is missing')
 
 const report = {
   result: failures.length ? 'FAIL' : 'PASS',

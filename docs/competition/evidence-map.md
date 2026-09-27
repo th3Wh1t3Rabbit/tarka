@@ -12,11 +12,14 @@ This is a map for readers evaluating the project, not a promise that every retai
 | How is the data bounded? | [Count guide](../data/counts.md) and [evidence limits](../data/evidence-limits.md) |
 | What was tested? | [Build and test](../testing.md) |
 | What is distributed? | [Credits and licenses](../credits.md) |
+| Where is the complete shipped writing? | [Script Explorer — full spoilers](../script/index.md) |
+| What was submitted? | [Submitted competition snapshot](submission-snapshot.md) |
 
 Public release surfaces: [play the game](https://play.tarka-meridian.workers.dev/),
 [browse the documentation](https://docs.tarka-meridian.workers.dev/),
 [inspect the code](https://github.com/th3Wh1t3Rabbit/tarka), or
 [download the release and checksums](https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian).
-Account-wide eligibility evidence and the competition submission receipt are
-not included in this public game repository. Frozen gameplay is never described
-as a live provider call.
+The public [Meridian submission post](https://x.com/th3Wh1t3Rabbit/status/2104292991699681304)
+links the same stable play and source surfaces. The official Meridian form was
+submitted on September 27, 2026; private account and form-response details are
+not published. Frozen gameplay is never described as a live provider call.

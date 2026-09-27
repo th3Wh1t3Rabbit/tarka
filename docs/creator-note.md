@@ -28,6 +28,11 @@ I am not presenting it as the perfect adventure game, or claiming perfect code a
 
 ## Thanks for playing
 
+For readers who want to inspect the writing itself, the [Complete Script
+Explorer](script/index.md) is a spoiler-filled map of all 724 final script
+bubbles, 1,505 runtime routes, and 214 executable action fixtures in the
+shipped game.
+
 I hope Tarka works on several levels: an entertaining old-school adventure, a gentle introduction to onchain investigation, and a demonstration of what Nansen makes possible when you ask useful questions. Building it was a very fun and educational adventure of its own.
 
 Getting it across the line in time feels like a good moment to rest and catch up on sleep. Thanks for spending some of your time in the Records Office. I hope you enjoy the company—even if Arthur is slow to say the same.

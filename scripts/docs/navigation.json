@@ -104,7 +104,12 @@
       [
         "docs/spoilers/brcg.md",
         "The piggy bank & BRCG"
-      ],
+      ]
+    ]
+  ],
+  [
+    "SCRIPT EXPLORER · SPOILERS",
+    [
       [
         "docs/script/index.md",
         "Complete Script Explorer"
@@ -115,23 +120,27 @@
       ],
       [
         "docs/script/world-routes.md",
-        "World hotspot routes"
+        "World hotspot and verb routes"
       ],
       [
         "docs/script/inventory-routes.md",
-        "Inventory combinations"
+        "Inventory interactions"
       ],
       [
         "docs/script/dialogue-routes.md",
-        "Arthur dialogue routes"
+        "Arthur dialogue"
       ],
       [
         "docs/script/actions-and-endings.md",
-        "Actions & endings"
+        "Actions, terminal speech, and endings"
       ],
       [
         "docs/script/coverage.md",
-        "Script coverage proof"
+        "Coverage and exclusions"
+      ],
+      [
+        "docs/script/how-to-read.md",
+        "How to read the explorer"
       ]
     ]
   ],
@@ -177,6 +186,10 @@
       [
         "docs/competition/evidence-map.md",
         "Buildathon evidence"
+      ],
+      [
+        "docs/competition/submission-snapshot.md",
+        "Submitted competition snapshot"
       ],
       [
         "docs/project/documentation.md",

@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto'
+import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
@@ -41,6 +42,22 @@ const sourcePaths = [
 ] as const
 
 const sourceHashes = Object.fromEntries(sourcePaths.map((path) => [path, fileHash(path)]))
+const generatedFromCommit = process.env.GITHUB_SHA
+  ?? execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim()
+
+const hotspotDisplayName = (hotspot: typeof hotspots[number]) => hotspot.id === 'wall-think-outside'
+  ? 'motivational poster'
+  : hotspot.name
+const hotspotSceneId = () => 'records-office'
+
+const inventoryLookAtRouteIds = (itemId: string) => runtimeRoutes
+  .filter((route) => route.routeId.startsWith(`inventory.LOOK_AT.${itemId}`))
+  .map((route) => route.routeId)
+
+const humanPerformance = (value: string) => value
+  .split(' | ')
+  .map((token) => token === 'UNRESOLVED' ? 'generic runtime fallback; no bespoke cue bound' : token)
+  .join(' | ')
 
 const publicRuntimeDelivery = (delivery: typeof RUNTIME_TRANSCRIPT_AUTHORITY[number]['deliveries'][number]) => ({
   routeId: delivery.routeId,
@@ -144,6 +161,7 @@ const expectedInventoryRouteCount = itemIds.length * VERBS.length + itemIds.leng
 const explorerIndex = {
   schemaVersion: 'tarka.script-explorer.v1',
   authority: 'FINAL_SHIPPED_IMPLEMENTATION',
+  generatedFromCommit,
   sourceHashes,
   sourceTotals: {
     finalAuthorityBubbles: authority.bubbles.length,
@@ -161,9 +179,19 @@ const explorerIndex = {
   storyEvents,
   runtimeRoutes,
   productionActions,
-  hotspots: hotspots.map((hotspot) => ({ id: hotspot.id, label: hotspot.label, scene: hotspot.scene, polygon: hotspot.polygon })),
+  hotspots: hotspots.map((hotspot) => ({
+    id: hotspot.id,
+    displayName: hotspotDisplayName(hotspot),
+    sceneId: hotspotSceneId(hotspot),
+    polygon: hotspot.polygon,
+  })),
   verbs: [...VERBS],
-  inventoryItems: Object.entries(inventoryItems).map(([id, item]) => ({ id, ...item })),
+  inventoryItems: Object.entries(inventoryItems).map(([id, item]) => ({
+    id,
+    displayName: item.name,
+    assetSlot: item.assetSlot,
+    lookAtAuthorityRouteIds: inventoryLookAtRouteIds(id),
+  })),
 }
 
 const explorerPayload = `${json(explorerIndex)}\n`
@@ -173,6 +201,7 @@ const coverage = {
   schemaVersion: 'tarka.script-explorer.coverage.v1',
   result: missingFinalBubbleIds.length === 0 && actionErrors.length === 0 && worldRoutes.length === expectedWorldRouteCount && inventoryRoutes.length === expectedInventoryRouteCount ? 'PASS' : 'FAIL',
   authority: 'Generated from the final shipped implementation, not planning notes.',
+  generatedFromCommit,
   sourceHashes,
   sourceTotals: explorerIndex.sourceTotals,
   publishedTotals: {
@@ -235,6 +264,7 @@ const routeDeliveries = (route: typeof runtimeRoutes[number]) => route.deliverie
 const routePerformance = (route: typeof runtimeRoutes[number]) => route.deliveries
   .flatMap((delivery) => delivery.performance)
   .filter(Boolean)
+  .map(humanPerformance)
   .join('<br>') || '—'
 
 const header = (title: string, description: string) => `# ${title}\n\n> **Full story and puzzle spoilers.** ${description} The documentation search excludes Script Explorer pages unless **Include evidence / spoilers** is enabled.\n\n[Script Explorer](index.md) · [Reading guide](how-to-read.md) · [Story](story.md) · [World routes](world-routes.md) · [Inventory](inventory-routes.md) · [Arthur dialogue](dialogue-routes.md) · [Actions & endings](actions-and-endings.md) · [Coverage](coverage.md)\n\n`
@@ -251,7 +281,7 @@ const story = [
     ...event.deliveries.map((delivery) => {
       const timing = `before ${delivery.beatBeforeMs} ms · after ${delivery.beatAfterMs} ms`
       const performance = delivery.performance.length
-        ? delivery.performance.map((cue) => `${cue.actor ?? 'none'}:${cue.track ?? 'none'}:${cue.clip ?? cue.intent} (${cue.activation})`).join('<br>')
+        ? delivery.performance.map((cue) => `${cue.actor ?? 'none'}:${cue.track ?? 'none'}:${humanPerformance(cue.clip ?? cue.intent)} (${cue.activation})`).join('<br>')
         : '—'
       const source = [delivery.sourceNodeId, delivery.source].filter(Boolean).map(code).join('<br>')
       return `| ${delivery.deliveryOrder} | <a id="delivery-${slug(delivery.deliveryId)}"></a>${code(delivery.deliveryId)} | ${cell(delivery.speaker)} | ${cell(delivery.deliveryParts.join(' / '))} | ${cell(timing)} | ${cell([performance, source].filter(Boolean).join('<br>'))} |`
@@ -268,9 +298,9 @@ const world = [
     const routes = worldRoutes.filter((route) => route.routeId.includes(`.${hotspot.id}.`))
     return [
       `<a id="hotspot-${slug(hotspot.id)}"></a>`,
-      `## ${hotspot.label}`,
+      `## ${hotspotDisplayName(hotspot)}`,
       '',
-      `Runtime ID: ${code(hotspot.id)} · Scene: ${code(hotspot.scene)}`,
+      `Runtime ID: ${code(hotspot.id)} · Scene: ${code(hotspotSceneId(hotspot))}`,
       '',
       '| Route / trigger | Owner | Player-visible delivery | Performance |',
       '|---|---|---|---|',
@@ -288,9 +318,9 @@ const inventory = [
     const routes = inventoryRoutes.filter((route) => route.routeId === `inventory.${route.routeId.split('.')[1]}.${itemId}` || route.routeId.includes(`.${itemId}.`) || route.routeId.endsWith(`.${itemId}`))
     return [
       `<a id="inventory-${slug(itemId)}"></a>`,
-      `## ${item.label}`,
+      `## ${item.name}`,
       '',
-      `Runtime ID: ${code(itemId)}`,
+      `Runtime ID: ${code(itemId)} · Writing authority: exact ${code('LOOK AT')} route listed below`,
       '',
       '| Route / trigger | Owner | Player-visible delivery | Performance |',
       '|---|---|---|---|',
@@ -379,11 +409,11 @@ const index = [
   '',
   '### Hotspots',
   '',
-  hotspots.map((hotspot) => `[${hotspot.label}](world-routes.md#hotspot-${slug(hotspot.id)})`).join(' · '),
+  hotspots.map((hotspot) => `[${hotspotDisplayName(hotspot)}](world-routes.md#hotspot-${slug(hotspot.id)})`).join(' · '),
   '',
   '### Inventory',
   '',
-  Object.entries(inventoryItems).map(([id, item]) => `[${item.label}](inventory-routes.md#inventory-${slug(id)})`).join(' · '),
+  Object.entries(inventoryItems).map(([id, item]) => `[${item.name}](inventory-routes.md#inventory-${slug(id)})`).join(' · '),
   '',
   '### Story event keys',
   '',
@@ -414,6 +444,10 @@ const guide = [
   '',
   'Each story delivery records the authored panel boundary, speaker, text, before/after beat duration, and any represented animation/expression cue. Runtime route pages preserve effective output after dialogue normalization. A dash means no extra timing or performance cue is authored for that delivery.',
   '',
+  'Raw machine-readable cue authority preserves the token `UNRESOLVED`. In the human tables, that token is rendered as **generic runtime fallback; no bespoke cue bound**: the shipped runtime falls back to its ordinary speaker/talking presentation rather than selecting a dedicated authored expression or body clip.',
+  '',
+  'Inventory metadata intentionally omits the legacy `description` field because several values are stale or shifted. The exact `LOOK AT` route shown for each item is the authoritative player-facing writing.',
+  '',
   '## Source authority',
   '',
   'The explorer is regenerated from the final script authority, final runtime corrections, transcript route authority, production action registry, hotspot/verb inventory, and runtime selectors. The coverage receipt hashes each source input and fails generation if a final bubble disappears, an executable action errors, or expected world/inventory route totals drift.',
@@ -428,6 +462,28 @@ const guide = [
 
 if (coverage.result !== 'PASS') {
   throw new Error(`SCRIPT_EXPLORER_COVERAGE_FAILED:${json(coverage.invariants)}`)
+}
+
+const publicMarkdown = { index, guide, story, world, inventory, dialogue, actions, coverageSummary }
+const publicMarkdownText = Object.entries(publicMarkdown).map(([name, text]) => `\n<!-- ${name} -->\n${text}`).join('\n')
+const invalidPublicPatterns: Array<[RegExp, string]> = [
+  [/\bundefined\b/i, 'literal undefined'],
+  [/^#{1,6}\s*$/m, 'empty heading'],
+  [/Scene:\s*``/, 'empty scene field'],
+  [/\[object Object\]/i, 'object coercion placeholder'],
+  [/\b(?:TODO|TBD)\b/i, 'unfinished marker'],
+]
+for (const [pattern, label] of invalidPublicPatterns) {
+  if (pattern.test(publicMarkdownText)) throw new Error(`SCRIPT_EXPLORER_PUBLIC_MARKDOWN_INVALID:${label}`)
+}
+if (explorerIndex.hotspots.some((entry) => !entry.displayName || !entry.sceneId)) {
+  throw new Error('SCRIPT_EXPLORER_HOTSPOT_DISPLAY_METADATA_MISSING')
+}
+if (explorerIndex.inventoryItems.some((entry) => !entry.displayName || !entry.lookAtAuthorityRouteIds.length)) {
+  throw new Error('SCRIPT_EXPLORER_INVENTORY_DISPLAY_METADATA_MISSING')
+}
+if (explorerIndex.inventoryItems.some((entry) => 'description' in entry)) {
+  throw new Error('SCRIPT_EXPLORER_UNTRUSTED_INVENTORY_DESCRIPTION_PUBLISHED')
 }
 
 writeFileSync(resolve(OUTPUT, 'SCRIPT_EXPLORER_INDEX.json'), explorerPayload)

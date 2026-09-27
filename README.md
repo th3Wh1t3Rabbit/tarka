@@ -9,6 +9,8 @@ Euler evidence into a case you can actually follow.
 [Play Tarka](https://play.tarka-meridian.workers.dev/) ·
 [Documentation](https://docs.tarka-meridian.workers.dev/) ·
 [Release downloads](https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian) ·
+[Complete Script Explorer — spoilers](docs/script/index.md) ·
+[Meridian submission post](https://x.com/th3Wh1t3Rabbit/status/2104292991699681304) ·
 [Creator's note](docs/creator-note.md) ·
 [Request catalog](docs/data/request-log.md) ·
 [Creator on GitHub](https://github.com/th3Wh1t3Rabbit) ·
@@ -17,6 +19,18 @@ Euler evidence into a case you can actually follow.
 
 No crypto expertise is required. Curiosity helps. So does reading the form
 before signing it.
+
+<div class="script-explorer-card">
+
+### Explore every shipped line and interaction — spoilers
+
+The [Complete Script Explorer](docs/script/index.md) maps **724 final script
+bubbles**, **1,505 runtime routes**, and **214 executable action fixtures**
+directly from the shipped implementation. Browse the full story, every world
+hotspot and inventory combination, Arthur's dialogue states, terminal speech,
+endings, timing, and performance cues.
+
+</div>
 
 ## Screenshots
 
@@ -106,6 +120,8 @@ rejects machine-local filesystem dependencies in the generated site.
 - [Production animation assets](docs/animation-assets.md)
 - [Nansen integration](docs/nansen-integration.md)
 - [Testing and release qualification](docs/testing.md)
+- [Submitted competition snapshot](docs/competition/submission-snapshot.md)
+- [Post-submission changelog](POST_SUBMISSION_CHANGELOG.md)
 - [Known limitations](docs/limitations.md)
 - [Credits and third-party notices](docs/credits.md)
 - [Complete Script Explorer](docs/script/index.md)
