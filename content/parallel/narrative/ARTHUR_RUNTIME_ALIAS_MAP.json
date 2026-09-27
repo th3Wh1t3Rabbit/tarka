@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "public_name": "Arthur",
+  "public_styling": "Arthur the Archivist",
+  "semantic_id": "archivist",
+  "semantic_speaker": "ARCHIVIST",
+  "legacy": {"speaker": "MR_INDEX", "hotspot": "mr-index", "art_manifest_key": "mrIndex", "historical_display": "Mr. Index"},
+  "rook_primary_nickname": "Mr. A",
+  "runtime_rename_authorized": false,
+  "integration_rule": "Resolve public display independently; preserve opaque runtime and art identifiers. Lane A changes no production identifier."
+}

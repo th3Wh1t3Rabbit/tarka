@@ -1,0 +1,9 @@
+import path from 'node:path'
+import {identity,sha} from '../nq5/schema.mjs'
+import {readEvidence} from '../nq5-p2/evidence-files.mjs'
+import {REVIEW_LENSES} from '../nq5-r2/review-identity.mjs'
+import {LOCAL_SUITES} from '../nq5-b1/live.mjs'
+import {cut,digest,git,REVIEWS,CONTRACT_SHA,ARCHIVE_SHA} from './authority.mjs'
+export const SUITES=[...LOCAL_SUITES,'current-tree-secret-boundary','exact-receipt-index-accounting']
+export function localGate(root){const dir=path.join(root,'artifacts/g6p-p2-r1/local'),v=JSON.parse(readEvidence(dir,'VERIFICATION.json'));if(v.status!=='PASS'||identity(v.candidate)!==identity(cut(root))||v.implementationSha256!==digest(root)||identity(v.freshVerificationRootCandidate)!==identity(v.candidate)||v.networkHold!==true||v.credentialAccess!==false||v.privateMutation!==false||v.externalRequests!==0||identity(v.suites.map(s=>s.name))!==identity(SUITES)||v.suites.some(s=>s.status!=='PASS'||sha(readEvidence(dir,s.name+'.log'))!==s.sha256))throw new Error('P2_R1_CURRENT_FRESH_VERIFICATION_REQUIRED');return v}
+export function reviewGate(root,index){const r=JSON.parse(readEvidence(path.join(root,'docs'),path.basename(REVIEWS[index])));if(r.status!=='PASS_BOUNDED_NO_CREDENTIAL_SCOPE'||r.checkpoint!==(index===0?'P2_R1_REVIEW_A':'P2_R1_REVIEW_B')||r.executionContractSha256!==CONTRACT_SHA||r.reviewedArchiveSha256!==ARCHIVE_SHA||r.implementationSha256!==digest(root)||r.unresolvedAcceptedP0P1!==0||r.credentialAccess!==false||r.actualPrivateStateAccess!==false||r.privateMutation!==false||r.providerRequests!==0||r.externalDocumentationGets!==0||r.networkRequests!==0||identity(r.lenses.map(x=>x.name).sort())!==identity([...REVIEW_LENSES].sort())||r.lenses.some(x=>x.status!=='PASS_BOUNDED_SCOPE')||git(root,'rev-parse',r.reviewedImplementationCommit+'^{tree}')!==r.reviewedImplementationTree)throw new Error('P2_R1_CURRENT_BOUND_REVIEW_REQUIRED');git(root,'merge-base','--is-ancestor',r.reviewedImplementationCommit,'HEAD');return r}

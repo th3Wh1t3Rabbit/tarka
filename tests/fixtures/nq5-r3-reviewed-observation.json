@@ -1,0 +1,162 @@
+{
+  "scope": "REVIEWED_PUBLIC_REDACTED_METADATA_ONLY_NO_PRIVATE_PATHS_OR_RAW_BODY",
+  "account": {
+    "schema_version": "1.0.2",
+    "status": "PASS",
+    "exception_id": "LEAD-NQ5-ACCOUNT-PREFLIGHT-BOOTSTRAP-001",
+    "parent_authorization_id": "LEAD-NQ5-UNIFIED-CASEBOARD-UTILITY-001",
+    "generated_at_utc": "2026-09-16T13:49:46.687Z",
+    "credential_status": "PRESENT_REDACTED",
+    "ACCOUNT_PREFLIGHT_PASS": true,
+    "request": {
+      "method": "GET",
+      "host": "api.nansen.ai",
+      "path": "/api/v1/account",
+      "attempts_issued": 1,
+      "retries": 0,
+      "redirects": 0,
+      "body_sent": false,
+      "query_sent": false,
+      "qualification_counted": false,
+      "public_indexed": false
+    },
+    "response": {
+      "http_status": 200,
+      "request_id": null,
+      "credits_cost": 0,
+      "credits_used": null,
+      "credits_remaining_header": null,
+      "actual_credit_delta": 0,
+      "transport_error_class": null,
+      "rate_limit_headers": {}
+    },
+    "storage": {
+      "persistence_status": "PASS",
+      "primary_raw_sha256": "56235098a2ebeff7f66bbf3d2f2bb59f0a17143d74f441a24f04af7fdf24dd96",
+      "mirror_raw_sha256": "56235098a2ebeff7f66bbf3d2f2bb59f0a17143d74f441a24f04af7fdf24dd96",
+      "bytes_equal": true,
+      "raw_payload_packaged": false,
+      "private_paths_redacted": true
+    },
+    "ledger": {
+      "question_lens": "ADMIN",
+      "purpose_code": "ACCOUNT_PREFLIGHT",
+      "qualification_counted": false,
+      "public_call_id": null,
+      "terminal_status": "COMPLETED_PRIVATE_NONQUALIFICATION"
+    },
+    "account": {
+      "plan_class": "PRO",
+      "available_credits": 630027,
+      "included_credits": null,
+      "promotional_credits": null,
+      "purchased_credits": null,
+      "actual_cash_spend_usd": null,
+      "identity_fields_included": false
+    },
+    "secret_scan": "PASS",
+    "blockers": []
+  },
+  "reuse": {
+    "schemaVersion": "1.0.0",
+    "status": "PASS_LOCAL_REVALIDATION_ONLY",
+    "observationCommit": "6572ea4ed1ea82902bac50669a2e534762558cea",
+    "originalRedactedReportSha256": "6dc07198fdc6f6dc685b076877456c9b669517798aea932cc39c981f8e11ee3f",
+    "originalPrivateJournalSha256": "540e694e2fdf1ef2d381320c49362df8200d613f8698fe8c967cec9eab938f2c",
+    "originalTerminalIdentity": "d7202d8a1bfc304661fd2dfca4d45556530cdf61cf02812f897080db3f984514",
+    "originalTerminalEnvelopeIdentity": "3858ca3ea35d7c337c04d8fdce8e2a4569ac3b0e93db6582d4b9829b9a1d1a2c",
+    "logicalRequestIdentity": "1e95c8c557d874ea652b7cedbb442d1de2df5f7c9b1a56dc068b3d63fcb6b8b1",
+    "primaryRawSha256": "56235098a2ebeff7f66bbf3d2f2bb59f0a17143d74f441a24f04af7fdf24dd96",
+    "mirrorRawSha256": "56235098a2ebeff7f66bbf3d2f2bb59f0a17143d74f441a24f04af7fdf24dd96",
+    "bytesEqual": true,
+    "rawHashesAgreeWithRedactedReport": true,
+    "httpStatus": 200,
+    "originalAttemptsConsumed": 1,
+    "additionalAttempts": 0,
+    "actualCreditDelta": 0,
+    "availableCredits": 630027,
+    "protectedReserveCredits": 250,
+    "credentialResolutionInGate": false,
+    "providerRequestsInGate": 0,
+    "accountAdapterInvoked": false,
+    "transportInvoked": false,
+    "privateJournalMutated": false,
+    "rawStorageMutated": false,
+    "localReuseOnly": true,
+    "noRelevantPostObservationCodeMutation": true,
+    "protectedCodeProof": {
+      "status": "PASS",
+      "noRelevantPostObservationMutation": true,
+      "observationCommit": "6572ea4ed1ea82902bac50669a2e534762558cea",
+      "historicalSchemaAllowanceFilesUnchanged": 61,
+      "evidence": [
+        {
+          "source": "scripts/nq5/account.mjs",
+          "originalSha256": "3c57b2e60590ac4f5bf8911f3f09d3b4c05f45e82e3e3c6b98db5b52148ff2c1",
+          "currentSha256": "3c57b2e60590ac4f5bf8911f3f09d3b4c05f45e82e3e3c6b98db5b52148ff2c1",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5/credential.mjs",
+          "originalSha256": "102b9eaa69dab86174fa404d6ad536b967804612fd868a4cfcacf7a405b78352",
+          "currentSha256": "102b9eaa69dab86174fa404d6ad536b967804612fd868a4cfcacf7a405b78352",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5/journal.mjs",
+          "originalSha256": "2d57da211c21d32c3b166105b7b000c9b0e7d417c644e9a2bf7646265eba63da",
+          "currentSha256": "2d57da211c21d32c3b166105b7b000c9b0e7d417c644e9a2bf7646265eba63da",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5/schema.mjs",
+          "originalSha256": "f36d2a7c54b9fcb110b25406329996e78fddb04f8957b65aa6aff285b5f59017",
+          "currentSha256": "f36d2a7c54b9fcb110b25406329996e78fddb04f8957b65aa6aff285b5f59017",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5/planner.mjs",
+          "originalSha256": "a89f3ebb6426bf6cf36db4e3699e314d4e47a68387e87a622eca8ae1043f5bdb",
+          "currentSha256": "a89f3ebb6426bf6cf36db4e3699e314d4e47a68387e87a622eca8ae1043f5bdb",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5-schema-validation.py",
+          "originalSha256": "8d178dd95e8f1f817869173617e7b5de9852efcfe0d598b49fa1afc1be64f434",
+          "currentSha256": "8d178dd95e8f1f817869173617e7b5de9852efcfe0d598b49fa1afc1be64f434",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5-checkpoint-policy.mjs",
+          "originalSha256": "bc048213d3457bd4334180ca1a9b2d78128eef1a956abfcc72ff112abed39d41",
+          "currentSha256": "bc048213d3457bd4334180ca1a9b2d78128eef1a956abfcc72ff112abed39d41",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5-checkpoint-reports.mjs",
+          "originalSha256": "3c9582c734c2a4fe167e69f20d9642a613217518138315ae987568379830aa0f",
+          "currentSha256": "3c9582c734c2a4fe167e69f20d9642a613217518138315ae987568379830aa0f",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "scripts/nq5-report-validation.py",
+          "originalSha256": "1bc2267e4f343f8c1fb99feb49aeda71c033189d8acd748cd9f3709fee2dd199",
+          "currentSha256": "1bc2267e4f343f8c1fb99feb49aeda71c033189d8acd748cd9f3709fee2dd199",
+          "changedSinceObservation": false
+        },
+        {
+          "source": "src/acquisition/live/transport.ts",
+          "originalSha256": "e5d8d3e484ddf4290ea560c217650663246ea8c965600433ce98b8cffee91105",
+          "currentSha256": "e5d8d3e484ddf4290ea560c217650663246ea8c965600433ce98b8cffee91105",
+          "changedSinceObservation": false
+        }
+      ]
+    },
+    "qualificationAttempts": 0,
+    "qualificationCounted": 0,
+    "originalOrderingAccepted": false,
+    "historicalDisposition": "CONSUMED_OBSERVATION_AFTER_REJECTED_OFFLINE_PASS_NOT_REAUTHORIZED",
+    "privatePathsIncluded": false,
+    "rawPayloadIncluded": false
+  }
+}

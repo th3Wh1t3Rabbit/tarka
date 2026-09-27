@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Exact-campaign NQ5 public call index; empty while semantic gate is held",
+  "type": "array",
+  "items": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://trace-escape.invalid/schema/nansen-public-call-index-v5.0.1.json",
+    "title": "TRACE//ESCAPE Public Nansen Call Index Record v5.0.1",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "schema_version",
+      "campaign_id",
+      "authorization_id",
+      "public_call_id",
+      "qualification_sequence",
+      "tranche_id",
+      "endpoint_family",
+      "business_question",
+      "purpose_code",
+      "consumer_ids",
+      "request_body_sha256",
+      "response_sha256",
+      "result_count",
+      "route_disposition",
+      "evidence_grade",
+      "temporal_class",
+      "coverage_scope",
+      "selection_lineage_summary",
+      "coverage_cell_ids",
+      "coverage_key",
+      "raw_payload_published",
+      "attribution",
+      "investigative_question_id",
+      "question_lens"
+    ],
+    "properties": {
+      "schema_version": {
+        "const": "5.0.1"
+      },
+      "campaign_id": {
+        "const": "NQ5-T1-20260916-15fc6ad1-d6f3-422a-b724-de5e66154011"
+      },
+      "public_call_id": {
+        "type": "string",
+        "pattern": "^NQ5-[0-9]{6}$"
+      },
+      "qualification_sequence": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 12288
+      },
+      "tranche_id": {
+        "type": "string"
+      },
+      "endpoint_family": {
+        "type": "string"
+      },
+      "business_question": {
+        "type": "string"
+      },
+      "purpose_code": {
+        "enum": [
+          "ANCHOR_ACTIVITY_PAGE",
+          "WINDOW_COMPLETENESS_PAGE",
+          "FLOW_DIRECTION_QUERY",
+          "ASSET_PATH_QUERY",
+          "VALUE_BAND_QUERY",
+          "COUNTERPARTY_RANKING",
+          "STATE_BEFORE",
+          "STATE_AFTER",
+          "EXACT_RECEIPT",
+          "TRACE_THREAD_LINK_TEST",
+          "DEAD_END_DISCOVERY",
+          "DEAD_END_FALSIFIER",
+          "QUESTION_RECIPE_VALIDATION",
+          "NEGATIVE_CONTROL",
+          "PAGINATION_COMPLETENESS",
+          "COVERAGE_CELL_CLOSURE",
+          "PROVENANCE_RECONCILIATION",
+          "REGRESSION_FIXTURE"
+        ]
+      },
+      "purpose_summary": {
+        "type": "string"
+      },
+      "consumer_ids": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "selection_lineage_summary": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "subject_addresses": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^0x[a-fA-F0-9]{40}$"
+        }
+      },
+      "time_window": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "from_utc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "to_utc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "as_of_utc": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
+      "request_body_sha256": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "response_sha256": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "normalized_sha256": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "result_count": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "response_bytes": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "route_disposition": {
+        "type": "string"
+      },
+      "evidence_grade": {
+        "enum": [
+          "EXACT",
+          "CORROBORATING",
+          "CONTEXTUAL",
+          "NONE"
+        ]
+      },
+      "temporal_class": {
+        "type": "string"
+      },
+      "coverage_scope": {
+        "type": "string",
+        "minLength": 8
+      },
+      "gameplay_summary": {
+        "type": "string"
+      },
+      "raw_payload_published": {
+        "const": false
+      },
+      "attribution": {
+        "const": "Powered by Nansen API"
+      },
+      "terminal_consumer_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "coverage_cell_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "question_card_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "query_recipe_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "candidate_dead_end_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "negative_evidence_scope": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "investigative_question_id": {
+        "type": "string",
+        "pattern": "^QUESTION\\."
+      },
+      "question_lens": {
+        "enum": [
+          "ACTIVITY",
+          "RELATIONSHIPS",
+          "STATE",
+          "RECEIPT"
+        ]
+      },
+      "caseboard_consumer_ids": {
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "type": "string"
+        }
+      },
+      "coverage_key": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subject_id",
+          "time_window_id",
+          "question_lens",
+          "page_or_partition_id"
+        ],
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "time_window_id": {
+            "type": "string"
+          },
+          "question_lens": {
+            "enum": [
+              "ACTIVITY",
+              "RELATIONSHIPS",
+              "STATE",
+              "RECEIPT"
+            ]
+          },
+          "page_or_partition_id": {
+            "type": "string"
+          }
+        }
+      },
+      "authorization_id": {
+        "const": "LEAD-NQ5-UNIFIED-CASEBOARD-UTILITY-001"
+      }
+    }
+  },
+  "uniqueItems": true
+}

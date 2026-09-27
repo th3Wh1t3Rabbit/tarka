@@ -1,0 +1,5 @@
+import {sanitizeLog} from '../nq5-b1-r2/privacy.mjs'
+import {sha} from '../nq5/schema.mjs'
+export function admitSuiteLogs(v,readLog){if(!Array.isArray(v.suites)||new Set(v.suites.map(s=>s.name)).size!==v.suites.length)throw new Error('P2_SUITE_LOG_CERTIFICATE');return Object.freeze(Object.fromEntries(v.suites.map(s=>{const bytes=readLog(s.name);if(!Buffer.isBuffer(bytes)||sha(bytes)!==s.sha256)throw new Error('P2_ADMITTED_LOG_HASH_MISMATCH');return [s.name,Buffer.from(bytes)]})))}
+export function assertAdmittedSuiteLogs(v,logs,readLog){for(const s of v.suites)if(!Buffer.isBuffer(logs[s.name])||sha(logs[s.name])!==s.sha256||sha(readLog(s.name))!==s.sha256)throw new Error('P2_FINAL_ADMITTED_LOG_CHANGED');return true}
+export function sanitizedLogBytes(input,workspace){const r=sanitizeLog(input,workspace),bytes=Buffer.from(r.text,'utf8');if(!bytes.length||sha(bytes)!==r.sanitizedSha256)throw new Error('P2_SANITIZED_LOG_BINDING');return {bytes,sourceSha256:r.sourceSha256,sanitizedSha256:r.sanitizedSha256,otherPathRedactions:r.otherPathRedactions}}

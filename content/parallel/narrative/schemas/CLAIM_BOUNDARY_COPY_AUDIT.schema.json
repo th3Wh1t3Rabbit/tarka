@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A CLAIM_BOUNDARY_COPY_AUDIT.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "content_sha256",
+    "entries",
+    "forbidden_inferences",
+    "unresolved_p0_p1",
+    "manual_review_required"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "content_sha256": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "copy_key",
+          "claim_class",
+          "requires",
+          "evidence_ids",
+          "disposition",
+          "rationale"
+        ],
+        "properties": {
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          },
+          "claim_class": {
+            "type": "string",
+            "enum": [
+              "FICTIONAL_FRAMING",
+              "METHOD_ONLY",
+              "BOUNDED_CONTEXT",
+              "SCOPED_NEGATIVE",
+              "ACCEPTED_EXACT",
+              "BOUNDARY_ONLY"
+            ]
+          },
+          "requires": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "ACCESS_EARNED",
+                "CANDIDATE_DISCOVERED",
+                "TWO_CANDIDATES_SELECTED",
+                "EXACT_EARLY_DISCOVERED",
+                "EXACT_MAIN_DISCOVERED",
+                "EXACT_CONVERGENCE_VERIFIED",
+                "CASE_COMPLETE",
+                "NEGATIVE_SCOPE_ACCEPTED",
+                "RESULT_CLASSIFIED",
+                "RESTORE_VALID",
+                "QUERY_REPLAY_AVAILABLE",
+                "SLOT.AMOUNT_FILED",
+                "SLOT.RECEIVER_FILED",
+                "SLOT.LINK_FILED",
+                "PHASE.START",
+                "PHASE.TICKET_PULLED",
+                "PHASE.REQUEST_COMPLETED",
+                "PHASE.REQUEST_STAMPED",
+                "PHASE.REQUEST_IN_TUBE",
+                "PHASE.TUBE_CLOSED",
+                "PHASE.DISPATCHED",
+                "PHASE.CANISTER_OPEN",
+                "PHASE.STRIP_TAKEN",
+                "PHASE.TERMINAL_UNLOCKED",
+                "PHASE.COMPLETE"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "EXACT_EARLY_NET",
+                "EXACT_MAIN_RECEIVER",
+                "EXACT_CONVERGENCE",
+                "STATE_EARLY_ENGINE",
+                "CONTEXT_FIRST_ENGINE_ACTIVITY",
+                "CONTEXT_SECONDARY"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "disposition": {
+            "const": "AUDITED_BOUNDED_CANDIDATE"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "forbidden_inferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "unresolved_p0_p1": {
+      "const": 0
+    },
+    "manual_review_required": {
+      "const": true
+    }
+  }
+}

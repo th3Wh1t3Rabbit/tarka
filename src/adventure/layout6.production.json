@@ -1,0 +1,670 @@
+{
+  "schema": "trace-escape.scene-composition.v1",
+  "parentCommit": "c255ae577851fe34452acf21d674743494a0a067",
+  "artArchiveSha256": "a14a63ca0dac07d8fc1a5daa4f2e551bb231e2313c4f60a53ff95880263b9c55",
+  "topManifestSha256": "1e2a14dca463071e18154e2c0b503c52370e2ef8aedba7d9a99d00f49a8b9b68",
+  "room": {
+    "width": 480,
+    "height": 180
+  },
+  "interfaceBand": {
+    "width": 480,
+    "height": 90
+  },
+  "viewport": {
+    "width": 480,
+    "height": 270
+  },
+  "fitPolicy": "NEAREST_CONTAIN",
+  "pixelScaling": "NEAREST_NEIGHBOR",
+  "inventoryRenderBox": {
+    "width": 24,
+    "height": 24
+  },
+  "cursor": {
+    "width": 13,
+    "height": 13,
+    "hotspotX": 6,
+    "hotspotY": 6
+  },
+  "principalDisposition": "PRINCIPAL_EXPORTED",
+  "entities": [
+    {
+      "id": "arthur",
+      "label": "Arthur",
+      "runtimeAssetId": "arthur.idle",
+      "src": "/art-packs/production/files/production/characters/arthur/conversation-v0.1.6/frames/archivist_idle_a.png",
+      "sourceWidth": 48,
+      "sourceHeight": 88,
+      "x": 206,
+      "y": 75,
+      "z": 160,
+      "renderWidth": 48,
+      "visible": true,
+      "mirrorAllowed": true,
+      "state": "idle",
+      "states": {
+        "idle": "/art-packs/production/files/production/characters/arthur/conversation-v0.1.6/frames/archivist_idle_a.png",
+        "talk": "/art-packs/production/files/production/characters/arthur/conversation-v0.1.6/frames/archivist_talk_open.png",
+        "listen": "/art-packs/production/files/production/characters/arthur/conversation-v0.1.6/frames/archivist_listening.png",
+        "stamp": "/art-packs/production/files/production/characters/arthur/stamp-v0.1.1/frames/archivist_stamp_down.png",
+        "paperwork": "/art-packs/production/files/production/characters/arthur/paperwork-v0.1.4/frames/archivist_document_hold.png"
+      },
+      "hotspotId": "mr-index",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "arthur-stamp",
+      "label": "Arthur's stamp",
+      "runtimeAssetId": "stamp.world",
+      "src": "/art-packs/production/files/production/props/stamp/frames/stamp_world.png",
+      "sourceWidth": 16,
+      "sourceHeight": 20,
+      "x": 205,
+      "y": 124,
+      "z": 220,
+      "renderWidth": 10,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "world",
+      "states": {
+        "world": "/art-packs/production/files/production/props/stamp/frames/stamp_world.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "bg-painting-city-bridge",
+      "label": "City bridge painting",
+      "runtimeAssetId": "bg-painting-city-bridge",
+      "src": "/art-review/background-detail/bg-painting-city-bridge.png",
+      "sourceWidth": 274,
+      "sourceHeight": 251,
+      "x": 188,
+      "y": 36,
+      "z": 10,
+      "renderWidth": 76,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-painting-city-bridge.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0.05
+    },
+    {
+      "id": "bg-plaque-employee-of-the-month",
+      "label": "Employee of the Month",
+      "runtimeAssetId": "bg-plaque-employee-of-the-month",
+      "src": "/art-review/background-detail/bg-plaque-employee-of-the-month.png",
+      "sourceWidth": 111,
+      "sourceHeight": 144,
+      "x": 153,
+      "y": 71,
+      "z": 20,
+      "renderWidth": 30,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-plaque-employee-of-the-month.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0.1
+    },
+    {
+      "id": "bg-plaque-preserve-serve-remember",
+      "label": "Preserve Serve Remember",
+      "runtimeAssetId": "bg-plaque-preserve-serve-remember",
+      "src": "/art-review/background-detail/bg-plaque-preserve-serve-remember.png",
+      "sourceWidth": 100,
+      "sourceHeight": 137,
+      "x": 268,
+      "y": 75,
+      "z": 30,
+      "renderWidth": 27,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-plaque-preserve-serve-remember.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "bg-poster-be-the-change",
+      "label": "Be the Change",
+      "runtimeAssetId": "bg-poster-be-the-change",
+      "src": "/art-review/background-detail/bg-poster-be-the-change.png",
+      "sourceWidth": 202,
+      "sourceHeight": 158,
+      "x": 6,
+      "y": 12,
+      "z": 40,
+      "renderWidth": 55,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-poster-be-the-change.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0.1
+    },
+    {
+      "id": "bg-poster-think-outside-the-box",
+      "label": "Think Outside the Box",
+      "runtimeAssetId": "bg-poster-think-outside-the-box",
+      "src": "/art-review/background-detail/bg-poster-think-outside-the-box.png",
+      "sourceWidth": 142,
+      "sourceHeight": 155,
+      "x": 63,
+      "y": 12,
+      "z": 50,
+      "renderWidth": 40,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-poster-think-outside-the-box.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "bg-print-building",
+      "label": "Building print",
+      "runtimeAssetId": "bg-print-building",
+      "src": "/art-review/background-detail/bg-print-building.png",
+      "sourceWidth": 92,
+      "sourceHeight": 134,
+      "x": 270,
+      "y": 37,
+      "z": 60,
+      "renderWidth": 25,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-print-building.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "bg-sign-records-office",
+      "label": "Records Office sign",
+      "runtimeAssetId": "bg-sign-records-office",
+      "src": "/art-review/background-detail/bg-sign-records-office.png",
+      "sourceWidth": 254,
+      "sourceHeight": 218,
+      "x": 328,
+      "y": 42,
+      "z": 70,
+      "renderWidth": 70,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-sign-records-office.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "bg-sign-you-are-not-a-number",
+      "label": "You Are Not a Number",
+      "runtimeAssetId": "bg-sign-you-are-not-a-number",
+      "src": "/art-review/background-detail/bg-sign-you-are-not-a-number.png",
+      "sourceWidth": 111,
+      "sourceHeight": 87,
+      "x": 445,
+      "y": 107,
+      "z": 80,
+      "renderWidth": 32,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-sign-you-are-not-a-number.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "bg-wall-clock",
+      "label": "Wall clock",
+      "runtimeAssetId": "bg-wall-clock",
+      "src": "/art-review/background-detail/bg-wall-clock.png",
+      "sourceWidth": 134,
+      "sourceHeight": 173,
+      "x": 137,
+      "y": 18,
+      "z": 90,
+      "renderWidth": 37,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "detail",
+      "states": {
+        "detail": "/art-review/background-detail/bg-wall-clock.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0.1
+    },
+    {
+      "id": "blank-form",
+      "label": "Blank authorization form",
+      "runtimeAssetId": "form.blank",
+      "src": "/art-packs/production/files/included/core-v2.1/forms/authform_blank.png",
+      "sourceWidth": 28,
+      "sourceHeight": 34,
+      "x": 14,
+      "y": 128,
+      "z": 120,
+      "renderWidth": 12,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "blank",
+      "states": {
+        "blank": "/art-packs/production/files/included/core-v2.1/forms/authform_blank.png"
+      },
+      "hotspotId": "blank-authorization-form",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "books-tall",
+      "label": "Tall books",
+      "runtimeAssetId": "books.tall",
+      "src": "/art-packs/production/files/production/furniture/bookstack-tall/frames/bookstack_tall.png",
+      "sourceWidth": 32,
+      "sourceHeight": 40,
+      "x": 90,
+      "y": 134,
+      "z": 110,
+      "renderWidth": 16,
+      "visible": false,
+      "mirrorAllowed": false,
+      "state": "tall",
+      "states": {
+        "tall": "/art-packs/production/files/production/furniture/bookstack-tall/frames/bookstack_tall.png",
+        "short": "/art-packs/production/files/production/furniture/bookstack-short/frames/bookstack_short.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "desk",
+      "label": "Desk",
+      "runtimeAssetId": "desk",
+      "src": "/art-packs/production/files/included/core-v2.1/room/desk.png",
+      "sourceWidth": 96,
+      "sourceHeight": 36,
+      "x": 172,
+      "y": 123,
+      "z": 170,
+      "renderWidth": 107,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "default",
+      "states": {
+        "default": "/art-packs/production/files/included/core-v2.1/room/desk.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "dispenser",
+      "label": "Form dispenser",
+      "runtimeAssetId": "dispenser",
+      "src": "/art-packs/production/files/production/props/required-v1.0.1/frames/dispenser_empty.png",
+      "sourceWidth": 47,
+      "sourceHeight": 70,
+      "x": 3,
+      "y": 104,
+      "z": 110,
+      "renderWidth": 36,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "empty",
+      "states": {
+        "idle": "/art-packs/production/files/production/props/required-v1.0.1/frames/dispenser_idle_with_ticket.png",
+        "empty": "/art-packs/production/files/production/props/required-v1.0.1/frames/dispenser_empty.png"
+      },
+      "hotspotId": "request-dispenser",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "globe",
+      "label": "Globe",
+      "runtimeAssetId": "globe",
+      "src": "/art-packs/production/files/production/ambience/globe-life/frames/globe_idle.png",
+      "sourceWidth": 32,
+      "sourceHeight": 48,
+      "x": 117,
+      "y": 81,
+      "z": 190,
+      "renderWidth": 23,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "idle",
+      "states": {
+        "idle": "/art-packs/production/files/production/ambience/globe-life/frames/globe_idle.png",
+        "push": "/art-packs/production/files/production/ambience/globe-life/frames/globe_spin_right.png",
+        "pull": "/art-packs/production/files/production/ambience/globe-life/frames/globe_spin_left.png",
+        "settle": "/art-packs/production/files/production/ambience/globe-life/frames/globe_settle.png"
+      },
+      "hotspotId": "office-globe",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "lamp",
+      "label": "Lamp",
+      "runtimeAssetId": "lamp",
+      "src": "/art-packs/production/files/production/ambience/lamp-switch/frames/lamp_on.png",
+      "sourceWidth": 24,
+      "sourceHeight": 40,
+      "x": 181,
+      "y": 100,
+      "z": 180,
+      "renderWidth": 22,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "on",
+      "states": {
+        "off": "/art-packs/production/files/production/ambience/lamp-switch/frames/lamp_off.png",
+        "on": "/art-packs/production/files/production/ambience/lamp-switch/frames/lamp_on.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "misc-cabinet",
+      "label": "Miscellaneous cabinet",
+      "runtimeAssetId": "cabinet.misc",
+      "src": "/art-packs/production/files/production/furniture/upper-drawer/frames/cabinet_closed.png",
+      "sourceWidth": 80,
+      "sourceHeight": 96,
+      "x": 303,
+      "y": 104,
+      "z": 130,
+      "renderWidth": 50,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "closed",
+      "states": {
+        "closed": "/art-packs/production/files/production/furniture/upper-drawer/frames/cabinet_closed.png",
+        "open": "/art-packs/production/files/production/furniture/upper-drawer/frames/cabinet_open.png",
+        "empty": "/art-packs/production/files/production/furniture/upper-drawer/frames/cabinet_open.png"
+      },
+      "hotspotId": "miscellaneous-drawer-cabinet",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "mug",
+      "label": "Mug",
+      "runtimeAssetId": "mug",
+      "src": "/art-packs/production/files/production/ambience/mug/frames/mug_idle.png",
+      "sourceWidth": 24,
+      "sourceHeight": 32,
+      "x": 245,
+      "y": 116,
+      "z": 200,
+      "renderWidth": 14,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "idle",
+      "states": {
+        "idle": "/art-packs/production/files/production/ambience/mug/frames/mug_idle.png",
+        "steam": "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "official-cabinet",
+      "label": "Official cabinet",
+      "runtimeAssetId": "cabinet.official",
+      "src": "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_closed.png",
+      "sourceWidth": 80,
+      "sourceHeight": 96,
+      "x": 371,
+      "y": 102,
+      "z": 140,
+      "renderWidth": 50,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "closed",
+      "states": {
+        "closed": "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_closed.png",
+        "open": "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open.png",
+        "filed": "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_01_filed_open.png",
+        "empty": "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open.png"
+      },
+      "hotspotId": "official-case-file-cabinet",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "penstand",
+      "label": "Pen stand",
+      "runtimeAssetId": "penstand",
+      "src": "/art-packs/production/files/production/props/required-v1.0.1/frames/penstand_idle.png",
+      "sourceWidth": 24,
+      "sourceHeight": 32,
+      "x": 260,
+      "y": 118,
+      "z": 210,
+      "renderWidth": 12,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "idle",
+      "states": {
+        "idle": "/art-packs/production/files/production/props/required-v1.0.1/frames/penstand_idle.png"
+      },
+      "hotspotId": "pen-stand",
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "rook",
+      "label": "Rook",
+      "runtimeAssetId": "rook.idle",
+      "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_idle_neutral_a.png",
+      "sourceWidth": 48,
+      "sourceHeight": 88,
+      "x": 52,
+      "y": 90,
+      "z": 230,
+      "renderWidth": 48,
+      "visible": true,
+      "mirrorAllowed": true,
+      "state": "idle",
+      "states": {
+        "idle": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_idle_neutral_a.png",
+        "walk": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_walk_1_contact_a.png",
+        "talk": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_talk_neutral_open.png",
+        "inspect": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_inspect_lean.png",
+        "give": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_give_offer.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "runtimeAssetId": "shelf",
+      "src": "/art-packs/production/files/production/furniture/shelf-full/frames/shelf_full.png",
+      "sourceWidth": 96,
+      "sourceHeight": 112,
+      "x": 104,
+      "y": 105,
+      "z": 100,
+      "renderWidth": 48,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "full",
+      "states": {
+        "full": "/art-packs/production/files/production/furniture/shelf-full/frames/shelf_full.png"
+      },
+      "hotspotId": null,
+      "mirror": false,
+      "blur": 0
+    },
+    {
+      "id": "terminal",
+      "label": "Terminal kiosk",
+      "runtimeAssetId": "terminal.kiosk",
+      "src": "/art-packs/production/files/included/core-v2.1/terminal/kiosk_off.png",
+      "sourceWidth": 48,
+      "sourceHeight": 75,
+      "x": 347,
+      "y": 105,
+      "z": 150,
+      "renderWidth": 36,
+      "visible": true,
+      "mirrorAllowed": false,
+      "state": "off",
+      "states": {
+        "off": "/art-packs/production/files/included/core-v2.1/terminal/kiosk_off.png",
+        "on": "/art-packs/production/files/included/core-v2.1/terminal/kiosk_on.png",
+        "chrome": "/art-packs/production/files/included/core-v2.1/terminal/frame_on_480x270.png"
+      },
+      "hotspotId": "nansen-terminal",
+      "mirror": false,
+      "blur": 0
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "filing-drawers",
+      "polygon": "48,136 148,136 148,246 48,246",
+      "walkTo": {
+        "x": 170,
+        "y": 341
+      },
+      "readOnly": true
+    },
+    {
+      "id": "historical-clock",
+      "polygon": "280,50 342,50 342,126 280,126",
+      "walkTo": {
+        "x": 265,
+        "y": 335
+      },
+      "readOnly": true
+    },
+    {
+      "id": "office-globe",
+      "polygon": "390,30 434,30 434,90 390,90",
+      "walkTo": {
+        "x": 430,
+        "y": 335
+      },
+      "readOnly": true
+    },
+    {
+      "id": "request-dispenser",
+      "polygon": "315,164 383,164 383,292 315,292",
+      "walkTo": {
+        "x": 350,
+        "y": 355
+      },
+      "readOnly": true
+    },
+    {
+      "id": "pen-stand",
+      "polygon": "406,232 464,232 464,310 406,310",
+      "walkTo": {
+        "x": 430,
+        "y": 362
+      },
+      "readOnly": true
+    },
+    {
+      "id": "mr-index",
+      "polygon": "492,163 550,163 550,313 492,313",
+      "walkTo": {
+        "x": 416,
+        "y": 365
+      },
+      "readOnly": true
+    },
+    {
+      "id": "official-case-file-cabinet",
+      "polygon": "639,169 703,169 703,286 639,286",
+      "walkTo": {
+        "x": 662,
+        "y": 365
+      },
+      "readOnly": true
+    },
+    {
+      "id": "disorderly-stack-of-confidential-files",
+      "polygon": "643,173 699,173 699,205 643,205",
+      "walkTo": {
+        "x": 666,
+        "y": 365
+      },
+      "readOnly": true
+    },
+    {
+      "id": "miscellaneous-drawer-cabinet",
+      "polygon": "758,175 820,175 820,289 758,289",
+      "walkTo": {
+        "x": 786,
+        "y": 365
+      },
+      "readOnly": true
+    },
+    {
+      "id": "miscellaneous-catch-all-contents",
+      "polygon": "764,179 814,179 814,209 764,209",
+      "walkTo": {
+        "x": 784,
+        "y": 365
+      },
+      "readOnly": true
+    },
+    {
+      "id": "nansen-terminal",
+      "polygon": "860,154 940,154 940,300 860,300",
+      "walkTo": {
+        "x": 870,
+        "y": 365
+      },
+      "readOnly": true
+    },
+    {
+      "id": "window",
+      "polygon": "808,32 888,32 888,176 808,176",
+      "walkTo": {
+        "x": 848,
+        "y": 340
+      },
+      "readOnly": true
+    }
+  ],
+  "contentSha256": "fb7811f5da1af3245b7577e7ba12f9283ace3cf13938a8d9c3b76a07da308d0f"
+}

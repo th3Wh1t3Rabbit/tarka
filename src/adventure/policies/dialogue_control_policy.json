@@ -1,0 +1,146 @@
+{
+  "schema": "TRACE_ESCAPE_DIALOGUE_CONTROL_POLICY",
+  "version": "1.0.0",
+  "presentationDoesNotDecideBlocking": true,
+  "classes": [
+    "PLAYER_CONTROLLED",
+    "WALK_PENDING_REPLACEABLE",
+    "BLOCKING_ACTION",
+    "BLOCKING_WORLD_DIALOGUE",
+    "BLOCKING_CUTSCENE",
+    "NONBLOCKING_SELF_TALK"
+  ],
+  "interfaceTreatments": [
+    "ACTIVE",
+    "INERT_VISIBLE",
+    "BLACKOUT"
+  ],
+  "bindings": {
+    "opening": {
+      "control": "BLOCKING_CUTSCENE",
+      "interface": "BLACKOUT",
+      "copy": "EXISTING_LEAD_SHELL"
+    },
+    "preauthorizationCabinet": {
+      "control": "BLOCKING_ACTION",
+      "interface": "INERT_VISIBLE",
+      "contactBeforeStoryLine": true,
+      "copyKey": "TODO.STORY.PREAUTH_CABINET_POLICY_BLOCK"
+    },
+    "ordinaryArthurTopic": {
+      "control": "BLOCKING_WORLD_DIALOGUE",
+      "interface": "INERT_VISIBLE",
+      "remote": true
+    },
+    "prebriefEvidenceSea": {
+      "control": "NONBLOCKING_SELF_TALK",
+      "interface": "ACTIVE",
+      "copyKey": "TODO.STORY.PREBRIEF_EVIDENCE_SEA_REACTION"
+    },
+    "voluntaryEarlyExit": {
+      "control": "NONBLOCKING_SELF_TALK",
+      "interface": "ACTIVE",
+      "copyKey": "TODO.STORY.VOLUNTARY_EARLY_EXIT"
+    },
+    "postResultSelfTalk": {
+      "control": "NONBLOCKING_SELF_TALK",
+      "interface": "ACTIVE",
+      "copyKey": "TODO.STORY.POST_RESULT_SELF_TALK"
+    },
+    "stateAwareBarks": {
+      "control": "NONBLOCKING_SELF_TALK",
+      "interface": "ACTIVE"
+    },
+    "postSolve": {
+      "control": "BLOCKING_CUTSCENE",
+      "interface": "BLACKOUT",
+      "copyKey": "TODO.STORY.POST_SOLVE_DIALOGUE",
+      "copy": "LATE_BOUND"
+    }
+  },
+  "terminal": {
+    "worldDialogueWhileOpen": false,
+    "presentationModes": [
+      "FULLSCREEN_CRT",
+      "DOCKED_OVERLAY",
+      "PLAIN_LIST"
+    ],
+    "oneSemanticModel": true
+  },
+  "blackout": {
+    "logicalBand": {
+      "x": 0,
+      "y": 180,
+      "width": 480,
+      "height": 90
+    },
+    "room": {
+      "width": 480,
+      "height": 180
+    },
+    "frame": {
+      "width": 480,
+      "height": 270
+    },
+    "roomExpands": false,
+    "advanceControlRemains": true,
+    "announcement": "Player control is temporarily unavailable."
+  },
+  "failClosed": "BLOCKING_WORLD_DIALOGUE",
+  "owner": "DIALOGUE_CONTROL",
+  "outcomes": {
+    "OPENING": "BLOCKING_CUTSCENE",
+    "POST_SOLVE_STAGED": "BLOCKING_CUTSCENE",
+    "RETURN_EXCHANGE": "BLOCKING_CUTSCENE",
+    "SEQUENCE.CABINET_POLICY_BLOCK": "BLOCKING_ACTION",
+    "TODO.STORY.PREAUTH_CABINET_POLICY_BLOCK": "BLOCKING_WORLD_DIALOGUE",
+    "DIALOGUE_TOPIC": "BLOCKING_WORLD_DIALOGUE",
+    "NOTE_READ": "BLOCKING_WORLD_DIALOGUE",
+    "OFFICE_HINT": "BLOCKING_WORLD_DIALOGUE",
+    "RETURN_TAG": "BLOCKING_WORLD_DIALOGUE",
+    "REVIEW_TALKING": "BLOCKING_WORLD_DIALOGUE",
+    "FIXTURE.ROOK_BLOCKING_BEAT": "BLOCKING_WORLD_DIALOGUE",
+    "ITEM.LOOK": "NONBLOCKING_SELF_TALK",
+    "DEAD_END": "NONBLOCKING_SELF_TALK",
+    "HERO_OPTIONAL": "NONBLOCKING_SELF_TALK",
+    "FORM_BARK": "NONBLOCKING_SELF_TALK",
+    "TODO.STORY.PREBRIEF_EVIDENCE_SEA_REACTION": "NONBLOCKING_SELF_TALK",
+    "TODO.STORY.VOLUNTARY_EARLY_EXIT": "NONBLOCKING_SELF_TALK",
+    "TODO.STORY.POST_RESULT_SELF_TALK": "NONBLOCKING_SELF_TALK",
+    "look-case-cabinet": "NONBLOCKING_SELF_TALK",
+    "look-drawer": "NONBLOCKING_SELF_TALK",
+    "look-case-stack": "NONBLOCKING_SELF_TALK",
+    "look-misc-contents": "NONBLOCKING_SELF_TALK",
+    "open-toolbox-open": "NONBLOCKING_SELF_TALK",
+    "use-toolbox-open": "NONBLOCKING_SELF_TALK",
+    "take-form": "BLOCKING_WORLD_DIALOGUE",
+    "take-pen": "BLOCKING_WORLD_DIALOGUE",
+    "take-form-2": "BLOCKING_WORLD_DIALOGUE",
+    "take-pen-2": "BLOCKING_WORLD_DIALOGUE",
+    "give-form": "BLOCKING_WORLD_DIALOGUE",
+    "reprimand-start": "BLOCKING_WORLD_DIALOGUE",
+    "reprimand-form-held": "BLOCKING_WORLD_DIALOGUE",
+    "reprimand-pen-held": "BLOCKING_WORLD_DIALOGUE",
+    "reprimand-form-and-pen": "BLOCKING_WORLD_DIALOGUE",
+    "reprimand-form-completed": "BLOCKING_WORLD_DIALOGUE",
+    "reprimand-form-submitted": "BLOCKING_WORLD_DIALOGUE",
+    "open-case-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "pull-case-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "close-case-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "push-case-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "use-case-drawer-open": "BLOCKING_WORLD_DIALOGUE",
+    "use-case-drawer-shut": "BLOCKING_WORLD_DIALOGUE",
+    "pickup-case-stack": "BLOCKING_WORLD_DIALOGUE",
+    "open-misc-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "pull-misc-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "close-misc-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "push-misc-drawer": "BLOCKING_WORLD_DIALOGUE",
+    "use-misc-drawer-open": "BLOCKING_WORLD_DIALOGUE",
+    "use-misc-drawer-shut": "BLOCKING_WORLD_DIALOGUE",
+    "pickup-misc-contents": "BLOCKING_WORLD_DIALOGUE",
+    "combine-form-pen": "BLOCKING_WORLD_DIALOGUE",
+    "open-toolbox": "BLOCKING_WORLD_DIALOGUE",
+    "use-toolbox": "BLOCKING_WORLD_DIALOGUE",
+    "smash-piggy": "BLOCKING_WORLD_DIALOGUE"
+  }
+}

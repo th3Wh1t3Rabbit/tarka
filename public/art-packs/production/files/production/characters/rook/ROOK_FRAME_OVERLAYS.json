@@ -1,0 +1,39 @@
+{
+  "schema": "tarka.production.rook-frame-authority.v1",
+  "status": "SHIPPING",
+  "runtimeAuthority": "src/adventure/animationCues.ts",
+  "geometry": {
+    "width": 48,
+    "height": 88,
+    "rendering": "nearest-neighbor whole cels"
+  },
+  "canonicalCore": {
+    "root": "latest-clean-v0.1.14/frames",
+    "policy": "Use this family for every production Rook cue unless the runtime authority names an exception."
+  },
+  "legacyRuntimeExceptions": [
+    {
+      "path": "frames/rook_camera_grin.png",
+      "purpose": "Rare silent camera-facing cheeky hold"
+    },
+    {
+      "path": "frames/rook_use_reach.png",
+      "purpose": "Empty-hand world-object reach/contact"
+    },
+    {
+      "path": "frames/rook_talk_use_reach.png",
+      "purpose": "World-object reach while speaking"
+    }
+  ],
+  "reviewCompatibility": {
+    "root": "frames",
+    "policy": "Review history only, except for the three explicit runtime exceptions above."
+  },
+  "rules": [
+    "Do not mix historical and clean idle, talk, or walk families.",
+    "Use 125 ms frames for ordinary speech and walking.",
+    "Keep reactions, reaches, camera takes, and prop actions finite.",
+    "Use neutral delivery for routine inventory LOOK AT dialogue.",
+    "Never render duplicate transferred props or exchange actor positions."
+  ]
+}

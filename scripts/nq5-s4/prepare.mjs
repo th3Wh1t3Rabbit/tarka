@@ -1,0 +1,20 @@
+import fs from 'node:fs'
+import assert from 'node:assert/strict'
+import {execFileSync} from 'node:child_process'
+import {sha} from '../nq5-s2/activity.mjs'
+import {BASE,TREE} from './compile-content.mjs'
+const reports='artifacts/g6p-s4/REPORTS/',out='artifacts/g6p-s4/LANE_A_PREPARED_NOT_SENT/'
+const put=(n,b)=>{fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+n,b)}
+const files=['src/controller/content/adapter.ts','src/controller/content/runtime-content.json','src/adventure/content.ts','src/adventure/narrative.ts','src/app/App.tsx','src/app/CaseTerminalWorkbench.tsx','src/investigation/corpus-seam/authority.d.mts','tests/unit/s4-content.test.ts','tests/unit/s4-type-contract.ts','tests/e2e/s4-content.spec.ts','artifacts/g6p-s4/REPORTS/TRUTH_HASH_CROSSWALK.json','artifacts/g6p-s4/REPORTS/LANE_A_ADMISSION.json']
+const contract={status:'PREPARED_NOT_SENT',interface:'TE-IFACE-CONTENT@1.1.0',reviewedStart:BASE,reviewedTree:TREE,candidateBinding:'Outer DELIVERY_MANIFEST gives exact integrated candidate commit/tree/parent; these exact file hashes bind targeted source scope.',packetsSent:false,LaneCActive:false,providerRequests:0,optionalBanterIntegrated:false,finalDensityAccepted:false,regressionTasks:['Arthur display with unchanged semantic/speaker/hotspot/art IDs','Exact mandatory opening and player-paced behavior','Stable beat/interruption/reduced-motion behavior','Useful-rule item/phase priority and catalog dead ends','No spoiler or unsupported negative promotion','Conclusion boundary plus deterministic active hashes','Required-token type negatives and canonical positives'],files:files.map(file=>({file,sha256:sha(fs.readFileSync(file))}))}
+contract.contentInterfaceIdentity='7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903'
+contract.contentIdentity='540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e'
+contract.implementationIdentity='84a081161b8b3e147021ad497af0862eaf3d7fe80b92f79de8ebe57e7711b46b'
+contract.acceptedAdditions=JSON.parse(fs.readFileSync(reports+'LANE_A_ADMISSION.json')).laneFiles
+put('TARGETED_REGRESSION_CONTRACT.json',JSON.stringify(contract,null,2)+'\n')
+put('README.md','# Lane A targeted regression — UNSENT\n\nNo message or acceptance is implied. Use the exact candidate in the outer delivery manifest and the hash-bound integrated source files. Run the unchanged accepted supplier contracts in their original-base isolated fixture, then the separate integrated S4 unit/browser tests, typecheck, active verification and scenario-pack verification. Optional banter, evidence-bound authoring hints, final density, corpus gameplay wiring and Pixel assets are outside this gate. This preparation does not establish supplier or MAIN acceptance.\n')
+const recovery='docs/source/execution-s4/RECOVERY/S3_R1_DELIVERY_MANIFEST.json',m=JSON.parse(fs.readFileSync(recovery))
+assert.equal(m.candidate.commit,BASE);assert.equal(m.candidate.tree,TREE)
+assert.equal(sha(execFileSync('git',['diff','--binary','38c673f7d031e19d8bd8574658ef876109b6fa7c',BASE],{maxBuffer:128000000})),'5cbbe48beb9ae656aad62c23922d8daf289bb1a640f7292bf62693a44d9d4015')
+fs.writeFileSync(reports+'INPUT_ADMISSION.json',JSON.stringify({status:'PASS',inputZipSha256:'8b75a7636bc03e9d3090ffd0c77a3c83d17e44986c12496bc6aade35b5928c74',members:70,governedHashes:67,manifestExceptions:['MANIFEST.sha256','VERIFY_INPUT.py','LANE_A_ACCEPTED_PACKAGE/MANIFEST.sha256'],suppliedValidator:'PASS_IN_COMPLETE_ADMITTED_ROOT',selectiveReferences:28,recoveryCandidate:BASE,recoveryTree:TREE,recoveryDiffSha256:m.sourceDiffSha256,stoppedPreflight:'Initial two-exception assumption stopped before extraction; corrected to three explicit ZIP-bound exceptions.',boundedReadRecovery:'Oversized combined read stopped before edits; bounded individual reads and exact reference hashes used.',credentialFileOpened:false},null,2)+'\n')
+console.log(JSON.stringify({status:'PASS',packet:'LANE_A_PREPARED_NOT_SENT',packetsSent:false,targetedFiles:files.length,recoveryDiffVerified:true}))

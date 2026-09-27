@@ -1,0 +1,13 @@
+{
+  "historicalPendingOrRejectedFieldsAreNotAcceptance": true,
+  "excluded": [
+    "optional-preferred",
+    "dainty nails",
+    "retired lamp glow",
+    "pneumatic-tube puzzle",
+    "dinosaur",
+    "smiley",
+    "gum"
+  ],
+  "note": "BRCG values are not painted into the generic note asset."
+}

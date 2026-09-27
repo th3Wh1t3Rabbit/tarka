@@ -1,0 +1,39 @@
+{
+  "schema": "tarka.production.live-vs-staged-capabilities.v3",
+  "live": [
+    "room plate 480x180 and registered production props",
+    "Rook idle, blink, posture, arms-crossed, foot-tap, confused, walk, talk, inspect, neutral reach, signed-form give, and Euler case-file hold",
+    "Arthur idle, glance, listen, talk, explain, point, stamp, and document families",
+    "opening closed-paper hold followed by fresh document frames only when Arthur speaks",
+    "mutual character facing with clip-family-aware mirroring; camera clips never auto-mirror",
+    "cabinet and terminal preauthorization point exchanges with Arthur screen-right and Rook screen-left",
+    "inventory icons and 13x13 cursor with 6,6 hotspot",
+    "terminal OFF before approved form return and ON once at exact return contact",
+    "single typed route-to-animation policy with neutral reach as ordinary physical default and no generic force fallback",
+    "globe three-level finite schedules with exact cursor, held-angle L1 restart, and fractional-dwell promotion/reversal continuity",
+    "mug steam plus official filed drawer-02 and miscellaneous bottom drawer-04 transition families, each with exact path owner and live consumer"
+  ],
+  "reservedForScriptBinding": [
+    "approved but currently unbound camera-address performances",
+    "Arthur pickup/present/read-document alternates not selected by current WHICH authority",
+    "additional approved dialogue expressions awaiting explicit script beat bindings"
+  ],
+  "optionalPostSubmission": [
+    "unrouted character micro-poses and alternate transitions",
+    "book stacks and shelf animation",
+    "terminal full-screen chrome animation",
+    "unused drawer exposure masks, layer helpers, and unrouted drawer families"
+  ],
+  "doNotUseOrSuperseded": [
+    "generic rook.use clip mixing neutral and effort poses",
+    "effort, press, push, or pull cels as ordinary reach fallbacks",
+    "pre-cleanup Arthur paperwork alternates superseded by WHICH.md",
+    "always-on terminal power behavior superseded by the Principal return-contact authority"
+  ],
+  "ownershipIdentity": "EXACT_NORMALIZED_RUNTIME_PATH",
+  "liveRuntimeFamilyIds": [
+    "mug.steam",
+    "drawer.official.filed.02",
+    "drawer.misc.04"
+  ]
+}

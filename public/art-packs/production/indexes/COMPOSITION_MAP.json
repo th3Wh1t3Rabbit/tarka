@@ -1,0 +1,26 @@
+{
+  "room": {
+    "width": 480,
+    "height": 180,
+    "plate": "/art-packs/production/room-plate-480x180.png"
+  },
+  "gameSpace": {
+    "width": 960,
+    "height": 360,
+    "note": "Existing hotspot and walk geometry is unchanged."
+  },
+  "actors": {
+    "rookAnchor": {
+      "x": 24,
+      "y": 88,
+      "scale": 2
+    },
+    "arthurAnchor": "bottom center of the shipping idle cel, scale 2"
+  },
+  "contacts": "Hotspot polygons and walkTo points remain the S10 geometry.",
+  "terminalHole": "Kiosk art is a prop. The full-screen terminal interior stays React-owned.",
+  "cursorHotspot": {
+    "x": 6,
+    "y": 6
+  }
+}

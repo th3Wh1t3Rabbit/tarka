@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "threshold": 78,
+  "priorityOrder": ["EULER_2023_INITIAL_EXPLOIT", "BYBIT_2025_DRAIN_FALLBACK"],
+  "candidates": [
+    {
+      "id": "EULER_2023_INITIAL_EXPLOIT",
+      "chain": "ethereum",
+      "auditionWindow": {"start":"2023-03-13T08:45:00Z","end":"2023-03-13T12:15:00Z"},
+      "contextWindow": {"start":"2023-03-13T08:30:00Z","end":"2023-03-13T12:30:00Z"},
+      "addresses": {
+        "main_exploiter_1":"0xb2698c2d99ad2c302a95a8db26b08d17a77cedd4",
+        "mev_front_runner_exploiter_3":"0x5f259d0b76665c337c6104145894f4d1d2758b8c",
+        "main_recipient_exploiter_2":"0xb66cd966670d962c227b3eaba30a872dbfb995db",
+        "secondary_recipient_exploiter_4":"0xc66dfa84bc1b93df194bd964a41282da65d73c9a"
+      },
+      "transactions": {
+        "mev_first_exploit":"0xc310a0affe2169d1f6feec1c63dbc7f7c62a887fa48795d327d4d2da2d6b111d",
+        "main_exploit_sequence_seed":"0x298bde3f9e53f7a5d870f7f5d56ee2f5e41fa25e6eb5e74611ac97025405db55",
+        "mev_dai_withdrawal_to_main_route":"0xdae809e4a1ddf77c39d44a4acfe6165bedbc19a385c4b241242cc9bd582a80b9",
+        "main_to_secondary_100_eth":"0x32be972bef6302d42d83ef624765ffd962728912a5896ce7e5d2092ff009ae07"
+      },
+      "limits": {"maxHttpAttempts":36,"maxProjectedCredits":120}
+    },
+    {
+      "id": "BYBIT_2025_DRAIN_FALLBACK",
+      "chain": "ethereum",
+      "auditionWindow": {"start":"2025-02-21T14:00:00Z","end":"2025-02-21T18:00:00Z"},
+      "contextWindow": {"start":"2025-02-21T13:30:00Z","end":"2025-02-21T20:30:00Z"},
+      "addresses": {
+        "victim_safe":"0x1db92e2eebc8e0c075a02bea49a2935bcd2dfcf4",
+        "initial_attacker":"0x0fa09c3a328792253f8dee7116848723b72a6d2e",
+        "known_exploiter_recipient":"0x47666fab8bd0ac7003bce3f5c3585383f09486e2",
+        "delegatecall_contract":"0x96221423681a6d52e184d440a8efcebb105c7242",
+        "malicious_implementation":"0xbdd077f651ebe7f7b3ce16fe5f2b025be2969516"
+      },
+      "transactions": {
+        "safe_upgrade":"0x46deef0f52e3a983b67abf4714448a41dd7ffd6d32d32da69d62081c68ad7882",
+        "eth_drain":"0xb61413c495fdad6114a7aa863a00b2e3c28945979a10885b12b30316ea9f072c",
+        "cmeth_drain":"0x847b8403e8a4816a4de1e63db321705cdb6f998fb01ab58f653b863fda988647",
+        "meth_drain":"0xbcf316f5835362b7f1586215173cc8b294f5499c60c029a3de6318bf25ca7b20",
+        "steth_drain":"0xa284a1bc4c7e0379c924c73fcea1067068635507254b03ebbbd3f4e222c1fae0"
+      },
+      "limits": {"maxHttpAttempts":27,"maxProjectedCredits":80}
+    }
+  ]
+}

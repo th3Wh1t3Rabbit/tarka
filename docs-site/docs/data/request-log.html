@@ -1,0 +1,528 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Nansen request catalog · Tarka</title><link rel="stylesheet" href="../../assets/site.css"></head><body data-start="docs/data/request-log.md" data-base="../../" data-inline="false"><aside id="rail"><div class="brand">TARKA</div><div class="subbrand">A case worth following</div><div class="toplinks"><a href="https://play.tarka-meridian.workers.dev/">Play</a><a href="https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian">Download</a><a href="https://github.com/th3Wh1t3Rabbit/tarka">GitHub</a><a href="https://docs.tarka-meridian.workers.dev/">Docs</a></div><label for="search" class="subbrand" style="display:block;margin-bottom:7px">Search documentation</label><input id="search" class="search" type="search" placeholder="Topics, questions, tokens…"><label class="search-options"><input type="checkbox" id="spoilerSearch">Include evidence / spoilers</label><button id="menu">CONTENTS</button><nav id="nav" aria-label="Documentation"><section class="navgroup"><h2>Play &amp; story</h2><a data-doc="README.md" href="../../index.html">Welcome</a><a data-doc="docs/play.md" href="../../docs/play.html">Play / download</a><a data-doc="docs/play/saves.md" href="../../docs/play/saves.html">Keeping your progress</a><a data-doc="docs/controls.md" href="../../docs/controls.html">Player guide</a><a data-doc="docs/design/terminal-tour.md" href="../../docs/design/terminal-tour.html">Illustrated terminal guide</a><a data-doc="docs/story.md" href="../../docs/story.html">The story</a><a data-doc="docs/showcase.md" href="../../docs/showcase.html">Watch the showcase</a></section><section class="navgroup"><h2>The design</h2><a data-doc="docs/design/questions-first.md" href="../../docs/design/questions-first.html">Questions before dashboards</a><a data-doc="docs/design/terminal-character.md" href="../../docs/design/terminal-character.html">A terminal with character</a><a data-doc="docs/creator-note.md" href="../../docs/creator-note.html">A note from the creator</a></section><section class="navgroup"><h2>Nansen &amp; the evidence</h2><a data-doc="docs/data/overview.md" href="../../docs/data/overview.html">Why Nansen</a><a data-doc="docs/data/discovery.md" href="../../docs/data/discovery.html">Choosing the case</a><a data-doc="docs/data/method.md" href="../../docs/data/method.html">Collection method</a><a data-doc="docs/data/assembly.md" href="../../docs/data/assembly.html">One record, explained</a><a data-doc="docs/data/endpoints.md" href="../../docs/data/endpoints.html">Endpoint families</a><a data-doc="docs/data/counts.md" href="../../docs/data/counts.html">Calls versus records</a><a data-doc="docs/data/evidence-limits.md" href="../../docs/data/evidence-limits.html">Evidence limits</a><a data-doc="@calls" href="../../docs/data/request-log.html">Browse 101 requests</a><a data-doc="docs/data/request-log.md" href="../../docs/data/request-log.html">Linked request index</a><a data-doc="docs/data/records.md" href="../../docs/data/records.html">Compiled records</a></section><section class="navgroup"><h2>Spoilers &amp; the writing</h2><a data-doc="docs/spoilers/euler-connection.md" href="../../docs/spoilers/euler-connection.html">How the case connects</a><a data-doc="docs/spoilers/brcg.md" href="../../docs/spoilers/brcg.html">The piggy bank &amp; BRCG</a><a data-doc="docs/script/index.md" href="../../docs/script/index.html">Complete Script Explorer</a><a data-doc="docs/script/story.md" href="../../docs/script/story.html">Complete story script</a><a data-doc="docs/script/world-routes.md" href="../../docs/script/world-routes.html">World hotspot routes</a><a data-doc="docs/script/inventory-routes.md" href="../../docs/script/inventory-routes.html">Inventory combinations</a><a data-doc="docs/script/dialogue-routes.md" href="../../docs/script/dialogue-routes.html">Arthur dialogue routes</a><a data-doc="docs/script/actions-and-endings.md" href="../../docs/script/actions-and-endings.html">Actions &amp; endings</a><a data-doc="docs/script/coverage.md" href="../../docs/script/coverage.html">Script coverage proof</a></section><section class="navgroup"><h2>Project information</h2><a data-doc="docs/architecture.md" href="../../docs/architecture.html">System overview</a><a data-doc="docs/animation-assets.md" href="../../docs/animation-assets.html">Animation assets</a><a data-doc="docs/platforms.md" href="../../docs/platforms.html">Platforms</a><a data-doc="docs/testing.md" href="../../docs/testing.html">Build and test</a><a data-doc="docs/limitations.md" href="../../docs/limitations.html">Limitations</a><a data-doc="docs/credits.md" href="../../docs/credits.html">Credits &amp; licenses</a><a data-doc="docs/project/source-and-content.md" href="../../docs/project/source-and-content.html">Source snapshots &amp; game content</a><a data-doc="docs/project/release-adapter.md" href="../../docs/project/release-adapter.html">Immutable release adapter</a><a data-doc="docs/future.md" href="../../docs/future.html">Future possibilities</a><a data-doc="docs/competition/evidence-map.md" href="../../docs/competition/evidence-map.html">Buildathon evidence</a><a data-doc="docs/project/documentation.md" href="../../docs/project/documentation.html">One library, two views</a><a data-doc="docs/project/figures.md" href="../../docs/project/figures.html">About the illustrations</a><a data-doc="docs/index.md" href="../../docs/index.html">Full contents</a></section></nav></aside><main><div class="toolbar"><span id="crumb" class="crumb">The Nansen request catalog</span><button id="downloadMd" class="quiet-button">Save Markdown</button></div><div class="docgrid"><article id="article" tabindex="-1"><h1 id="the-nansen-request-catalog">The Nansen request catalog</h1>
+<p>This catalog contains <strong>101 retained request entries for Euler research</strong>. Each page records the investigative question, endpoint family, selected-record associations, and available fingerprints. RQ identifiers are stable documentation references, not provider-issued request IDs or a new execution chronology.</p>
+<blockquote>
+<p><strong>Evidence appendix:</strong> request questions and linked records may reveal case connections. The <a href="../controls.html" data-doc="docs/controls.md" data-anchor="">player guide</a> remains spoiler-free.</p>
+</blockquote>
+<p>Execution evidence is not uniform across all 101 entries. The final 76-request expansion has exact canonical request bodies, endpoint paths, body hashes, result counts, raw/normalized/terminal hashes, hashed provider IDs, credit fields, and per-call independent acceptance. The earlier 25 accepted Euler receipts expose public call IDs, endpoint families, bounded questions, request/response/normalized hashes, result counts, temporal class, and acceptance status, but this admitted slice does not expose every original body, execution timestamp, terminal commitment, or hashed provider ID. Archive index order is not presented as execution chronology.</p>
+<p>The missing execution timestamps and provider IDs for the earlier 25 rows were
+not retained in the public-safe slice. They remain unavailable; no body,
+timestamp, provider identifier, or chronology is inferred from the questions.</p>
+<p>Original responses remain private; selected public fields and hashes retain traceability. <a href="counts.html" data-doc="docs/data/counts.md" data-anchor="">How these counts differ</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Endpoint family</th>
+<th>Investigative question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="requests/RQ-001.html" data-doc="docs/data/requests/RQ-001.md" data-anchor="">RQ-001</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Which bounded activity facts for the first breach transaction in 2023-03-13T08:45:00Z through 2023-03-13T12:15:00Z test the incident question?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-002.html" data-doc="docs/data/requests/RQ-002.md" data-anchor="">RQ-002</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Which subject-involved contextual activity facts for the Main Trigger add route-candidate coverage inside the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-003.html" data-doc="docs/data/requests/RQ-003.md" data-anchor="">RQ-003</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does the sender of the Early Trigger contextual 0.0001 ETH transfer show route-relevant incident-window activity, or is it a bounded dead end?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-004.html" data-doc="docs/data/requests/RQ-004.md" data-anchor="">RQ-004</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does repeated opposite-side contextual incident activity for 0x620fefb079854dd89cad930bdb596338a8265bb6 support a route-relevant directional pattern or resolve to a bounded dead-end test?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-005.html" data-doc="docs/data/requests/RQ-005.md" data-anchor="">RQ-005</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does the single-support counterparty 0xa5d7f0f7027fa8f4d1be8042e1e43bbdec36951e have independent incident-window contextual activity or resolve to a bounded dead-end test?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-006.html" data-doc="docs/data/requests/RQ-006.md" data-anchor="">RQ-006</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does repeated opposite-side contextual incident activity for 0xb003df4b243f938132e8cadbeb237abc5a889fb4 support a route-relevant directional pattern or resolve to a bounded dead-end test?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-007.html" data-doc="docs/data/requests/RQ-007.md" data-anchor="">RQ-007</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does repeated opposite-side contextual incident activity for 0xef1c6e67703c7bd7107eed8303fbe6ec2554bf6b support a route-relevant directional pattern or resolve to a bounded dead-end test?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-008.html" data-doc="docs/data/requests/RQ-008.md" data-anchor="">RQ-008</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does the single-support counterparty 0xf16e9b0d03470827a95cdfd0cb8a8a3b46969b91 have independent incident-window contextual activity or resolve to a bounded dead-end test?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-009.html" data-doc="docs/data/requests/RQ-009.md" data-anchor="">RQ-009</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does one bundled DAI query reconcile transfer participation for all three separately checked exact case transactions?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-010.html" data-doc="docs/data/requests/RQ-010.md" data-anchor="">RQ-010</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers leave the accepted early trigger in the incident query?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-011.html" data-doc="docs/data/requests/RQ-011.md" data-anchor="">RQ-011</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers enter the first engine in the incident query, providing contextual receipt participation around the separately checked convergence?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-012.html" data-doc="docs/data/requests/RQ-012.md" data-anchor="">RQ-012</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers leave the first engine, contextualizing the checked exact convergence join?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-013.html" data-doc="docs/data/requests/RQ-013.md" data-anchor="">RQ-013</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers leave the main trigger on the independently accepted second branch?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-014.html" data-doc="docs/data/requests/RQ-014.md" data-anchor="">RQ-014</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers enter the extraction engine within the bounded incident query?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-015.html" data-doc="docs/data/requests/RQ-015.md" data-anchor="">RQ-015</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers leave the extraction engine before the accepted case cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-016.html" data-doc="docs/data/requests/RQ-016.md" data-anchor="">RQ-016</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers enter the receiving vault across the two accepted branch contexts?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-017.html" data-doc="docs/data/requests/RQ-017.md" data-anchor="">RQ-017</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does the bounded provider query return any DAI outflow from the receiving vault before cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-018.html" data-doc="docs/data/requests/RQ-018.md" data-anchor="">RQ-018</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet addresses have bounded ERC20 interaction-count relationships with the main trigger, distinct from DAI-only outgoing transfers?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-019.html" data-doc="docs/data/requests/RQ-019.md" data-anchor="">RQ-019</a></td>
+<td><code>tgm/transfers</code></td>
+<td>How does the incoming DAI provider view for the Early Trigger in the breach-opening interval compare with its full-window case context, teaching the exact subject/time filter around the first breach transaction and the second breach transaction?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-020.html" data-doc="docs/data/requests/RQ-020.md" data-anchor="">RQ-020</a></td>
+<td><code>tgm/transfers</code></td>
+<td>How does the outgoing DAI provider view for the First Engine in the breach-opening interval compare with its full-window case context, teaching the exact subject/time filter around the first breach transaction and the second breach transaction?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-021.html" data-doc="docs/data/requests/RQ-021.md" data-anchor="">RQ-021</a></td>
+<td><code>tgm/transfers</code></td>
+<td>How does the incoming DAI provider view for the First Engine in the breach-opening interval compare with its full-window case context, teaching the exact subject/time filter around the first breach transaction and the second breach transaction?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-022.html" data-doc="docs/data/requests/RQ-022.md" data-anchor="">RQ-022</a></td>
+<td><code>tgm/transfers</code></td>
+<td>How does the incoming DAI provider view for the Main Trigger in the breach-opening interval compare with its full-window case context, teaching the exact subject/time filter around the first breach transaction and the second breach transaction?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-023.html" data-doc="docs/data/requests/RQ-023.md" data-anchor="">RQ-023</a></td>
+<td><code>tgm/transfers</code></td>
+<td>How does the incoming DAI provider view for the Early Trigger in the route-development interval compare with its full-window case context, teaching the exact subject/time filter around the second breach transaction and the connecting transaction?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-024.html" data-doc="docs/data/requests/RQ-024.md" data-anchor="">RQ-024</a></td>
+<td><code>tgm/transfers</code></td>
+<td>What bounded page-1 DAI match-count and coverage metadata illustrates the token-wide haystack during the breach-opening interval before a player applies accepted subject/time clues?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-025.html" data-doc="docs/data/requests/RQ-025.md" data-anchor="">RQ-025</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does the bounded OUT DAI view for one-hop subject 0x583c21631c48d442b5c0e605d624f54a0b366c72 test its known-transaction comparison comparison with 2 independently reviewed non-hub view(s), separating candidate or dead-end/control material from exact proof?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-026.html" data-doc="docs/data/requests/RQ-026.md" data-anchor="">RQ-026</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers enter the Receiving Vault after the 11:38:11 UTC connecting transaction and before cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-027.html" data-doc="docs/data/requests/RQ-027.md" data-anchor="">RQ-027</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded subject-involved activity does Nansen return for the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-028.html" data-doc="docs/data/requests/RQ-028.md" data-anchor="">RQ-028</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-029.html" data-doc="docs/data/requests/RQ-029.md" data-anchor="">RQ-029</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0x036cec1a199234fc02f72d29e596a09440825f1c in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-030.html" data-doc="docs/data/requests/RQ-030.md" data-anchor="">RQ-030</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-031.html" data-doc="docs/data/requests/RQ-031.md" data-anchor="">RQ-031</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xc66dfa84bc1b93df194bd964a41282da65d73c9a in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-032.html" data-doc="docs/data/requests/RQ-032.md" data-anchor="">RQ-032</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-033.html" data-doc="docs/data/requests/RQ-033.md" data-anchor="">RQ-033</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-034.html" data-doc="docs/data/requests/RQ-034.md" data-anchor="">RQ-034</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-035.html" data-doc="docs/data/requests/RQ-035.md" data-anchor="">RQ-035</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-036.html" data-doc="docs/data/requests/RQ-036.md" data-anchor="">RQ-036</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0x036cec1a199234fc02f72d29e596a09440825f1c in the route-development interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-037.html" data-doc="docs/data/requests/RQ-037.md" data-anchor="">RQ-037</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0x5f259d0b76665c337c6104145894f4d1d2758b8c in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-038.html" data-doc="docs/data/requests/RQ-038.md" data-anchor="">RQ-038</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0x5f259d0b76665c337c6104145894f4d1d2758b8c in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-039.html" data-doc="docs/data/requests/RQ-039.md" data-anchor="">RQ-039</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0x5f259d0b76665c337c6104145894f4d1d2758b8c in the previous-day comparison window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-040.html" data-doc="docs/data/requests/RQ-040.md" data-anchor="">RQ-040</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the following-day comparison window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-041.html" data-doc="docs/data/requests/RQ-041.md" data-anchor="">RQ-041</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-042.html" data-doc="docs/data/requests/RQ-042.md" data-anchor="">RQ-042</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-043.html" data-doc="docs/data/requests/RQ-043.md" data-anchor="">RQ-043</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-044.html" data-doc="docs/data/requests/RQ-044.md" data-anchor="">RQ-044</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>What bounded address-transaction activity exists for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-045.html" data-doc="docs/data/requests/RQ-045.md" data-anchor="">RQ-045</a></td>
+<td><code>profiler/address/transactions</code></td>
+<td>Does the BRCG wallet participate in Euler-window address transactions? Expected bounded no-match; BRCG is not Euler proof.</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-046.html" data-doc="docs/data/requests/RQ-046.md" data-anchor="">RQ-046</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0x5f259d0b76665c337c6104145894f4d1d2758b8c in the incident window (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-047.html" data-doc="docs/data/requests/RQ-047.md" data-anchor="">RQ-047</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0x036cec1a199234fc02f72d29e596a09440825f1c in the incident window (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-048.html" data-doc="docs/data/requests/RQ-048.md" data-anchor="">RQ-048</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0xb66cd966670d962c227b3eaba30a872dbfb995db in the incident window (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-049.html" data-doc="docs/data/requests/RQ-049.md" data-anchor="">RQ-049</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0xc66dfa84bc1b93df194bd964a41282da65d73c9a in the incident window (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-050.html" data-doc="docs/data/requests/RQ-050.md" data-anchor="">RQ-050</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the pre-breach interval (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-051.html" data-doc="docs/data/requests/RQ-051.md" data-anchor="">RQ-051</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0xb66cd966670d962c227b3eaba30a872dbfb995db in the interval from the connecting transaction to the cutoff (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-052.html" data-doc="docs/data/requests/RQ-052.md" data-anchor="">RQ-052</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0x5f259d0b76665c337c6104145894f4d1d2758b8c in the previous-day comparison window (source Combined)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-053.html" data-doc="docs/data/requests/RQ-053.md" data-anchor="">RQ-053</a></td>
+<td><code>profiler/address/counterparties</code></td>
+<td>Which wallet-grouped counterparties interact with 0xb66cd966670d962c227b3eaba30a872dbfb995db in the incident window (source ETH)?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-054.html" data-doc="docs/data/requests/RQ-054.md" data-anchor="">RQ-054</a></td>
+<td><code>tgm/transfers</code></td>
+<td>What DAI transfers does Nansen return for the accepted First Breach hash?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-055.html" data-doc="docs/data/requests/RQ-055.md" data-anchor="">RQ-055</a></td>
+<td><code>tgm/transfers</code></td>
+<td>What DAI transfers does Nansen return for the accepted Main / Second Breach hash?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-056.html" data-doc="docs/data/requests/RQ-056.md" data-anchor="">RQ-056</a></td>
+<td><code>tgm/transfers</code></td>
+<td>What DAI transfers does Nansen return for the accepted 11:38:11 UTC convergence hash?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-057.html" data-doc="docs/data/requests/RQ-057.md" data-anchor="">RQ-057</a></td>
+<td><code>tgm/transfers</code></td>
+<td>What DAI transfers does Nansen return for the accepted secondary context hash?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-058.html" data-doc="docs/data/requests/RQ-058.md" data-anchor="">RQ-058</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers in the incident window fall in the approximately 8.88M amount band?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-059.html" data-doc="docs/data/requests/RQ-059.md" data-anchor="">RQ-059</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which approximately 8.88M DAI transfers enter the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-060.html" data-doc="docs/data/requests/RQ-060.md" data-anchor="">RQ-060</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which approximately 8.88M DAI transfers leave the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-061.html" data-doc="docs/data/requests/RQ-061.md" data-anchor="">RQ-061</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which tiny DAI transfers exist in the incident window as a supporting amount-band control?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-062.html" data-doc="docs/data/requests/RQ-062.md" data-anchor="">RQ-062</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does the DAI to_address view for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the previous-day comparison window return a bounded no-match or off-path haystack?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-063.html" data-doc="docs/data/requests/RQ-063.md" data-anchor="">RQ-063</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does the DAI to_address view for 0xb66cd966670d962c227b3eaba30a872dbfb995db in the following-day comparison window return a bounded no-match or off-path haystack?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-064.html" data-doc="docs/data/requests/RQ-064.md" data-anchor="">RQ-064</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does the DAI from_address view for 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the previous-day comparison window return a bounded no-match or off-path haystack?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-065.html" data-doc="docs/data/requests/RQ-065.md" data-anchor="">RQ-065</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Does the DAI to_address view for 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the following-day comparison window return a bounded no-match or off-path haystack?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-066.html" data-doc="docs/data/requests/RQ-066.md" data-anchor="">RQ-066</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers enter the secondary receiver in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-067.html" data-doc="docs/data/requests/RQ-067.md" data-anchor="">RQ-067</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers leave the secondary receiver in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-068.html" data-doc="docs/data/requests/RQ-068.md" data-anchor="">RQ-068</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match from_address 0x5f259d0b76665c337c6104145894f4d1d2758b8c in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-069.html" data-doc="docs/data/requests/RQ-069.md" data-anchor="">RQ-069</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match to_address 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-070.html" data-doc="docs/data/requests/RQ-070.md" data-anchor="">RQ-070</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match from_address 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-071.html" data-doc="docs/data/requests/RQ-071.md" data-anchor="">RQ-071</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match to_address 0xebc29199c817dc47ba12e3f86102564d640cbf99 in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-072.html" data-doc="docs/data/requests/RQ-072.md" data-anchor="">RQ-072</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match to_address 0xb2698c2d99ad2c302a95a8db26b08d17a77cedd4 in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-073.html" data-doc="docs/data/requests/RQ-073.md" data-anchor="">RQ-073</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match to_address 0x036cec1a199234fc02f72d29e596a09440825f1c in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-074.html" data-doc="docs/data/requests/RQ-074.md" data-anchor="">RQ-074</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match from_address 0x036cec1a199234fc02f72d29e596a09440825f1c in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-075.html" data-doc="docs/data/requests/RQ-075.md" data-anchor="">RQ-075</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match from_address 0xb66cd966670d962c227b3eaba30a872dbfb995db in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-076.html" data-doc="docs/data/requests/RQ-076.md" data-anchor="">RQ-076</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match to_address 0xb66cd966670d962c227b3eaba30a872dbfb995db in the pre-breach interval?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-077.html" data-doc="docs/data/requests/RQ-077.md" data-anchor="">RQ-077</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which DAI transfers match from_address 0xb2698c2d99ad2c302a95a8db26b08d17a77cedd4 in the interval from the connecting transaction to the cutoff?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-078.html" data-doc="docs/data/requests/RQ-078.md" data-anchor="">RQ-078</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which USDC transfers enter the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-079.html" data-doc="docs/data/requests/RQ-079.md" data-anchor="">RQ-079</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which USDC transfers leave the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-080.html" data-doc="docs/data/requests/RQ-080.md" data-anchor="">RQ-080</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which USDC transfers enter the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-081.html" data-doc="docs/data/requests/RQ-081.md" data-anchor="">RQ-081</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which USDC transfers leave the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-082.html" data-doc="docs/data/requests/RQ-082.md" data-anchor="">RQ-082</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which USDC transfers enter the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-083.html" data-doc="docs/data/requests/RQ-083.md" data-anchor="">RQ-083</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which USDC transfers leave the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-084.html" data-doc="docs/data/requests/RQ-084.md" data-anchor="">RQ-084</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which WBTC transfers enter the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-085.html" data-doc="docs/data/requests/RQ-085.md" data-anchor="">RQ-085</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which WBTC transfers leave the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-086.html" data-doc="docs/data/requests/RQ-086.md" data-anchor="">RQ-086</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which WBTC transfers enter the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-087.html" data-doc="docs/data/requests/RQ-087.md" data-anchor="">RQ-087</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which WBTC transfers leave the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-088.html" data-doc="docs/data/requests/RQ-088.md" data-anchor="">RQ-088</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which WBTC transfers enter the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-089.html" data-doc="docs/data/requests/RQ-089.md" data-anchor="">RQ-089</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which WBTC transfers leave the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-090.html" data-doc="docs/data/requests/RQ-090.md" data-anchor="">RQ-090</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which stETH transfers enter the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-091.html" data-doc="docs/data/requests/RQ-091.md" data-anchor="">RQ-091</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which stETH transfers leave the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-092.html" data-doc="docs/data/requests/RQ-092.md" data-anchor="">RQ-092</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which stETH transfers enter the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-093.html" data-doc="docs/data/requests/RQ-093.md" data-anchor="">RQ-093</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which stETH transfers leave the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-094.html" data-doc="docs/data/requests/RQ-094.md" data-anchor="">RQ-094</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which stETH transfers enter the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-095.html" data-doc="docs/data/requests/RQ-095.md" data-anchor="">RQ-095</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which stETH transfers leave the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-096.html" data-doc="docs/data/requests/RQ-096.md" data-anchor="">RQ-096</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which wstETH transfers enter the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-097.html" data-doc="docs/data/requests/RQ-097.md" data-anchor="">RQ-097</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which wstETH transfers leave the First Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-098.html" data-doc="docs/data/requests/RQ-098.md" data-anchor="">RQ-098</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which wstETH transfers enter the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-099.html" data-doc="docs/data/requests/RQ-099.md" data-anchor="">RQ-099</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which wstETH transfers leave the Extraction Engine in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-100.html" data-doc="docs/data/requests/RQ-100.md" data-anchor="">RQ-100</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which wstETH transfers enter the Receiving Vault in the incident window?</td>
+</tr>
+<tr>
+<td><a href="requests/RQ-101.html" data-doc="docs/data/requests/RQ-101.md" data-anchor="">RQ-101</a></td>
+<td><code>tgm/transfers</code></td>
+<td>Which wstETH transfers leave the Receiving Vault in the incident window?</td>
+</tr>
+</tbody>
+</table>
+<p>Download the <a href="requests.json" data-asset="docs/data/requests.json">JSON register</a> or <a href="requests.csv" data-asset="docs/data/requests.csv">CSV register</a>.</p>
+</article><nav id="toc" class="toc" aria-label="On this page"></nav></div></main><script src="../../assets/library.js"></script><script src="../../assets/site.js"></script></body></html>

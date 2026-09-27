@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A COPY_CATALOG.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "key",
+          "text",
+          "fallback",
+          "speaker",
+          "line_class",
+          "intention",
+          "performance_fallback",
+          "claim_class",
+          "requires",
+          "evidence_ids",
+          "surfaces",
+          "tokens",
+          "optional",
+          "source_refs"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fallback": {
+            "type": "string",
+            "minLength": 1
+          },
+          "speaker": {
+            "type": "string",
+            "enum": [
+              "ROOK",
+              "ARCHIVIST",
+              "SYSTEM"
+            ]
+          },
+          "line_class": {
+            "type": "string",
+            "enum": [
+              "CORE",
+              "METHOD",
+              "CASE",
+              "OPTIONAL_BANTER",
+              "REACTION",
+              "DEAD_END",
+              "SYSTEM"
+            ]
+          },
+          "intention": {
+            "type": "string",
+            "enum": [
+              "IDLE",
+              "SPEAK",
+              "LISTEN",
+              "EXPLAIN",
+              "PRESENT",
+              "SKEPTICAL",
+              "CONFUSED",
+              "PROUD",
+              "IRRITATED",
+              "FRUSTRATED",
+              "AMUSED",
+              "ATTENTIVE"
+            ]
+          },
+          "performance_fallback": {
+            "const": "TEXT_ONLY"
+          },
+          "claim_class": {
+            "type": "string",
+            "enum": [
+              "FICTIONAL_FRAMING",
+              "METHOD_ONLY",
+              "BOUNDED_CONTEXT",
+              "SCOPED_NEGATIVE",
+              "ACCEPTED_EXACT",
+              "BOUNDARY_ONLY"
+            ]
+          },
+          "requires": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "ACCESS_EARNED",
+                "CANDIDATE_DISCOVERED",
+                "TWO_CANDIDATES_SELECTED",
+                "EXACT_EARLY_DISCOVERED",
+                "EXACT_MAIN_DISCOVERED",
+                "EXACT_CONVERGENCE_VERIFIED",
+                "CASE_COMPLETE",
+                "NEGATIVE_SCOPE_ACCEPTED",
+                "RESULT_CLASSIFIED",
+                "RESTORE_VALID",
+                "QUERY_REPLAY_AVAILABLE",
+                "SLOT.AMOUNT_FILED",
+                "SLOT.RECEIVER_FILED",
+                "SLOT.LINK_FILED",
+                "PHASE.START",
+                "PHASE.TICKET_PULLED",
+                "PHASE.REQUEST_COMPLETED",
+                "PHASE.REQUEST_STAMPED",
+                "PHASE.REQUEST_IN_TUBE",
+                "PHASE.TUBE_CLOSED",
+                "PHASE.DISPATCHED",
+                "PHASE.CANISTER_OPEN",
+                "PHASE.STRIP_TAKEN",
+                "PHASE.TERMINAL_UNLOCKED",
+                "PHASE.COMPLETE"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "EXACT_EARLY_NET",
+                "EXACT_MAIN_RECEIVER",
+                "EXACT_CONVERGENCE",
+                "STATE_EARLY_ENGINE",
+                "CONTEXT_FIRST_ENGINE_ACTIVITY",
+                "CONTEXT_SECONDARY"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "surfaces": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "tokens": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "QUESTION_LENS",
+                "SUBJECT_ROLE",
+                "NARRATIVE_PHASE",
+                "RESULT_COUNT",
+                "PREVIOUS_COUNT",
+                "FILTER_EFFECT",
+                "EVIDENCE_GRADE",
+                "COVERAGE_SCOPE",
+                "CANDIDATE_ROLE",
+                "PUBLIC_CALL_ID",
+                "EXACT_TIME_IF_ACCEPTED"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "optional": {
+            "type": "boolean"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1
+    }
+  }
+}

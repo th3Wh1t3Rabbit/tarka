@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A COPY_COVERAGE_REPORT.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "content_sha256",
+    "mappings",
+    "late_bound",
+    "excluded",
+    "runtime_integrated"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "content_sha256": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "surface",
+          "copy_keys",
+          "status"
+        ],
+        "properties": {
+          "surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "copy_keys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "status": {
+            "const": "MAPPED_ADDITIVE_CANDIDATE"
+          }
+        }
+      }
+    },
+    "late_bound": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "reason",
+          "fallback_keys",
+          "owner"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fallback_keys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          },
+          "owner": {
+            "const": "MAIN_CONTROLLER"
+          }
+        }
+      }
+    },
+    "excluded": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "surface",
+          "reason"
+        ],
+        "properties": {
+          "surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "runtime_integrated": {
+      "const": false
+    }
+  }
+}

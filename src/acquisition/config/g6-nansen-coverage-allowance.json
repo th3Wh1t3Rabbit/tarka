@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "allowanceId": "G6-EULER-COVERAGE",
+  "leadAuthorizationId": "LEAD-G6-EULER-COVERAGE-001",
+  "approvedCandidateIds": ["G6_ACCOUNT_PREFLIGHT", "EULER_2023_G6_COVERAGE"],
+  "approvedEndpoints": ["/api/v1/account", "/api/v1/profiler/address/transactions", "/api/v1/profiler/address/counterparties", "/api/v1/transaction-with-token-transfer-lookup", "/api/v1/tgm/token-information"],
+  "maximumRequests": 48,
+  "maximumProjectedCredits": 120,
+  "maximumPerEndpointCalls": {
+    "/api/v1/account": 1,
+    "/api/v1/profiler/address/transactions": 4,
+    "/api/v1/profiler/address/counterparties": 6,
+    "/api/v1/transaction-with-token-transfer-lookup": 4,
+    "/api/v1/tgm/token-information": 6
+  },
+  "validFromUtc": "2026-09-15T00:00:00Z",
+  "validUntilUtc": "2026-09-20T06:00:00Z",
+  "softTarget": { "httpAttempts": 20, "credits": 50 },
+  "hardMaximum": { "httpAttempts": 48, "credits": 120 },
+  "concurrency": 1,
+  "minimumInterRequestDelayMs": 1000,
+  "reuseRequired": true,
+  "namedQuestions": ["Q1_FIRST_ENGINE_ACTIVITY", "Q2_POINT_IN_TIME_ANCHORS", "Q3_PROTOCOL_METADATA", "Q4_RELATIONSHIP_GEOMETRY"],
+  "allowedEndpointFamilies": ["account", "profiler/address/transactions", "profiler/address/counterparties", "transaction-with-token-transfer-lookup", "tgm/token-information"],
+  "prohibited": ["address labels", "Smart Money", "agents", "leaderboards", "related wallets", "portfolio", "trade execution", "historical balance retries", "Alchemy", "additional incident search"]
+}

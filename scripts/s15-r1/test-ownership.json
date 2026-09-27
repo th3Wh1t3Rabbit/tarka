@@ -1,0 +1,1408 @@
+{
+  "schemaVersion": "s15-r1-test-ownership.v1",
+  "canonicalCommands": {
+    "unitAcquisition": "npm test",
+    "e2e": "npm run test:e2e",
+    "historicalUnitAcquisition": "npm run test:historical",
+    "historicalE2e": "npm run test:e2e:historical"
+  },
+  "minimumCurrentCounts": {
+    "unitAcquisition": 38,
+    "e2e": 30
+  },
+  "protectedCurrentPaths": [
+    "tests/e2e/art-pack-integrity.spec.ts",
+    "tests/e2e/s12-p4-launch.spec.ts",
+    "tests/e2e/s14-r1-runtime-consumers.spec.ts",
+    "tests/e2e/s14-r2-globe.spec.ts",
+    "tests/e2e/s14-r3-background.spec.ts",
+    "tests/e2e/s14-r4-source-slices.spec.ts",
+    "tests/e2e/s14-r5-repeat-pickup.spec.ts",
+    "tests/e2e/s14-r55-production.spec.ts",
+    "tests/e2e/s14-r6-a1-pickup.spec.ts",
+    "tests/e2e/s15-background-music.spec.ts",
+    "tests/e2e/s15-entry-capture.spec.ts",
+    "tests/e2e/s15-r1-production-journeys.spec.ts",
+    "tests/e2e/s15-r10-final-closure.spec.ts",
+    "tests/e2e/s15-r2-principal-feedback.spec.ts",
+    "tests/e2e/s15-r3-runtime-closure.spec.ts",
+    "tests/e2e/s15-r4-room-presentation.spec.ts",
+    "tests/e2e/s15-r5-truthful-closure.spec.ts",
+    "tests/e2e/s15-r6-physical-pose-closure.spec.ts",
+    "tests/e2e/s15-r7-opening-dialogue-form-terminal.spec.ts",
+    "tests/e2e/s15-r8-visual-mouth-ownership.spec.ts",
+    "tests/e2e/s15-r9-reconciliation.spec.ts",
+    "tests/e2e/s16-guided-terminal.spec.ts",
+    "tests/e2e/s17-p1-r1-closeout.spec.ts",
+    "tests/e2e/s17-p1-audio-wrap.spec.ts",
+    "tests/e2e/s17-p1-final-room.spec.ts",
+    "tests/e2e/s17-p2-r2-routing-terminal.spec.ts",
+    "tests/e2e/character-sprite-continuity.spec.ts",
+    "tests/e2e/principal-drawer-corrections.spec.ts",
+    "tests/e2e/s17-p2-r3-runtime-transcript.spec.ts",
+    "tests/e2e/script-routing-regressions.spec.ts",
+    "tests/unit/art-pack-integrity.test.ts",
+    "tests/unit/domain.test.ts",
+    "tests/unit/pacing.test.ts",
+    "tests/unit/s12-p3-r55-registry.test.ts",
+    "tests/unit/s12-p4-launch.test.ts",
+    "tests/unit/s12-p4-r1-credits.test.ts",
+    "tests/unit/s13-corpus-integration.test.ts",
+    "tests/unit/s14-r1-runtime-consumers.test.ts",
+    "tests/unit/s14-r2-executable-consumer-state-matrix.test.ts",
+    "tests/unit/s14-r3-real-route-state.test.ts",
+    "tests/unit/s14-r55-production.test.ts",
+    "tests/unit/s14-r6-actual-action-matrix.test.ts",
+    "tests/unit/s15-background-music.test.ts",
+    "tests/unit/s15-r10-final-closure.test.ts",
+    "tests/unit/s15-r2-principal-feedback.test.ts",
+    "tests/unit/s15-r3-runtime-closure.test.ts",
+    "tests/unit/s15-r4-room-presentation.test.ts",
+    "tests/unit/s15-r5-truthful-closure.test.ts",
+    "tests/unit/s15-r6-physical-pose-closure.test.ts",
+    "tests/unit/s15-r7-opening-dialogue-form-terminal.test.ts",
+    "tests/unit/s15-r8-visual-mouth-policy.test.ts",
+    "tests/unit/s15-r9-reconciliation.test.ts",
+    "tests/unit/s16-guided-terminal.test.ts",
+    "tests/unit/s16-terminal-audio.test.ts",
+    "tests/unit/s17-p1-r1-closeout.test.ts",
+    "tests/unit/s17-p1-r1-speech-timers.test.ts",
+    "tests/unit/s17-p1-final-integration.test.ts",
+    "tests/unit/s17-p2-r1-animation-review.test.ts",
+    "tests/unit/s17-p2-r2-production-dialogue-audit.test.ts",
+    "tests/unit/s17-p2-r2-routing-matrix.test.ts",
+    "tests/unit/principal-drawer-corrections.test.ts",
+    "tests/unit/s17-p2-r2-repetition-guard.test.ts",
+    "tests/unit/s17-p2-r3-full-action-matrix.test.ts",
+    "tests/unit/s17-p2-r3-runtime-sanitation.test.ts",
+    "tests/unit/s17-p2-r3-semantic-mutants.test.ts",
+    "tests/unit/s17-p2-r3-terminal-prototype-adapter.test.ts",
+    "tests/unit/s17-p2-r3-transcript-authority.test.ts",
+    "tests/unit/scenario.test.ts",
+    "tests/unit/solver-evaluate.test.ts"
+  ],
+  "currentSourceOwners": [
+    {
+      "owner": "src/app guided terminal and src/investigation/s16",
+      "tests": [
+        "tests/unit/s16-guided-terminal.test.ts",
+        "tests/e2e/s16-guided-terminal.spec.ts",
+        "tests/unit/s17-p2-r3-terminal-prototype-adapter.test.ts"
+      ]
+    },
+    {
+      "owner": "src/adventure",
+      "tests": [
+        "tests/unit/domain.test.ts",
+        "tests/unit/s14-r6-actual-action-matrix.test.ts",
+        "tests/unit/s15-r2-principal-feedback.test.ts",
+        "tests/unit/s15-r6-physical-pose-closure.test.ts",
+        "tests/unit/s15-r7-opening-dialogue-form-terminal.test.ts",
+        "tests/unit/s15-r8-visual-mouth-policy.test.ts",
+        "tests/unit/s15-r9-reconciliation.test.ts",
+        "tests/unit/s17-p1-r1-closeout.test.ts",
+        "tests/unit/s17-p1-r1-speech-timers.test.ts",
+        "tests/unit/s17-p1-final-integration.test.ts",
+        "tests/unit/s17-p2-r1-animation-review.test.ts",
+        "tests/unit/s17-p2-r2-production-dialogue-audit.test.ts",
+        "tests/unit/s17-p2-r2-routing-matrix.test.ts",
+        "tests/e2e/s15-r2-principal-feedback.spec.ts",
+        "tests/e2e/s15-r6-physical-pose-closure.spec.ts",
+        "tests/e2e/s15-r7-opening-dialogue-form-terminal.spec.ts",
+        "tests/e2e/s15-r8-visual-mouth-ownership.spec.ts",
+        "tests/e2e/s15-r9-reconciliation.spec.ts",
+        "tests/e2e/s17-p1-r1-closeout.spec.ts",
+        "tests/e2e/s17-p1-audio-wrap.spec.ts",
+        "tests/e2e/s17-p1-final-room.spec.ts",
+        "tests/e2e/s17-p2-r2-routing-terminal.spec.ts",
+        "tests/e2e/s14-r1-runtime-consumers.spec.ts",
+        "tests/e2e/character-sprite-continuity.spec.ts",
+        "tests/e2e/principal-drawer-corrections.spec.ts",
+        "tests/e2e/s17-p2-r3-runtime-transcript.spec.ts",
+        "tests/e2e/script-routing-regressions.spec.ts",
+        "tests/unit/principal-drawer-corrections.test.ts",
+        "tests/unit/s17-p2-r2-repetition-guard.test.ts",
+        "tests/unit/s17-p2-r3-full-action-matrix.test.ts",
+        "tests/unit/s17-p2-r3-runtime-sanitation.test.ts",
+        "tests/unit/s17-p2-r3-semantic-mutants.test.ts",
+        "tests/unit/s17-p2-r3-transcript-authority.test.ts"
+      ]
+    },
+    {
+      "owner": "src/app launch/navigation/endings",
+      "tests": [
+        "tests/unit/s12-p4-launch.test.ts",
+        "tests/unit/s12-p4-r1-credits.test.ts",
+        "tests/unit/s15-r10-final-closure.test.ts",
+        "tests/e2e/s12-p4-launch.spec.ts",
+        "tests/e2e/s15-r1-production-journeys.spec.ts",
+        "tests/e2e/s15-r10-final-closure.spec.ts"
+      ]
+    },
+    {
+      "owner": "src/investigation",
+      "tests": [
+        "tests/unit/s13-corpus-integration.test.ts",
+        "tests/unit/solver-evaluate.test.ts",
+        "tests/e2e/s15-r1-production-journeys.spec.ts"
+      ]
+    },
+    {
+      "owner": "src/story/r55",
+      "tests": [
+        "tests/unit/s12-p3-r55-registry.test.ts",
+        "tests/unit/s14-r55-production.test.ts",
+        "tests/e2e/s14-r55-production.spec.ts"
+      ]
+    },
+    {
+      "owner": "production art",
+      "tests": [
+        "tests/unit/art-pack-integrity.test.ts",
+        "tests/e2e/art-pack-integrity.spec.ts"
+      ]
+    },
+    {
+      "owner": "production background music",
+      "tests": [
+        "tests/unit/s15-background-music.test.ts",
+        "tests/unit/s16-terminal-audio.test.ts",
+        "tests/e2e/s15-background-music.spec.ts",
+        "tests/e2e/s16-guided-terminal.spec.ts",
+        "tests/e2e/s15-r1-production-journeys.spec.ts"
+      ]
+    }
+  ],
+  "classifications": [
+    {
+      "path": "tests/acquisition/cli.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/evidence.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/g5-bybit-reserve.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/g5-closure.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/g6-durable-evidence.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/integrity.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/live-normalize.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/acquisition/runtime-config.test.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 EXCLUDED EFFECTS; frozen-runtime boundary",
+      "reason": "Historical provider-acquisition pipeline diagnostic; current production is frozen, keyless, and forbids acquisition/provider calls."
+    },
+    {
+      "path": "tests/e2e/art-pack-integrity.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/capture.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "legacy test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/cold-open.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "legacy test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/g5-hero.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g5-hero test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/g6p-a0.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a0 test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/g6p-a2p.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a2p test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/g6p-a2u.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a2u test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/g6p-capture.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-capture test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/nq5-r1-parity.spec.ts",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/e2e/s10-p1-cabinet-lock.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p1-cabinet-lock test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s10-p1-r1-closure.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p1-r1-closure test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s10-p2-control.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-control test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s10-p2-r1.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-r1 test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s10-p2-r2-event.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-r2-event test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s10-p3-r1-reentry.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p3-r1-reentry test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s10-p3-terminal.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p3-terminal test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s11-p1-visual.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-visual test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p1-r1-persistence.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r1-persistence test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p1-r1-production-tools.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r1-production-tools test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p1-r2-one-game.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r2-one-game test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p2-r3-closure.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2-r3-closure test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p2-r4-form-owner.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2-r4-form-owner test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p2c-surface.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2c-surface test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p3-r55-review.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p3-r55-review test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s12-p4-launch.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s13-corpus-integration.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s13-corpus-integration test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s14-r1-runtime-consumers.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s14-r2-globe.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s14-r3-background.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s14-r4-source-slices.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s14-r5-repeat-pickup.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s14-r55-production.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s14-r6-a1-pickup.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s15-background-music.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s15-entry-capture.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s15-r1-production-journeys.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/e2e/s15-r2-principal-feedback.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R2 PF1-001..PF1-057",
+      "reason": "Principal Playtest 1 feedback integration and Playtest 2 relaunch journey."
+    },
+    {
+      "path": "tests/e2e/s15-r3-runtime-closure.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R3 PF1 runtime closure",
+      "reason": "Ordinary production route coverage for document hold, speaker ownership, semantic motion, physical interaction, handoff, and persistent controls."
+    },
+    {
+      "path": "tests/e2e/s15-r4-room-presentation.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R4 PF2-001..PF2-060",
+      "reason": "Ordinary production route coverage for fixed composition, selected typography, point hold, drawer transitions, and flash-free frame retention."
+    },
+    {
+      "path": "tests/e2e/s2-fixes.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s2-fixes test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s2-prefix.repro.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s2-prefix test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s3-guard.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-guard test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s3-r1-authority.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-r1-authority test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s3-semantics.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-semantics test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s4-content.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s4-content test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s4-r1-display.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s4-r1-display test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s4-r2-surfaces.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s4-r2-surfaces test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s5-integration.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s5-integration test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s5-r1-single-explore.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s5-r1-single-explore test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s7-r2a-shell.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r2a-shell test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s7-r3-runtime.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r3-runtime test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s9-p1-flows.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-flows test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s9-p1-r2-seam.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r2-seam test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s9-p1-r3-seam.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r3-seam test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s9-p1-r4-completion.spec.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r4-completion test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/art-pack-integrity.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/domain.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/g5-compiler.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g5-compiler test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g5-domain.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g5-domain test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6-atomic-precision.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6-atomic-precision test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6-contract.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6-contract test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6p-a0.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a0 test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6p-a2p.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a2p test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6p-a2u-bootstrap-schema.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a2u-bootstrap-schema test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6p-a2u-cut.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a2u-cut test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/g6p-a2u.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "g6p-a2u test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/nq5-b1-executor.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b1-r1-remediation.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b1-r2-contracts.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b1-r3-r1-semantics.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b1-r3-r2-signed-flow.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b1-r3-resume.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b2-canary.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b3-frontier.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-b4-filtered.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-checkpoint-policy.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-p1-pilot.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-p2-breadth.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-p2-identity.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-p2-r1-remediation.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r1-catalog.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r1-official.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r1-offline.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r2-remediation.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r2-secret-patterns.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r3-checkpoint.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/nq5-r3-r1-frontier-policy.test.mjs",
+      "classification": "HISTORICAL_EXTERNAL_FIXTURE_DIAGNOSTIC",
+      "authority": "S15-R1 finding 1 and A",
+      "reason": "Historical supplier-package/checkpoint diagnostic whose archived transmission fixtures are not current production runtime inputs."
+    },
+    {
+      "path": "tests/unit/pacing.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/project-clock.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "legacy test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p1-cabinet-lock.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p1-cabinet-lock test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p2-dialogue.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-dialogue test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p2-intent.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-intent test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p2-r1-closure.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-r1-closure test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p2-r2-event.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p2-r2-event test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p3-r1-reentry.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p3-r1-reentry test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s10-p3-terminal-entry.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s10-p3-terminal-entry test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s11-p1-art-foundation.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-art-foundation test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s11-p1-r1-animation-cues.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-r1-animation-cues test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s11-p1-r1-background-detail.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-r1-background-detail test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s11-p1-r1-fit.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-r1-fit test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s11-p1-r1-layout-library.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-r1-layout-library test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s11-p1-r1-player-surface.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s11-p1-r1-player-surface test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-layout7-bind.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-layout7-bind test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p1-r1-live-timers.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r1-live-timers test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p1-r1-persistence.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r1-persistence test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p1-r1-placed-image.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r1-placed-image test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p1-r2-terminal-geometry.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r2-terminal-geometry test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p1-r2-timer-owner-harness.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-r2-timer-owner-harness test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p1-runtime-owners.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p1-runtime-owners test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2-r2-migration-look.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2-r2-migration-look test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2-r3-look-matrix.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2-r3-look-matrix test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2-r3-network.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2-r3-network test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2-r4-form-owner.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2-r4-form-owner test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2a-layout-binding.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2a-layout-binding test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2b-spatial.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2b-spatial test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p2c-completion.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s12-p2c-completion test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s12-p3-r55-registry.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s12-p4-launch.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s12-p4-r1-credits.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s13-corpus-integration.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s14-r1-runtime-consumers.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s14-r2-executable-consumer-state-matrix.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s14-r3-real-route-state.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s14-r55-production.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s14-r6-actual-action-matrix.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s15-background-music.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/s15-r2-principal-feedback.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R2 PF1-001..PF1-057",
+      "reason": "Principal Playtest 1 feedback delta, pacing, animation, labels, and state binding."
+    },
+    {
+      "path": "tests/unit/s15-r3-runtime-closure.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R3 PF1-001..PF1-057",
+      "reason": "Explicit typed PF1 catalog and requirement-specific executable observations."
+    },
+    {
+      "path": "tests/unit/s15-r4-room-presentation.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R4 PF2-001..PF2-060",
+      "reason": "Executable room-presentation, compiler delivery, font identity, physical pose, and third-drawer binding observations."
+    },
+    {
+      "path": "tests/unit/s2-activity-corpus.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s2-activity-corpus test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s2-controller.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s2-controller test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s2-r1-measurement.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s2-r1-measurement test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s3-corpus-seam.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-corpus-seam test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s3-lane-b-contract.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-lane-b-contract test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s3-lane-b-query.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-lane-b-query test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s3-r1-authority.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s3-r1-authority test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s4-content.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s4-content test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s4-r1-remediation.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s4-r1-remediation test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s4-r2-surfaces.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s4-r2-surfaces test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s5-foundation.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s5-foundation test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s5-r1-identity.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s5-r1-identity test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-r1-blueprint.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-r1-blueprint test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-r1-origin-boundary.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-r1-origin-boundary test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-r1-res2-atomic.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-r1-res2-atomic test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-r1-res2-blueprint.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-r1-res2-blueprint test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-r1-res3-arrays.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-r1-res3-arrays test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-realization.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-realization test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s6-review.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s6-review test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s7-r1-mission-choreography.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r1-mission-choreography test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s7-r2a-interaction-performance.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r2a-interaction-performance test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s7-r3-exact-content-performance.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r3-exact-content-performance test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s7-r3-r2-review-integrity.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r3-r2-review-integrity test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s7-r3-r3-review-registry.test.mjs",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s7-r3-r3-review-registry test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s9-p1-fiction-boundary.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-fiction-boundary test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s9-p1-r1-corrections.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r1-corrections test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s9-p1-r2-reconciliation.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r2-reconciliation test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s9-p1-r3-toolbox-note.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r3-toolbox-note test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s9-p1-r4-note-completion.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-r4-note-completion test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/unit/s9-p1-structural.test.ts",
+      "classification": "HISTORICAL_SUPERSEDED",
+      "authority": "S15-R1 A; accepted S12-S15 production ownership",
+      "reason": "s9-p1-structural test contract is superseded by the authenticated S12-S15 production owners and current integrated test families; preserved for explicit historical diagnostics."
+    },
+    {
+      "path": "tests/e2e/s15-r5-truthful-closure.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R5 browser evidence ownership",
+      "reason": "Fresh contact, silent drawer, derived window, full-delivery clamp, and blocked-network observations."
+    },
+    {
+      "path": "tests/e2e/s15-r6-physical-pose-closure.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R6 R6-05 browser evidence ownership",
+      "reason": "Current pointer, keyboard, touch, sprite-cue, contact, prop-owner, and network observations."
+    },
+    {
+      "path": "tests/e2e/s15-r7-opening-dialogue-form-terminal.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R7 R7-01 through R7-07 browser evidence ownership",
+      "reason": "Current frame-zero blackout, speaker-turn mouth, staged form, visible-paper, terminal-power, semantic receipt, and blocked-network observations."
+    },
+    {
+      "path": "tests/e2e/s15-r8-visual-mouth-ownership.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R8 R8-01 through R8-08 browser evidence ownership",
+      "reason": "Actual frame-index and requested/rendered-source evidence for document, pointing, ordinary talk, transitions, waits, and final dismissal."
+    },
+    {
+      "path": "tests/e2e/s15-r9-reconciliation.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R9 R9-B01 through R9-B14 browser reconciliation ownership",
+      "reason": "Actual opening-paper, globe schedule, terminal power, neutral reach, facing, pixel-source, control, and network observations."
+    },
+    {
+      "path": "tests/e2e/s15-r10-final-closure.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R10 final S15 closure and S16 readiness",
+      "reason": "Current final globe, drawer, transition, animation-index, ending, and readiness observations inherited by S16."
+    },
+    {
+      "path": "tests/e2e/s16-guided-terminal.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S16 through S16-R3 focused and canonical browser ownership",
+      "reason": "Current pre-file, guided query, Explore, Source, Ledger, proof, corrected record actions/body flow, cosmetic CRT/degauss, accessibility, viewport, journey, and blocked-network observations."
+    },
+    {
+      "path": "tests/e2e/s17-p1-r1-closeout.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P1-R1 correction contract and Principal issue pass",
+      "reason": "Current Full/Typed viewport, blocked-reach/facing/reprimand, form handoff, TALK approach, terminal reply, exact globe exception, final-line BRCG, and browser-writer migration observations."
+    },
+    {
+      "path": "tests/unit/s15-r5-truthful-closure.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R5 R5-01 through R5-06",
+      "reason": "Current truthful contact, relational window, full-delivery clamp, evidence, and export closure."
+    },
+    {
+      "path": "tests/unit/s15-r6-physical-pose-closure.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R6 R6-01 through R6-06",
+      "reason": "Current executable pose owner, pickup-order, drawer-loot, case-file, and staged form-exchange closure."
+    },
+    {
+      "path": "tests/unit/s15-r7-opening-dialogue-form-terminal.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R7 R7-01 through R7-06",
+      "reason": "Current opening lock, speaker-turn mouth owner, interleaved form sequence, paper overlay, terminal authorization, and truthful receipt closure."
+    },
+    {
+      "path": "tests/unit/s15-r8-visual-mouth-policy.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R8 R8-01 through R8-05",
+      "reason": "Single rendered animation policy for talk-capable poses, speaker ownership, lifecycle identities, and ordinary talk continuity."
+    },
+    {
+      "path": "tests/unit/s15-r9-reconciliation.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R9 exact reconciliation unit gate",
+      "reason": "Fifty exact globe, terminal, typed route-animation, facing, complete-frame inventory, authority hash, and production-route matrix checks."
+    },
+    {
+      "path": "tests/unit/s15-r10-final-closure.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R10 final S15 closure and S16 readiness",
+      "reason": "Current final S15 closure, production binding, and S16 entry contract inherited by S16."
+    },
+    {
+      "path": "tests/unit/s16-guided-terminal.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S16 through S16-R3 typed contract and exhaustive command ownership",
+      "reason": "Current accepted count funnels, source-bound legacy persistence, screen states, section roles, all Explore questions and filters, provider-free derivation, and exhaustive reducer-command presentation ownership."
+    },
+    {
+      "path": "tests/unit/s16-terminal-audio.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S16-R3 shared audio-clock and pending terminal effect lifecycle ownership",
+      "reason": "Current loop-wrap alignment, early/late scheduling, manual collision, post-await lifecycle invalidation, fallback callback epochs, denied fallback, cancellation, and single-voice behavior."
+    },
+    {
+      "path": "tests/unit/s17-p1-r1-closeout.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P1-R1 correction contract and Principal issue pass",
+      "reason": "Current blocked target-facing, form ownership, exact script deltas, interaction copy, dialogue continuity, performance cue, and terminal-anchor observations."
+    },
+    {
+      "path": "tests/unit/s17-p1-r1-speech-timers.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P1-R1 Full/Typed speech policy",
+      "reason": "Current display preference, virtual-clock reveal, readable dwell, authored beat, exact exception, stale timer, mode-switch, and physical-hold observations."
+    },
+    {
+      "path": "tests/e2e/s17-p1-audio-wrap.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P1 accepted terminal audio lifecycle",
+      "reason": "Inherited browser ownership for loop-wrap overlap, manual degauss isolation, and terminal audio lifecycle behavior retained by R3."
+    },
+    {
+      "path": "tests/e2e/s17-p1-final-room.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P1 accepted final-room integration",
+      "reason": "Inherited browser ownership for the final room interaction and terminal integration behavior retained by R3."
+    },
+    {
+      "path": "tests/e2e/s17-p2-r2-routing-terminal.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R2 reviewed routing and terminal closeout",
+      "reason": "Inherited browser ownership for reviewed R2 script routing, repetition guards, and terminal presentation retained by R3."
+    },
+    {
+      "path": "tests/unit/s17-p1-final-integration.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P1 accepted final-room integration",
+      "reason": "Inherited unit ownership for the accepted final terminal script and room integration contract retained by R3."
+    },
+    {
+      "path": "tests/unit/s17-p2-r2-production-dialogue-audit.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R2 reviewed dialogue audit",
+      "reason": "Inherited unit ownership for production dialogue corpus auditing and duplicate detection retained by R3."
+    },
+    {
+      "path": "tests/unit/s17-p2-r2-routing-matrix.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R2 reviewed action-routing matrix",
+      "reason": "Inherited unit ownership for reviewed R2 action-route precedence and special response coverage retained by R3."
+    },
+    {
+      "path": "tests/e2e/character-sprite-continuity.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 sprite continuity correction contract",
+      "reason": "Current browser ownership for cached image decode, speaker handoff continuity, walk-frame recovery, and the deterministic camera-aside regression."
+    },
+    {
+      "path": "tests/e2e/principal-drawer-corrections.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 retained Principal drawer corrections",
+      "reason": "Current browser ownership for drawer-specific approach geometry, open hotspot placement, retained contents, and interleaved extraction choreography."
+    },
+    {
+      "path": "tests/e2e/s17-p2-r3-runtime-transcript.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 runtime transcript authority contract",
+      "reason": "Current browser transcript ownership for opening, signed-form, post-authorization, terminal-use, and duplicate-line suppression routes."
+    },
+    {
+      "path": "tests/e2e/script-routing-regressions.spec.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 complete action-routing matrix",
+      "reason": "Current browser ownership for selected-item USE and GIVE precedence, truthful no-effect routing, and prop-specific dialogue resolution."
+    },
+    {
+      "path": "tests/unit/principal-drawer-corrections.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 retained Principal drawer corrections",
+      "reason": "Current unit ownership for second and bottom drawer identity, persistent contents, approach radii, and extraction beat order."
+    },
+    {
+      "path": "tests/unit/s17-p2-r1-animation-review.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "Principal-authorized S17-P2 isolated animation review studio",
+      "reason": "Current ownership for the latest-script review fork, complete current-game baseline, pose-preserving talk controls, per-character timelines, and save/export isolation from live gameplay."
+    },
+    {
+      "path": "tests/unit/s17-p2-r2-repetition-guard.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 repetition root-cause closure",
+      "reason": "Current unit ownership for exact consecutive dialogue duplicate detection across authored sequences and derived runtime queues."
+    },
+    {
+      "path": "tests/unit/s17-p2-r3-full-action-matrix.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 complete action-routing matrix",
+      "reason": "Current exhaustive unit matrix for object and inventory USE, GIVE, LOOK, TALK, OPEN, CLOSE, PICK UP, and blocked-action precedence."
+    },
+    {
+      "path": "tests/unit/s17-p2-r3-runtime-sanitation.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 MVP state sanitation policy",
+      "reason": "Current unit ownership for clearing superseded hunch state and preserving accepted terminal, save, and case progress across legacy reloads."
+    },
+    {
+      "path": "tests/unit/s17-p2-r3-semantic-mutants.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 semantic mutant test plan",
+      "reason": "Current negative-control ownership proving transcript, routing, drawer, terminal, and removed-MVP-flow assertions fail under targeted mutations."
+    },
+    {
+      "path": "tests/unit/s17-p2-r3-terminal-prototype-adapter.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 exact v0.13 presentation adapter",
+      "reason": "Current unit ownership for the narrow production-state adapter that feeds approved prototype labels, rows, paging, source, and detail surfaces."
+    },
+    {
+      "path": "tests/unit/s17-p2-r3-transcript-authority.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S17-P2-R3 runtime transcript authority contract",
+      "reason": "Current unit ownership for authoritative dialogue queue provenance, active sequence identity, exact post-authorization fallback, and duplicate guards."
+    },
+    {
+      "path": "tests/unit/scenario.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    },
+    {
+      "path": "tests/unit/solver-evaluate.test.ts",
+      "classification": "CURRENT_PRODUCTION_REQUIRED",
+      "authority": "S15-R1 A/E",
+      "reason": "Current production owner coverage required by the S15-R1 canonical qualification gate."
+    }
+  ]
+}

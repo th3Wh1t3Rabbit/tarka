@@ -1,0 +1,19 @@
+{
+  "id": "DIRECT_ACTION_BUTTON_AUDIT",
+  "controls": [
+    { "id": "OPEN_CASE_TERMINAL", "disposition": "SINGLE_INTENT_REQUEST_TERMINAL_ENTRY" },
+    { "id": "WORLD_USE_NANSEN_TERMINAL", "disposition": "SINGLE_INTENT_PROXIMITY_USE" },
+    { "id": "PLAY_OPTIONAL_RETURN_TAG", "disposition": "UNAVAILABLE_WHILE_PENDING_OR_QUIESCENT" },
+    { "id": "METHOD_HINT", "disposition": "UNAVAILABLE_WHILE_PENDING_OR_BLOCKING" },
+    { "id": "CASE_HINT", "disposition": "UNAVAILABLE_WHILE_PENDING_OR_BLOCKING" },
+    { "id": "DIRECT_HINT", "disposition": "UNAVAILABLE_WHILE_PENDING_OR_BLOCKING" },
+    { "id": "DIALOGUE_PRESENTATION", "disposition": "NON_COMMAND_SETTING" },
+    { "id": "TEXT_PACE", "disposition": "NON_COMMAND_SETTING" },
+    { "id": "HOTSPOT_CONTRAST", "disposition": "NON_COMMAND_SETTING" },
+    { "id": "EVIDENCE_DRAWER", "disposition": "NON_COMMAND_RECORD_UI" },
+    { "id": "REVIEW_JUMP", "disposition": "REVIEW_ONLY_RESET" },
+    { "id": "REVIEW_TALKING", "disposition": "REVIEW_ONLY" },
+    { "id": "REVIEW_RESET", "disposition": "REVIEW_ONLY_RESET" },
+    { "id": "REVIEW_HOTSPOTS", "disposition": "REVIEW_ONLY_SETTING" }
+  ]
+}

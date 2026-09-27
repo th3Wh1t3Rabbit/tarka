@@ -1,0 +1,3045 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "base_commit": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41",
+  "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "content_sha256": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+  "mappings": [
+    {
+      "surface": "accessibility.focus",
+      "copy_keys": [
+        "lane_a.accessibility.focus"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "accessibility.high_contrast",
+      "copy_keys": [
+        "lane_a.accessibility.high_contrast"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "accessibility.instant_text",
+      "copy_keys": [
+        "lane_a.accessibility.instant_text"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "accessibility.plain_list",
+      "copy_keys": [
+        "lane_a.accessibility.plain_list"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "accessibility.player_paced",
+      "copy_keys": [
+        "lane_a.accessibility.player_paced"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "accessibility.reduced_motion",
+      "copy_keys": [
+        "lane_a.accessibility.reduced_motion"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.CLOSE:record-canister",
+      "copy_keys": [
+        "lane_a.dead.alternate.8"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.OPEN:pneumatic-tube",
+      "copy_keys": [
+        "lane_a.dead.alternate.6"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.OPEN:request-dispenser",
+      "copy_keys": [
+        "lane_a.dead.alternate.3"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.OPEN:rotunda-exit",
+      "copy_keys": [
+        "lane_a.dead.alternate.10"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.PULL:dispatch-plunger",
+      "copy_keys": [
+        "lane_a.dead.alternate.7"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.PULL:historical-clock",
+      "copy_keys": [
+        "lane_a.dead.alternate.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.PULL:mr-index",
+      "copy_keys": [
+        "lane_a.dead.alternate.5"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.PULL:pen-stand",
+      "copy_keys": [
+        "lane_a.dead.alternate.4"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.PUSH:filing-drawers",
+      "copy_keys": [
+        "lane_a.dead.alternate.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "alternate.PUSH:nansen-terminal",
+      "copy_keys": [
+        "lane_a.dead.alternate.9"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "banter.archive_ace.arthur",
+      "copy_keys": [
+        "lane_a.banter.archive_ace.arthur"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "banter.archive_ace.rook",
+      "copy_keys": [
+        "lane_a.banter.archive_ace.rook"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "banter.mr_a.arthur",
+      "copy_keys": [
+        "lane_a.banter.mr_a.arthur"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "banter.mr_a.rook",
+      "copy_keys": [
+        "lane_a.banter.mr_a.rook"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.cannot_prove",
+      "copy_keys": [
+        "lane_a.candidate.cannot_prove"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.compare",
+      "copy_keys": [
+        "lane_a.candidate.compare"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.context",
+      "copy_keys": [
+        "lane_a.candidate.context"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.control",
+      "copy_keys": [
+        "lane_a.candidate.control"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.corroboration",
+      "copy_keys": [
+        "lane_a.candidate.corroboration"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.may_support",
+      "copy_keys": [
+        "lane_a.candidate.may_support"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.next_question",
+      "copy_keys": [
+        "lane_a.candidate.next_question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.pin",
+      "copy_keys": [
+        "lane_a.candidate.pin"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.pinned",
+      "copy_keys": [
+        "lane_a.candidate.pinned"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.repeat",
+      "copy_keys": [
+        "lane_a.candidate.repeat"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.save",
+      "copy_keys": [
+        "lane_a.candidate.save"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.saved",
+      "copy_keys": [
+        "lane_a.candidate.saved"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.source",
+      "copy_keys": [
+        "lane_a.candidate.source"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "candidate.why_matched",
+      "copy_keys": [
+        "lane_a.candidate.why_matched"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.ASSET_OUT.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.asset_out.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.ASSET_OUT.may_establish",
+      "copy_keys": [
+        "lane_a.card.asset_out.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.ASSET_OUT.next",
+      "copy_keys": [
+        "lane_a.card.asset_out.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.ASSET_OUT.question",
+      "copy_keys": [
+        "lane_a.card.asset_out.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.ASSET_OUT.why",
+      "copy_keys": [
+        "lane_a.card.asset_out.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.COMPARE_ROUTES.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.compare_routes.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.COMPARE_ROUTES.may_establish",
+      "copy_keys": [
+        "lane_a.card.compare_routes.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.COMPARE_ROUTES.next",
+      "copy_keys": [
+        "lane_a.card.compare_routes.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.COMPARE_ROUTES.question",
+      "copy_keys": [
+        "lane_a.card.compare_routes.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.COMPARE_ROUTES.why",
+      "copy_keys": [
+        "lane_a.card.compare_routes.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.EXACT_RECEIPT.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.exact_receipt.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.EXACT_RECEIPT.may_establish",
+      "copy_keys": [
+        "lane_a.card.exact_receipt.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.EXACT_RECEIPT.next",
+      "copy_keys": [
+        "lane_a.card.exact_receipt.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.EXACT_RECEIPT.question",
+      "copy_keys": [
+        "lane_a.card.exact_receipt.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.EXACT_RECEIPT.why",
+      "copy_keys": [
+        "lane_a.card.exact_receipt.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.FOLLOW_FORWARD.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.follow_forward.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.FOLLOW_FORWARD.may_establish",
+      "copy_keys": [
+        "lane_a.card.follow_forward.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.FOLLOW_FORWARD.next",
+      "copy_keys": [
+        "lane_a.card.follow_forward.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.FOLLOW_FORWARD.question",
+      "copy_keys": [
+        "lane_a.card.follow_forward.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.FOLLOW_FORWARD.why",
+      "copy_keys": [
+        "lane_a.card.follow_forward.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.HIGH_VALUE.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.high_value.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.HIGH_VALUE.may_establish",
+      "copy_keys": [
+        "lane_a.card.high_value.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.HIGH_VALUE.next",
+      "copy_keys": [
+        "lane_a.card.high_value.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.HIGH_VALUE.question",
+      "copy_keys": [
+        "lane_a.card.high_value.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.HIGH_VALUE.why",
+      "copy_keys": [
+        "lane_a.card.high_value.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INCIDENT.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.incident.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INCIDENT.may_establish",
+      "copy_keys": [
+        "lane_a.card.incident.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INCIDENT.next",
+      "copy_keys": [
+        "lane_a.card.incident.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INCIDENT.question",
+      "copy_keys": [
+        "lane_a.card.incident.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INCIDENT.why",
+      "copy_keys": [
+        "lane_a.card.incident.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INTERACTIONS.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.interactions.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INTERACTIONS.may_establish",
+      "copy_keys": [
+        "lane_a.card.interactions.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INTERACTIONS.next",
+      "copy_keys": [
+        "lane_a.card.interactions.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INTERACTIONS.question",
+      "copy_keys": [
+        "lane_a.card.interactions.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.INTERACTIONS.why",
+      "copy_keys": [
+        "lane_a.card.interactions.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.STATE_CHANGE.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.state_change.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.STATE_CHANGE.may_establish",
+      "copy_keys": [
+        "lane_a.card.state_change.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.STATE_CHANGE.next",
+      "copy_keys": [
+        "lane_a.card.state_change.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.STATE_CHANGE.question",
+      "copy_keys": [
+        "lane_a.card.state_change.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.STATE_CHANGE.why",
+      "copy_keys": [
+        "lane_a.card.state_change.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_ARRIVED.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.what_arrived.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_ARRIVED.may_establish",
+      "copy_keys": [
+        "lane_a.card.what_arrived.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_ARRIVED.next",
+      "copy_keys": [
+        "lane_a.card.what_arrived.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_ARRIVED.question",
+      "copy_keys": [
+        "lane_a.card.what_arrived.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_ARRIVED.why",
+      "copy_keys": [
+        "lane_a.card.what_arrived.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_LEFT.cannot_establish",
+      "copy_keys": [
+        "lane_a.card.what_left.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_LEFT.may_establish",
+      "copy_keys": [
+        "lane_a.card.what_left.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_LEFT.next",
+      "copy_keys": [
+        "lane_a.card.what_left.next"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_LEFT.question",
+      "copy_keys": [
+        "lane_a.card.what_left.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CARD.WHAT_LEFT.why",
+      "copy_keys": [
+        "lane_a.card.what_left.why"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.gap",
+      "copy_keys": [
+        "lane_a.caseboard.gap"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.known",
+      "copy_keys": [
+        "lane_a.caseboard.known"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.open_question",
+      "copy_keys": [
+        "lane_a.caseboard.open_question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.read_first",
+      "copy_keys": [
+        "lane_a.caseboard.read_first"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.read_second",
+      "copy_keys": [
+        "lane_a.caseboard.read_second"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.theory_not_fact",
+      "copy_keys": [
+        "lane_a.caseboard.theory_not_fact"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "caseboard.trace",
+      "copy_keys": [
+        "lane_a.caseboard.trace"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.AMOUNT",
+      "copy_keys": [
+        "lane_a.clue.family.amount"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.APPLIED",
+      "copy_keys": [
+        "lane_a.clue.applied"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.ARCHIVED",
+      "copy_keys": [
+        "lane_a.clue.archived"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.ASSET",
+      "copy_keys": [
+        "lane_a.clue.family.asset"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.AVAILABLE",
+      "copy_keys": [
+        "lane_a.clue.available"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.DISCOVERED",
+      "copy_keys": [
+        "lane_a.clue.discovered"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.LOCKED",
+      "copy_keys": [
+        "lane_a.clue.locked"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.OUT",
+      "copy_keys": [
+        "lane_a.clue.family.out"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.PINNED",
+      "copy_keys": [
+        "lane_a.clue.pinned"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.PROOF.*",
+      "copy_keys": [
+        "lane_a.clue.family.proof.discovered"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "clue.RELATED",
+      "copy_keys": [
+        "lane_a.clue.related"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.RESULT.*",
+      "copy_keys": [
+        "lane_a.clue.family.result.discovered"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.START",
+      "copy_keys": [
+        "lane_a.clue.family.start"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "CLUE.WINDOW",
+      "copy_keys": [
+        "lane_a.clue.family.window"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "comparison.empty",
+      "copy_keys": [
+        "lane_a.comparison.empty"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "comparison.teach",
+      "copy_keys": [
+        "lane_a.comparison.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "comparison.two_only",
+      "copy_keys": [
+        "lane_a.comparison.two_only"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "conclusion.boundary",
+      "copy_keys": [
+        "lane_a.conclusion.boundary"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "conclusion.heading",
+      "copy_keys": [
+        "lane_a.conclusion.heading"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "continuity.AMOUNT_RELATIONSHIP",
+      "copy_keys": [
+        "lane_a.continuity.amount_relationship"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "continuity.ASSET_OR_PROVEN_TRANSFORMATION",
+      "copy_keys": [
+        "lane_a.continuity.asset_or_proven_transformation"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "continuity.CHRONOLOGY",
+      "copy_keys": [
+        "lane_a.continuity.chronology"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "continuity.CUTOFF",
+      "copy_keys": [
+        "lane_a.continuity.cutoff"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "continuity.EXACT_RELATIONSHIP",
+      "copy_keys": [
+        "lane_a.continuity.exact_relationship"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "continuity.SOURCE_DESTINATION",
+      "copy_keys": [
+        "lane_a.continuity.source_destination"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "coverage.COMPLETE",
+      "copy_keys": [
+        "lane_a.coverage.complete"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "coverage.EMPTY_COMPLETE",
+      "copy_keys": [
+        "lane_a.coverage.empty_complete"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "coverage.FAILED",
+      "copy_keys": [
+        "lane_a.coverage.failed"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "coverage.NOT_IN_SCOPE",
+      "copy_keys": [
+        "lane_a.coverage.not_in_scope"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "coverage.PARTIAL",
+      "copy_keys": [
+        "lane_a.coverage.partial"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "coverage.PLANNED",
+      "copy_keys": [
+        "lane_a.coverage.planned"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "dead_archetype.BALANCE_MIRAGE",
+      "copy_keys": [
+        "lane_a.dead.archetype.balance_mirage"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "dead_archetype.FALSE_TERMINAL",
+      "copy_keys": [
+        "lane_a.dead.archetype.false_terminal"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "dead_archetype.FAMILIAR_COUNTERPARTY",
+      "copy_keys": [
+        "lane_a.dead.archetype.familiar_counterparty"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "dead_archetype.LOUD_ROOM",
+      "copy_keys": [
+        "lane_a.dead.archetype.loud_room"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "dead_archetype.RIGHT_ASSET_WRONG_TIME",
+      "copy_keys": [
+        "lane_a.dead.archetype.right_asset_wrong_time"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "dead_archetype.RIGHT_TIME_WRONG_DIRECTION",
+      "copy_keys": [
+        "lane_a.dead.archetype.right_time_wrong_direction"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "delta.no_exclusion",
+      "copy_keys": [
+        "lane_a.delta.no_exclusion"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "delta.predicate",
+      "copy_keys": [
+        "lane_a.delta.predicate"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "delta.teach",
+      "copy_keys": [
+        "lane_a.delta.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "explore.manual",
+      "copy_keys": [
+        "lane_a.explore.manual"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "explore.search",
+      "copy_keys": [
+        "lane_a.explore.search"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "explore.search_no_match",
+      "copy_keys": [
+        "lane_a.explore.search_no_match"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "explore.teach",
+      "copy_keys": [
+        "lane_a.explore.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.CLOSE",
+      "copy_keys": [
+        "lane_a.dead.verb.close"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.GIVE",
+      "copy_keys": [
+        "lane_a.dead.verb.give"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.LOOK_AT",
+      "copy_keys": [
+        "lane_a.dead.verb.look_at"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.OPEN",
+      "copy_keys": [
+        "lane_a.dead.verb.open"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.PICK_UP",
+      "copy_keys": [
+        "lane_a.dead.verb.pick_up"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.PULL",
+      "copy_keys": [
+        "lane_a.dead.verb.pull"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.PUSH",
+      "copy_keys": [
+        "lane_a.dead.verb.push"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.TALK_TO",
+      "copy_keys": [
+        "lane_a.dead.verb.talk_to"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fallback.USE",
+      "copy_keys": [
+        "lane_a.dead.verb.use"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "fictional_boundary",
+      "copy_keys": [
+        "lane_a.fictional_boundary"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "folder.CONTRADICTED",
+      "copy_keys": [
+        "lane_a.folder.contradicted"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "folder.CORROBORATING",
+      "copy_keys": [
+        "lane_a.folder.corroborating"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "folder.EXACT",
+      "copy_keys": [
+        "lane_a.folder.exact"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "folder.SAVED",
+      "copy_keys": [
+        "lane_a.folder.saved"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "folder.UNTESTED",
+      "copy_keys": [
+        "lane_a.folder.untested"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "grade.CONTEXTUAL",
+      "copy_keys": [
+        "lane_a.grade.contextual"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "grade.CORROBORATING",
+      "copy_keys": [
+        "lane_a.grade.corroborating"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "grade.EXACT",
+      "copy_keys": [
+        "lane_a.grade.exact"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.ACCESS_EARNED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.investigation.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.ACCESS_EARNED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.investigation.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.ACCESS_EARNED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.investigation.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.CANDIDATE_DISCOVERED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.selected_candidate.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.CANDIDATE_DISCOVERED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.selected_candidate.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.CANDIDATE_DISCOVERED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.selected_candidate.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.EXACT_CONVERGENCE_VERIFIED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.exact_found.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.EXACT_CONVERGENCE_VERIFIED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.exact_found.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.EXACT_CONVERGENCE_VERIFIED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.exact_found.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.CANISTER_OPEN.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.canister_open.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.CANISTER_OPEN.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.canister_open.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.CANISTER_OPEN.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.canister_open.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.COMPLETE.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.complete.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.COMPLETE.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.complete.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.COMPLETE.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.complete.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.DISPATCHED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.dispatched.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.DISPATCHED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.dispatched.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.DISPATCHED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.dispatched.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_COMPLETED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_completed.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_COMPLETED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_completed.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_COMPLETED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_completed.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_IN_TUBE.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_in_tube.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_IN_TUBE.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_in_tube.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_IN_TUBE.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_in_tube.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_STAMPED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_stamped.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_STAMPED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_stamped.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.REQUEST_STAMPED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.request_stamped.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.START.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.start.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.START.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.start.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.START.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.start.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.STRIP_TAKEN.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.strip_taken.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.STRIP_TAKEN.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.strip_taken.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.STRIP_TAKEN.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.strip_taken.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TERMINAL_UNLOCKED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.terminal_unlocked.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TERMINAL_UNLOCKED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.terminal_unlocked.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TERMINAL_UNLOCKED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.terminal_unlocked.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TICKET_PULLED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.ticket_pulled.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TICKET_PULLED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.ticket_pulled.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TICKET_PULLED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.ticket_pulled.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TUBE_CLOSED.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.tube_closed.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TUBE_CLOSED.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.tube_closed.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.PHASE.TUBE_CLOSED.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.puzzle.tube_closed.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hint.unavailable",
+      "copy_keys": [
+        "lane_a.hint.unavailable"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.dispatch-plunger.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.dispatch-plunger.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.dispatch-plunger.name",
+      "copy_keys": [
+        "lane_a.hotspot.dispatch-plunger.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.filing-drawers.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.filing-drawers.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.filing-drawers.name",
+      "copy_keys": [
+        "lane_a.hotspot.filing-drawers.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.historical-clock.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.historical-clock.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.historical-clock.name",
+      "copy_keys": [
+        "lane_a.hotspot.historical-clock.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.mr-index.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.mr-index.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.mr-index.name",
+      "copy_keys": [
+        "lane_a.hotspot.mr-index.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.nansen-terminal.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.nansen-terminal.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.nansen-terminal.name",
+      "copy_keys": [
+        "lane_a.hotspot.nansen-terminal.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.pen-stand.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.pen-stand.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.pen-stand.name",
+      "copy_keys": [
+        "lane_a.hotspot.pen-stand.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.pneumatic-tube.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.pneumatic-tube.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.pneumatic-tube.name",
+      "copy_keys": [
+        "lane_a.hotspot.pneumatic-tube.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.record-canister.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.record-canister.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.record-canister.name",
+      "copy_keys": [
+        "lane_a.hotspot.record-canister.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.request-dispenser.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.request-dispenser.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.request-dispenser.name",
+      "copy_keys": [
+        "lane_a.hotspot.request-dispenser.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.rotunda-exit.ariaLabel",
+      "copy_keys": [
+        "lane_a.hotspot.rotunda-exit.aria"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "hotspot.rotunda-exit.name",
+      "copy_keys": [
+        "lane_a.hotspot.rotunda-exit.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.blank-request.description",
+      "copy_keys": [
+        "lane_a.inventory.blank-request.description"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.blank-request.name",
+      "copy_keys": [
+        "lane_a.inventory.blank-request.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.completed-request.description",
+      "copy_keys": [
+        "lane_a.inventory.completed-request.description"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.completed-request.name",
+      "copy_keys": [
+        "lane_a.inventory.completed-request.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.first-breach-strip.description",
+      "copy_keys": [
+        "lane_a.inventory.first-breach-strip.description"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.first-breach-strip.name",
+      "copy_keys": [
+        "lane_a.inventory.first-breach-strip.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.stamped-request.description",
+      "copy_keys": [
+        "lane_a.inventory.stamped-request.description"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "inventory.stamped-request.name",
+      "copy_keys": [
+        "lane_a.inventory.stamped-request.name"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.acceptance",
+      "copy_keys": [
+        "lane_a.ledger.acceptance"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.atlas",
+      "copy_keys": [
+        "lane_a.ledger.atlas"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.attempts",
+      "copy_keys": [
+        "lane_a.ledger.attempts"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.coverage",
+      "copy_keys": [
+        "lane_a.ledger.coverage"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.credits",
+      "copy_keys": [
+        "lane_a.ledger.credits"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.fixture",
+      "copy_keys": [
+        "lane_a.ledger.fixture"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.responses",
+      "copy_keys": [
+        "lane_a.ledger.responses"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.reuse",
+      "copy_keys": [
+        "lane_a.ledger.reuse"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.supplier",
+      "copy_keys": [
+        "lane_a.ledger.supplier"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.unknown",
+      "copy_keys": [
+        "lane_a.ledger.unknown"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "ledger.why_nansen",
+      "copy_keys": [
+        "lane_a.ledger.why_nansen"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.ACTIVITY.cannot_establish",
+      "copy_keys": [
+        "lane_a.lens.activity.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.ACTIVITY.may_establish",
+      "copy_keys": [
+        "lane_a.lens.activity.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.ACTIVITY.question",
+      "copy_keys": [
+        "lane_a.lens.activity.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.RECEIPT.cannot_establish",
+      "copy_keys": [
+        "lane_a.lens.receipt.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.RECEIPT.may_establish",
+      "copy_keys": [
+        "lane_a.lens.receipt.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.RECEIPT.question",
+      "copy_keys": [
+        "lane_a.lens.receipt.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.RELATIONSHIPS.cannot_establish",
+      "copy_keys": [
+        "lane_a.lens.relationships.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.RELATIONSHIPS.may_establish",
+      "copy_keys": [
+        "lane_a.lens.relationships.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.RELATIONSHIPS.question",
+      "copy_keys": [
+        "lane_a.lens.relationships.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.STATE.cannot_establish",
+      "copy_keys": [
+        "lane_a.lens.state.cannot_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.STATE.may_establish",
+      "copy_keys": [
+        "lane_a.lens.state.may_establish"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "lens.STATE.question",
+      "copy_keys": [
+        "lane_a.lens.state.question"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.dispatch-plunger",
+      "copy_keys": [
+        "lane_a.dead.look.dispatch-plunger"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.filing-drawers",
+      "copy_keys": [
+        "lane_a.dead.look.filing-drawers"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.historical-clock",
+      "copy_keys": [
+        "lane_a.dead.look.historical-clock"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.mr-index",
+      "copy_keys": [
+        "lane_a.dead.look.mr-index"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.nansen-terminal",
+      "copy_keys": [
+        "lane_a.dead.look.nansen-terminal"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.pen-stand",
+      "copy_keys": [
+        "lane_a.dead.look.pen-stand"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.pneumatic-tube",
+      "copy_keys": [
+        "lane_a.dead.look.pneumatic-tube"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.record-canister",
+      "copy_keys": [
+        "lane_a.dead.look.record-canister"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.request-dispenser",
+      "copy_keys": [
+        "lane_a.dead.look.request-dispenser"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "look.rotunda-exit",
+      "copy_keys": [
+        "lane_a.dead.look.rotunda-exit"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "override.GIVE:mr-index:ANY_ITEM",
+      "copy_keys": [
+        "lane_a.dead.rejected_item"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "override.PULL:historical-clock",
+      "copy_keys": [
+        "lane_a.dead.alternate.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "override.PUSH:filing-drawers",
+      "copy_keys": [
+        "lane_a.dead.alternate.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "override.TALK_TO:filing-drawers",
+      "copy_keys": [
+        "lane_a.dead.drawers_reply"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "physical.canister_empty",
+      "copy_keys": [
+        "lane_a.physical.canister_empty"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "physical.canister_returned",
+      "copy_keys": [
+        "lane_a.physical.canister_returned"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "physical.equivalent",
+      "copy_keys": [
+        "lane_a.physical.equivalent"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.AMOUNT.FILED",
+      "copy_keys": [
+        "lane_a.proof.amount.filed"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.AMOUNT.label",
+      "copy_keys": [
+        "lane_a.proof.amount.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.AMOUNT.OPEN",
+      "copy_keys": [
+        "lane_a.proof.amount.open"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.AMOUNT.record",
+      "copy_keys": [
+        "lane_a.proof.first_amount"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.build_case",
+      "copy_keys": [
+        "lane_a.proof.build_case"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.context_rejected",
+      "copy_keys": [
+        "lane_a.proof.context_rejected"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.insufficient",
+      "copy_keys": [
+        "lane_a.proof.insufficient"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.LINK.FILED",
+      "copy_keys": [
+        "lane_a.proof.link.filed"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.LINK.label",
+      "copy_keys": [
+        "lane_a.proof.link.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.LINK.OPEN",
+      "copy_keys": [
+        "lane_a.proof.link.open"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.LINK.record",
+      "copy_keys": [
+        "lane_a.proof.link"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.RECEIVER.FILED",
+      "copy_keys": [
+        "lane_a.proof.receiver.filed"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.RECEIVER.label",
+      "copy_keys": [
+        "lane_a.proof.receiver.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.RECEIVER.OPEN",
+      "copy_keys": [
+        "lane_a.proof.receiver.open"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.RECEIVER.record",
+      "copy_keys": [
+        "lane_a.proof.receiver"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "proof.repeat",
+      "copy_keys": [
+        "lane_a.proof.repeat"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[0]",
+      "copy_keys": [
+        "lane_a.opening.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[1]",
+      "copy_keys": [
+        "lane_a.opening.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[2]",
+      "copy_keys": [
+        "lane_a.opening.3"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[3]",
+      "copy_keys": [
+        "lane_a.opening.4"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[4]",
+      "copy_keys": [
+        "lane_a.opening.5"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[5]",
+      "copy_keys": [
+        "lane_a.opening.6"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[6]",
+      "copy_keys": [
+        "lane_a.opening.7"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "PROVISIONAL_OPENING[7]",
+      "copy_keys": [
+        "lane_a.opening.8"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "query.BROAD",
+      "copy_keys": [
+        "lane_a.query.broad"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "query.CANDIDATE",
+      "copy_keys": [
+        "lane_a.query.candidate"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "query.EXACT",
+      "copy_keys": [
+        "lane_a.query.exact"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "query.FOCUSED",
+      "copy_keys": [
+        "lane_a.query.focused"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "reaction.exact_rook",
+      "copy_keys": [
+        "lane_a.reaction.exact_rook"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "receipt.dispatch",
+      "copy_keys": [
+        "lane_a.receipt.dispatch"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "receipt.funnel",
+      "copy_keys": [
+        "lane_a.receipt.funnel"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "receipt.no_hidden_filter",
+      "copy_keys": [
+        "lane_a.receipt.no_hidden_filter"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "receipt.review_required",
+      "copy_keys": [
+        "lane_a.receipt.review_required"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "receipt.teach",
+      "copy_keys": [
+        "lane_a.receipt.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.archivist_corrects_scope",
+      "copy_keys": [
+        "lane_a.beat.records.archivist_corrects_scope"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.authorized_case_access",
+      "copy_keys": [
+        "lane_a.beat.records.authorized_case_access"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.event_was_onchain",
+      "copy_keys": [
+        "lane_a.beat.records.event_was_onchain"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.learn_together",
+      "copy_keys": [
+        "lane_a.beat.records.learn_together"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.nansen_structures_not_solves",
+      "copy_keys": [
+        "lane_a.beat.records.nansen_structures_not_solves"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.no_ordinary_witnesses",
+      "copy_keys": [
+        "lane_a.beat.records.no_ordinary_witnesses"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.public_but_hard_to_read",
+      "copy_keys": [
+        "lane_a.beat.records.public_but_hard_to_read"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.rook_assumes_no_leads",
+      "copy_keys": [
+        "lane_a.beat.records.rook_assumes_no_leads"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.rook_misses_implication",
+      "copy_keys": [
+        "lane_a.beat.records.rook_misses_implication"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "records.rook_premature_confidence",
+      "copy_keys": [
+        "lane_a.beat.records.rook_premature_confidence"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.corpus_load",
+      "copy_keys": [
+        "lane_a.recovery.corpus_load"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.invalid_input",
+      "copy_keys": [
+        "lane_a.recovery.invalid_input"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.invalid_save",
+      "copy_keys": [
+        "lane_a.recovery.invalid_save"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.last_dispatch",
+      "copy_keys": [
+        "lane_a.recovery.last_dispatch"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.load_query",
+      "copy_keys": [
+        "lane_a.recovery.load_query"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.locked_identifier",
+      "copy_keys": [
+        "lane_a.recovery.locked_identifier"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.query_changed",
+      "copy_keys": [
+        "lane_a.recovery.query_changed"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.redo",
+      "copy_keys": [
+        "lane_a.recovery.redo"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.reentry",
+      "copy_keys": [
+        "lane_a.recovery.reentry"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.remove_chips",
+      "copy_keys": [
+        "lane_a.recovery.remove_chips"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.reset_case",
+      "copy_keys": [
+        "lane_a.recovery.reset_case"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.save_query",
+      "copy_keys": [
+        "lane_a.recovery.save_query"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.storage_unavailable",
+      "copy_keys": [
+        "lane_a.recovery.storage_unavailable"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "recovery.undo",
+      "copy_keys": [
+        "lane_a.recovery.undo"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "results.no_dispatch",
+      "copy_keys": [
+        "lane_a.results.no_dispatch"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "results.show_more",
+      "copy_keys": [
+        "lane_a.results.show_more"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "results.sort",
+      "copy_keys": [
+        "lane_a.results.sort"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.close-tube",
+      "copy_keys": [
+        "lane_a.puzzle.close-tube.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.complete-request",
+      "copy_keys": [
+        "lane_a.puzzle.complete-request.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.dispatch-request",
+      "copy_keys": [
+        "lane_a.puzzle.dispatch-request.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.load-tube",
+      "copy_keys": [
+        "lane_a.puzzle.load-tube.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.open-canister",
+      "copy_keys": [
+        "lane_a.puzzle.open-canister.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.pull-ticket",
+      "copy_keys": [
+        "lane_a.puzzle.pull-ticket.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.read-record",
+      "copy_keys": [
+        "lane_a.puzzle.read-record.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.reread-record",
+      "copy_keys": [
+        "lane_a.puzzle.reread-record.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.stamp-request",
+      "copy_keys": [
+        "lane_a.puzzle.stamp-request.1",
+        "lane_a.puzzle.stamp-request.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.take-strip",
+      "copy_keys": [
+        "lane_a.puzzle.take-strip.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "rule.unlock-terminal",
+      "copy_keys": [
+        "lane_a.puzzle.unlock-terminal.1"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.CASE",
+      "copy_keys": [
+        "lane_a.section.case"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.CASE.teaching",
+      "copy_keys": [
+        "lane_a.section.case.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.EXPLORE",
+      "copy_keys": [
+        "lane_a.section.explore"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.EXPLORE.teaching",
+      "copy_keys": [
+        "lane_a.section.explore.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.LEDGER",
+      "copy_keys": [
+        "lane_a.section.ledger"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.LEDGER.teaching",
+      "copy_keys": [
+        "lane_a.section.ledger.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.RESULTS",
+      "copy_keys": [
+        "lane_a.section.results"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.RESULTS.teaching",
+      "copy_keys": [
+        "lane_a.section.results.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.SOURCE",
+      "copy_keys": [
+        "lane_a.section.source"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "section.SOURCE.teaching",
+      "copy_keys": [
+        "lane_a.section.source.teach"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.boundary",
+      "copy_keys": [
+        "lane_a.source.boundary"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.contextual_time",
+      "copy_keys": [
+        "lane_a.source.contextual_time"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.derived",
+      "copy_keys": [
+        "lane_a.source.derived"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.event_time",
+      "copy_keys": [
+        "lane_a.source.event_time"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.lineage",
+      "copy_keys": [
+        "lane_a.source.lineage"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.normalized_digest",
+      "copy_keys": [
+        "lane_a.source.normalized_digest"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.precision",
+      "copy_keys": [
+        "lane_a.source.precision"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.raw_digest",
+      "copy_keys": [
+        "lane_a.source.raw_digest"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "source.retrieval_time",
+      "copy_keys": [
+        "lane_a.source.retrieval_time"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.candidate",
+      "copy_keys": [
+        "lane_a.template.candidate"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.control",
+      "copy_keys": [
+        "lane_a.template.control"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.delta",
+      "copy_keys": [
+        "lane_a.template.delta"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.exact_time",
+      "copy_keys": [
+        "lane_a.template.exact_time"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.exclusion",
+      "copy_keys": [
+        "lane_a.template.exclusion"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.phase",
+      "copy_keys": [
+        "lane_a.template.phase"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.receipt",
+      "copy_keys": [
+        "lane_a.template.receipt"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.results",
+      "copy_keys": [
+        "lane_a.template.results"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.source",
+      "copy_keys": [
+        "lane_a.template.source"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "template.subject",
+      "copy_keys": [
+        "lane_a.template.subject"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.access_earned",
+      "copy_keys": [
+        "lane_a.terminal.access_earned"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.access_locked",
+      "copy_keys": [
+        "lane_a.terminal.access_locked"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.ask",
+      "copy_keys": [
+        "lane_a.terminal.ask"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.attribution",
+      "copy_keys": [
+        "lane_a.terminal.attribution"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.back_to_case",
+      "copy_keys": [
+        "lane_a.terminal.back_to_case"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.frozen",
+      "copy_keys": [
+        "lane_a.terminal.frozen"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "terminal.return",
+      "copy_keys": [
+        "lane_a.terminal.return"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "theory.falsifier",
+      "copy_keys": [
+        "lane_a.theory.falsifier"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "theory.FIRST_TRAIL_JOINS_SECOND_ROUTE",
+      "copy_keys": [
+        "lane_a.theory.accepted"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "theory.FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+      "copy_keys": [
+        "lane_a.theory.wrong"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "theory.recovery",
+      "copy_keys": [
+        "lane_a.theory.recovery"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "thread.CANDIDATE_FITS",
+      "copy_keys": [
+        "lane_a.thread.candidate_fits"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "thread.CONTRADICTED",
+      "copy_keys": [
+        "lane_a.thread.contradicted"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "thread.CORROBORATED_NOT_PROVEN",
+      "copy_keys": [
+        "lane_a.thread.corroborated_not_proven"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "thread.NEEDS_EXACT_LINK",
+      "copy_keys": [
+        "lane_a.thread.needs_exact_link"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "thread.OPEN",
+      "copy_keys": [
+        "lane_a.thread.open"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "thread.PROVED",
+      "copy_keys": [
+        "lane_a.thread.proved"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.CASE_HINT",
+      "copy_keys": [
+        "lane_a.hint.investigation.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.DIRECT_HINT",
+      "copy_keys": [
+        "lane_a.hint.investigation.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.FALSE_TERMINAL",
+      "copy_keys": [
+        "lane_a.theory.falsifier"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.HINT_CASE",
+      "copy_keys": [
+        "lane_a.hint.investigation.case_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.HINT_DIRECT",
+      "copy_keys": [
+        "lane_a.hint.investigation.direct_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.HINT_METHOD",
+      "copy_keys": [
+        "lane_a.hint.investigation.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.METHOD_HINT",
+      "copy_keys": [
+        "lane_a.hint.investigation.method_hint"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.PROOF_01",
+      "copy_keys": [
+        "lane_a.proof.link"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.archivist_corrects_scope",
+      "copy_keys": [
+        "lane_a.beat.records.archivist_corrects_scope"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.authorized_case_access",
+      "copy_keys": [
+        "lane_a.beat.records.authorized_case_access"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.event_was_onchain",
+      "copy_keys": [
+        "lane_a.beat.records.event_was_onchain"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.learn_together",
+      "copy_keys": [
+        "lane_a.beat.records.learn_together"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.nansen_structures_not_solves",
+      "copy_keys": [
+        "lane_a.beat.records.nansen_structures_not_solves"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.no_ordinary_witnesses",
+      "copy_keys": [
+        "lane_a.beat.records.no_ordinary_witnesses"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.public_but_hard_to_read",
+      "copy_keys": [
+        "lane_a.beat.records.public_but_hard_to_read"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.rook_assumes_no_leads",
+      "copy_keys": [
+        "lane_a.beat.records.rook_assumes_no_leads"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.rook_misses_implication",
+      "copy_keys": [
+        "lane_a.beat.records.rook_misses_implication"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "TODO.LEAD_COPY.records.rook_premature_confidence",
+      "copy_keys": [
+        "lane_a.beat.records.rook_premature_confidence"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.charge.label",
+      "copy_keys": [
+        "lane_a.topic.charge.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.charge.lines",
+      "copy_keys": [
+        "lane_a.topic.charge.1",
+        "lane_a.topic.charge.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.leave.closes",
+      "copy_keys": [
+        "lane_a.topic.leave.close"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.leave.label",
+      "copy_keys": [
+        "lane_a.topic.leave.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.noise.label",
+      "copy_keys": [
+        "lane_a.topic.noise.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.noise.lines",
+      "copy_keys": [
+        "lane_a.topic.noise.1",
+        "lane_a.topic.noise.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.record.label",
+      "copy_keys": [
+        "lane_a.topic.record.label"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "topic.record.lines",
+      "copy_keys": [
+        "lane_a.topic.record.1",
+        "lane_a.topic.record.2"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "tray.CHECK",
+      "copy_keys": [
+        "lane_a.tray.check"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "tray.optional_categories",
+      "copy_keys": [
+        "lane_a.tray.optional_categories"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "tray.STARTING_POINT",
+      "copy_keys": [
+        "lane_a.tray.starting_point"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "tray.WHAT_MOVED",
+      "copy_keys": [
+        "lane_a.tray.what_moved"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "tray.WHEN",
+      "copy_keys": [
+        "lane_a.tray.when"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.CLOSE",
+      "copy_keys": [
+        "lane_a.verb.close"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.GIVE",
+      "copy_keys": [
+        "lane_a.verb.give"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.LOOK_AT",
+      "copy_keys": [
+        "lane_a.verb.look_at"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.OPEN",
+      "copy_keys": [
+        "lane_a.verb.open"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.PICK_UP",
+      "copy_keys": [
+        "lane_a.verb.pick_up"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.PULL",
+      "copy_keys": [
+        "lane_a.verb.pull"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.PUSH",
+      "copy_keys": [
+        "lane_a.verb.push"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.TALK_TO",
+      "copy_keys": [
+        "lane_a.verb.talk_to"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "verb.USE",
+      "copy_keys": [
+        "lane_a.verb.use"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "zero.NEGATIVE_EVIDENCE_SUPPORTED",
+      "copy_keys": [
+        "lane_a.zero.negative_evidence_supported"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "zero.NO_MATCH_IN_ACCEPTED_CORPUS",
+      "copy_keys": [
+        "lane_a.zero.no_match_in_accepted_corpus"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    },
+    {
+      "surface": "zero.QUERY_OUTSIDE_COVERAGE",
+      "copy_keys": [
+        "lane_a.zero.query_outside_coverage"
+      ],
+      "status": "MAPPED_ADDITIVE_CANDIDATE"
+    }
+  ],
+  "late_bound": [
+    {
+      "id": "P2_NAMES_COUNTS",
+      "reason": "No P2 data or acceptance received. Generic role/count templates require accepted public-safe discovered bindings.",
+      "fallback_keys": [
+        "lane_a.template.candidate",
+        "lane_a.template.results"
+      ],
+      "owner": "MAIN_CONTROLLER"
+    },
+    {
+      "id": "FOREGROUND_CORPUS",
+      "reason": "Final foreground selection is not lane-owned. Existing cards and discovered-record selectors remain controlling.",
+      "fallback_keys": [
+        "lane_a.explore.teach",
+        "lane_a.results.no_dispatch"
+      ],
+      "owner": "MAIN_CONTROLLER"
+    },
+    {
+      "id": "ART_CAPABILITIES",
+      "reason": "No final asset capability assumed; semantic intention is optional, all words remain plain text.",
+      "fallback_keys": [
+        "lane_a.accessibility.reduced_motion",
+        "lane_a.accessibility.plain_list"
+      ],
+      "owner": "MAIN_CONTROLLER"
+    },
+    {
+      "id": "PUBLIC_TITLE",
+      "reason": "Public title is unresolved. No player-facing final game title authored; use neutral Case Terminal header.",
+      "fallback_keys": [
+        "lane_a.terminal.ask"
+      ],
+      "owner": "MAIN_CONTROLLER"
+    },
+    {
+      "id": "DIALOGUE_DENSITY",
+      "reason": "MAIN binds density after playtest; optional banter/reactions are removable.",
+      "fallback_keys": [
+        "lane_a.beat.records.learn_together",
+        "lane_a.hint.unavailable"
+      ],
+      "owner": "MAIN_CONTROLLER"
+    }
+  ],
+  "excluded": [
+    {
+      "surface": "Art Lab / art integrity / reviewer-only harness copy",
+      "reason": "Developer and separate art surfaces are outside player narrative scope. No assets inspected or modified."
+    },
+    {
+      "surface": "Provider/raw/qualification execution and release copy",
+      "reason": "Outside Lane A ownership; no endpoint permissions or acquisition outcomes authored."
+    }
+  ],
+  "runtime_integrated": false
+}

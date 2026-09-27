@@ -1,0 +1,13 @@
+{
+  "id": "OFFICE_INVESTIGATION_SYNC",
+  "owner": "synchronizeOfficeMilestones",
+  "appliesTo": ["restored", "existing", "newly created"],
+  "when": ["before terminal presentation", "before every terminal command", "before local persistence"],
+  "milestones": [
+    { "command": "EARN_ACCESS", "when": "phase COMPLETE and access is absent" },
+    { "command": "COLLECT_CASE_FILE", "when": "euler-case-file is in office inventory and starting clues are absent" },
+    { "command": "COLLECT_SIDE_NOTE", "when": "piggyNoteReadState is BACK_READ and the side lead is absent" }
+  ],
+  "idempotent": true,
+  "doesNot": ["read local storage", "fork the investigation reducer", "rewind completion", "unlock the side lead from note possession alone"]
+}

@@ -1,0 +1,490 @@
+{
+  "schemaVersion": "1.0.0",
+  "scenarioId": "EULER_2023_FALSE_EXIT",
+  "cutoffUtc": "2023-03-13T12:15:00Z",
+  "entities": [
+    {
+      "id": "early_trigger",
+      "role": "Early Trigger",
+      "kind": "ADDRESS",
+      "address": "0x5f259d0b76665c337c6104145894f4d1d2758b8c"
+    },
+    {
+      "id": "early_engine",
+      "role": "First Engine",
+      "kind": "CONTRACT",
+      "address": "0xebc29199c817dc47ba12e3f86102564d640cbf99"
+    },
+    {
+      "id": "main_trigger",
+      "role": "Main Trigger",
+      "kind": "ADDRESS",
+      "address": "0xb2698c2d99ad2c302a95a8db26b08d17a77cedd4"
+    },
+    {
+      "id": "extraction_engine",
+      "role": "Extraction Engine",
+      "kind": "CONTRACT",
+      "address": "0x036cec1a199234fc02f72d29e596a09440825f1c"
+    },
+    {
+      "id": "main_receiver",
+      "role": "Receiving Vault",
+      "kind": "ADDRESS",
+      "address": "0xb66cd966670d962c227b3eaba30a872dbfb995db"
+    },
+    {
+      "id": "secondary_receiver",
+      "role": "Secondary Receiver Context",
+      "kind": "ADDRESS",
+      "address": "0xc66dfa84bc1b93df194bd964a41282da65d73c9a"
+    },
+    {
+      "id": "dai",
+      "role": "DAI contract",
+      "kind": "CONTRACT",
+      "address": "0x6b175474e89094c44da98b954eedeac495271d0f"
+    }
+  ],
+  "events": [
+    {
+      "id": "early_exploit",
+      "kind": "TRANSACTION",
+      "observedAtUtc": "2023-03-13T08:50:59Z",
+      "transactionHash": "0xc310a0affe2169d1f6feec1c63dbc7f7c62a887fa48795d327d4d2da2d6b111d",
+      "evidenceIds": [
+        "EXACT_EARLY_NET",
+        "STATE_EARLY_ENGINE"
+      ]
+    },
+    {
+      "id": "main_exploit",
+      "kind": "TRANSACTION",
+      "observedAtUtc": "2023-03-13T09:12:23Z",
+      "transactionHash": "0x298bde3f9e53f7a5d870f7f5d56ee2f5e41fa25e6eb5e74611ac97025405db55",
+      "evidenceIds": [
+        "EXACT_MAIN_RECEIVER"
+      ]
+    },
+    {
+      "id": "secondary_context",
+      "kind": "TOKEN_TRANSFER",
+      "observedAtUtc": "2023-03-13T10:33:35Z",
+      "transactionHash": "0x32be972bef6302d42d83ef624765ffd962728912a5896ce7e5d2092ff009ae07",
+      "evidenceIds": [
+        "CONTEXT_SECONDARY"
+      ]
+    },
+    {
+      "id": "convergence",
+      "kind": "TOKEN_TRANSFER",
+      "observedAtUtc": "2023-03-13T11:38:11Z",
+      "transactionHash": "0xdae809e4a1ddf77c39d44a4acfe6165bedbc19a385c4b241242cc9bd582a80b9",
+      "evidenceIds": [
+        "EXACT_CONVERGENCE"
+      ]
+    },
+    {
+      "id": "first_engine_activity_window",
+      "kind": "CONTEXT",
+      "observedAtUtc": "2023-03-13T11:38:11Z",
+      "transactionHash": "0xdae809e4a1ddf77c39d44a4acfe6165bedbc19a385c4b241242cc9bd582a80b9",
+      "evidenceIds": [
+        "CONTEXT_FIRST_ENGINE_ACTIVITY"
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "id": "early-initiation",
+      "kind": "INITIATES",
+      "fromEntityId": "early_trigger",
+      "toEntityId": "early_engine",
+      "eventId": "early_exploit",
+      "evidenceId": "EXACT_EARLY_NET",
+      "basisEvidenceId": null,
+      "asset": null,
+      "amount": null,
+      "falsifiesTheoryOptionIds": []
+    },
+    {
+      "id": "main-extraction",
+      "kind": "INITIATES",
+      "fromEntityId": "main_trigger",
+      "toEntityId": "extraction_engine",
+      "eventId": "main_exploit",
+      "evidenceId": "EXACT_MAIN_RECEIVER",
+      "basisEvidenceId": null,
+      "asset": null,
+      "amount": null,
+      "falsifiesTheoryOptionIds": []
+    },
+    {
+      "id": "main-receiving-point",
+      "kind": "RECEIVES",
+      "fromEntityId": "extraction_engine",
+      "toEntityId": "main_receiver",
+      "eventId": "main_exploit",
+      "evidenceId": "EXACT_MAIN_RECEIVER",
+      "basisEvidenceId": null,
+      "asset": "DAI",
+      "amount": "34186225.91950095",
+      "falsifiesTheoryOptionIds": []
+    },
+    {
+      "id": "route-convergence",
+      "kind": "CONVERGES_TO",
+      "fromEntityId": "early_engine",
+      "toEntityId": "main_receiver",
+      "eventId": "convergence",
+      "evidenceId": "EXACT_CONVERGENCE",
+      "basisEvidenceId": "EXACT_EARLY_NET",
+      "asset": "DAI",
+      "amount": "8877507.348306697",
+      "falsifiesTheoryOptionIds": [
+        "FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+        "early-engine-terminal",
+        "quiet-engine",
+        "early-net-quiet"
+      ]
+    },
+    {
+      "id": "secondary-context-only",
+      "kind": "CONTEXT_ONLY",
+      "fromEntityId": "main_receiver",
+      "toEntityId": "secondary_receiver",
+      "eventId": "secondary_context",
+      "evidenceId": "CONTEXT_SECONDARY",
+      "basisEvidenceId": null,
+      "asset": "ETH",
+      "amount": "100",
+      "falsifiesTheoryOptionIds": []
+    }
+  ],
+  "proofDependencies": [
+    {
+      "slot": "route",
+      "evidenceIds": [
+        "EXACT_EARLY_NET",
+        "EXACT_CONVERGENCE"
+      ]
+    },
+    {
+      "slot": "transformation",
+      "evidenceIds": [
+        "EXACT_EARLY_NET"
+      ]
+    },
+    {
+      "slot": "destination",
+      "evidenceIds": [
+        "EXACT_MAIN_RECEIVER",
+        "EXACT_CONVERGENCE"
+      ]
+    },
+    {
+      "slot": "proof",
+      "evidenceIds": [
+        "EXACT_EARLY_NET",
+        "EXACT_MAIN_RECEIVER",
+        "EXACT_CONVERGENCE"
+      ]
+    }
+  ],
+  "firstFalsifier": "EXACT_CONVERGENCE",
+  "gaps": [
+    {
+      "id": "clean-early-engine-balance-sequence",
+      "disposition": "FALLBACK",
+      "explanation": "Historical-balance semantics were ambiguous; preserve the transaction-derived state view without multiplying proof."
+    },
+    {
+      "id": "negative-historical-balance-rows",
+      "disposition": "OMIT",
+      "explanation": "Unexplained negative historical DAI rows are never player evidence."
+    },
+    {
+      "id": "secondary-dispersal",
+      "disposition": "CONTEXT_ONLY",
+      "explanation": "The 100 ETH transfer is peripheral and cannot close solver truth."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "EXACT_EARLY_NET",
+      "grade": "EXACT",
+      "proofGrade": "EXACT_EVENT",
+      "sourceLineageId": "NANSEN_EARLY_TX_TRANSFERS",
+      "independenceGroup": "EARLY_TX",
+      "derivedFromEvidenceIds": [],
+      "independentForProof": true,
+      "numericPrecisionStatus": "PROVIDER_REPORTED_DECIMAL",
+      "observedAtUtc": "2023-03-13T08:50:59Z",
+      "sourceFamily": "TOKEN_TRANSFERS",
+      "sourceEndpoint": "/api/v1/transaction-with-token-transfer-lookup",
+      "retrievedAtUtc": "2026-09-15T04:44:24.290Z",
+      "temporalClass": "HISTORICAL_AT_CUTOFF",
+      "normalizedSha256": "0bd03b8d5f940f5d2d5c76cbc346b3d868e181f90c03865521b594bf3bcdc273",
+      "uncertainty": "Nansen decimal serialization supplies 8,877,507.3483067 DAI for the computed early net.",
+      "rawSha256": "b35f77a345248b804ca6783974d83226f49b5bef9bb42b4ff6e15c03b6593910",
+      "claim": "The early exploit transaction resolves to a net 8,877,507.3483067 DAI state at the First Engine.",
+      "transactionHash": "0xc310a0affe2169d1f6feec1c63dbc7f7c62a887fa48795d327d4d2da2d6b111d",
+      "facts": {
+        "assetAmounts": [
+          {
+            "asset": "DAI",
+            "amount": "8877507.3483067",
+            "unit": "TOKEN"
+          }
+        ],
+        "roleBindings": [
+          {
+            "entityId": "early_trigger",
+            "role": "Early Trigger",
+            "address": "0x5f259d0b76665c337c6104145894f4d1d2758b8c"
+          },
+          {
+            "entityId": "early_engine",
+            "role": "First Engine",
+            "address": "0xebc29199c817dc47ba12e3f86102564d640cbf99"
+          },
+          {
+            "entityId": "dai",
+            "role": "DAI contract",
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f"
+          }
+        ],
+        "stateLabel": "NANSEN-PROVIDER-PRECISION NET",
+        "provesRoute": true,
+        "negativeRowsPublished": 0
+      },
+      "redistribution": "PUBLIC_ALLOWLISTED"
+    },
+    {
+      "id": "STATE_EARLY_ENGINE",
+      "grade": "CORROBORATING",
+      "proofGrade": "DERIVED_VIEW",
+      "sourceLineageId": "NANSEN_EARLY_TX_TRANSFERS",
+      "independenceGroup": "EARLY_TX",
+      "derivedFromEvidenceIds": [
+        "EXACT_EARLY_NET"
+      ],
+      "independentForProof": false,
+      "numericPrecisionStatus": "PROVIDER_REPORTED_DECIMAL",
+      "observedAtUtc": "2023-03-13T08:50:59Z",
+      "sourceFamily": "TOKEN_TRANSFERS",
+      "sourceEndpoint": "/api/v1/transaction-with-token-transfer-lookup",
+      "retrievedAtUtc": "2026-09-15T04:44:24.290Z",
+      "temporalClass": "HISTORICAL_AT_CUTOFF",
+      "normalizedSha256": "0bd03b8d5f940f5d2d5c76cbc346b3d868e181f90c03865521b594bf3bcdc273",
+      "uncertainty": "Transaction-derived view; corroborates the early event but is not independent proof.",
+      "rawSha256": "b35f77a345248b804ca6783974d83226f49b5bef9bb42b4ff6e15c03b6593910",
+      "claim": "A transaction-derived view places about 8.88M DAI at the First Engine.",
+      "transactionHash": "0xc310a0affe2169d1f6feec1c63dbc7f7c62a887fa48795d327d4d2da2d6b111d",
+      "facts": {
+        "assetAmounts": [
+          {
+            "asset": "DAI",
+            "amount": "8877507.3483067",
+            "unit": "TOKEN"
+          }
+        ],
+        "roleBindings": [
+          {
+            "entityId": "early_engine",
+            "role": "First Engine",
+            "address": "0xebc29199c817dc47ba12e3f86102564d640cbf99"
+          }
+        ],
+        "stateLabel": "TRANSACTION-DERIVED VIEW",
+        "provesRoute": false,
+        "negativeRowsPublished": 0
+      },
+      "redistribution": "PUBLIC_ALLOWLISTED"
+    },
+    {
+      "id": "EXACT_MAIN_RECEIVER",
+      "grade": "EXACT",
+      "proofGrade": "EXACT_EVENT",
+      "sourceLineageId": "NANSEN_MAIN_TX_TRANSFERS",
+      "independenceGroup": "MAIN_TX",
+      "derivedFromEvidenceIds": [],
+      "independentForProof": true,
+      "numericPrecisionStatus": "PROVIDER_REPORTED_DECIMAL",
+      "observedAtUtc": "2023-03-13T09:12:23Z",
+      "sourceFamily": "TOKEN_TRANSFERS",
+      "sourceEndpoint": "/api/v1/transaction-with-token-transfer-lookup",
+      "retrievedAtUtc": "2026-09-15T04:44:28.453Z",
+      "temporalClass": "HISTORICAL_AT_CUTOFF",
+      "normalizedSha256": "1ad68ecbfef9f7b8c66b66e552e661f2de37be9414a5fb214616a13c9412cfa5",
+      "uncertainty": null,
+      "rawSha256": "ce4b2eb4a87e23b86a73dd40b4795decc68f5136c2eb463fbac58ed005ed40fe",
+      "claim": "The second breach moves DAI and ETH through the Extraction Engine to the Receiving Vault.",
+      "transactionHash": "0x298bde3f9e53f7a5d870f7f5d56ee2f5e41fa25e6eb5e74611ac97025405db55",
+      "facts": {
+        "assetAmounts": [
+          {
+            "asset": "DAI",
+            "amount": "34186225.91950095",
+            "unit": "TOKEN"
+          },
+          {
+            "asset": "ETH",
+            "amount": "88752.69745982855",
+            "unit": "NATIVE"
+          }
+        ],
+        "roleBindings": [
+          {
+            "entityId": "main_trigger",
+            "role": "Main Trigger",
+            "address": "0xb2698c2d99ad2c302a95a8db26b08d17a77cedd4"
+          },
+          {
+            "entityId": "extraction_engine",
+            "role": "Extraction Engine",
+            "address": "0x036cec1a199234fc02f72d29e596a09440825f1c"
+          },
+          {
+            "entityId": "main_receiver",
+            "role": "Receiving Vault",
+            "address": "0xb66cd966670d962c227b3eaba30a872dbfb995db"
+          }
+        ],
+        "stateLabel": null,
+        "provesRoute": true,
+        "negativeRowsPublished": 0
+      },
+      "redistribution": "PUBLIC_ALLOWLISTED"
+    },
+    {
+      "id": "EXACT_CONVERGENCE",
+      "grade": "EXACT",
+      "proofGrade": "EXACT_EVENT",
+      "sourceLineageId": "NANSEN_CONVERGENCE_TX_TRANSFERS",
+      "independenceGroup": "CONVERGENCE_TX",
+      "derivedFromEvidenceIds": [],
+      "independentForProof": true,
+      "numericPrecisionStatus": "PROVIDER_REPORTED_DECIMAL",
+      "observedAtUtc": "2023-03-13T11:38:11Z",
+      "sourceFamily": "TOKEN_TRANSFERS",
+      "sourceEndpoint": "/api/v1/transaction-with-token-transfer-lookup",
+      "retrievedAtUtc": "2026-09-15T04:44:30.582Z",
+      "temporalClass": "HISTORICAL_AT_CUTOFF",
+      "normalizedSha256": "c868921b09f3e409c08149a7b8ae94279411c4564e7f2a6fe1df51d08293c1e5",
+      "uncertainty": "Compared with the early net only within Nansen-reported decimal precision.",
+      "rawSha256": "e5f2d6701598192b560a1f179fedc7450bcf3d00588a2efcd564f80963c32e32",
+      "claim": "At 11:38:11 UTC, the First Engine sends 8,877,507.348306697 DAI to the Receiving Vault.",
+      "transactionHash": "0xdae809e4a1ddf77c39d44a4acfe6165bedbc19a385c4b241242cc9bd582a80b9",
+      "facts": {
+        "assetAmounts": [
+          {
+            "asset": "DAI",
+            "amount": "8877507.348306697",
+            "unit": "TOKEN"
+          }
+        ],
+        "roleBindings": [
+          {
+            "entityId": "early_engine",
+            "role": "First Engine",
+            "address": "0xebc29199c817dc47ba12e3f86102564d640cbf99"
+          },
+          {
+            "entityId": "main_receiver",
+            "role": "Receiving Vault",
+            "address": "0xb66cd966670d962c227b3eaba30a872dbfb995db"
+          },
+          {
+            "entityId": "dai",
+            "role": "DAI contract",
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f"
+          }
+        ],
+        "stateLabel": null,
+        "provesRoute": true,
+        "negativeRowsPublished": 0
+      },
+      "redistribution": "PUBLIC_ALLOWLISTED"
+    },
+    {
+      "id": "CONTEXT_SECONDARY",
+      "grade": "CONTEXTUAL",
+      "proofGrade": "CONTEXT",
+      "sourceLineageId": "NANSEN_SECONDARY_TX_TRANSFERS",
+      "independenceGroup": "SECONDARY_CONTEXT",
+      "derivedFromEvidenceIds": [],
+      "independentForProof": false,
+      "numericPrecisionStatus": "PROVIDER_REPORTED_DECIMAL",
+      "observedAtUtc": "2023-03-13T10:33:35Z",
+      "sourceFamily": "TOKEN_TRANSFERS",
+      "sourceEndpoint": "/api/v1/transaction-with-token-transfer-lookup",
+      "retrievedAtUtc": "2026-09-15T04:44:31.649Z",
+      "temporalClass": "HISTORICAL_AT_CUTOFF",
+      "normalizedSha256": "f17aca4ceb39d4bb486a77886b986d5783d33bc4175cb96bbf8eae35909646c0",
+      "uncertainty": "Peripheral context; cannot satisfy a decisive case slot.",
+      "rawSha256": "ad6b19d8a26226dd394bd2d14845bac2a2df9b5dce2b7c547f5ad4f10a7139e7",
+      "claim": "A later 100 ETH transfer leaves the Receiving Vault for a secondary receiver.",
+      "transactionHash": "0x32be972bef6302d42d83ef624765ffd962728912a5896ce7e5d2092ff009ae07",
+      "facts": {
+        "assetAmounts": [
+          {
+            "asset": "ETH",
+            "amount": "100",
+            "unit": "NATIVE"
+          }
+        ],
+        "roleBindings": [
+          {
+            "entityId": "main_receiver",
+            "role": "Receiving Vault",
+            "address": "0xb66cd966670d962c227b3eaba30a872dbfb995db"
+          },
+          {
+            "entityId": "secondary_receiver",
+            "role": "Secondary Receiver Context",
+            "address": "0xc66dfa84bc1b93df194bd964a41282da65d73c9a"
+          }
+        ],
+        "stateLabel": null,
+        "provesRoute": false,
+        "negativeRowsPublished": 0
+      },
+      "redistribution": "PUBLIC_ALLOWLISTED"
+    },
+    {
+      "id": "CONTEXT_FIRST_ENGINE_ACTIVITY",
+      "grade": "CONTEXTUAL",
+      "proofGrade": "CONTEXT",
+      "sourceLineageId": "NANSEN_FIRST_ENGINE_ACTIVITY_WINDOW",
+      "independenceGroup": "FIRST_ENGINE_ACTIVITY_CONTEXT",
+      "derivedFromEvidenceIds": [],
+      "independentForProof": false,
+      "numericPrecisionStatus": "ROUNDED_PLAYER_DISPLAY",
+      "observedAtUtc": "2023-03-13T11:38:11Z",
+      "sourceFamily": "ADDRESS_ACTIVITY",
+      "sourceEndpoint": "/api/v1/profiler/address/transactions",
+      "retrievedAtUtc": "2026-09-15T10:42:37Z",
+      "temporalClass": "HISTORICAL_AT_CUTOFF",
+      "normalizedSha256": "74359334f194603a0e8fd4544b91e82faf66ac12e6db9d0f66e59afd2674c790",
+      "uncertainty": "The bounded address query returned the early event and the later convergence event; absence of another returned DAI record is not proof of inactivity.",
+      "rawSha256": "43286c209b76e15365a1a0268aa73294998806dd845dceeac6abf54027805ce4",
+      "claim": "The bounded First Engine DAI activity view contains the early event and the 11:38 convergence record.",
+      "transactionHash": "0xdae809e4a1ddf77c39d44a4acfe6165bedbc19a385c4b241242cc9bd582a80b9",
+      "facts": {
+        "assetAmounts": [],
+        "roleBindings": [
+          {
+            "entityId": "early_engine",
+            "role": "First Engine",
+            "address": "0xebc29199c817dc47ba12e3f86102564d640cbf99"
+          }
+        ],
+        "stateLabel": "BOUNDED ADDRESS ACTIVITY CONTEXT",
+        "provesRoute": false,
+        "negativeRowsPublished": 0
+      },
+      "redistribution": "PUBLIC_ALLOWLISTED"
+    }
+  ]
+}

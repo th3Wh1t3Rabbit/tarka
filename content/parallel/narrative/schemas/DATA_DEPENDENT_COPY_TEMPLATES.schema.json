@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A DATA_DEPENDENT_COPY_TEMPLATES.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "token_contract",
+    "template_keys",
+    "fallback_policy",
+    "input_policy",
+    "output"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "token_contract": {
+      "type": "object"
+    },
+    "template_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+      },
+      "uniqueItems": true
+    },
+    "fallback_policy": {
+      "const": "WHOLE_LINE_IF_ANY_BINDING_INVALID"
+    },
+    "input_policy": {
+      "const": "ACCEPTED_PUBLIC_SAFE_DISCOVERED_BOUNDINGS_ONLY"
+    },
+    "output": {
+      "const": "PLAIN_TEXT"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+name: Deploy Tarka
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.19.1
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: python3 -m pip install -r scripts/docs/requirements.txt
+      - run: npm run docs:build
+      - run: git diff --exit-code -- docs-site
+      - run: npm run release:verify
+      - run: node scripts/verify-public-release.mjs
+      - name: Deploy game
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: cf2b2c74b60ce9ef7ce35573dee4dbdc
+          command: deploy --config wrangler.game.jsonc
+      - name: Deploy documentation
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: cf2b2c74b60ce9ef7ce35573dee4dbdc
+          command: deploy --config wrangler.docs.jsonc

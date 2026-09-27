@@ -1,0 +1,64 @@
+{
+  "source": "principal square crops, wall removed",
+  "sourceSize": [
+    1768,
+    663
+  ],
+  "placedInScene": false,
+  "assets": [
+    {
+      "id": "bg-painting-city-bridge",
+      "file": "bg-painting-city-bridge.png",
+      "width": 274,
+      "height": 251
+    },
+    {
+      "id": "bg-plaque-employee-of-the-month",
+      "file": "bg-plaque-employee-of-the-month.png",
+      "width": 111,
+      "height": 144
+    },
+    {
+      "id": "bg-plaque-preserve-serve-remember",
+      "file": "bg-plaque-preserve-serve-remember.png",
+      "width": 100,
+      "height": 137
+    },
+    {
+      "id": "bg-poster-be-the-change",
+      "file": "bg-poster-be-the-change.png",
+      "width": 202,
+      "height": 158
+    },
+    {
+      "id": "bg-poster-think-outside-the-box",
+      "file": "bg-poster-think-outside-the-box.png",
+      "width": 142,
+      "height": 155
+    },
+    {
+      "id": "bg-print-building",
+      "file": "bg-print-building.png",
+      "width": 92,
+      "height": 134
+    },
+    {
+      "id": "bg-sign-records-office",
+      "file": "bg-sign-records-office.png",
+      "width": 254,
+      "height": 218
+    },
+    {
+      "id": "bg-sign-you-are-not-a-number",
+      "file": "bg-sign-you-are-not-a-number.png",
+      "width": 111,
+      "height": 87
+    },
+    {
+      "id": "bg-wall-clock",
+      "file": "bg-wall-clock.png",
+      "width": 134,
+      "height": 173
+    }
+  ]
+}

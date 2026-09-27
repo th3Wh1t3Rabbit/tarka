@@ -1,0 +1,9 @@
+{
+  "id": "TERMINAL_WORLD_BOUNDARY",
+  "duringApproach": "NONBLOCKING_SELF_TALK may continue while Rook walks to the terminal",
+  "atContact": ["speech null", "nonblockingSpeech null", "dialogueOpen false", "activeSequence null", "transcript kept"],
+  "destinationWalk": "a walk with no pending interaction is one replaceable intent and emits TODO.STORY.INTENT_REPLACED",
+  "sameTerminalIntent": "idempotent no-op",
+  "noWalk": "no replacement event",
+  "control": "OPEN CASE TERMINAL stays enabled for a different uncommitted intent and is disabled with aria-busy once the terminal intent itself is pending or contact has committed"
+}

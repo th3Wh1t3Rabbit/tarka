@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "defaultScenarioId": "EULER_2023_FALSE_EXIT",
+  "entries": [
+    {
+      "id": "EULER_2023_FALSE_EXIT",
+      "kind": "HISTORICAL_CASE",
+      "title": "THE FALSE EXIT",
+      "scenarioHash": "sha256:9626f18b64f5a705524af46709e9ee9dff529a7cd6eead0884fe7c98736c594d",
+      "worldHash": "sha256:868a7fb8d5a0e7a08c73fbcb5e4ac53795d3b4dfecd6ee25de448dd07bf96c7c"
+    },
+    {
+      "id": "synthetic-prism-calibration-v2",
+      "kind": "SYNTHETIC_CALIBRATION",
+      "title": "THE SIGNAL VAULT",
+      "scenarioHash": "sha256:eaf1605f103934e541855980f61623a891f20a12f086752cabb650d43ec7fc30",
+      "worldHash": "sha256:d54327710ba24b963e720fa4b90f61f6b14fd30e6b88bdcbf0a321ea9bb52b7b"
+    }
+  ]
+}

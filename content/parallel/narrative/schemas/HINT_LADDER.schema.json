@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A HINT_LADDER.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "ladders",
+    "unavailable_fallback"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "ladders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "selector",
+          "tiers",
+          "no_undiscovered_value"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "selector": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tiers": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "METHOD_HINT",
+              "CASE_HINT",
+              "DIRECT_HINT"
+            ],
+            "properties": {
+              "METHOD_HINT": {
+                "type": "string",
+                "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+              },
+              "CASE_HINT": {
+                "type": "string",
+                "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+              },
+              "DIRECT_HINT": {
+                "type": "string",
+                "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+              }
+            }
+          },
+          "no_undiscovered_value": {
+            "const": true
+          }
+        }
+      }
+    },
+    "unavailable_fallback": {
+      "type": "string",
+      "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+    }
+  }
+}

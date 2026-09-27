@@ -1,0 +1,1833 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Production actions, terminal speech, optional branches, and endings · Tarka</title><link rel="stylesheet" href="../../assets/site.css"></head><body data-start="docs/script/actions-and-endings.md" data-base="../../" data-inline="false"><aside id="rail"><div class="brand">TARKA</div><div class="subbrand">A case worth following</div><div class="toplinks"><a href="https://play.tarka-meridian.workers.dev/">Play</a><a href="https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian">Download</a><a href="https://github.com/th3Wh1t3Rabbit/tarka">GitHub</a><a href="https://docs.tarka-meridian.workers.dev/">Docs</a></div><label for="search" class="subbrand" style="display:block;margin-bottom:7px">Search documentation</label><input id="search" class="search" type="search" placeholder="Topics, questions, tokens…"><label class="search-options"><input type="checkbox" id="spoilerSearch">Include evidence / spoilers</label><button id="menu">CONTENTS</button><nav id="nav" aria-label="Documentation"><section class="navgroup"><h2>Play &amp; story</h2><a data-doc="README.md" href="../../index.html">Welcome</a><a data-doc="docs/play.md" href="../../docs/play.html">Play / download</a><a data-doc="docs/play/saves.md" href="../../docs/play/saves.html">Keeping your progress</a><a data-doc="docs/controls.md" href="../../docs/controls.html">Player guide</a><a data-doc="docs/design/terminal-tour.md" href="../../docs/design/terminal-tour.html">Illustrated terminal guide</a><a data-doc="docs/story.md" href="../../docs/story.html">The story</a><a data-doc="docs/showcase.md" href="../../docs/showcase.html">Watch the showcase</a></section><section class="navgroup"><h2>The design</h2><a data-doc="docs/design/questions-first.md" href="../../docs/design/questions-first.html">Questions before dashboards</a><a data-doc="docs/design/terminal-character.md" href="../../docs/design/terminal-character.html">A terminal with character</a><a data-doc="docs/creator-note.md" href="../../docs/creator-note.html">A note from the creator</a></section><section class="navgroup"><h2>Nansen &amp; the evidence</h2><a data-doc="docs/data/overview.md" href="../../docs/data/overview.html">Why Nansen</a><a data-doc="docs/data/discovery.md" href="../../docs/data/discovery.html">Choosing the case</a><a data-doc="docs/data/method.md" href="../../docs/data/method.html">Collection method</a><a data-doc="docs/data/assembly.md" href="../../docs/data/assembly.html">One record, explained</a><a data-doc="docs/data/endpoints.md" href="../../docs/data/endpoints.html">Endpoint families</a><a data-doc="docs/data/counts.md" href="../../docs/data/counts.html">Calls versus records</a><a data-doc="docs/data/evidence-limits.md" href="../../docs/data/evidence-limits.html">Evidence limits</a><a data-doc="@calls" href="../../docs/data/request-log.html">Browse 101 requests</a><a data-doc="docs/data/request-log.md" href="../../docs/data/request-log.html">Linked request index</a><a data-doc="docs/data/records.md" href="../../docs/data/records.html">Compiled records</a></section><section class="navgroup"><h2>Spoilers &amp; the writing</h2><a data-doc="docs/spoilers/euler-connection.md" href="../../docs/spoilers/euler-connection.html">How the case connects</a><a data-doc="docs/spoilers/brcg.md" href="../../docs/spoilers/brcg.html">The piggy bank &amp; BRCG</a><a data-doc="docs/script/index.md" href="../../docs/script/index.html">Complete Script Explorer</a><a data-doc="docs/script/story.md" href="../../docs/script/story.html">Complete story script</a><a data-doc="docs/script/world-routes.md" href="../../docs/script/world-routes.html">World hotspot routes</a><a data-doc="docs/script/inventory-routes.md" href="../../docs/script/inventory-routes.html">Inventory combinations</a><a data-doc="docs/script/dialogue-routes.md" href="../../docs/script/dialogue-routes.html">Arthur dialogue routes</a><a data-doc="docs/script/actions-and-endings.md" href="../../docs/script/actions-and-endings.html">Actions &amp; endings</a><a data-doc="docs/script/coverage.md" href="../../docs/script/coverage.html">Script coverage proof</a></section><section class="navgroup"><h2>Project information</h2><a data-doc="docs/architecture.md" href="../../docs/architecture.html">System overview</a><a data-doc="docs/animation-assets.md" href="../../docs/animation-assets.html">Animation assets</a><a data-doc="docs/platforms.md" href="../../docs/platforms.html">Platforms</a><a data-doc="docs/testing.md" href="../../docs/testing.html">Build and test</a><a data-doc="docs/limitations.md" href="../../docs/limitations.html">Limitations</a><a data-doc="docs/credits.md" href="../../docs/credits.html">Credits &amp; licenses</a><a data-doc="docs/project/source-and-content.md" href="../../docs/project/source-and-content.html">Source snapshots &amp; game content</a><a data-doc="docs/project/release-adapter.md" href="../../docs/project/release-adapter.html">Immutable release adapter</a><a data-doc="docs/future.md" href="../../docs/future.html">Future possibilities</a><a data-doc="docs/competition/evidence-map.md" href="../../docs/competition/evidence-map.html">Buildathon evidence</a><a data-doc="docs/project/documentation.md" href="../../docs/project/documentation.html">One library, two views</a><a data-doc="docs/project/figures.md" href="../../docs/project/figures.html">About the illustrations</a><a data-doc="docs/index.md" href="../../docs/index.html">Full contents</a></section></nav></aside><main><div class="toolbar"><span id="crumb" class="crumb">Production actions, terminal speech, optional branches, and endings</span><button id="downloadMd" class="quiet-button">Save Markdown</button></div><div class="docgrid"><article id="article" tabindex="-1"><h1 id="production-actions-terminal-speech-optional-branches-and-endings">Production actions, terminal speech, optional branches, and endings</h1>
+<blockquote>
+<p><strong>Full story and puzzle spoilers.</strong> This combines specific action/state fixtures with special system, terminal, BRCG, and ending routes. The documentation search excludes Script Explorer pages unless <strong>Include evidence / spoilers</strong> is enabled.</p>
+</blockquote>
+<p><a href="index.html" data-doc="docs/script/index.md" data-anchor="">Script Explorer</a> · <a href="how-to-read.html" data-doc="docs/script/how-to-read.md" data-anchor="">Reading guide</a> · <a href="story.html" data-doc="docs/script/story.md" data-anchor="">Story</a> · <a href="world-routes.html" data-doc="docs/script/world-routes.md" data-anchor="">World routes</a> · <a href="inventory-routes.html" data-doc="docs/script/inventory-routes.md" data-anchor="">Inventory</a> · <a href="dialogue-routes.html" data-doc="docs/script/dialogue-routes.md" data-anchor="">Arthur dialogue</a> · <a href="actions-and-endings.html" data-doc="docs/script/actions-and-endings.md" data-anchor="">Actions &amp; endings</a> · <a href="coverage.html" data-doc="docs/script/coverage.md" data-anchor="">Coverage</a></p>
+<p>The production action matrix contains <strong>214 executable route fixtures</strong>. The remaining <strong>50 special runtime routes</strong> cover the opening, useful/item owners, blocked interactions, terminal speech, BRCG, and ending variants.</p>
+<h2 id="executable-production-action-matrix">Executable production action matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Owner</th>
+<th>Action input</th>
+<th>State / trigger fixture</th>
+<th>Player-visible delivery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="action-opening-player-paced"></a><code>opening.player-paced</code></td>
+<td><code>opening:createInitialAdventureState</code></td>
+<td><code>{&quot;skipIntro&quot;:false}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: “This the Records Office?”<br>MR_INDEX: “No. It’s a pizza restaurant.”<br>ROOK: “Right.<br><br>I was called in<br>about a very important case.”<br>MR_INDEX: “We’re closed<br>to the public.<br><br>I’m waiting for<br>a top-tier lead investigator.”<br>ROOK: “Then your wait is over.<br><br>My friends call me Rook.<br><br>I’m your lead investigator.”<br>MR_INDEX: “You?”<br>ROOK: “Yup!<br><br>Yours truly.”<br>MR_INDEX: “They’re not sending<br>anyone else?”<br>ROOK: “Nope!<br><br>It’s just me and you.”<br>MR_INDEX: “I was afraid of that...”<br>ROOK: “I didn’t catch<br>your name.”<br>MR_INDEX: “I never threw it.”<br>MR_INDEX: “I’m Mr. A,<br>the Archivist.<br><br>My friends<br>call me Arthur.”<br>ROOK: “So, Arthur—”<br>MR_INDEX: “...But <em>you</em><br>can call me Mr. A.”<br>ROOK: “Well...<br><br>by the end<br>of this investigation,<br><br>we’ll be closer<br>than ever.”<br>MR_INDEX: “I wouldn’t<br>count on it.”<br>ROOK: “Alright.<br><br>Lead investigator present.<br><br>So...<br><br>what exactly<br>are we investigating?”<br>MR_INDEX: “You did read<br>the case brief,<br>didn’t you?”<br>ROOK: “Errm...<br><br>case brief?”<br>MR_INDEX: “You’re telling me<br>the big-shot lead investigator<br><br>for arguably one of<br>the most significant cases<br>this office has ever handled...<br><br>shows up alone...<br><br>without the case brief?”<br>ROOK: “Oh, that case brief.<br><br>Sure.<br><br>It’s, uh...<br><br>just in my car.”<br>ROOK: “It’s a long walk<br>back, though.<br><br>Maybe I can just<br>borrow yours?”<br>MR_INDEX: “The office copy<br>is in the case-file cabinet.<br><br>It is available<br>on a need-to-know basis...<br><br>and without an approved<br>authorization form...<br><br>there is nothing<br>that <em>you</em> need to know.”<br>MR_INDEX: “Until then,<br>I’ll give you<br>the short version.”<br>MR_INDEX: “Pay attention.”<br>ROOK: “Fully focused.”<br>ROOK: “Starting now.”<br>MR_INDEX: “This is going<br>to be a long day.”<br>MR_INDEX: “Euler Finance<br>was hacked.<br><br>A large amount<br>of digital assets<br>was taken.”<br>ROOK: “Any witnesses?”<br>MR_INDEX: “No.”<br>ROOK: “Any suspects?”<br>MR_INDEX: “Not one<br>we can identify<br>from the record.”<br>ROOK: “Crime scene?”<br>MR_INDEX: “The transactions<br>are the crime scene.”<br>ROOK: “That sounds<br>inconveniently abstract.”<br>MR_INDEX: “All we have<br>is the public record<br>of those transactions.<br><br>The blockchain.”<br>ROOK: “The block...what?”<br>MR_INDEX: “The BLOCKCHAIN.<br><br>A public ledger.”<br>MR_INDEX: “It records<br>what moved...<br><br>when it moved...<br><br>and which wallet addresses<br>sent and received it.”<br>MR_INDEX: “Once recorded,<br>those entries cannot<br>simply be erased.”<br>ROOK: “So whoever did this<br>left a trail.”<br>MR_INDEX: “Yes.”<br>ROOK: “Great.<br><br>This already sounds<br>like a closed case to me.<br><br>We just go to<br>this public chain thingy...<br><br>and trace the activity.”<br>MR_INDEX: “<em>Public</em> is not<br>the same as <em>simple</em>.”<br>MR_INDEX: “The ledger is enormous...<br><br>technical...<br><br>and full of activity<br>that has nothing<br>to do with this case.”<br>MR_INDEX: “It’s like trying<br>to find a needle<br><br>in a mathematically<br>precise haystack.”<br>ROOK: “Sounds complicated.”<br>MR_INDEX: “It is.”<br>MR_INDEX: “Fortunately,<br>our office has been authorized<br>to use the Nansen API<br>for this case.<br><br>The case terminal<br>already has<br>the relevant records loaded.”<br>MR_INDEX: “Nansen helps us organize<br>and query the activity...<br><br>sort through the noise...<br><br>and surface patterns<br>or relationships<br><br>that would be difficult<br>to spot manually.”<br>ROOK: “So Nansen<br>solves the case.”<br>MR_INDEX: “No.<br><br>Nansen has organized<br>the activity.<br><br>It has not decided<br>which activity matters.<br><br>That is where<br>you come in.”<br>ROOK: “So I need a clue.”<br>MR_INDEX: “You need a question.”<br>ROOK: “I have several.”<br>MR_INDEX: “One <em>relevant</em> question.”<br>ROOK: “So then,<br>just hand over<br>the terminal access...<br><br>and I’ll get started.”<br>MR_INDEX: “Our office<br>is authorized<br>to use the Nansen API<br>for this case.<br><br>You are not authorized<br>to use the case terminal.”<br>ROOK: “But I’m<br>the lead investigator.”<br>MR_INDEX: “The more<br>you remind me of that...<br><br>the worse<br>my migraine gets.”<br>MR_INDEX: “It does not matter<br>who you are.<br><br>You need to submit<br>a terminal authorization form.”<br>MR_INDEX: “It must pass through<br>the appropriate<br>management channels...<br><br>and receive approval<br>from the shift manager.”<br>ROOK: “Who’s the shift manager?”<br>MR_INDEX: “I am.”<br>ROOK: “So the management channel<br>is you.”<br>MR_INDEX: “It is company policy.”<br>ROOK: “Where do I get<br>the form?”<br>MR_INDEX: “Take a blank<br>terminal authorization form<br>from the dispenser...<br><br>fill it out...<br><br>and bring it back to me.”<br>MR_INDEX: “Until you submit it...<br><br>and unless management<br>renders you<br>a favorable response...<br><br>do not use<br>the terminal...<br><br>do not access<br>the case files...<br><br>and do not touch<br>anything else.”</td>
+</tr>
+<tr>
+<td><a id="action-useful-take-form"></a><code>useful.take-form</code></td>
+<td><code>useful-rule:take-form</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;blank-authorization-form&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[]}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-take-pen"></a><code>useful.take-pen</code></td>
+<td><code>useful-rule:take-pen</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;pen-stand&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[]}</code></td>
+<td>MR_INDEX: Careful with that.<br>MR_INDEX: It’s an antique collector’s item.<br>MR_INDEX: Supposedly, it dates back to the signing of the Declaration of Independence.</td>
+</tr>
+<tr>
+<td><a id="action-useful-take-form-2"></a><code>useful.take-form-2</code></td>
+<td><code>useful-rule:take-form-2</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;blank-authorization-form&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;PEN_HELD&quot;,&quot;inventory&quot;:[&quot;loose-feather-pen&quot;]}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-take-pen-2"></a><code>useful.take-pen-2</code></td>
+<td><code>useful-rule:take-pen-2</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;pen-stand&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_HELD&quot;,&quot;inventory&quot;:[&quot;blank-terminal-authorization-form&quot;]}</code></td>
+<td>MR_INDEX: Careful with that.<br>MR_INDEX: It’s an antique collector’s item.<br>MR_INDEX: Supposedly, it dates back to the signing of the Declaration of Independence.</td>
+</tr>
+<tr>
+<td><a id="action-useful-give-form"></a><code>useful.give-form</code></td>
+<td><code>useful-rule:give-form</code></td>
+<td><code>{&quot;verb&quot;:&quot;GIVE&quot;,&quot;targetId&quot;:&quot;mr-index&quot;,&quot;itemId&quot;:&quot;signed-terminal-authorization-form-with-doodles&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_COMPLETED&quot;,&quot;inventory&quot;:[&quot;signed-terminal-authorization-form-with-doodles&quot;,&quot;broken-feather-pen&quot;]}</code></td>
+<td>MR_INDEX: Let’s see here.<br>MR_INDEX: This is barely legible.<br>ROOK: Legible enough to be legally binding?<br>MR_INDEX: My two-year-old grandson has better handwriting than this.<br>ROOK: Does he do contract work?<br>MR_INDEX: And what exactly are these?<br>MR_INDEX: Did you draw...<br>MR_INDEX: DINOSAURS...<br>MR_INDEX: and SMILEY FACES...<br>MR_INDEX: on my corporate authorization form!?<br>ROOK: Ah. So some of it is legible.<br>MR_INDEX: Unfortunately...<br>MR_INDEX: you did complete the required fields.<br>MR_INDEX: Barely.<br>MR_INDEX: Against my better judgment...<br>MR_INDEX: and in the interest of getting you out of this office faster...<br>MR_INDEX: I’m approving it.<br>MR_INDEX: There.<br>MR_INDEX: You’re authorized to use the Nansen™ terminal.<br>MR_INDEX: But just for TODAY.<br>ROOK: Knew the dinosaurs would win you over.<br>MR_INDEX: They did not.<br>MR_INDEX: And since you left your case brief in the car...<br>MR_INDEX: the office copy is in that filing cabinet.<br>MR_INDEX: Take the Euler file ONLY.<br>MR_INDEX: The others are confidential.<br>MR_INDEX: Do not snoop.<br>ROOK: How much snooping counts as snooping?<br>MR_INDEX: Any amount performed by you.<br>ROOK: What if I need another case file?<br>MR_INDEX: Then you’ll need to submit another authorization form...<br>MR_INDEX: which management will promptly deny.<br>ROOK: Euler only. Got it.<br>MR_INDEX: Good. Let’s see how long that lasts.</td>
+</tr>
+<tr>
+<td><a id="action-useful-reprimand-start"></a><code>useful.reprimand-start</code></td>
+<td><code>useful-rule:reprimand-start</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[]}</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-useful-reprimand-form-held"></a><code>useful.reprimand-form-held</code></td>
+<td><code>useful-rule:reprimand-form-held</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_HELD&quot;,&quot;inventory&quot;:[&quot;blank-terminal-authorization-form&quot;]}</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-useful-reprimand-pen-held"></a><code>useful.reprimand-pen-held</code></td>
+<td><code>useful-rule:reprimand-pen-held</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;PEN_HELD&quot;,&quot;inventory&quot;:[&quot;loose-feather-pen&quot;]}</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-useful-reprimand-form-and-pen"></a><code>useful.reprimand-form-and-pen</code></td>
+<td><code>useful-rule:reprimand-form-and-pen</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_AND_PEN&quot;,&quot;inventory&quot;:[&quot;blank-terminal-authorization-form&quot;,&quot;loose-feather-pen&quot;]}</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-useful-reprimand-form-completed"></a><code>useful.reprimand-form-completed</code></td>
+<td><code>useful-rule:reprimand-form-completed</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_COMPLETED&quot;,&quot;inventory&quot;:[&quot;signed-terminal-authorization-form-with-doodles&quot;,&quot;broken-feather-pen&quot;]}</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-useful-reprimand-form-submitted"></a><code>useful.reprimand-form-submitted</code></td>
+<td><code>useful-rule:reprimand-form-submitted</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_SUBMITTED&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;]}</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-useful-look-case-cabinet"></a><code>useful.look-case-cabinet</code></td>
+<td><code>useful-rule:look-case-cabinet</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;]}</code></td>
+<td>SYSTEM: OFFICIAL CASE-FILE CABINET</td>
+</tr>
+<tr>
+<td><a id="action-useful-look-drawer"></a><code>useful.look-drawer</code></td>
+<td><code>useful-rule:look-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;]}</code></td>
+<td>ROOK: This must be the office’s miscellaneous catch-all junk drawer.<br>ROOK: A random assortment of items...<br>ROOK: and a piece of chewed gum haphazardly covered by the wrapper.<br>ROOK: At least they tried...<br>ROOK: It still might be worth pillaging through.<br>ROOK: Rummaging through other people’s partially sticky objects...<br>ROOK: is a cherished pastime of mine.</td>
+</tr>
+<tr>
+<td><a id="action-useful-open-case-drawer"></a><code>useful.open-case-drawer</code></td>
+<td><code>useful-rule:open-case-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-pull-case-drawer"></a><code>useful.pull-case-drawer</code></td>
+<td><code>useful-rule:pull-case-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;PULL&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-close-case-drawer"></a><code>useful.close-case-drawer</code></td>
+<td><code>useful-rule:close-case-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-push-case-drawer"></a><code>useful.push-case-drawer</code></td>
+<td><code>useful-rule:push-case-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-use-case-drawer-open"></a><code>useful.use-case-drawer-open</code></td>
+<td><code>useful-rule:use-case-drawer-open</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-use-case-drawer-shut"></a><code>useful.use-case-drawer-shut</code></td>
+<td><code>useful-rule:use-case-drawer-shut</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-look-case-stack"></a><code>useful.look-case-stack</code></td>
+<td><code>useful-rule:look-case-stack</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;disorderly-stack-of-confidential-files&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td>ROOK: Confidential files. Randomly assorted. Chaotically arranged.<br>ROOK: Ah. Classic security through obscurity.<br>ROOK: I use the same system in my office. Even I can’t find anything.<br>ROOK: Very secure.</td>
+</tr>
+<tr>
+<td><a id="action-useful-pickup-case-stack"></a><code>useful.pickup-case-stack</code></td>
+<td><code>useful-rule:pickup-case-stack</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;disorderly-stack-of-confidential-files&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;caseFileDrawer&quot;:&quot;OPEN&quot;,&quot;caseStack&quot;:&quot;UNSEARCHED&quot;}</code></td>
+<td>ROOK: I’ll just pick up the Euler file.<br>ROOK: As soon as I find out which one it is...<br>ROOK: Folder tabs aren’t snooping.<br>ROOK: They’re... navigation.<br>ROOK: Let’s see here...<br>ROOK: ‘Notorious Ransomware Gang Claims “Dog Ate Their Decryption Key.”<br>ROOK: Responsible Breed Still Unknown and at Large.’<br>ROOK: Not Euler.<br>ROOK: ‘The Great Break-Room Yogurt Heist:<br>ROOK: When Sufficient Labeling of Your Snacks Is Ineffective...<br>ROOK: ...at Deterring Stomach-Grumbling Coworkers.’<br>ROOK: Ah. A classic case of who-dun-it.<br>ROOK: ...And now I’m hungry.<br>ROOK: ...but still not Euler.<br>ROOK: ‘The REAL Roswell Conspiracy:<br>ROOK: Extraterrestrial Pilots Lacked Proper Licensing, Registration...<br>ROOK: and Minimum State-Required Insurance Coverage at Time of Crash.’<br>ROOK: Yikes. Sounds dicey. Definitely not for me.<br>ROOK: Euler Finance. There you are.<br>ROOK: March 13, 2023. First entry: DAI.<br>ROOK: A stablecoin— designed to stay close to one U.S. dollar.<br>ROOK: Just over 8,877,507 DAI. About $8.8 million at the time.<br>ROOK: And that was only the first DAI pool.<br>ROOK: The broader exploit reached other assets too...<br>ROOK: including stETH, wstETH, USDC, and WBTC.<br>ROOK: Roughly $197 million in total losses.<br>ROOK: No witnesses. No fingerprints.<br>ROOK: Just a very expensive trail of receipts.<br>ROOK: And the exact DAI contract address is here. Good.<br>ROOK: No following the wrong token.<br>ROOK: That much value leaves a trail.<br>ROOK: Now I’ve got what I need to check the Nansen™ terminal...<br>ROOK: and trace the transactions.</td>
+</tr>
+<tr>
+<td><a id="action-useful-open-misc-drawer"></a><code>useful.open-misc-drawer</code></td>
+<td><code>useful-rule:open-misc-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-pull-misc-drawer"></a><code>useful.pull-misc-drawer</code></td>
+<td><code>useful-rule:pull-misc-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;PULL&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-close-misc-drawer"></a><code>useful.close-misc-drawer</code></td>
+<td><code>useful-rule:close-misc-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-push-misc-drawer"></a><code>useful.push-misc-drawer</code></td>
+<td><code>useful-rule:push-misc-drawer</code></td>
+<td><code>{&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-use-misc-drawer-open"></a><code>useful.use-misc-drawer-open</code></td>
+<td><code>useful-rule:use-misc-drawer-open</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-use-misc-drawer-shut"></a><code>useful.use-misc-drawer-shut</code></td>
+<td><code>useful-rule:use-misc-drawer-shut</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-useful-look-misc-contents"></a><code>useful.look-misc-contents</code></td>
+<td><code>useful-rule:look-misc-contents</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;miscellaneous-catch-all-contents&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td>ROOK: This must be the office’s miscellaneous catch-all junk drawer.<br>ROOK: A random assortment of items...<br>ROOK: and a piece of chewed gum haphazardly covered by the wrapper.<br>ROOK: At least they tried...<br>ROOK: It still might be worth pillaging through.<br>ROOK: Rummaging through other people’s partially sticky objects...<br>ROOK: is a cherished pastime of mine.</td>
+</tr>
+<tr>
+<td><a id="action-useful-pickup-misc-contents"></a><code>useful.pickup-misc-contents</code></td>
+<td><code>useful-rule:pickup-misc-contents</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;miscellaneous-catch-all-contents&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;,&quot;approved-stamped-terminal-authorization-form&quot;,&quot;euler-case-file&quot;],&quot;miscDrawer&quot;:&quot;OPEN&quot;,&quot;miscContents&quot;:&quot;UNCOLLECTED&quot;}</code></td>
+<td>ROOK: Let’s see what’s in here...<br>ROOK: A rubber band.<br>ROOK: A junk drawer wouldn’t be complete without one.<br>ROOK: No one uses it. Yet, no one is willing to throw it away.<br>ROOK: A Rubik’s Cube.<br>ROOK: I prefer the already solved ones.<br>ROOK: Sharknado 2. On VHS.<br>ROOK: Finally. Evidence of a crime.<br>MR_INDEX: That is not evidence.<br>ROOK: Then why is it in a Records Office?<br>MR_INDEX: Because no one wanted it at home.<br>ROOK: Compelling motive.<br>ROOK: A piggy bank.<br>ROOK: Finally, a financial system I understand.<br>ROOK: And a Do-It-Herself Small Pink Toolbox.<br>ROOK: Empowering self-reliant women everywhere...<br>ROOK: and now me.<br>ROOK: At last, I can hang my own pictures...<br>ROOK: and tighten any loose furniture screws I come across...<br>ROOK: all without calling in a professional...<br>ROOK: and keeping my dignity fully intact!<br>ROOK: I’m collecting these as potentially relevant.<br>ROOK: It’s not stealing. It’s tactical acquisition.<br>ROOK: That’s about it for the salvageable objects. The used peppermint gum can stay.<br>ROOK: I’m still enjoying the aroma that has permanently permeated the drawer.<br>ROOK: Very refreshing.</td>
+</tr>
+<tr>
+<td><a id="action-item-combine-form-pen"></a><code>item.combine-form-pen</code></td>
+<td><code>item-rule:combine-form-pen</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;itemId&quot;:&quot;blank-terminal-authorization-form&quot;,&quot;targetItemId&quot;:&quot;loose-feather-pen&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_AND_PEN&quot;,&quot;inventory&quot;:[&quot;blank-terminal-authorization-form&quot;,&quot;loose-feather-pen&quot;]}</code></td>
+<td>ROOK: Role:<br>ROOK: Lead Investigator<br>ROOK: Name:<br>ROOK: Rook<br>ROOK: Purpose:<br>ROOK: Investigate official things...officially.<br>ROOK: Annnd...my signature.<br>ROOK: Whoops...<br>ROOK: I think I pressed too hard, and broke the pen.<br>ROOK: At least I finished the form though.</td>
+</tr>
+<tr>
+<td><a id="action-item-open-toolbox"></a><code>item.open-toolbox</code></td>
+<td><code>item-rule:open-toolbox</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;itemId&quot;:&quot;small-toolbox-closed&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;small-toolbox-closed&quot;]}</code></td>
+<td>ROOK: Alrighty.<br>ROOK: Let’s see what kind of professional-grade responsibility is in here.<br>ROOK: A hammer. A small handful of dainty nails...<br>ROOK: And an empty spot where it looks like a screwdriver was supposed to be.<br>ROOK: So... a hammer, a handful of nails, a screwdriver-shaped vacancy...<br>ROOK: and one newly self-certified handyman.<br>ROOK: Look out, property values.</td>
+</tr>
+<tr>
+<td><a id="action-item-use-toolbox"></a><code>item.use-toolbox</code></td>
+<td><code>item-rule:use-toolbox</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;itemId&quot;:&quot;small-toolbox-closed&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;small-toolbox-closed&quot;]}</code></td>
+<td>ROOK: Alrighty.<br>ROOK: Let’s see what kind of professional-grade responsibility is in here.<br>ROOK: A hammer. A small handful of dainty nails...<br>ROOK: And an empty spot where it looks like a screwdriver was supposed to be.<br>ROOK: So... a hammer, a handful of nails, a screwdriver-shaped vacancy...<br>ROOK: and one newly self-certified handyman.<br>ROOK: Look out, property values.</td>
+</tr>
+<tr>
+<td><a id="action-item-open-toolbox-open"></a><code>item.open-toolbox-open</code></td>
+<td><code>item-rule:open-toolbox-open</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;itemId&quot;:&quot;small-toolbox-open-empty&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;small-toolbox-open-empty&quot;]}</code></td>
+<td>ROOK: It’s already open.</td>
+</tr>
+<tr>
+<td><a id="action-item-use-toolbox-open"></a><code>item.use-toolbox-open</code></td>
+<td><code>item-rule:use-toolbox-open</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;itemId&quot;:&quot;small-toolbox-open-empty&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;small-toolbox-open-empty&quot;]}</code></td>
+<td>ROOK: Empty now. Still pink. Still empowering.<br>ROOK: And, by default, the most organized toolbox I’ve ever owned.</td>
+</tr>
+<tr>
+<td><a id="action-item-smash-piggy"></a><code>item.smash-piggy</code></td>
+<td><code>item-rule:smash-piggy</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;itemId&quot;:&quot;hammer&quot;,&quot;targetItemId&quot;:&quot;piggy-bank-intact&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;hammer&quot;,&quot;piggy-bank-intact&quot;]}</code></td>
+<td>ROOK: Sorry, little pig. This might sting a little.<br>ROOK: One gentle tap.<br>ROOK: Just enough to take a tiny chip out of the bottom.<br>ROOK: ...I...I was aiming for one little chip.<br>ROOK: I may have underestimated the ‘heavy-duty’ part.<br>MR_INDEX: What did you do?<br>ROOK: Made a withdrawal.<br>MR_INDEX: With a hammer?<br>ROOK: Let’s call it a hostile withdrawal.<br>ROOK: Huh. Not coins. A little strip of paper.<br>ROOK: So that’s what was shuffling around in there.</td>
+</tr>
+<tr>
+<td><a id="action-blocked-give-mr-index-broken-feather-pen"></a><code>blocked.give.mr-index.broken-feather-pen</code></td>
+<td><code>blocked-interaction:GIVE:mr-index:broken-feather-pen</code></td>
+<td><code>{&quot;verb&quot;:&quot;GIVE&quot;,&quot;targetId&quot;:&quot;mr-index&quot;,&quot;itemId&quot;:&quot;broken-feather-pen&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;text&quot;:&quot;Umm... I think I’ll hang onto this for now.&quot;,&quot;speech&quot;:[{&quot;speaker&quot;:&quot;ROOK&quot;,&quot;text&quot;:&quot;Umm... I think I’ll hang onto this for now.&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceCopyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;finalScriptSource&quot;:{&quot;eventKey&quot;:&quot;COPY.A1:GIVE to Arthur or attempt to return/use with inkwell&quot;,&quot;sourceRecordId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceNodeId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceOrder&quot;:176,&quot;effectiveAction&quot;:&quot;CHANGE&quot;,&quot;source&quot;:&quot;FULL_TEXT/02_A1_OPENING_AND_AUTHORIZATION_FULL.md:877-888&quot;},&quot;deliveryParts&quot;:[&quot;Umm... I think I’ll hang onto this for now.&quot;],&quot;authority&quot;:&quot;FINAL_SCRIPT_RECONCILIATION&quot;},{&quot;speaker&quot;:&quot;ROOK&quot;,&quot;text&quot;:&quot;I don’t want to upset Arthur.&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c::2&quot;,&quot;sourceCopyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;finalScriptSource&quot;:{&quot;eventKey&quot;:&quot;COPY.A1:GIVE to Arthur or attempt to return/use with inkwell&quot;,&quot;sourceRecordId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceNodeId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceOrder&quot;:176,&quot;effectiveAction&quot;:&quot;CHANGE&quot;,&quot;source&quot;:&quot;FULL_TEXT/02_A1_OPENING_AND_AUTHORIZATION_FULL.md:877-888&quot;},&quot;deliveryParts&quot;:[&quot;I don’t want to upset Arthur.&quot;],&quot;authority&quot;:&quot;FINAL_SCRIPT_RECONCILIATION&quot;},{&quot;speaker&quot;:&quot;ROOK&quot;,&quot;text&quot;:&quot;He already seems to have a bad case of the Mondays.&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c::3&quot;,&quot;sourceCopyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;finalScriptSource&quot;:{&quot;eventKey&quot;:&quot;COPY.A1:GIVE to Arthur or attempt to return/use with inkwell&quot;,&quot;sourceRecordId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceNodeId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceOrder&quot;:176,&quot;effectiveAction&quot;:&quot;CHANGE&quot;,&quot;source&quot;:&quot;FULL_TEXT/02_A1_OPENING_AND_AUTHORIZATION_FULL.md:877-888&quot;},&quot;deliveryParts&quot;:[&quot;He already seems to have a bad case of the Mondays.&quot;],&quot;authority&quot;:&quot;FINAL_SCRIPT_RECONCILIATION&quot;}]}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;]}</code></td>
+<td>ROOK: Umm... I think I’ll hang onto this for now.<br>ROOK: I don’t want to upset Arthur.<br>ROOK: He already seems to have a bad case of the Mondays.</td>
+</tr>
+<tr>
+<td><a id="action-blocked-use-pen-stand-broken-feather-pen"></a><code>blocked.use.pen-stand.broken-feather-pen</code></td>
+<td><code>blocked-interaction:USE:pen-stand:broken-feather-pen</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;pen-stand&quot;,&quot;itemId&quot;:&quot;broken-feather-pen&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;text&quot;:&quot;Umm... I think I’ll hang onto this for now.&quot;,&quot;speech&quot;:[{&quot;speaker&quot;:&quot;ROOK&quot;,&quot;text&quot;:&quot;Umm... I think I’ll hang onto this for now.&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceCopyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;finalScriptSource&quot;:{&quot;eventKey&quot;:&quot;COPY.A1:GIVE to Arthur or attempt to return/use with inkwell&quot;,&quot;sourceRecordId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceNodeId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceOrder&quot;:176,&quot;effectiveAction&quot;:&quot;CHANGE&quot;,&quot;source&quot;:&quot;FULL_TEXT/02_A1_OPENING_AND_AUTHORIZATION_FULL.md:877-888&quot;},&quot;deliveryParts&quot;:[&quot;Umm... I think I’ll hang onto this for now.&quot;],&quot;authority&quot;:&quot;FINAL_SCRIPT_RECONCILIATION&quot;},{&quot;speaker&quot;:&quot;ROOK&quot;,&quot;text&quot;:&quot;I don’t want to upset Arthur.&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c::2&quot;,&quot;sourceCopyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;finalScriptSource&quot;:{&quot;eventKey&quot;:&quot;COPY.A1:GIVE to Arthur or attempt to return/use with inkwell&quot;,&quot;sourceRecordId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceNodeId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceOrder&quot;:176,&quot;effectiveAction&quot;:&quot;CHANGE&quot;,&quot;source&quot;:&quot;FULL_TEXT/02_A1_OPENING_AND_AUTHORIZATION_FULL.md:877-888&quot;},&quot;deliveryParts&quot;:[&quot;I don’t want to upset Arthur.&quot;],&quot;authority&quot;:&quot;FINAL_SCRIPT_RECONCILIATION&quot;},{&quot;speaker&quot;:&quot;ROOK&quot;,&quot;text&quot;:&quot;He already seems to have a bad case of the Mondays.&quot;,&quot;copyKey&quot;:&quot;r55-05da682089548d1a874c::3&quot;,&quot;sourceCopyKey&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;finalScriptSource&quot;:{&quot;eventKey&quot;:&quot;COPY.A1:GIVE to Arthur or attempt to return/use with inkwell&quot;,&quot;sourceRecordId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceNodeId&quot;:&quot;r55-05da682089548d1a874c&quot;,&quot;sourceOrder&quot;:176,&quot;effectiveAction&quot;:&quot;CHANGE&quot;,&quot;source&quot;:&quot;FULL_TEXT/02_A1_OPENING_AND_AUTHORIZATION_FULL.md:877-888&quot;},&quot;deliveryParts&quot;:[&quot;He already seems to have a bad case of the Mondays.&quot;],&quot;authority&quot;:&quot;FINAL_SCRIPT_RECONCILIATION&quot;}]}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;broken-feather-pen&quot;]}</code></td>
+<td>ROOK: Umm... I think I’ll hang onto this for now.<br>ROOK: I don’t want to upset Arthur.<br>ROOK: He already seems to have a bad case of the Mondays.</td>
+</tr>
+<tr>
+<td><a id="action-dead-request-look"></a><code>dead.request-look</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;request-dispenser&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: A bulky machine for storing, printing, and dispensing office forms...<br>ROOK: It’s basically a printer... but with more authority.</td>
+</tr>
+<tr>
+<td><a id="action-dead-request-pickup"></a><code>dead.request-pickup</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;request-dispenser&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I could totally lift that, on any other day.<br>ROOK: But yesterday was leg day.</td>
+</tr>
+<tr>
+<td><a id="action-dead-request-push"></a><code>dead.request-push</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetId&quot;:&quot;request-dispenser&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Nope. It weighs more than it looks...</td>
+</tr>
+<tr>
+<td><a id="action-dead-request-open"></a><code>dead.request-open</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;request-dispenser&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: That is one thing I’m man enough to admit that...<br>ROOK: I am absolutely not authorized to open.<br>ROOK: And I don’t need a rejected authorization form to tell me that.</td>
+</tr>
+<tr>
+<td><a id="action-dead-request-close"></a><code>dead.request-close</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetId&quot;:&quot;request-dispenser&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It’s already shut. And fastened with proprietary screws...<br>ROOK: ...that require an exorbitantly priced manufacturer-approved screwdriver.</td>
+</tr>
+<tr>
+<td><a id="action-dead-request-use"></a><code>dead.request-use</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;request-dispenser&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It already printed the form I need.<br>ROOK: Any more paperwork and this becomes a desk job.</td>
+</tr>
+<tr>
+<td><a id="action-dead-blank-form-look"></a><code>dead.blank-form-look</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;blank-authorization-form&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Bureaucratic office forms. My favorite.<br>ROOK: Nothing says ‘urgent investigation’... like stopping to fill one out.</td>
+</tr>
+<tr>
+<td><a id="action-dead-pen-look"></a><code>dead.pen-look</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;pen-stand&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: A feather pen. Elegant. I wonder how the bird feels...<br>ROOK: knowing one of its feathers ended up supporting tedious office management.</td>
+</tr>
+<tr>
+<td><a id="action-dead-blank-form-give"></a><code>dead.blank-form-give</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;GIVE&quot;,&quot;targetId&quot;:&quot;mr-index&quot;,&quot;itemId&quot;:&quot;blank-terminal-authorization-form&quot;}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: It’s blank.<br>ROOK: I figured that’d save us both time and be more efficient.<br>MR_INDEX: Funny. All you seem to do is WASTE time.<br>MR_INDEX: I will only consider a properly filled out and signed form.<br>MR_INDEX: Complete it... or leave.</td>
+</tr>
+<tr>
+<td><a id="action-dead-incompatible-pen"></a><code>dead.incompatible-pen</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;coffee-mug&quot;,&quot;itemId&quot;:&quot;loose-feather-pen&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I should save the ink for something official. Or official-looking...<br>ROOK: like the authorization form.</td>
+</tr>
+<tr>
+<td><a id="action-dead-blank-form-open"></a><code>dead.blank-form-open</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;blank-authorization-form&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It doesn’t open.<br>ROOK: It’s paperwork... not a treasure map.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-change"></a><code>background.look.change</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-be-the-change&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: ‘Be the change. Submit a revision request. Form ID 10T.’<br>ROOK: Apparently, even personal growth needs managerial approval.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-think"></a><code>background.look.think</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-think-outside&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: ‘Think outside the box... Then put it back.’<br>ROOK: I think you’re gonna need a bigger box.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-clock"></a><code>background.look.clock</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-clock&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Ah. It’s a dash past a line.<br>ROOK: I’m right on time.<br>ROOK: Probably.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-employee"></a><code>background.look.employee</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-employee&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: ‘Employee of the Month: Ron Gilbert.’<br>ROOK: Hmm... Why does that name sound so familiar?</td>
+</tr>
+<tr>
+<td><a id="action-background-look-city"></a><code>background.look.city</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-city-bridge&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It’s the sort of view people hang indoors...<br>ROOK: to remind themselves they could be somewhere else.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-building"></a><code>background.look.building</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-building&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Blueprints.<br>ROOK: A building’s way of saying: ‘It seemed like a good idea on paper.’</td>
+</tr>
+<tr>
+<td><a id="action-background-look-preserve"></a><code>background.look.preserve</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-preserve&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: ‘Preserve. Serve. Remember.’<br>ROOK: Either a Records Office motto...<br>ROOK: or a taxidermist’s business plan.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-records"></a><code>background.look.records</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-records-sign&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: ‘Records Office. Everything. Archived. Forever.<br>ROOK: Like it or not.’<br>ROOK: That’s either a slogan... or a warning.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-stanchion"></a><code>background.look.stanchion</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;wall-not-a-number&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: ‘You are not a number. Please take one.’<br>ROOK: I feel seen... then sequentially processed.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-window"></a><code>background.look.window</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;window&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Blue sky. Puffy clouds. Sunlight.<br>ROOK: Somewhere out there, people are doing things...<br>ROOK: without filling out an authorization form first.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-books"></a><code>background.look.books</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;book-shelf&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: A lot of books. A lot of words. Not nearly enough pictures.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-globe"></a><code>background.look.globe</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;office-globe&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: A globe. The whole world, neatly labeled, not flat...<br>ROOK: and easy to spin.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-lamp"></a><code>background.look.lamp</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;desk-lamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: This lamp looks like it’s been working here longer than Mr. A...<br>ROOK: and that’s saying a lot.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-stamp"></a><code>background.look.stamp</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;arthur-stamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: An official-looking rubber stamp with its own custom-branded ink pad.<br>ROOK: And somehow... the Kinko’s barcode sticker is still hanging on for dear life.</td>
+</tr>
+<tr>
+<td><a id="action-background-look-mug"></a><code>background.look.mug</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;coffee-mug&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: MmmMMm... Smells like coffee from a 24-hour diner.<br>ROOK: Never quite fresh...<br>ROOK: but reheatable and always ready.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-change"></a><code>background.talk.change</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-be-the-change&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m not discussing personal growth with a poster.<br>ROOK: That’s what performance reviews are for.<br>ROOK: Nah.<br>ROOK: It’d probably want to put whatever I’d say to it into that box, too.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-think"></a><code>background.talk.think</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-think-outside&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Nah.<br>ROOK: It’d probably want to put whatever I’d say to it into that box, too.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-clock"></a><code>background.talk.clock</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-clock&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Alexa... what time is it?<br>ROOK: Ah. Not one of those clocks.<br>ROOK: Those are the only kind I actually know how to use.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-employee"></a><code>background.talk.employee</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-employee&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Congratulations, Ron. Still humble. I respect that.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-city"></a><code>background.talk.city</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-city-bridge&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: The picture says a thousand words. That’s already plenty.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-building"></a><code>background.talk.building</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-building&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I wouldn’t even know what to say to a building...<br>ROOK: that hasn’t even been built yet.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-preserve"></a><code>background.talk.preserve</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-preserve&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I was going to ask it something...<br>ROOK: I forgot... Maybe it’ll come back to me later.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-records"></a><code>background.talk.records</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-records-sign&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m not making small talk with office signage.<br>ROOK: That’s how mandatory training videos start.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-stanchion"></a><code>background.talk.stanchion</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;wall-not-a-number&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It probably wouldn’t respond anyways until my number was called.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-window"></a><code>background.talk.window</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;window&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m lonely... but not ‘talk to the window’ lonely.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-books"></a><code>background.talk.books</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;book-shelf&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I shouldn’t be talking to books. Books should be talking to me...<br>ROOK: so I can brag about how many I’ve ‘read’ while half-listening...<br>ROOK: doing chores, and answering text messages.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-globe"></a><code>background.talk.globe</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;office-globe&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Mother Earth. You're Beautiful. Mysterious. Full of wonder...<br>ROOK: and apparently require being bolted to a bookshelf for everyone’s protection.</td>
+</tr>
+<tr>
+<td><a id="action-background-talk-mug"></a><code>background.talk.mug</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetId&quot;:&quot;coffee-mug&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: The best part of waking up...<br>ROOK: is mediocre store-brand coffee in your cup.</td>
+</tr>
+<tr>
+<td><a id="action-background-employee-removal"></a><code>background.employee-removal</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;wall-employee&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I think it looks great where it is.<br>ROOK: Front and center, and for all to see.</td>
+</tr>
+<tr>
+<td><a id="action-background-city-pick"></a><code>background.city-pick</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;wall-city-bridge&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t need it.<br>ROOK: Though it would match my new curtains and tie the whole kitchen together.<br>ROOK: Total vibe.</td>
+</tr>
+<tr>
+<td><a id="action-background-records-use"></a><code>background.records-use</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;wall-records-sign&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: What would I even do with it? Open a competing Records Office?<br>ROOK: No thanks.</td>
+</tr>
+<tr>
+<td><a id="action-background-stanchion-pick"></a><code>background.stanchion-pick</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;wall-not-a-number&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: That feels like cutting the line... but with extra steps.</td>
+</tr>
+<tr>
+<td><a id="action-background-preserve-short"></a><code>background.preserve-short</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;GIVE&quot;,&quot;targetId&quot;:&quot;wall-preserve&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It’s not mine to give.</td>
+</tr>
+<tr>
+<td><a id="action-background-preserve-vault"></a><code>background.preserve-vault</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;wall-preserve&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game.</td>
+</tr>
+<tr>
+<td><a id="action-background-window-physical"></a><code>background.window-physical</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetId&quot;:&quot;window&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I should leave it alone.<br>ROOK: It’s the only thing in here with an outside perspective.</td>
+</tr>
+<tr>
+<td><a id="action-background-books-physical"></a><code>background.books-physical</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;book-shelf&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t need one.<br>ROOK: I already have unread books at home depending on me.</td>
+</tr>
+<tr>
+<td><a id="action-background-globe-pickup"></a><code>background.globe-pickup</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;office-globe&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t need the whole world in my hand...<br>ROOK: when it’s bolted to a bookshelf, lubed up, and ready to spin.</td>
+</tr>
+<tr>
+<td><a id="action-background-lamp-pickup"></a><code>background.lamp-pickup</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;desk-lamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: It has a permanent position on this desk.<br>ROOK: I respect seniority.</td>
+</tr>
+<tr>
+<td><a id="action-background-mug-pickup"></a><code>background.mug-pickup</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;coffee-mug&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Mr. A needs it more than I do.</td>
+</tr>
+<tr>
+<td><a id="action-background-globe-give"></a><code>background.globe-give</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;GIVE&quot;,&quot;targetId&quot;:&quot;office-globe&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I can’t. It’s bolted to the bookshelf.</td>
+</tr>
+<tr>
+<td><a id="action-background-globe-open"></a><code>background.globe-open</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;office-globe&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t want to break it.</td>
+</tr>
+<tr>
+<td><a id="action-background-lamp-push"></a><code>background.lamp-push</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetId&quot;:&quot;desk-lamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t want to knock it over.</td>
+</tr>
+<tr>
+<td><a id="action-background-mug-pull"></a><code>background.mug-pull</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PULL&quot;,&quot;targetId&quot;:&quot;coffee-mug&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m not spilling Mr. A’s coffee.<br>ROOK: Though by the look of his desk...<br>ROOK: I don’t think it’d be the first time that’s happened.</td>
+</tr>
+<tr>
+<td><a id="action-background-stamp-before"></a><code>background.stamp-before</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;arthur-stamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;}</code></td>
+<td>ROOK: Mr. A needs that to approve my authorization form.<br>ROOK: My chances already seem slim enough as it is.</td>
+</tr>
+<tr>
+<td><a id="action-background-stamp-after"></a><code>background.stamp-after</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;arthur-stamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;}</code></td>
+<td>ROOK: I think Mr. A should keep that...<br>ROOK: in case I need another authorization approved before this day is over.</td>
+</tr>
+<tr>
+<td><a id="action-background-stamp-use-approved"></a><code>background.stamp-use-approved</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;arthur-stamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;}</code></td>
+<td>ROOK: I’m already approved.<br>ROOK: No need to test how permanent that decision is.</td>
+</tr>
+<tr>
+<td><a id="action-background-stamp-use-before"></a><code>background.stamp-use-before</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;arthur-stamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;}</code></td>
+<td>ROOK: Tempting. But not with Mr. A standing right here.</td>
+</tr>
+<tr>
+<td><a id="action-background-stamp-push"></a><code>background.stamp-push</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetId&quot;:&quot;arthur-stamp&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t want to break the very thing...<br>ROOK: that arguably carries the most authority in this entire office.</td>
+</tr>
+<tr>
+<td><a id="action-background-mug-use"></a><code>background.mug-use</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;coffee-mug&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m not putting my lips on that.</td>
+</tr>
+<tr>
+<td><a id="action-background-global-refusal"></a><code>background.global-refusal</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;wall-be-the-change&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I can’t reach it.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-case-stack-look"></a><code>repeat.case-stack-look</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;disorderly-stack-of-confidential-files&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;caseStack&quot;:&quot;SEARCHED_EULER_REMOVED&quot;}</code></td>
+<td>ROOK: The Euler file is already out. The rest are still confidential...<br>ROOK: and allegedly still none of my business.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-misc-look"></a><code>repeat.misc-look</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetId&quot;:&quot;miscellaneous-catch-all-contents&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;miscContents&quot;:&quot;COLLECTED_GUM_REMAINS&quot;}</code></td>
+<td>ROOK: Mostly useless junk left in there... along with the peppermint gum...<br>ROOK: and the atmosphere it created. Not gonna lie...<br>ROOK: the more I smell it, the more I’m tempted to try it.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-case-stack-pickup"></a><code>repeat.case-stack-pickup</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;disorderly-stack-of-confidential-files&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;caseStack&quot;:&quot;SEARCHED_EULER_REMOVED&quot;}</code></td>
+<td>ROOK: I found the Euler file. Anything else at this point would be snooping.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-misc-pickup"></a><code>repeat.misc-pickup</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;PICK_UP&quot;,&quot;targetId&quot;:&quot;miscellaneous-catch-all-contents&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;miscContents&quot;:&quot;COLLECTED_GUM_REMAINS&quot;}</code></td>
+<td>ROOK: The gum stays. Tactical acquisition has limits.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-case-drawer-open"></a><code>repeat.case-drawer-open</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;caseFileDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td>ROOK: It’s already open.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-case-drawer-closed"></a><code>repeat.case-drawer-closed</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetId&quot;:&quot;official-case-file-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;caseFileDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td>ROOK: It’s already closed.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-misc-drawer-open"></a><code>repeat.misc-drawer-open</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;miscDrawer&quot;:&quot;OPEN&quot;}</code></td>
+<td>ROOK: It’s already open.</td>
+</tr>
+<tr>
+<td><a id="action-repeat-misc-drawer-closed"></a><code>repeat.misc-drawer-closed</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetId&quot;:&quot;miscellaneous-drawer-cabinet&quot;,&quot;itemId&quot;:null}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;miscDrawer&quot;:&quot;CLOSED&quot;}</code></td>
+<td>ROOK: It’s already closed.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-blank-form-look"></a><code>inventory.blank-form-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;blank-terminal-authorization-form&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Seems relatively boilerplate.<br>ROOK: Name. Role. Reason for access. Signature.<br>ROOK: Very official. These guys don’t mess around.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-pen-look"></a><code>inventory.pen-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;loose-feather-pen&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Fancy feather. Sharp, inked-up, little nib.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-signed-look"></a><code>inventory.signed-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;signed-terminal-authorization-form-with-doodles&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Signed and ready for Mr. A.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-broken-first-look"></a><code>inventory.broken-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;broken-feather-pen&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: The nib is cracked. The feather is bent.<br>ROOK: It gave everything it had to corporate authorization.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-approved-first-look"></a><code>inventory.approved-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;approved-stamped-terminal-authorization-form&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Approved. Stamped. Fully authorized.<br>ROOK: And apparently, the dinosaurs were acceptable for the signature field.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-approved-repeat-look"></a><code>inventory.approved-repeat-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;approved-stamped-terminal-authorization-form&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-approved-stamped-terminal-authorization-form&quot;}</code></td>
+<td>ROOK: Approved. Stamped. Fully authorized.<br>ROOK: And apparently, the dinosaurs were acceptable for the signature field.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-rubber-look"></a><code>inventory.rubber-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubber-band&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: A rubber band. Currently performing its traditional role...<br>ROOK: taking up space until the exact moment someone throws it away...<br>ROOK: and immediately needs one.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-cube-look"></a><code>inventory.cube-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubiks-cube&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Still scrambled. I could solve it...<br>ROOK: if I knew how and had several uninterrupted years.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-vhs-look"></a><code>inventory.vhs-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;sharknado-2-vhs&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Sharknado 2. On VHS. I’m surprised the first one got made.<br>ROOK: I’m even more surprised someone green-lit a sequel...<br>ROOK: and then preserved it on obsolete plastic.<br>ROOK: I heard a rumor the leading shark...<br>ROOK: was played by Bruce’s nephew.<br>ROOK: I’m watching this when I get home.<br>ROOK: Right after I find an antique store willing to admit it still sells VCRs.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-hammer-repeat-look"></a><code>inventory.hammer-repeat-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;hammer&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-hammer&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-inventory-nails-repeat-look"></a><code>inventory.nails-repeat-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;nails&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-nails&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-inventory-piggy-repeat-look"></a><code>inventory.piggy-repeat-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;piggy-bank-intact&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-piggy-bank-intact&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-inventory-broken-repeat-look"></a><code>inventory.broken-repeat-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;broken-feather-pen&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-broken-feather-pen&quot;}</code></td>
+<td><em>No spoken delivery.</em></td>
+</tr>
+<tr>
+<td><a id="action-inventory-toolbox-closed-first-look"></a><code>inventory.toolbox-closed-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;small-toolbox-closed&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Do-It-Herself. Small, pink, and radiating competence.<br>ROOK: This toolbox believes I can repair things without supervision.<br>ROOK: That makes one of us.<br>ROOK: Still... I admire its confidence in me.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-toolbox-closed-repeat-look"></a><code>inventory.toolbox-closed-repeat-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;small-toolbox-closed&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-small-toolbox-closed&quot;}</code></td>
+<td>ROOK: Do-It-Herself. Small. Pink. Radiating competence.<br>ROOK: This toolbox believes I can repair things without supervision.<br>ROOK: That makes one of us.<br>ROOK: Still... I admire its confidence.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-toolbox-open-first-look"></a><code>inventory.toolbox-open-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;small-toolbox-open-empty&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Empty now. Still pink. Still empowering.<br>ROOK: And, by default, the most organized toolbox I’ve ever owned.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-hammer-first-look"></a><code>inventory.hammer-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;hammer&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Wow. This thing has some weight to it. Properly heavy-duty.<br>ROOK: I might actually need to be careful with this.<br>ROOK: I feel like I could accidentally break something.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-nails-first-look"></a><code>inventory.nails-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;nails&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Small. Dainty. Very pointy. Perfect for hanging my keys by the door...<br>ROOK: or the calendar I’ve been meaning to put up all year.<br>ROOK: It’s already December, but better late than never.<br>ROOK: The possibilities are endless!</td>
+</tr>
+<tr>
+<td><a id="action-inventory-piggy-first-look"></a><code>inventory.piggy-first-look</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;piggy-bank-intact&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: No clinking. So there’s no change in there.<br>ROOK: But it isn’t empty.<br>ROOK: Something light is shuffling around in there.<br>ROOK: No rubber plug on the bottom.<br>ROOK: And the slot up top is too narrow to see inside...<br>ROOK: or pull anything back out.<br>ROOK: So this little pig is hiding something...<br>ROOK: or enforcing a very strict no-withdrawals policy.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-piggy-first-talk"></a><code>inventory.piggy-first-talk</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;piggy-bank-intact&quot;,&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Alright, piggy. One financial question.<br>ROOK: Is Bitcoin about to pump... or dump?<br>ROOK: Oink?<br>ROOK: Oink oinkity oink oink?<br>ROOK: Fine. I have Nansen™ access anyways...<br>ROOK: Some help you were, piggy.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-piggy-repeat-talk"></a><code>inventory.piggy-repeat-talk</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;piggy-bank-intact&quot;,&quot;verb&quot;:&quot;TALK_TO&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.talk_to-piggy-bank-intact&quot;}</code></td>
+<td>ROOK: “Alright, piggy. One financial question. Is Bitcoin about to pump... or dump?”<br>ROOK: “Oink?”<br>ROOK: “Oink oinkity oink oink?”<br>ROOK: “Fine. I have Nansen™ access anyways... Some help you were, piggy.”</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-initial"></a><code>inventory.euler-initial</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;BEFORE_Q1&quot;}</code></td>
+<td>ROOK: Euler Finance. March 13, 2023.<br>ROOK: DAI. A stablecoin built to stay close to the dollar.<br>ROOK: The first DAI entry records just over 8,877,507 DAI...<br>ROOK: about $8.8 million at the time.<br>ROOK: The wider exploit reached roughly $197 million across several assets.<br>ROOK: Now I have:<br>ROOK: the exact token, the amount, and the contract address.<br>ROOK: Time to trace the transactions.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-before-q1"></a><code>inventory.euler-before-q1</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;BEFORE_Q1&quot;,&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-euler-case-file&quot;}</code></td>
+<td>ROOK: “Euler Finance. March 13, 2023.”<br>ROOK: “DAI. A stablecoin built to stay close to the dollar.”<br>ROOK: “The first DAI entry records just over 8,877,507 DAI— about $8.8 million at the<br>ROOK: time.”<br>ROOK: “The wider exploit reached roughly $197 million across several assets.”<br>ROOK: “Now I have: the exact token, the amount, and the contract address.”<br>ROOK: “Time to trace the transactions.”</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-after-q1"></a><code>inventory.euler-after-q1</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;AFTER_Q1&quot;}</code></td>
+<td>ROOK: The first transaction led to the First Engine.<br>ROOK: That’s the start of the trail... not the end.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-after-q2"></a><code>inventory.euler-after-q2</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;AFTER_Q2&quot;}</code></td>
+<td>ROOK: The First Engine. The Receiving Vault. And one missing link between them.<br>ROOK: I need the exact transaction that tells me whether they actually connect.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-exact"></a><code>inventory.euler-exact</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;EXACT_RECEIPT&quot;}</code></td>
+<td>ROOK: The exact transaction connects the routes.<br>ROOK: Now I need to line up the amount, the receiver...<br>ROOK: and the link... and lock the proof in place.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-proof"></a><code>inventory.euler-proof</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;PROOF_COMPLETE&quot;}</code></td>
+<td>ROOK: Amount. Receiver. Link. The proof is complete.<br>ROOK: Now I just need to close the case.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-euler-proof-repeat"></a><code>inventory.euler-proof-repeat</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;investigationMilestone&quot;:&quot;PROOF_COMPLETE&quot;,&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-euler-case-file&quot;}</code></td>
+<td>ROOK: Amount. Receiver. Link.<br>ROOK: The case is ready to close.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-invalid-pair-rubber-band"></a><code>inventory.invalid-pair.rubber-band</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubber-band&quot;,&quot;verb&quot;:&quot;USE&quot;,&quot;targetItemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-invalid-pair-rubiks-cube"></a><code>inventory.invalid-pair.rubiks-cube</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubiks-cube&quot;,&quot;verb&quot;:&quot;USE&quot;,&quot;targetItemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-invalid-pair-hammer"></a><code>inventory.invalid-pair.hammer</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;hammer&quot;,&quot;verb&quot;:&quot;USE&quot;,&quot;targetItemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t think so.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-invalid-pair-nails"></a><code>inventory.invalid-pair.nails</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;nails&quot;,&quot;verb&quot;:&quot;USE&quot;,&quot;targetItemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-invalid-pair-fictional-token-note"></a><code>inventory.invalid-pair.fictional-token-note</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;,&quot;verb&quot;:&quot;USE&quot;,&quot;targetItemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Those don’t really go together.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-note-unread-repeat"></a><code>inventory.note-unread-repeat</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;,&quot;verb&quot;:&quot;LOOK_AT&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;UNREAD&quot;,&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.look-fictional-token-note&quot;}</code></td>
+<td>ROOK: “Let’s see...”<br>ROOK: “‘Abandon.’”<br>ROOK: “‘Ability.’”<br>ROOK: “‘Antique.’”<br>ROOK: “‘Bacon.’”<br>ROOK: “‘Voodoo.’”<br>ROOK: “‘Grog.’”<br>ROOK: “‘Carla.’”<br>ROOK: “‘Otis.’”<br>ROOK: “‘Elaine...’”<br>ROOK: “That started like terrible life advice... turned into a drink order... and ended<br>ROOK: with a guest list I wasn’t invited to.”<br>ROOK: “Useless.”<br>ROOK: “Wait. There’s something on the back.”<br>ROOK: “‘BRCG. Bitcoin Roller Coaster Guy. Balance: 888,888,888.’”<br>ROOK: “Eight hundred eighty-eight million, eight hundred eighty-eight thousand, eight<br>ROOK: hundred eighty-eight.”<br>ROOK: “Arthur!”<br>MR_INDEX: “Mr. A!”<br>ROOK: “I’m RICH!”<br>MR_INDEX: “No.”<br>ROOK: “You answered that alarmingly fast.”<br>MR_INDEX: “Token quantity is not value.”<br>ROOK: “There are nine WHOLE digits.”<br>MR_INDEX: “And not one of them tells you what a single token is worth.”<br>ROOK: “I don’t believe you.”<br>MR_INDEX: “You don’t have to. Use Token God Mode on the Nansen™ terminal.”<br>MR_INDEX: “Check the price, the liquidity, who’s buying and selling... and whether any real<br>MR_INDEX: value is flowing in or out.”<br>ROOK: “Or confirm that I’m independently wealthy.”<br>MR_INDEX: “I wouldn’t hold your breath over it.”<br>ROOK: “Fine. I’ll check it myself.”</td>
+</tr>
+<tr>
+<td><a id="action-inventory-note-open-untested"></a><code>inventory.note-open-untested</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;,&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;BACK_READ&quot;,&quot;brcgInvestigationState&quot;:&quot;UNTESTED&quot;}</code></td>
+<td>ROOK: I don’t want to damage it. It might be worth something.<br>ROOK: I should check the terminal.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-note-open-untested-repeat"></a><code>inventory.note-open-untested-repeat</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;,&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;BACK_READ&quot;,&quot;brcgInvestigationState&quot;:&quot;UNTESTED&quot;,&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.open-fictional-token-note&quot;}</code></td>
+<td>ROOK: “I don’t want to damage it. It might be worth something. I should check the<br>ROOK: terminal.”</td>
+</tr>
+<tr>
+<td><a id="action-inventory-note-close-resolved"></a><code>inventory.note-close-resolved</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;,&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;BACK_READ&quot;,&quot;brcgInvestigationState&quot;:&quot;RESOLVED&quot;}</code></td>
+<td>ROOK: I don’t want to damage it. BRCG could pump someday.<br>ROOK: Then who’ll be laughing?</td>
+</tr>
+<tr>
+<td><a id="action-inventory-note-close-resolved-repeat"></a><code>inventory.note-close-resolved-repeat</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;,&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;BACK_READ&quot;,&quot;brcgInvestigationState&quot;:&quot;RESOLVED&quot;,&quot;lastInteractionId&quot;:&quot;INTERACTION.ITEM.close-fictional-token-note&quot;}</code></td>
+<td>ROOK: “I don’t want to damage it. BRCG could pump someday. Then who’ll be laughing?”</td>
+</tr>
+<tr>
+<td><a id="action-inventory-toolbox-close"></a><code>inventory.toolbox-close</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;small-toolbox-open-empty&quot;,&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Closed tight.<br>ROOK: The little pink plastic clips snapped right into place.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-generic-open"></a><code>inventory.generic-open</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubber-band&quot;,&quot;verb&quot;:&quot;OPEN&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: There’s nothing to open.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-generic-close"></a><code>inventory.generic-close</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubber-band&quot;,&quot;verb&quot;:&quot;CLOSE&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: There’s nothing to close.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-generic-push"></a><code>inventory.generic-push</code></td>
+<td><code>inventory-state:inventorySpeechForState</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubber-band&quot;,&quot;verb&quot;:&quot;PUSH&quot;,&quot;targetItemId&quot;:null}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: That won’t help.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-generic-use"></a><code>inventory.generic-use</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;blank-authorization-form&quot;,&quot;itemId&quot;:&quot;approved-stamped-terminal-authorization-form&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+</tr>
+<tr>
+<td><a id="action-inventory-case-terminal-use"></a><code>inventory.case-terminal-use</code></td>
+<td><code>dead-end:deadEndSpeech</code></td>
+<td><code>{&quot;verb&quot;:&quot;USE&quot;,&quot;targetId&quot;:&quot;nansen-terminal&quot;,&quot;itemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: The terminal investigates crimes. It doesn’t play them.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-broken-pen"></a><code>arthur.broken-pen</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;broken-feather-pen&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Umm... I think I’ll hang onto this for now.<br>ROOK: I don’t want to upset Arthur.<br>ROOK: He already seems to have a bad case of the Mondays.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-approved-form"></a><code>arthur.approved-form</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;approved-stamped-terminal-authorization-form&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;}</code></td>
+<td>ROOK: He already approved it.<br>ROOK: Giving it back feels like asking for a second opinion.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-euler"></a><code>arthur.euler</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;euler-case-file&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m afraid if I give it to him, he won’t give it back.<br>ROOK: Besides... I still need it for the case.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-pen"></a><code>arthur.pen</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;loose-feather-pen&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Sure. I’ll give it back to him.<br>ROOK: Just as soon as I finish filling out the authorization form.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-rubber"></a><code>arthur.rubber</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubber-band&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m sure he already has plenty.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-cube"></a><code>arthur.cube</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;rubiks-cube&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I’m sure he is dealing with enough unsolved problems in this office.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-vhs"></a><code>arthur.vhs</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;sharknado-2-vhs&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: This is the last thing I’d give someone I want to like me.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-piggy"></a><code>arthur.piggy</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;piggy-bank-intact&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I think I’ll hold onto this for now. Besides...<br>ROOK: I’m still curious about what’s inside.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-toolbox"></a><code>arthur.toolbox</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;small-toolbox-closed&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t think giving him a second-hand pink toolbox with missing items...<br>ROOK: will help nurture our budding new friendship.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-hammer"></a><code>arthur.hammer</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;hammer&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I don’t want to insult his masculinity.<br>ROOK: I’m sure he has his own non-pink hammer at home.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-nails"></a><code>arthur.nails</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;nails&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I think the staples he uses might be stronger than these.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-note-unread"></a><code>arthur.note-unread</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;UNREAD&quot;}</code></td>
+<td>ROOK: I should probably read it first.<br>ROOK: Whatever this is... the pig went to a lot of trouble to hide it.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-note-untested"></a><code>arthur.note-untested</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;BACK_READ&quot;,&quot;brcgInvestigationState&quot;:&quot;UNTESTED&quot;}</code></td>
+<td>ROOK: I should see how much it is worth first.<br>ROOK: It could be like handing over a lottery ticket...<br>ROOK: without checking the latest winning numbers.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-note-resolved"></a><code>arthur.note-resolved</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;fictional-token-note&quot;}</code></td>
+<td><code>{&quot;piggyNoteReadState&quot;:&quot;BACK_READ&quot;,&quot;brcgInvestigationState&quot;:&quot;RESOLVED&quot;}</code></td>
+<td>ROOK: I have a feeling BRCG will pump someday. I’ll hold onto it.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-use-canonical-pen"></a><code>arthur.use-canonical.pen</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;loose-feather-pen&quot;,&quot;verb&quot;:&quot;USE&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Sure. I’ll give it back to him.<br>ROOK: Just as soon as I finish filling out the authorization form.</td>
+</tr>
+<tr>
+<td><a id="action-arthur-use-canonical-approved-form"></a><code>arthur.use-canonical.approved-form</code></td>
+<td><code>arthur-item:arthurItemSpeech</code></td>
+<td><code>{&quot;itemId&quot;:&quot;approved-stamped-terminal-authorization-form&quot;,&quot;verb&quot;:&quot;USE&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;}</code></td>
+<td>ROOK: He already approved it.<br>ROOK: Giving it back feels like asking for a second opinion.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-menu-preauth"></a><code>dialogue.menu-preauth</code></td>
+<td><code>arthur-dialogue:dialogueMenuSpeechForState</code></td>
+<td><code>{}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;}</code></td>
+<td>SYSTEM: WHAT IS IT YOU NEED ME TO DO AGAIN?<br>SYSTEM: TELL ME AGAIN HOW NANSEN™ ACCESS HELPS US WITH OUR CASE?<br>SYSTEM: DID YOU CATCH THE GAME THIS WEEKEND?<br>SYSTEM: SO, HOW ARE THE HEALTH BENEFITS WORKING HERE?<br>SYSTEM: I’LL GET BACK TO THE FORM.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-menu-postauth"></a><code>dialogue.menu-postauth</code></td>
+<td><code>arthur-dialogue:dialogueMenuSpeechForState</code></td>
+<td><code>{}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;}</code></td>
+<td>SYSTEM: WHAT SHOULD I BE DOING RIGHT NOW?<br>SYSTEM: TELL ME AGAIN HOW NANSEN™ HELPS.<br>SYSTEM: DID YOU CATCH THE GAME THIS WEEKEND?<br>SYSTEM: SO, HOW ARE THE HEALTH BENEFITS WORKING HERE?<br>SYSTEM: CAN I CALL YOU ARTHUR YET?<br>SYSTEM: I’LL GET BACK TO THE CASE.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-form-none"></a><code>dialogue.form-none</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;form-reminder&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: Sorry. I haven’t had my coffee yet...<br>ROOK: What did you need me to do again?<br>MR_INDEX: Take the blank authorization form from the dispenser.<br>MR_INDEX: Complete it, and bring it back to me.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-form-held"></a><code>dialogue.form-held</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;form-reminder&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_HELD&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: What was the next step?<br>MR_INDEX: Complete and sign the form.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-form-and-pen"></a><code>dialogue.form-and-pen</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;form-reminder&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_AND_PEN&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: I have the form and the pen. Now what?<br>MR_INDEX: Fill it out. Sign it. Bring it back.<br>ROOK: You make paperwork sound easy.<br>MR_INDEX: For most people, it is.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-form-completed"></a><code>dialogue.form-completed</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;form-reminder&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;FORM_COMPLETED&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>MR_INDEX: Leave... or hand me the completed authorization form.<br>MR_INDEX: My personal preference is the former.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-form-repeat"></a><code>dialogue.form-repeat</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;form-reminder&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[&quot;form-reminder&quot;]}</code></td>
+<td>ROOK: What was I doing again?<br>MR_INDEX: My goldfish has a better memory than you.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-nansen-preauth"></a><code>dialogue.nansen-preauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;nansen-benefit&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: Tell me again...<br>ROOK: how does Nansen™ access help us with our case?<br>MR_INDEX: It organizes and queries blockchain activity...<br>MR_INDEX: filters the noise...<br>MR_INDEX: and surfaces useful patterns.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-sports-preauth"></a><code>dialogue.sports-preauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;sports&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: Did you catch the game this weekend?<br>MR_INDEX: Which game?<br>ROOK: I was hoping you’d know.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-health-preauth"></a><code>dialogue.health-preauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;health&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: So... how are the health benefits working here?<br>MR_INDEX: Adequate.<br>ROOK: Dental?<br>MR_INDEX: Why?<br>ROOK: Building rapport.<br>MR_INDEX: Build the form.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-exit-preauth"></a><code>dialogue.exit-preauth</code></td>
+<td><code>arthur-dialogue:leave</code></td>
+<td><code>{&quot;topicId&quot;:&quot;leave&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;START&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: I’ll get back to the form.<br>MR_INDEX: Please do.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-guidance-no-file"></a><code>dialogue.guidance-no-file</code></td>
+<td><code>arthur-dialogue:case-file</code></td>
+<td><code>{&quot;topicId&quot;:&quot;case-file&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[],&quot;investigationMilestone&quot;:&quot;BEFORE_Q1&quot;}</code></td>
+<td>ROOK: What should I be doing right now?<br>MR_INDEX: Open the case-file cabinet. Take ONLY the Euler file. Read it.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-guidance-before-q1"></a><code>dialogue.guidance-before-q1</code></td>
+<td><code>arthur-dialogue:case-file</code></td>
+<td><code>{&quot;topicId&quot;:&quot;case-file&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;euler-case-file&quot;],&quot;exhaustedTopics&quot;:[],&quot;investigationMilestone&quot;:&quot;BEFORE_Q1&quot;}</code></td>
+<td>ROOK: What’s next?<br>MR_INDEX: Use the Nansen™ terminal.<br>MR_INDEX: Start with the facts from the Euler file.<br>MR_INDEX: The token, the amount, and the address.<br>MR_INDEX: And a relevant question.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-guidance-after-q1"></a><code>dialogue.guidance-after-q1</code></td>
+<td><code>arthur-dialogue:case-file</code></td>
+<td><code>{&quot;topicId&quot;:&quot;case-file&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;euler-case-file&quot;],&quot;exhaustedTopics&quot;:[],&quot;investigationMilestone&quot;:&quot;AFTER_Q1&quot;}</code></td>
+<td>ROOK: What should I follow next?<br>MR_INDEX: You found where the DAI landed.<br>MR_INDEX: Now determine where it moved afterward.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-guidance-after-q2"></a><code>dialogue.guidance-after-q2</code></td>
+<td><code>arthur-dialogue:case-file</code></td>
+<td><code>{&quot;topicId&quot;:&quot;case-file&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;euler-case-file&quot;],&quot;exhaustedTopics&quot;:[],&quot;investigationMilestone&quot;:&quot;AFTER_Q2&quot;}</code></td>
+<td>ROOK: I have a few possible readings.<br>MR_INDEX: Then identify the one exact record...<br>MR_INDEX: that tells you whether the routes connect.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-guidance-exact"></a><code>dialogue.guidance-exact</code></td>
+<td><code>arthur-dialogue:case-file</code></td>
+<td><code>{&quot;topicId&quot;:&quot;case-file&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;euler-case-file&quot;],&quot;exhaustedTopics&quot;:[],&quot;investigationMilestone&quot;:&quot;EXACT_RECEIPT&quot;}</code></td>
+<td>ROOK: I found the exact transaction.<br>MR_INDEX: Then organize what it proves:<br>MR_INDEX: the amount... the receiver... and the link.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-guidance-proof"></a><code>dialogue.guidance-proof</code></td>
+<td><code>arthur-dialogue:case-file</code></td>
+<td><code>{&quot;topicId&quot;:&quot;case-file&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[&quot;euler-case-file&quot;],&quot;exhaustedTopics&quot;:[],&quot;investigationMilestone&quot;:&quot;PROOF_COMPLETE&quot;}</code></td>
+<td>ROOK: I think I might have the case details all figured out.<br>MR_INDEX: I don’t think anyone would blame me for being skeptical.<br>MR_INDEX: But if you’re so sure...<br>MR_INDEX: close the case in the terminal.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-nansen-postauth"></a><code>dialogue.nansen-postauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;nansen-benefit&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: Tell me again...<br>ROOK: how does Nansen™ access help us with our case?<br>MR_INDEX: It organizes and queries blockchain activity, filters the noise...<br>MR_INDEX: and surfaces useful patterns.<br>ROOK: And I ask the right question.<br>MR_INDEX: In theory.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-sports-postauth"></a><code>dialogue.sports-postauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;sports&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: Did you catch the game this weekend?<br>MR_INDEX: Which game?<br>ROOK: I was hoping you’d know.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-health-postauth"></a><code>dialogue.health-postauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;health&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: So... how are the health benefits working here?<br>MR_INDEX: Adequate.<br>ROOK: Dental?<br>MR_INDEX: Why?<br>ROOK: Building rapport.<br>MR_INDEX: Build the case.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-name-postauth"></a><code>dialogue.name-postauth</code></td>
+<td><code>arthur-dialogue:dialogueTopicsForState</code></td>
+<td><code>{&quot;topicId&quot;:&quot;arthur-name&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: Can I call you Arthur yet?<br>MR_INDEX: No.<br>ROOK: ...but we’re making progress on that?<br>MR_INDEX: In the opposite direction.</td>
+</tr>
+<tr>
+<td><a id="action-dialogue-exit-postauth"></a><code>dialogue.exit-postauth</code></td>
+<td><code>arthur-dialogue:leave</code></td>
+<td><code>{&quot;topicId&quot;:&quot;leave&quot;}</code></td>
+<td><code>{&quot;phase&quot;:&quot;COMPLETE&quot;,&quot;inventory&quot;:[],&quot;exhaustedTopics&quot;:[]}</code></td>
+<td>ROOK: I’ll get back to the case.<br>MR_INDEX: Please do.</td>
+</tr>
+<tr>
+<td><a id="action-hero-prebrief-initial"></a><code>hero.prebrief-initial</code></td>
+<td><code>hero-terminal:selectHeroTerminalSpeech</code></td>
+<td><code>{&quot;route&quot;:&quot;PREBRIEF_INITIAL&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Alright. I’ll give it a shot. I don’t actually have any case information yet...<br>ROOK: which feels like a fairly important part of investigating a case.<br>ROOK: I should probably find that file Mr. A mentioned.<br>ROOK: Still... let’s see what we’re dealing with.</td>
+</tr>
+<tr>
+<td><a id="action-hero-prebrief-repeat"></a><code>hero.prebrief-repeat</code></td>
+<td><code>hero-terminal:selectHeroTerminalSpeech</code></td>
+<td><code>{&quot;route&quot;:&quot;PREBRIEF_REPEAT&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Yeah... I need that case file. There’s plenty in there...<br>ROOK: I just don’t know which part of it matters yet.</td>
+</tr>
+<tr>
+<td><a id="action-hero-prebrief-reentry"></a><code>hero.prebrief-reentry</code></td>
+<td><code>hero-terminal:selectHeroTerminalSpeech</code></td>
+<td><code>{&quot;route&quot;:&quot;PREBRIEF_REENTRY&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Same terminal. Better question.</td>
+</tr>
+<tr>
+<td><a id="action-hero-delta-1"></a><code>hero.delta-1</code></td>
+<td><code>hero-terminal:selectHeroTerminalSpeech</code></td>
+<td><code>{&quot;route&quot;:&quot;DELTA_1&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Okay. One exact transaction.<br>ROOK: The DAI landed at the First Engine.<br>ROOK: That’s a starting point... not an ending.<br>ROOK: Now I need to see where it went next.</td>
+</tr>
+<tr>
+<td><a id="action-hero-delta-2"></a><code>hero.delta-2</code></td>
+<td><code>hero-terminal:selectHeroTerminalSpeech</code></td>
+<td><code>{&quot;route&quot;:&quot;DELTA_2&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: The terminal can settle this.<br>ROOK: I need to get back in there and trace the missing link.</td>
+</tr>
+<tr>
+<td><a id="action-hero-theory"></a><code>hero.theory</code></td>
+<td><code>hero-terminal:selectHeroTerminalSpeech</code></td>
+<td><code>{&quot;route&quot;:&quot;THEORY_RESOLUTION&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I found the exact link. Now I need to put the proof together.</td>
+</tr>
+<tr>
+<td><a id="action-brcg-untested"></a><code>brcg.untested</code></td>
+<td><code>brcg-terminal:selectBrcgTerminalSpeech</code></td>
+<td><code>{&quot;state&quot;:&quot;UNTESTED&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Bitcoin Roller Coaster Guy. 888,888,888 BRCG.<br>ROOK: There are still nine whole digits. That feels rich.<br>ROOK: I need to check this out for myself in the terminal.</td>
+</tr>
+<tr>
+<td><a id="action-brcg-resolved"></a><code>brcg.resolved</code></td>
+<td><code>brcg-terminal:selectBrcgTerminalSpeech</code></td>
+<td><code>{&quot;state&quot;:&quot;RESOLVED&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Eight hundred eighty-eight million BRCG.<br>ROOK: About $7.10 at the snapshot’s price.<br>ROOK: That’s a lot of digits doing very little work.<br>ROOK: People say something isn’t worth the paper it’s printed on.<br>ROOK: Here... the paper might be the strongest asset.<br>ROOK: Somewhere, the U.S. dollar is taking notes.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-cabinet-first"></a><code>reducer.cabinet-first</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;CABINET_FIRST&quot;}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: Do not touch anything until you are authorized.<br>ROOK: I was just opening a drawer.<br>MR_INDEX: That is touching something.<br>MR_INDEX: As far as office policy is concerned...<br>MR_INDEX: you have no authorized business in those cabinets.<br>MR_INDEX: Submit the signed authorization form first.<br>ROOK: So paperwork before snooping.<br>MR_INDEX: Investigation.<br>ROOK: Right. Authorized snooping.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-cabinet-repeat"></a><code>reducer.cabinet-repeat</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;CABINET_REPEAT&quot;}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: Authorization form first.<br>ROOK: I was checking whether office policy had changed.<br>MR_INDEX: It has not.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-ambient-first"></a><code>reducer.ambient-first</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;AMBIENT_FIRST&quot;}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: Are you done with that form yet?</td>
+</tr>
+<tr>
+<td><a id="action-reducer-ambient-second"></a><code>reducer.ambient-second</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;AMBIENT_SECOND&quot;}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: Either fill out that form... or leave my office.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-note-read"></a><code>reducer.note-read</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;NOTE_READ&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Let’s see...<br>ROOK: ‘Abandon.’<br>ROOK: ‘Ability.’<br>ROOK: ‘Antique.’<br>ROOK: ‘Bacon.’<br>ROOK: ‘Voodoo.’<br>ROOK: ‘Grog.’<br>ROOK: ‘Carla.’<br>ROOK: ‘Otis.’<br>ROOK: ‘Elaine...’<br>ROOK: That started like terrible life advice, turned into a drink order...<br>ROOK: and ended with a guest list I wasn’t invited to.<br>ROOK: Useless.<br>ROOK: Wait. There’s something on the back.<br>ROOK: ‘BRCG. Bitcoin Roller Coaster Guy.<br>ROOK: Balance: 888,888,888.’<br>ROOK: Arthur!<br>MR_INDEX: Mr. A!<br>ROOK: I’m RICH!<br>MR_INDEX: No.<br>ROOK: You answered that alarmingly fast.<br>MR_INDEX: Token quantity is not value.<br>ROOK: But there are nine whole digits.<br>MR_INDEX: And not one of them tells you what a single token is worth.<br>ROOK: I don’t believe you.<br>MR_INDEX: You don’t have to. Use Token God Mode on the Nansen™ terminal.<br>MR_INDEX: Check the price, the liquidity, who’s buying and selling...<br>MR_INDEX: and whether any real value is flowing in or out.<br>ROOK: Or confirm that I’m independently wealthy.<br>MR_INDEX: I wouldn’t hold your breath on that.<br>ROOK: Fine. I’ll check it myself.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-brcg-payoff"></a><code>reducer.brcg-payoff</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;BRCG_PAYOFF&quot;}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: Well?<br>ROOK: At the frozen quoted price: 888,888,888 BRCG comes to about...<br>ROOK: $7.10.<br>MR_INDEX: That’s some ‘fortune’ you got there!<br>MR_INDEX: And the note still does not prove that the balance exists...<br>MR_INDEX: belongs to you... or could even be sold for that amount.<br>ROOK: So I shattered a pig for seven hypothetical dollars.<br>MR_INDEX: And a useful lesson.<br>ROOK: Can the lesson pay for a new pig?<br>MR_INDEX: It cannot.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-return-exchange"></a><code>reducer.return-exchange</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;RETURN_EXCHANGE&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Mr. A!<br>MR_INDEX: What now?<br>ROOK: I cracked the case!<br>MR_INDEX: You identified who did it?<br>ROOK: Well, no...<br>ROOK: BUT, I traced the wallet movements and the transactions connecting them.<br>ROOK: Whoever was behind the wallets is still unknown.<br>ROOK: Could be one person. Could be several.<br>ROOK: Could be the same dog that ate that ransomware gang’s decryption key.<br>MR_INDEX: The dog is not a suspect.<br>ROOK: Breed still unknown and at large.<br>MR_INDEX: Then what did you find?<br>ROOK: The route. I traced it all. The first DAI trail reached the First Engine...<br>ROOK: the second route reached the Receiving Vault... and best of all...<br>ROOK: I found the exact transaction that connected them.<br>MR_INDEX: Good. So you did your job. Barely.<br>MR_INDEX: And arguably, Nansen™ did most of the heavy lifting.<br>ROOK: I asked the right question.<br>MR_INDEX: And let the evidence answer it.<br>MR_INDEX: Considering that this morning you did not know what a blockchain was...<br>MR_INDEX: that is progress.<br>ROOK: That sounded dangerously close to praise.<br>MR_INDEX: It was an observation.<br>ROOK: I’ll take it.<br>ROOK: So... now that I cracked the case, can I call you Arthur?<br>MR_INDEX: You may not.<br>ROOK: But your friends call you Arthur, and we made a pretty good team today.<br>MR_INDEX: You completed one assignment. That barely establishes competence...<br>MR_INDEX: let alone friendship.<br>ROOK: So friendship is still under review?<br>MR_INDEX: It never entered review.<br>ROOK: How about a celebratory pizza, then?<br>MR_INDEX: This is still not a pizza restaurant.<br>MR_INDEX: But...<br>MR_INDEX: there is a place around the corner.<br>ROOK: I knew you’d warm up to me.<br>MR_INDEX: We just happen to both be hungry at the same time.<br>ROOK: That’s how the best of teams start!<br>MR_INDEX: No. It really isn’t.<br>ROOK: So you’re buying?</td>
+</tr>
+<tr>
+<td><a id="action-reducer-return-tag"></a><code>reducer.return-tag</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;RETURN_TAG&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Same terminal. Better question.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-globe-speed-1"></a><code>reducer.globe-speed-1</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;GLOBE_SPEED_1&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Wow. This spins so easily! Barely any friction at all.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-globe-speed-2"></a><code>reducer.globe-speed-2</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;GLOBE_SPEED_2&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Now it’s picking up some real speed.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-globe-maximum"></a><code>reducer.globe-maximum</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;GLOBE_MAXIMUM&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Wheeeeeeee!</td>
+</tr>
+<tr>
+<td><a id="action-reducer-globe-maximum-repeat"></a><code>reducer.globe-maximum-repeat</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;GLOBE_MAXIMUM_REPEAT&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: I think that’s as fast as it’ll go!</td>
+</tr>
+<tr>
+<td><a id="action-reducer-globe-reversal"></a><code>reducer.globe-reversal</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;GLOBE_REVERSAL&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: And now... the other way.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-lamp-off"></a><code>reducer.lamp-off</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;LAMP_OFF&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: No better way to set the mood than dimming the lights.<br>ROOK: Though... I don’t want Mr. A to get the wrong idea.</td>
+</tr>
+<tr>
+<td><a id="action-reducer-lamp-on"></a><code>reducer.lamp-on</code></td>
+<td><code>reducer-state:adventureReducer</code></td>
+<td><code>{&quot;fixture&quot;:&quot;LAMP_ON&quot;}</code></td>
+<td><code>{}</code></td>
+<td>ROOK: Cozy.</td>
+</tr>
+<tr>
+<td><a id="action-ending-default"></a><code>ending.default</code></td>
+<td><code>ending-completion:selectEndingVariantSpeech</code></td>
+<td><code>{&quot;brcgResolved&quot;:false}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: You broke my pen. I’d say you owe me.</td>
+</tr>
+<tr>
+<td><a id="action-ending-brcg"></a><code>ending.brcg</code></td>
+<td><code>ending-completion:selectEndingVariantSpeech</code></td>
+<td><code>{&quot;brcgResolved&quot;:true}</code></td>
+<td><code>{}</code></td>
+<td>MR_INDEX: You broke my pen. I’d say you owe me.<br>MR_INDEX: And besides, you’re rolling in the dough now...<br>MR_INDEX: with all that BRCG you somehow came across. Right?<br>ROOK: That’s right! That should cover one slice...<br>ROOK: to share.<br>ROOK: This one’s on me!</td>
+</tr>
+</tbody>
+</table>
+<h2 id="special-runtime-routes">Special runtime routes</h2>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-opening-principal"></a><code>opening.principal</code></td>
+<td><code>PRINCIPAL_OPENING</code></td>
+<td>ROOK: This the Records Office?<br>MR_INDEX: No. It’s a pizza restaurant.<br>ROOK: Right...<br>MR_INDEX: We’re closed to the public.<br>MR_INDEX: I’m waiting for a top-tier lead investigator.<br>ROOK: Then your wait is over.<br>ROOK: I’m your lead investigator.<br>ROOK: My friends call me Rook.<br>MR_INDEX: You?!?<br>ROOK: Yup! Yours truly.<br>MR_INDEX: This has got to be some sort of mistake.<br>MR_INDEX: They’re not sending anyone else?<br>ROOK: Nope! It’s just me and you.<br>MR_INDEX: I was afraid of that...<br>ROOK: I didn’t catch your name.<br>MR_INDEX: I never threw it.<br>MR_INDEX: I’m Mr. A, the Archivist. My friends call me Arthur.<br>ROOK: So, Arthur—<br>MR_INDEX: ...But you can call me Mr. A.<br>ROOK: Well...by the end of this investigation...<br>ROOK: we'll be closer than ever.<br>MR_INDEX: I wouldn’t count on it.<br>ROOK: So...what is it exactly am I investigating?<br>ROOK: It sounded very important.<br>MR_INDEX: You did read the case brief, didn’t you?<br>ROOK: Errm... case brief?<br>MR_INDEX: You’re telling me the big-shot lead investigator...<br>MR_INDEX: for arguably one of the most significant cases...<br>MR_INDEX: this office has ever seen...<br>MR_INDEX: shows up alone...<br>MR_INDEX: and without the case brief?<br>ROOK: Ohhhh...<br>ROOK: that case brief.<br>ROOK: It’s...uh...<br>ROOK: I must have left it in my car.<br>ROOK: It’s a long walk back.<br>ROOK: Maybe I can borrow yours?<br>MR_INDEX: We have an official office copy filed in the cabinet.<br>MR_INDEX: It is available on a need-to-know basis...<br>MR_INDEX: and without an approved authorization form...<br>MR_INDEX: there is nothing that you need to know.<br>MR_INDEX: Until then...<br>MR_INDEX: I’ll give you the short version.<br>MR_INDEX: Please pay attention.<br>ROOK: I’m fully focused.<br>ROOK: Starting...now<br>MR_INDEX: This is going to be a long day.<br>MR_INDEX: Euler Finance was hacked.<br>MR_INDEX: A large amount of digital assets was taken.<br>ROOK: Any witnesses?<br>MR_INDEX: None.<br>ROOK: Any suspects?<br>MR_INDEX: Not one we can identify from the record.<br>ROOK: Crime scene?<br>MR_INDEX: The digital transactions are the crime scene.<br>MR_INDEX: All we have is the public record of those transactions.<br>MR_INDEX: The blockchain.<br>ROOK: The block...what?<br>MR_INDEX: The BLOCKCHAIN.<br>MR_INDEX: A public ledger.<br>MR_INDEX: It records what moved, when it moved...<br>MR_INDEX: and which wallet addresses sent and received it.<br>MR_INDEX: Once recorded, those entries cannot simply be erased.<br>ROOK: So whoever did this left us a trail.<br>MR_INDEX: Yes.<br>ROOK: Great. This already sounds like a closed case to me.<br>ROOK: We just go to this public chain thingy and trace the activity.<br>MR_INDEX: Public is not the same as simple.<br>MR_INDEX: The ledger is enormous...<br>MR_INDEX: technical...<br>MR_INDEX: and full of activity that has nothing to do with this case.<br>MR_INDEX: It’s like trying to find a needle...<br>MR_INDEX: in a mathematically precise haystack.<br>ROOK: Sounds complicated.<br>MR_INDEX: It is.<br>MR_INDEX: Fortunately...<br>MR_INDEX: our office has been authorized to use the Nansen™ API for this case.<br>MR_INDEX: The case terminal already has the relevant records loaded.<br>MR_INDEX: Nansen™ helps us organize and query the activity...<br>MR_INDEX: sort through the noise...<br>MR_INDEX: ...and surface patterns or relationships that would be difficult to spot manually.<br>ROOK: So Nansen™ basically solves the case for us?<br>MR_INDEX: No. Nansen™ has organized the activity.<br>MR_INDEX: It has not decided which activity matters.<br>MR_INDEX: That is where you come in.<br>ROOK: So I need a clue.<br>MR_INDEX: You need a question.<br>ROOK: I have several...<br>MR_INDEX: One relevant question.<br>ROOK: Okay then...<br>ROOK: I’ll jump on the terminal and get started right away.<br>MR_INDEX: The Records Office is authorized to use the Nansen™ API for this case.<br>MR_INDEX: You are not authorized to use the case terminal.<br>ROOK: But...I’m the lead investigator!<br>MR_INDEX: The more you remind me of that, the worse my migraine gets.<br>MR_INDEX: It does not matter who you are.<br>MR_INDEX: You need to submit a terminal authorization form.<br>MR_INDEX: It must pass through the appropriate management channels...<br>MR_INDEX: and receive approval from the shift manager.<br>ROOK: Okay... who’s the shift manager?<br>MR_INDEX: I am.<br>ROOK: So... the management channel is you?<br>MR_INDEX: It is company policy.<br>ROOK: Where do I get the form?<br>MR_INDEX: Take a blank terminal authorization form from the dispenser.<br>MR_INDEX: Fill it out COMPLETELY, then bring it back to me.<br>MR_INDEX: Until you submit it...<br>MR_INDEX: and unless management renders you a favorable response...<br>MR_INDEX: do not use the terminal or access the case files.<br>MR_INDEX: And DO NOT touch anything else!</td>
+<td>arthur:BODY:arthur.you-incredulous<br>rook:BODY:rook.proud-delivery<br>arthur:FACE:arthur.sardonic-reaction<br>rook:BODY:needs a very short beat after the line is delivered. Rook's character can look left for a brief beat, then back towards arthur (right), and then deliver the next line.<br>rook:BODY:rook.shrug-delivery<br>arthur:BODY:Very short beat after the last delivery<br>arthur:BODY:Very short beat after the last delivery<br>arthur:BODY:Very short beat after the last delivery<br>arthur:BODY:Very short beat after the last delivery<br>rook:BODY:very short beat after he says this. And in that time, rook will blink once, short beat beat, blink again, and then deliver the next line.<br>arthur:FACE:arthur.camera-talk<br>arthur:BODY:arthur.present-delivery<br>rook:BODY:rook.thinking-delivery<br>arthur:BODY:arthur.glasses-adjust<br>arthur:BODY:arthur.slouch-delivery</td>
+</tr>
+<tr>
+<td><a id="route-useful-take-form"></a><code>useful.take-form</code></td>
+<td><code>usefulRules:take-form</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-take-pen"></a><code>useful.take-pen</code></td>
+<td><code>usefulRules:take-pen</code></td>
+<td>MR_INDEX: Careful with that.<br>MR_INDEX: It’s an antique collector’s item.<br>MR_INDEX: Supposedly, it dates back to the signing of the Declaration of Independence.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-take-form-2"></a><code>useful.take-form-2</code></td>
+<td><code>usefulRules:take-form-2</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-take-pen-2"></a><code>useful.take-pen-2</code></td>
+<td><code>usefulRules:take-pen-2</code></td>
+<td>MR_INDEX: Careful with that.<br>MR_INDEX: It’s an antique collector’s item.<br>MR_INDEX: Supposedly, it dates back to the signing of the Declaration of Independence.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-give-form"></a><code>useful.give-form</code></td>
+<td><code>usefulRules:give-form</code></td>
+<td>MR_INDEX: Let’s see here.<br>MR_INDEX: This is barely legible.<br>ROOK: Legible enough to be legally binding?<br>MR_INDEX: My two-year-old grandson has better handwriting than this.<br>ROOK: Does he do contract work?<br>MR_INDEX: And what exactly are these?<br>MR_INDEX: Did you draw...<br>MR_INDEX: DINOSAURS...<br>MR_INDEX: and SMILEY FACES...<br>MR_INDEX: on my corporate authorization form!?<br>ROOK: Ah. So some of it is legible.<br>MR_INDEX: Unfortunately...<br>MR_INDEX: you did complete the required fields.<br>MR_INDEX: Barely.<br>MR_INDEX: Against my better judgment...<br>MR_INDEX: and in the interest of getting you out of this office faster...<br>MR_INDEX: I’m approving it.<br>MR_INDEX: There.<br>MR_INDEX: You’re authorized to use the Nansen™ terminal.<br>MR_INDEX: But just for TODAY.<br>ROOK: Knew the dinosaurs would win you over.<br>MR_INDEX: They did not.<br>MR_INDEX: And since you left your case brief in the car...<br>MR_INDEX: the office copy is in that filing cabinet.<br>MR_INDEX: Take the Euler file ONLY.<br>MR_INDEX: The others are confidential.<br>MR_INDEX: Do not snoop.<br>ROOK: How much snooping counts as snooping?<br>MR_INDEX: Any amount performed by you.<br>ROOK: What if I need another case file?<br>MR_INDEX: Then you’ll need to submit another authorization form...<br>MR_INDEX: which management will promptly deny.<br>ROOK: Euler only. Got it.<br>MR_INDEX: Good. Let’s see how long that lasts.</td>
+<td>arthur:BODY:PROP<br>arthur:BODY:GAZE<br>arthur:BODY:UNRESOLVED<br>arthur:PROP:arthur.document-adjust<br>arthur:BODY:PROP | EXPRESSION<br>rook:FACE:rook.camera-cheeky-hold<br>arthur:BODY:UNRESOLVED<br>arthur:BODY:PROP<br>arthur:BODY:GAZE</td>
+</tr>
+<tr>
+<td><a id="route-useful-reprimand-start"></a><code>useful.reprimand-start</code></td>
+<td><code>usefulRules:reprimand-start</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+<td>arthur:BODY:MOVEMENT | UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-useful-reprimand-form-held"></a><code>useful.reprimand-form-held</code></td>
+<td><code>usefulRules:reprimand-form-held</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+<td>arthur:BODY:MOVEMENT | UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-useful-reprimand-pen-held"></a><code>useful.reprimand-pen-held</code></td>
+<td><code>usefulRules:reprimand-pen-held</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+<td>arthur:BODY:MOVEMENT | UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-useful-reprimand-form-and-pen"></a><code>useful.reprimand-form-and-pen</code></td>
+<td><code>usefulRules:reprimand-form-and-pen</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+<td>arthur:BODY:MOVEMENT | UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-useful-reprimand-form-completed"></a><code>useful.reprimand-form-completed</code></td>
+<td><code>usefulRules:reprimand-form-completed</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+<td>arthur:BODY:MOVEMENT | UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-useful-reprimand-form-submitted"></a><code>useful.reprimand-form-submitted</code></td>
+<td><code>usefulRules:reprimand-form-submitted</code></td>
+<td>MR_INDEX: Don’t touch that!<br>MR_INDEX: YOU ARE NOT AUTHORIZED TO USE THE TERMINAL!<br>MR_INDEX: Submit the signed authorization form first.</td>
+<td>arthur:BODY:MOVEMENT | UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-useful-look-case-cabinet"></a><code>useful.look-case-cabinet</code></td>
+<td><code>usefulRules:look-case-cabinet</code></td>
+<td>SYSTEM: OFFICIAL CASE-FILE CABINET</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-look-drawer"></a><code>useful.look-drawer</code></td>
+<td><code>usefulRules:look-drawer</code></td>
+<td>ROOK: This must be the office’s miscellaneous catch-all junk drawer.<br>ROOK: A random assortment of items...<br>ROOK: and a piece of chewed gum haphazardly covered by the wrapper.<br>ROOK: At least they tried...<br>ROOK: It still might be worth pillaging through.<br>ROOK: Rummaging through other people’s partially sticky objects...<br>ROOK: is a cherished pastime of mine.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-open-case-drawer"></a><code>useful.open-case-drawer</code></td>
+<td><code>usefulRules:open-case-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-pull-case-drawer"></a><code>useful.pull-case-drawer</code></td>
+<td><code>usefulRules:pull-case-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-close-case-drawer"></a><code>useful.close-case-drawer</code></td>
+<td><code>usefulRules:close-case-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-push-case-drawer"></a><code>useful.push-case-drawer</code></td>
+<td><code>usefulRules:push-case-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-use-case-drawer-open"></a><code>useful.use-case-drawer-open</code></td>
+<td><code>usefulRules:use-case-drawer-open</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-use-case-drawer-shut"></a><code>useful.use-case-drawer-shut</code></td>
+<td><code>usefulRules:use-case-drawer-shut</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-look-case-stack"></a><code>useful.look-case-stack</code></td>
+<td><code>usefulRules:look-case-stack</code></td>
+<td>ROOK: Confidential files. Randomly assorted. Chaotically arranged.<br>ROOK: Ah. Classic security through obscurity.<br>ROOK: I use the same system in my office. Even I can’t find anything.<br>ROOK: Very secure.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-pickup-case-stack"></a><code>useful.pickup-case-stack</code></td>
+<td><code>usefulRules:pickup-case-stack</code></td>
+<td>ROOK: I’ll just pick up the Euler file.<br>ROOK: As soon as I find out which one it is...<br>ROOK: Folder tabs aren’t snooping.<br>ROOK: They’re... navigation.<br>ROOK: Let’s see here...<br>ROOK: ‘Notorious Ransomware Gang Claims “Dog Ate Their Decryption Key.”<br>ROOK: Responsible Breed Still Unknown and at Large.’<br>ROOK: Not Euler.<br>ROOK: ‘The Great Break-Room Yogurt Heist:<br>ROOK: When Sufficient Labeling of Your Snacks Is Ineffective...<br>ROOK: ...at Deterring Stomach-Grumbling Coworkers.’<br>ROOK: Ah. A classic case of who-dun-it.<br>ROOK: ...And now I’m hungry.<br>ROOK: ...but still not Euler.<br>ROOK: ‘The REAL Roswell Conspiracy:<br>ROOK: Extraterrestrial Pilots Lacked Proper Licensing, Registration...<br>ROOK: and Minimum State-Required Insurance Coverage at Time of Crash.’<br>ROOK: Yikes. Sounds dicey. Definitely not for me.<br>ROOK: Euler Finance. There you are.<br>ROOK: March 13, 2023. First entry: DAI.<br>ROOK: A stablecoin— designed to stay close to one U.S. dollar.<br>ROOK: Just over 8,877,507 DAI. About $8.8 million at the time.<br>ROOK: And that was only the first DAI pool.<br>ROOK: The broader exploit reached other assets too...<br>ROOK: including stETH, wstETH, USDC, and WBTC.<br>ROOK: Roughly $197 million in total losses.<br>ROOK: No witnesses. No fingerprints.<br>ROOK: Just a very expensive trail of receipts.<br>ROOK: And the exact DAI contract address is here. Good.<br>ROOK: No following the wrong token.<br>ROOK: That much value leaves a trail.<br>ROOK: Now I’ve got what I need to check the Nansen™ terminal...<br>ROOK: and trace the transactions.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-open-misc-drawer"></a><code>useful.open-misc-drawer</code></td>
+<td><code>usefulRules:open-misc-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-pull-misc-drawer"></a><code>useful.pull-misc-drawer</code></td>
+<td><code>usefulRules:pull-misc-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-close-misc-drawer"></a><code>useful.close-misc-drawer</code></td>
+<td><code>usefulRules:close-misc-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-push-misc-drawer"></a><code>useful.push-misc-drawer</code></td>
+<td><code>usefulRules:push-misc-drawer</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-use-misc-drawer-open"></a><code>useful.use-misc-drawer-open</code></td>
+<td><code>usefulRules:use-misc-drawer-open</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-use-misc-drawer-shut"></a><code>useful.use-misc-drawer-shut</code></td>
+<td><code>usefulRules:use-misc-drawer-shut</code></td>
+<td><em>No spoken delivery; route is still represented.</em></td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-look-misc-contents"></a><code>useful.look-misc-contents</code></td>
+<td><code>usefulRules:look-misc-contents</code></td>
+<td>ROOK: This must be the office’s miscellaneous catch-all junk drawer.<br>ROOK: A random assortment of items...<br>ROOK: and a piece of chewed gum haphazardly covered by the wrapper.<br>ROOK: At least they tried...<br>ROOK: It still might be worth pillaging through.<br>ROOK: Rummaging through other people’s partially sticky objects...<br>ROOK: is a cherished pastime of mine.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-useful-pickup-misc-contents"></a><code>useful.pickup-misc-contents</code></td>
+<td><code>usefulRules:pickup-misc-contents</code></td>
+<td>ROOK: Let’s see what’s in here...<br>ROOK: A rubber band.<br>ROOK: A junk drawer wouldn’t be complete without one.<br>ROOK: No one uses it. Yet, no one is willing to throw it away.<br>ROOK: A Rubik’s Cube.<br>ROOK: I prefer the already solved ones.<br>ROOK: Sharknado 2. On VHS.<br>ROOK: Finally. Evidence of a crime.<br>MR_INDEX: That is not evidence.<br>ROOK: Then why is it in a Records Office?<br>MR_INDEX: Because no one wanted it at home.<br>ROOK: Compelling motive.<br>ROOK: A piggy bank.<br>ROOK: Finally, a financial system I understand.<br>ROOK: And a Do-It-Herself Small Pink Toolbox.<br>ROOK: Empowering self-reliant women everywhere...<br>ROOK: and now me.<br>ROOK: At last, I can hang my own pictures...<br>ROOK: and tighten any loose furniture screws I come across...<br>ROOK: all without calling in a professional...<br>ROOK: and keeping my dignity fully intact!<br>ROOK: I’m collecting these as potentially relevant.<br>ROOK: It’s not stealing. It’s tactical acquisition.<br>ROOK: That’s about it for the salvageable objects. The used peppermint gum can stay.<br>ROOK: I’m still enjoying the aroma that has permanently permeated the drawer.<br>ROOK: Very refreshing.</td>
+<td>rook:BODY:PROP<br>rook:BODY:PROP<br>rook:BODY:PROP | BEAT<br>rook:BODY:PROP<br>rook:BODY:PROP</td>
+</tr>
+<tr>
+<td><a id="route-item-combine-form-pen"></a><code>item.combine-form-pen</code></td>
+<td><code>itemRules:combine-form-pen</code></td>
+<td>ROOK: Role:<br>ROOK: Lead Investigator<br>ROOK: Name:<br>ROOK: Rook<br>ROOK: Purpose:<br>ROOK: Investigate official things...officially.<br>ROOK: Annnd...my signature.<br>ROOK: Whoops...<br>ROOK: I think I pressed too hard, and broke the pen.<br>ROOK: At least I finished the form though.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-item-open-toolbox"></a><code>item.open-toolbox</code></td>
+<td><code>itemRules:open-toolbox</code></td>
+<td>ROOK: Alrighty.<br>ROOK: Let’s see what kind of professional-grade responsibility is in here.<br>ROOK: A hammer. A small handful of dainty nails...<br>ROOK: And an empty spot where it looks like a screwdriver was supposed to be.<br>ROOK: So... a hammer, a handful of nails, a screwdriver-shaped vacancy...<br>ROOK: and one newly self-certified handyman.<br>ROOK: Look out, property values.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-item-use-toolbox"></a><code>item.use-toolbox</code></td>
+<td><code>itemRules:use-toolbox</code></td>
+<td>ROOK: Alrighty.<br>ROOK: Let’s see what kind of professional-grade responsibility is in here.<br>ROOK: A hammer. A small handful of dainty nails...<br>ROOK: And an empty spot where it looks like a screwdriver was supposed to be.<br>ROOK: So... a hammer, a handful of nails, a screwdriver-shaped vacancy...<br>ROOK: and one newly self-certified handyman.<br>ROOK: Look out, property values.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-item-open-toolbox-open"></a><code>item.open-toolbox-open</code></td>
+<td><code>itemRules:open-toolbox-open</code></td>
+<td>ROOK: It’s already open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-item-use-toolbox-open"></a><code>item.use-toolbox-open</code></td>
+<td><code>itemRules:use-toolbox-open</code></td>
+<td>ROOK: Empty now. Still pink. Still empowering.<br>ROOK: And, by default, the most organized toolbox I’ve ever owned.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-item-smash-piggy"></a><code>item.smash-piggy</code></td>
+<td><code>itemRules:smash-piggy</code></td>
+<td>ROOK: Sorry, little pig. This might sting a little.<br>ROOK: One gentle tap.<br>ROOK: Just enough to take a tiny chip out of the bottom.<br>ROOK: ...I...I was aiming for one little chip.<br>ROOK: I may have underestimated the ‘heavy-duty’ part.<br>MR_INDEX: What did you do?<br>ROOK: Made a withdrawal.<br>MR_INDEX: With a hammer?<br>ROOK: Let’s call it a hostile withdrawal.<br>ROOK: Huh. Not coins. A little strip of paper.<br>ROOK: So that’s what was shuffling around in there.</td>
+<td>rook:BODY:rook.embarrassed-reaction<br>rook:BODY:UNRESOLVED<br>rook:FACE:rook.camera-cheeky-hold</td>
+</tr>
+<tr>
+<td><a id="route-blocked-give-mr-index-broken-feather-pen"></a><code>blocked.GIVE.mr-index.broken-feather-pen</code></td>
+<td><code>blockedInteractions</code></td>
+<td>ROOK: Umm... I think I’ll hang onto this for now.<br>ROOK: I don’t want to upset Arthur.<br>ROOK: He already seems to have a bad case of the Mondays.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-blocked-use-pen-stand-broken-feather-pen"></a><code>blocked.USE.pen-stand.broken-feather-pen</code></td>
+<td><code>blockedInteractions</code></td>
+<td>ROOK: Umm... I think I’ll hang onto this for now.<br>ROOK: I don’t want to upset Arthur.<br>ROOK: He already seems to have a bad case of the Mondays.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-hero-prebrief-initial"></a><code>hero.PREBRIEF_INITIAL</code></td>
+<td><code>selectHeroTerminalSpeech</code></td>
+<td>ROOK: Alright. I’ll give it a shot. I don’t actually have any case information yet...<br>ROOK: which feels like a fairly important part of investigating a case.<br>ROOK: I should probably find that file Mr. A mentioned.<br>ROOK: Still... let’s see what we’re dealing with.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-hero-prebrief-repeat"></a><code>hero.PREBRIEF_REPEAT</code></td>
+<td><code>selectHeroTerminalSpeech</code></td>
+<td>ROOK: Yeah... I need that case file. There’s plenty in there...<br>ROOK: I just don’t know which part of it matters yet.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-hero-prebrief-reentry"></a><code>hero.PREBRIEF_REENTRY</code></td>
+<td><code>selectHeroTerminalSpeech</code></td>
+<td>ROOK: Same terminal. Better question.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-hero-delta-1"></a><code>hero.DELTA_1</code></td>
+<td><code>selectHeroTerminalSpeech</code></td>
+<td>ROOK: Okay. One exact transaction.<br>ROOK: The DAI landed at the First Engine.<br>ROOK: That’s a starting point... not an ending.<br>ROOK: Now I need to see where it went next.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-hero-delta-2"></a><code>hero.DELTA_2</code></td>
+<td><code>selectHeroTerminalSpeech</code></td>
+<td>ROOK: The terminal can settle this.<br>ROOK: I need to get back in there and trace the missing link.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-hero-theory-resolution"></a><code>hero.THEORY_RESOLUTION</code></td>
+<td><code>selectHeroTerminalSpeech</code></td>
+<td>ROOK: I found the exact link. Now I need to put the proof together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-brcg-untested"></a><code>brcg.UNTESTED</code></td>
+<td><code>selectBrcgTerminalSpeech</code></td>
+<td>ROOK: Bitcoin Roller Coaster Guy. 888,888,888 BRCG.<br>ROOK: There are still nine whole digits. That feels rich.<br>ROOK: I need to check this out for myself in the terminal.</td>
+<td>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-brcg-resolved"></a><code>brcg.RESOLVED</code></td>
+<td><code>selectBrcgTerminalSpeech</code></td>
+<td>ROOK: Eight hundred eighty-eight million BRCG.<br>ROOK: About $7.10 at the snapshot’s price.<br>ROOK: That’s a lot of digits doing very little work.<br>ROOK: People say something isn’t worth the paper it’s printed on.<br>ROOK: Here... the paper might be the strongest asset.<br>ROOK: Somewhere, the U.S. dollar is taking notes.</td>
+<td>rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-ending-universal"></a><code>ending.universal</code></td>
+<td><code>R55_ENDING_UNIVERSAL</code></td>
+<td>ROOK: Mr. A!<br>MR_INDEX: What now?<br>ROOK: I cracked the case!<br>MR_INDEX: You identified who did it?<br>ROOK: Well, no...<br>ROOK: BUT, I traced the wallet movements and the transactions connecting them.<br>ROOK: Whoever was behind the wallets is still unknown.<br>ROOK: Could be one person. Could be several.<br>ROOK: Could be the same dog that ate that ransomware gang’s decryption key.<br>MR_INDEX: The dog is not a suspect.<br>ROOK: Breed still unknown and at large.<br>MR_INDEX: Then what did you find?<br>ROOK: The route. I traced it all. The first DAI trail reached the First Engine...<br>ROOK: the second route reached the Receiving Vault... and best of all...<br>ROOK: I found the exact transaction that connected them.<br>MR_INDEX: Good. So you did your job. Barely.<br>MR_INDEX: And arguably, Nansen™ did most of the heavy lifting.<br>ROOK: I asked the right question.<br>MR_INDEX: And let the evidence answer it.<br>MR_INDEX: Considering that this morning you did not know what a blockchain was...<br>MR_INDEX: that is progress.<br>ROOK: That sounded dangerously close to praise.<br>MR_INDEX: It was an observation.<br>ROOK: I’ll take it.<br>ROOK: So... now that I cracked the case, can I call you Arthur?<br>MR_INDEX: You may not.<br>ROOK: But your friends call you Arthur, and we made a pretty good team today.<br>MR_INDEX: You completed one assignment. That barely establishes competence...<br>MR_INDEX: let alone friendship.<br>ROOK: So friendship is still under review?<br>MR_INDEX: It never entered review.<br>ROOK: How about a celebratory pizza, then?<br>MR_INDEX: This is still not a pizza restaurant.<br>MR_INDEX: But...<br>MR_INDEX: there is a place around the corner.<br>ROOK: I knew you’d warm up to me.<br>MR_INDEX: We just happen to both be hungry at the same time.<br>ROOK: That’s how the best of teams start!<br>MR_INDEX: No. It really isn’t.<br>ROOK: So you’re buying?</td>
+<td>rook:BODY:UNRESOLVED | UNRESOLVED | MOVEMENT<br>rook:BODY:rook.case-cracked-delivery<br>rook:BODY:rook.emphasis-delivery<br>arthur:BODY:STAGE | UNRESOLVED<br>rook:BODY:rook.shrug-delivery<br>arthur:BODY:arthur.present-delivery<br>rook:BODY:rook.pizza-invite-delivery<br>arthur:BODY:arthur.present-delivery<br>arthur:BODY:GAZE | UNRESOLVED | STAGE<br>arthur:BODY:arthur.glasses-wiggle<br>arthur:BODY:One short beat after, Arthur will look at the camera, blink, then turn back to Rook's position, then he will deliver the next scheduled line.</td>
+</tr>
+<tr>
+<td><a id="route-ending-variant-default"></a><code>ending.variant.default</code></td>
+<td><code>selectEndingVariantSpeech</code></td>
+<td>MR_INDEX: You broke my pen. I’d say you owe me.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-ending-variant-brcg"></a><code>ending.variant.brcg</code></td>
+<td><code>selectEndingVariantSpeech</code></td>
+<td>MR_INDEX: You broke my pen. I’d say you owe me.<br>MR_INDEX: And besides, you’re rolling in the dough now...<br>MR_INDEX: with all that BRCG you somehow came across. Right?<br>ROOK: That’s right! That should cover one slice...<br>ROOK: to share.<br>ROOK: This one’s on me!</td>
+<td>arthur:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-ending-brcg-payoff"></a><code>ending.brcg-payoff</code></td>
+<td><code>R55_BRCG_PAYOFF</code></td>
+<td>MR_INDEX: Well?<br>ROOK: At the frozen quoted price: 888,888,888 BRCG comes to about...<br>ROOK: $7.10.<br>MR_INDEX: That’s some ‘fortune’ you got there!<br>MR_INDEX: And the note still does not prove that the balance exists...<br>MR_INDEX: belongs to you... or could even be sold for that amount.<br>ROOK: So I shattered a pig for seven hypothetical dollars.<br>MR_INDEX: And a useful lesson.<br>ROOK: Can the lesson pay for a new pig?<br>MR_INDEX: It cannot.</td>
+<td>arthur:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED</td>
+</tr>
+</tbody>
+</table>
+<p><a href="index.html" data-doc="docs/script/index.md" data-anchor="">Back to Script Explorer</a></p>
+</article><nav id="toc" class="toc" aria-label="On this page"></nav></div></main><script src="../../assets/library.js"></script><script src="../../assets/site.js"></script></body></html>

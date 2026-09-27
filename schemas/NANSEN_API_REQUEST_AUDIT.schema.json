@@ -1,0 +1,2898 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:trace-escape:nansen-api-request-audit:1.0.0",
+  "type": "object",
+  "properties": {
+    "b3ContractReview": {"type":"object","additionalProperties":false,"required":["executionContractSha256","leadAcceptanceReceiptIdentity","planIdentity","leadAcceptedBeforeB3","permanentlyHeldCalls","newLocalSupportCandidates"],"properties":{"executionContractSha256":{"const":"cb9d15464a2542339b7848fde7377ead0be11537a0b6f7d3b166e4e623a61378"},"leadAcceptanceReceiptIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"planIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"leadAcceptedBeforeB3":{"const":3},"permanentlyHeldCalls":{"const":3},"newLocalSupportCandidates":{"type":"integer","minimum":0,"maximum":5}}},
+    "r3r1SemanticReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "campaignId",
+        "allFourRetentionPass",
+        "leadAcceptedCount",
+        "perCallEvidenceIdentity",
+        "supplierTerminalRecordsUnchanged"
+      ],
+      "properties": {
+        "campaignId": {
+          "const": "NQ5-T1-20260916-15fc6ad1-d6f3-422a-b724-de5e66154011"
+        },
+        "allFourRetentionPass": {
+          "type": "boolean"
+        },
+        "leadAcceptedCount": {
+          "const": 0
+        },
+        "perCallEvidenceIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "supplierTerminalRecordsUnchanged": {
+          "const": true
+        }
+      }
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "campaignId": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "authorizationId": {
+      "type": "string",
+      "maxLength": 1000
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/b1AuditRecord"
+          },
+          {
+            "$ref": "#/$defs/b2AuditRecord"
+          },
+          {"$ref":"#/$defs/b3AuditRecord"}
+        ]
+      },
+      "minItems": 15,
+      "maxItems": 22
+    },
+    "rawBodiesIncluded": {
+      "const": false
+    },
+    "privatePathsIncluded": {
+      "const": false
+    },
+    "unrestrictedHeadersIncluded": {
+      "const": false
+    },
+    "auditScope": {
+      "enum": [
+        "HISTORICAL_ACCEPTED_R2_ONLY_NEW_STATE_UNVERIFIED"
+      ]
+    },
+    "r3r2SignedFlowReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "campaignId",
+        "signedFlowCompatibilityProfileIdentity",
+        "leadAcceptanceCandidates",
+        "heldCalls",
+        "correctedDerivedPublicCount",
+        "leadAcceptedCount",
+        "perCallEvidenceIdentity",
+        "signBucketDirectionMatrixIdentity",
+        "supplierTerminalRecordsUnchanged"
+      ],
+      "properties": {
+        "campaignId": {
+          "const": "NQ5-T1-20260916-15fc6ad1-d6f3-422a-b724-de5e66154011"
+        },
+        "signedFlowCompatibilityProfileIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "leadAcceptanceCandidates": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "heldCalls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "correctedDerivedPublicCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "leadAcceptedCount": {
+          "const": 0
+        },
+        "perCallEvidenceIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "signBucketDirectionMatrixIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "supplierTerminalRecordsUnchanged": {
+          "const": true
+        }
+      }
+    },
+    "b2ContractReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "executionContractSha256",
+        "leadAcceptanceReceiptIdentity",
+        "planIdentity",
+        "leadAcceptedBeforeB2",
+        "permanentlyHeldCalls",
+        "newLocalSupportCandidates"
+      ],
+      "properties": {
+        "executionContractSha256": {
+          "const": "0f4ae129ce922d4325bffd01a1347f42ca54338257f38cac2030314e5c3f8443"
+        },
+        "leadAcceptanceReceiptIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "planIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "leadAcceptedBeforeB2": {
+          "const": 1
+        },
+        "permanentlyHeldCalls": {
+          "const": 3
+        },
+        "newLocalSupportCandidates": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "evidenceStatus": {
+          "const": "HISTORICAL_ONLY_CURRENT_PRIVATE_RECONCILIATION_BLOCKED"
+        }
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "campaignId",
+    "authorizationId",
+    "records",
+    "rawBodiesIncluded",
+    "privatePathsIncluded",
+    "unrestrictedHeadersIncluded"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "b3AuditRecord": {"type":"object","properties":{"authorizationId":{"const":"LEAD-NQ5-T1-B3-FIVE-REQUEST-REPRESENTATIVE-FRONTIER-001"},"executionContractSha256":{"const":"cb9d15464a2542339b7848fde7377ead0be11537a0b6f7d3b166e4e623a61378"},"campaignId":{"type":"string","maxLength":1000},"trancheId":{"const":"T1"},"batchId":{"const":"B3"},"planSequence":{"type":"integer","minimum":1,"maximum":5},"logicalId":{"enum":["7c812749f9e8351f18621782214a2bbb36edd26675f41247f98a7d35fc17cae9","3ce23250b09f423c615ddf1865131476066c14cbdd3549efe6c3005fa35b8820","e677fcc895ee443cbfd3d72c6d68463ed15cc9820d14ac9bd8bf9eeb0c66f4c3","fd844b4bdc5999147d8327b8ba95a47c9feee61862411c09f80b5aedb119d6f7","2fa5ca459facb8746725cc6d753cc5b72712137ed0e68fbaab1d47ecf50f1db9"]},"family":{"const":"profiler/address/transactions"},"path":{"const":"/api/v1/profiler/address/transactions"},"method":{"const":"POST"},"requestBodySha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},"investigativeQuestionId":{"type":"string","maxLength":1000},"questionLens":{"const":"RELATIONSHIPS"},"purposeCode":{"type":"string","maxLength":1000},"businessQuestion":{"type":"string","maxLength":1000},"selectionLineage":{"type":"array","items":{"type":"string","maxLength":1000},"maxItems":128,"uniqueItems":true},"coverageCells":{"type":"array","items":{"type":"string","maxLength":1000},"maxItems":128},"coverageKey":{"type":"object","properties":{"subject_id":{"type":"string","maxLength":1000},"time_window_id":{"type":"string","maxLength":1000},"question_lens":{"const":"RELATIONSHIPS"},"page_or_partition_id":{"const":"PAGE.1"}},"required":["subject_id","time_window_id","question_lens","page_or_partition_id"],"additionalProperties":false},"consumerIds":{"type":"array","items":{"type":"string","maxLength":1000},"maxItems":128,"uniqueItems":true},"expectedCredits":{"const":1},"worstCaseCredits":{"const":3},"issued":{"type":["boolean","null"]},"issueDisposition":{"enum":["NOT_ISSUED_PRELIVE_HOLD","ISSUED_B3","NOT_ISSUED_BREAKER","ISSUE_STATE_UNKNOWN_AFTER_DURABLE_BREAKER"]},"attempts":{"type":"array","items":{"type":"object","properties":{"attemptNumber":{"type":"integer","minimum":1,"maximum":3},"attemptIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"startSequence":{"type":"integer","minimum":0},"responseSequence":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"terminalSequence":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"issuedAtUtc":{"type":"string","maxLength":1000},"completedAtUtc":{"anyOf":[{"type":"string","maxLength":1000},{"type":"null"}]},"completedTimestampDisposition":{"enum":["CAPTURED","NOT_CAPTURED_BY_B1_TRANSPORT_V1","NO_RESPONSE"]},"latencyMs":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"httpStatus":{"anyOf":[{"type":"integer","minimum":100,"maximum":599},{"type":"null"}]},"provider_request_id":{"anyOf":[{"type":"string","pattern":"^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"},{"type":"null"}]},"providerRequestIdDisposition":{"enum":["CAPTURED","NOT_CAPTURED_BY_B1_TRANSPORT_V1","MISSING_FUTURE_REQUEST_ID","NO_RESPONSE"]},"safeHeaders":{"type":"object","properties":{"x-request-id":{"type":"string","maxLength":128},"x-nansen-credits-cost":{"type":"string","maxLength":128},"x-nansen-credits-used":{"type":"string","maxLength":128},"x-nansen-credits-remaining":{"type":"string","maxLength":128},"retry-after":{"type":"string","maxLength":128},"x-nansen-ratelimit-scope":{"type":"string","maxLength":128},"ratelimit-limit":{"type":"string","maxLength":128},"ratelimit-remaining":{"type":"string","maxLength":128},"ratelimit-reset":{"type":"string","maxLength":128},"x-ratelimit-limit":{"type":"string","maxLength":128},"x-ratelimit-remaining":{"type":"string","maxLength":128},"x-ratelimit-reset":{"type":"string","maxLength":128},"x-ratelimit-limit-second":{"type":"string","maxLength":128},"x-ratelimit-remaining-second":{"type":"string","maxLength":128},"x-ratelimit-reset-second":{"type":"string","maxLength":128},"x-ratelimit-limit-minute":{"type":"string","maxLength":128},"x-ratelimit-remaining-minute":{"type":"string","maxLength":128},"x-ratelimit-reset-minute":{"type":"string","maxLength":128},"x-ratelimit-limit-credit-fails":{"type":"string","maxLength":128},"x-ratelimit-remaining-credit-fails":{"type":"string","maxLength":128},"x-ratelimit-reset-credit-fails":{"type":"string","maxLength":128},"x-ratelimit-limit-credit-fails-minute":{"type":"string","maxLength":128},"x-ratelimit-remaining-credit-fails-minute":{"type":"string","maxLength":128},"x-ratelimit-reset-credit-fails-minute":{"type":"string","maxLength":128}},"additionalProperties":false},"quotedCredits":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"actualCredits":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"remainingCredits":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"rawBytes":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"primarySha256":{"anyOf":[{"type":"string","pattern":"^[a-f0-9]{64}$"},{"type":"null"}]},"mirrorSha256":{"anyOf":[{"type":"string","pattern":"^[a-f0-9]{64}$"},{"type":"null"}]},"bytesEqual":{"type":"boolean"},"responseSchemaIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"validation":{"anyOf":[{"type":"object","properties":{"schemaIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"stages":{"type":"object","properties":{"json":{"$ref":"#/$defs/validationStage"},"providerSchema":{"$ref":"#/$defs/validationStage"},"pagination":{"$ref":"#/$defs/validationStage"},"temporal":{"$ref":"#/$defs/validationStage"},"normalizationProjection":{"$ref":"#/$defs/validationStage"},"publicSchema":{"$ref":"#/$defs/validationStage"},"durableStorage":{"$ref":"#/$defs/validationStage"},"diagnostic":{"$ref":"#/$defs/validationStage"}},"required":["json","providerSchema","pagination","temporal","normalizationProjection","publicSchema"],"additionalProperties":false},"safelyAdmissible":{"type":"boolean"},"admittedResultCount":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"normalizedIdentity":{"anyOf":[{"type":"string","pattern":"^[a-f0-9]{64}$"},{"type":"null"}]},"firstFailedStage":{"anyOf":[{"enum":["json","providerSchema","pagination","temporal","normalizationProjection","publicSchema","durableStorage","diagnostic"]},{"type":"null"}]}},"required":["schemaIdentity","stages","safelyAdmissible","admittedResultCount","normalizedIdentity","firstFailedStage"],"additionalProperties":false},{"type":"null"}]}},"required":["attemptNumber","attemptIdentity","startSequence","responseSequence","terminalSequence","issuedAtUtc","completedAtUtc","completedTimestampDisposition","latencyMs","httpStatus","provider_request_id","providerRequestIdDisposition","safeHeaders","quotedCredits","actualCredits","remainingCredits","rawBytes","primarySha256","mirrorSha256","bytesEqual","responseSchemaIdentity","validation"],"additionalProperties":false},"maxItems":128},"terminalDisposition":{"anyOf":[{"enum":["TERMINAL_FAILURE","SUCCESS_NOT_COUNTED","SUCCESS_COUNTED"]},{"type":"null"}]},"qualificationCounted":{"type":["boolean","null"]},"qualificationSequence":{"anyOf":[{"type":"integer","minimum":1,"maximum":13},{"type":"null"}]},"exclusionReason":{"anyOf":[{"type":"string","maxLength":1000},{"type":"null"}]},"publicCallId":{"anyOf":[{"type":"string","pattern":"^NQ5-[0-9]{6}$"},{"type":"null"}]},"normalizedIdentity":{"anyOf":[{"type":"string","pattern":"^[a-f0-9]{64}$"},{"type":"null"}]},"admittedResultCount":{"anyOf":[{"type":"integer","minimum":0},{"type":"null"}]},"qualification_value":{"enum":["ZERO_NOT_COUNTED","ADMITTED_BOUNDED_EVIDENCE","UNKNOWN_NOT_ADMITTED_AFTER_DURABLE_BREAKER"]},"engineering_value":{"type":"array","items":{"enum":["AUTHENTICATED_TRANSPORT","CONCURRENCY_OBSERVATION","DURABLE_PRIMARY_MIRROR_STORAGE","BILLING_RATE_HEADER_OBSERVATION","VALIDATION_MISMATCH_DIAGNOSIS"]},"maxItems":128},"gameplay_consumer_value":{"enum":["NO_ADMITTED_GAMEPLAY_EVIDENCE_FROM_B1_V1","ADMITTED_BOUNDED_EVIDENCE_NOT_INTEGRATION_ACCEPTANCE"]},"competition_evidence_value":{"enum":["SAFE_ENGINEERING_AUDIT_ONLY","SAFE_ADMITTED_QUALIFICATION_AUDIT","PLAN_ONLY_NOT_ISSUED"]},"frontierProof":{"type":"object","additionalProperties":false,"required":["kind","sourceCandidateMatrixIdentity","candidateMatrixRowIdentity","subjectAddress","supportingLogicalIds","supportingTransactionHashes","supportingTransferIdentities","sourceLeadAcceptanceReceiptIdentity"],"properties":{"kind":{"const":"LEAD_ACCEPTED_DURABLE_COUNTERPARTY"},"sourceCandidateMatrixIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"candidateMatrixRowIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"subjectAddress":{"type":"string","maxLength":1000},"supportingLogicalIds":{"type":"array","items":{"type":"string","pattern":"^[a-f0-9]{64}$"},"uniqueItems":true,"minItems":1,"maxItems":128},"supportingTransactionHashes":{"type":"array","uniqueItems":true,"minItems":1,"maxItems":3,"items":{"type":"string","pattern":"^0x[a-f0-9]{64}$"}},"supportingTransferIdentities":{"type":"array","items":{"type":"string","pattern":"^[a-f0-9]{64}$"},"uniqueItems":true,"minItems":1,"maxItems":128},"sourceLeadAcceptanceReceiptIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"}}},"candidateRole":{"enum":["REPEATED_COUNTERPARTY_FLOW_TEST","SINGLE_COUNTERPARTY_DEAD_END_TEST"]},"planIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"leadAcceptanceReceiptIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"signedFlowReview":{"type":"object","additionalProperties":false,"required":["profileIdentity","observedNullTimeProfileIdentity","stageStatuses","stats","matrixIdentity","localSupportCandidate","leadAccepted"],"properties":{"profileIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"observedNullTimeProfileIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"stageStatuses":{"type":"object","additionalProperties":{"enum":["PASS","FAIL","NOT_RUN"]},"required":["json","schema","pagination","contextualTemporal","normalization","projection","publicSchema"]},"stats":{"type":["object","null"],"additionalProperties":false,"required":["rawTransactionRecords","rawTransferRows","sentRows","receivedRows","positiveRows","negativeRows","zeroRows","subjectInvolvedRows","incidentalRows","fromRows","toRows","selfRows","bucketContradictions","eligibleNonzeroRows","duplicateRows","uniqueAdmittedRows"],"properties":{"rawTransactionRecords":{"type":"integer","minimum":0},"rawTransferRows":{"type":"integer","minimum":0},"sentRows":{"type":"integer","minimum":0},"receivedRows":{"type":"integer","minimum":0},"positiveRows":{"type":"integer","minimum":0},"negativeRows":{"type":"integer","minimum":0},"zeroRows":{"type":"integer","minimum":0},"subjectInvolvedRows":{"type":"integer","minimum":0},"incidentalRows":{"type":"integer","minimum":0},"fromRows":{"type":"integer","minimum":0},"toRows":{"type":"integer","minimum":0},"selfRows":{"type":"integer","minimum":0},"bucketContradictions":{"type":"integer","minimum":0},"eligibleNonzeroRows":{"type":"integer","minimum":0},"duplicateRows":{"type":"integer","minimum":0},"uniqueAdmittedRows":{"type":"integer","minimum":0}}},"matrixIdentity":{"anyOf":[{"type":"string","pattern":"^[a-f0-9]{64}$"},{"type":"null"}]},"localSupportCandidate":{"type":"boolean"},"leadAccepted":{"const":false}}}},"required":["authorizationId","executionContractSha256","campaignId","trancheId","batchId","planSequence","logicalId","family","path","method","requestBodySha256","investigativeQuestionId","questionLens","purposeCode","businessQuestion","selectionLineage","coverageCells","coverageKey","consumerIds","expectedCredits","worstCaseCredits","issued","issueDisposition","attempts","terminalDisposition","qualificationCounted","qualificationSequence","exclusionReason","publicCallId","normalizedIdentity","admittedResultCount","qualification_value","engineering_value","gameplay_consumer_value","competition_evidence_value","frontierProof","candidateRole","planIdentity","leadAcceptanceReceiptIdentity","signedFlowReview"],"additionalProperties":false,"allOf":[{"if":{"properties":{"issueDisposition":{"const":"ISSUE_STATE_UNKNOWN_AFTER_DURABLE_BREAKER"}},"required":["issueDisposition"]},"then":{"properties":{"issued":{"type":"null"},"qualificationCounted":{"type":"null"},"terminalDisposition":{"type":"null"},"publicCallId":{"type":"null"},"normalizedIdentity":{"type":"null"},"admittedResultCount":{"type":"null"},"attempts":{"maxItems":0},"qualification_value":{"const":"UNKNOWN_NOT_ADMITTED_AFTER_DURABLE_BREAKER"}}},"else":{"properties":{"issued":{"type":"boolean"},"qualificationCounted":{"type":"boolean"},"qualification_value":{"enum":["ZERO_NOT_COUNTED","ADMITTED_BOUNDED_EVIDENCE"]}}}}]},
+    "validationStage": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "NOT_RUN",
+            "NOT_APPLICABLE"
+          ]
+        },
+        "code": {
+          "type": "string",
+          "pattern": "^[A-Z0-9_]+$"
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "pattern": "^SCHEMA_[A-Z]+$"
+              },
+              "pointer": {
+                "type": "string",
+                "maxLength": 512
+              },
+              "expectedTypes": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "null",
+                    "boolean",
+                    "object",
+                    "array",
+                    "string",
+                    "number",
+                    "integer"
+                  ]
+                },
+                "maxItems": 128
+              },
+              "observedType": {
+                "enum": [
+                  "null",
+                  "boolean",
+                  "object",
+                  "array",
+                  "string",
+                  "number"
+                ]
+              },
+              "missingFieldNames": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 1000
+                },
+                "maxItems": 128
+              },
+              "unknownFieldNames": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 1000
+                },
+                "maxItems": 128
+              }
+            },
+            "required": [
+              "code",
+              "pointer",
+              "expectedTypes",
+              "observedType",
+              "missingFieldNames",
+              "unknownFieldNames"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 128
+        },
+        "page": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "isLastPage": {
+          "type": "boolean"
+        },
+        "requestedWindow": {
+          "type": "object",
+          "properties": {
+            "from": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "to": {
+              "type": "string",
+              "maxLength": 1000
+            }
+          },
+          "required": [
+            "from",
+            "to"
+          ],
+          "additionalProperties": false
+        },
+        "minimumTimestamp": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "maximumTimestamp": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cutoffUtc": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "timestampRangeInterpretation": {
+          "enum": [
+            "EXPLICIT_OFFSET_INSTANTS",
+            "NOMINAL_TIME_WITH_UNSPECIFIED_ZONE"
+          ]
+        },
+        "missingAllowlistedFieldNames": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "rejectedFieldNames": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "nominalMinimumPrecedesRequestedFrom": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "status",
+        "code"
+      ],
+      "additionalProperties": false
+    },
+    "b1AuditRecord": {
+      "allOf": [{"if":{"required":["formalLeadAcceptance"]},"then":{"properties":{"logicalId":{"const":"2ba8e2f1d9c841b8781a736dbceb61ebd52eb78edbb5d6e8f04e5e39b1fad4e6"},"qualificationCounted":{"const":true},"qualificationSequence":{"const":1}}}}],
+      "type": "object",
+      "properties": {
+        "formalLeadAcceptance": {"type":"object","additionalProperties":false,"required":["receiptIdentity","leadAccepted","leadAcceptanceOrder","immutableSupplierSequence"],"properties":{"receiptIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"leadAccepted":{"const":true},"leadAcceptanceOrder":{"type":"integer","minimum":1,"maximum":1},"immutableSupplierSequence":{"type":"integer","minimum":1,"maximum":1}}},
+        "r3r1CountHold": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "supplierTerminalDisposition",
+            "semanticallySupportable",
+            "leadAccepted",
+            "qualificationValueDisposition"
+          ],
+          "properties": {
+            "supplierTerminalDisposition": {
+              "const": "SUCCESS_COUNTED"
+            },
+            "semanticallySupportable": {
+              "type": "boolean"
+            },
+            "leadAccepted": {
+              "const": false
+            },
+            "qualificationValueDisposition": {
+              "const": "HELD_PENDING_LEAD_SEMANTIC_REVIEW"
+            }
+          }
+        },
+        "authorizationId": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "executionContractSha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "campaignId": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "trancheId": {
+          "const": "T1"
+        },
+        "batchId": {
+          "const": "B1"
+        },
+        "planSequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 15
+        },
+        "logicalId": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "family": {
+          "enum": [
+            "profiler/address/transactions",
+            "profiler/address/historical-balances"
+          ]
+        },
+        "path": {
+          "enum": [
+            "/api/v1/profiler/address/transactions",
+            "/api/v1/profiler/address/historical-balances"
+          ]
+        },
+        "method": {
+          "const": "POST"
+        },
+        "requestBodySha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "investigativeQuestionId": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "questionLens": {
+          "enum": [
+            "ACTIVITY",
+            "STATE"
+          ]
+        },
+        "purposeCode": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "businessQuestion": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "selectionLineage": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "coverageCells": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "coverageKey": {
+          "type": "object",
+          "properties": {
+            "subject_id": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "time_window_id": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "question_lens": {
+              "enum": [
+                "ACTIVITY",
+                "STATE"
+              ]
+            },
+            "page_or_partition_id": {
+              "const": "PAGE.1"
+            }
+          },
+          "required": [
+            "subject_id",
+            "time_window_id",
+            "question_lens",
+            "page_or_partition_id"
+          ],
+          "additionalProperties": false
+        },
+        "consumerIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "expectedCredits": {
+          "const": 1
+        },
+        "worstCaseCredits": {
+          "const": 3
+        },
+        "issued": {
+          "type": "boolean"
+        },
+        "issueDisposition": {
+          "enum": [
+            "CONSUMED_PRIOR_B1_NONCOUNTED_IMMUTABLE",
+            "ISSUED_R1",
+            "NOT_ISSUED_ROOT_CAUSE_ADMISSION_BLOCK",
+            "NOT_ISSUED_BREAKER",
+            "ISSUED_R3",
+            "NOT_ISSUED_HELD_FAMILY"
+          ]
+        },
+        "attempts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "attemptNumber": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "attemptIdentity": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "startSequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "responseSequence": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "terminalSequence": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "issuedAtUtc": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "completedAtUtc": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 1000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "completedTimestampDisposition": {
+                "enum": [
+                  "CAPTURED",
+                  "NOT_CAPTURED_BY_B1_TRANSPORT_V1",
+                  "NO_RESPONSE"
+                ]
+              },
+              "latencyMs": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "httpStatus": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 100,
+                    "maximum": 599
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "provider_request_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "providerRequestIdDisposition": {
+                "enum": [
+                  "CAPTURED",
+                  "NOT_CAPTURED_BY_B1_TRANSPORT_V1",
+                  "MISSING_FUTURE_REQUEST_ID",
+                  "NO_RESPONSE"
+                ]
+              },
+              "safeHeaders": {
+                "type": "object",
+                "properties": {
+                  "x-request-id": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-credits-cost": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-credits-used": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-credits-remaining": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "retry-after": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-ratelimit-scope": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "ratelimit-limit": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "ratelimit-remaining": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "ratelimit-reset": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-second": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-second": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-second": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-credit-fails": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-credit-fails": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-credit-fails": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-credit-fails-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-credit-fails-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-credit-fails-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  }
+                },
+                "additionalProperties": false
+              },
+              "quotedCredits": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actualCredits": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "remainingCredits": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "rawBytes": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "primarySha256": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "mirrorSha256": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bytesEqual": {
+                "type": "boolean"
+              },
+              "responseSchemaIdentity": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "validation": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "stages": {
+                        "type": "object",
+                        "properties": {
+                          "json": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "providerSchema": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "pagination": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "temporal": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "normalizationProjection": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "publicSchema": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "durableStorage": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "diagnostic": {
+                            "$ref": "#/$defs/validationStage"
+                          }
+                        },
+                        "required": [
+                          "json",
+                          "providerSchema",
+                          "pagination",
+                          "temporal",
+                          "normalizationProjection",
+                          "publicSchema"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "safelyAdmissible": {
+                        "type": "boolean"
+                      },
+                      "admittedResultCount": {
+                        "anyOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "normalizedIdentity": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^[a-f0-9]{64}$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "firstFailedStage": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "json",
+                              "providerSchema",
+                              "pagination",
+                              "temporal",
+                              "normalizationProjection",
+                              "publicSchema",
+                              "durableStorage",
+                              "diagnostic"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "schemaIdentity",
+                      "stages",
+                      "safelyAdmissible",
+                      "admittedResultCount",
+                      "normalizedIdentity",
+                      "firstFailedStage"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "r3Validation": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "json": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA"
+                        ]
+                      }
+                    }
+                  },
+                  "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA"
+                        ]
+                      }
+                    }
+                  },
+                  "pagination": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA"
+                        ]
+                      }
+                    }
+                  },
+                  "contextualTemporal": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA"
+                        ]
+                      }
+                    }
+                  },
+                  "normalization": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA",
+                          "ZERO_OR_NEGATIVE_TRANSFER_RESPONSE_REJECTED",
+                          "NO_UNIQUE_POSITIVE_SUBJECT_TRANSFER"
+                        ]
+                      },
+                      "subjectParticipation": {
+                        "const": true
+                      },
+                      "exactSignedLexemePreserved": {
+                        "const": true
+                      },
+                      "strictlyPositive": {
+                        "const": true
+                      },
+                      "deterministicDeduplication": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "projection": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA"
+                        ]
+                      }
+                    }
+                  },
+                  "publicSchema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      },
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "classification": {
+                        "const": "NANSEN_SERVER_FILTERED_UNZONED_BLOCK_TIME_CONTEXTUAL"
+                      },
+                      "timezoneEstablished": {
+                        "const": false
+                      },
+                      "acceptedExactHashJoins": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "nullImputed": {
+                        "const": false
+                      },
+                      "enrichmentFieldsExported": {
+                        "const": 0
+                      },
+                      "labelsExported": {
+                        "const": 0
+                      },
+                      "originalRawTimestampExported": {
+                        "const": false
+                      },
+                      "allowlistOnly": {
+                        "const": true
+                      },
+                      "code": {
+                        "enum": [
+                          "RAW_HASH_SIZE_UTF8_OR_DUPLICATE_JSON",
+                          "EXACT_NARROW_COMPATIBILITY_REJECTED",
+                          "EXACT_FROZEN_PAGE_METADATA_REQUIRED",
+                          "MALFORMED_OUTSIDE_BOUND_CUTOFF_OR_ACCEPTED_TRUTH_CONFLICT",
+                          "STRICT_TRANSFER_CORE_OR_EXACT_DECIMAL",
+                          "NORMALIZED_PUBLIC_ALLOWLIST_SCHEMA",
+                          "PUBLIC_CALL_INDEX_SCHEMA"
+                        ]
+                      },
+                      "exactCampaignBinding": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "requestAudit": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "status"
+                    ],
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "PASS",
+                          "FAIL",
+                          "NOT_RUN"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "required": [
+              "attemptNumber",
+              "attemptIdentity",
+              "startSequence",
+              "responseSequence",
+              "terminalSequence",
+              "issuedAtUtc",
+              "completedAtUtc",
+              "completedTimestampDisposition",
+              "latencyMs",
+              "httpStatus",
+              "provider_request_id",
+              "providerRequestIdDisposition",
+              "safeHeaders",
+              "quotedCredits",
+              "actualCredits",
+              "remainingCredits",
+              "rawBytes",
+              "primarySha256",
+              "mirrorSha256",
+              "bytesEqual",
+              "responseSchemaIdentity",
+              "validation"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 128
+        },
+        "terminalDisposition": {
+          "anyOf": [
+            {
+              "enum": [
+                "TERMINAL_FAILURE",
+                "SUCCESS_NOT_COUNTED",
+                "SUCCESS_COUNTED"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "qualificationCounted": {
+          "type": "boolean"
+        },
+        "qualificationSequence": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 13
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "exclusionReason": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publicCallId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^NQ5-[0-9]{6}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalizedIdentity": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "admittedResultCount": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "qualification_value": {
+          "enum": [
+            "ZERO_NOT_COUNTED",
+            "ADMITTED_BOUNDED_EVIDENCE"
+          ]
+        },
+        "engineering_value": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "AUTHENTICATED_TRANSPORT",
+              "CONCURRENCY_OBSERVATION",
+              "DURABLE_PRIMARY_MIRROR_STORAGE",
+              "BILLING_RATE_HEADER_OBSERVATION",
+              "VALIDATION_MISMATCH_DIAGNOSIS"
+            ]
+          },
+          "maxItems": 128
+        },
+        "gameplay_consumer_value": {
+          "enum": [
+            "NO_ADMITTED_GAMEPLAY_EVIDENCE_FROM_B1_V1",
+            "ADMITTED_BOUNDED_EVIDENCE_NOT_INTEGRATION_ACCEPTANCE"
+          ]
+        },
+        "competition_evidence_value": {
+          "enum": [
+            "SAFE_ENGINEERING_AUDIT_ONLY",
+            "SAFE_ADMITTED_QUALIFICATION_AUDIT",
+            "PLAN_ONLY_NOT_ISSUED"
+          ]
+        },
+        "r2ContractReview": {
+          "type": "object",
+          "properties": {
+            "profileIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "correctedPlanIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "clarificationSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "officialEndpointSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "sourceIndexIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "lineageOriginalLogicalId": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "profileDisposition": {
+              "enum": [
+                "CURRENT_OPENAPI_STRICT_NO_NULL",
+                "HELD_TIMEZONE_OR_BUCKET_AMBIGUOUS",
+                "BLOCKED_AMBIGUOUS"
+              ]
+            },
+            "rowState": {
+              "enum": [
+                "ISSUED_TERMINAL_NONCOUNTED",
+                "HELD_PENDING_CONTRACT"
+              ]
+            },
+            "noIssueReason": {
+              "enum": [
+                "PRIOR_CONSUMED_CALL_IMMUTABLE_NOT_REISSUED",
+                "HELD_UNISSUED_PENDING_OFFICIAL_TEMPORAL_SEMANTICS",
+                "HELD_UNISSUED_CURRENT_OPENAPI_STRICT_NO_NULL"
+              ]
+            },
+            "replacementLogicalId": {
+              "type": "null"
+            },
+            "driftNotice": {
+              "enum": [
+                null,
+                "OBSERVED_PROVIDER_NULL_ENRICHMENT_CONTRACT_DRIFT_PENDING_LEAD"
+              ]
+            },
+            "AUTHORIZED_TO_ISSUE": {
+              "const": false
+            }
+          },
+          "required": [
+            "profileIdentity",
+            "correctedPlanIdentity",
+            "clarificationSha256",
+            "officialEndpointSha256",
+            "sourceIndexIdentity",
+            "lineageOriginalLogicalId",
+            "profileDisposition",
+            "rowState",
+            "noIssueReason",
+            "replacementLogicalId",
+            "driftNotice",
+            "AUTHORIZED_TO_ISSUE"
+          ],
+          "additionalProperties": false
+        },
+        "r3ContractReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "authorizationId",
+            "compatibilityProfileIdentity",
+            "planIdentity",
+            "publishedRequestSchemaIdentity",
+            "publishedResponseSchemaIdentity",
+            "officialEndpointSha256",
+            "r2NegativeClarificationSha256",
+            "observedDriftNotice",
+            "disposition",
+            "document_provenance_value",
+            "contextualOnly",
+            "retroactiveCount"
+          ],
+          "properties": {
+            "authorizationId": {
+              "const": "LEAD-G6P-NQ5-T1-B1-R3-OBSERVED-TRANSACTION-COMPATIBILITY"
+            },
+            "compatibilityProfileIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "planIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "publishedRequestSchemaIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "publishedResponseSchemaIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "officialEndpointSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "r2NegativeClarificationSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "observedDriftNotice": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "disposition": {
+              "enum": [
+                "CONSUMED_IMMUTABLE_NONCOUNTED",
+                "PARKED_HISTORICAL_OFF_CRITICAL_PATH",
+                "ELIGIBLE_CONDITIONAL_FOUR_ONLY",
+                "ISSUED_TERMINAL_COUNTED",
+                "ISSUED_NONCOUNTED_BREAKER",
+                "NOT_ISSUED_BREAKER"
+              ]
+            },
+            "document_provenance_value": {
+              "const": "CAPTURED_OFFICIAL_SCHEMA_AND_NEGATIVE_CLARIFICATION_WITH_LEAD_COMPATIBILITY_DRIFT_DISCLOSURE"
+            },
+            "contextualOnly": {
+              "const": true
+            },
+            "retroactiveCount": {
+              "const": false
+            }
+          }
+        },
+        "r3r2SignedFlow": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "signedFlowCompatibilityProfileIdentity",
+            "stats",
+            "signDirectionMatrixIdentity",
+            "immutableTerminalDisposition",
+            "correctedDerivedDisposition",
+            "qualificationValue",
+            "engineeringValue",
+            "gameplayProvenanceValue",
+            "reason",
+            "leadAccepted"
+          ],
+          "properties": {
+            "signedFlowCompatibilityProfileIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "stats": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "required": [
+                "rawTransactionRecords",
+                "rawTransferRows",
+                "sentRows",
+                "receivedRows",
+                "positiveRows",
+                "negativeRows",
+                "zeroRows",
+                "subjectInvolvedRows",
+                "incidentalRows",
+                "fromRows",
+                "toRows",
+                "selfRows",
+                "bucketContradictions",
+                "eligibleNonzeroRows",
+                "duplicateRows",
+                "uniqueAdmittedRows"
+              ],
+              "properties": {
+                "rawTransactionRecords": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "rawTransferRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "sentRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "receivedRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "positiveRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "negativeRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "zeroRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "subjectInvolvedRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "incidentalRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "fromRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "toRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "selfRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "bucketContradictions": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "eligibleNonzeroRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "duplicateRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "uniqueAdmittedRows": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "signDirectionMatrixIdentity": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "immutableTerminalDisposition": {
+              "const": "SUCCESS_COUNTED"
+            },
+            "correctedDerivedDisposition": {
+              "enum": [
+                "LEAD_ACCEPTANCE_CANDIDATE",
+                "HELD_IMMUTABLE_IDENTITY_MISMATCH_OR_SEMANTIC_FAILURE"
+              ]
+            },
+            "qualificationValue": {
+              "type": "string",
+              "minLength": 1
+            },
+            "engineeringValue": {
+              "type": "string",
+              "minLength": 1
+            },
+            "gameplayProvenanceValue": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            },
+            "leadAccepted": {
+              "const": false
+            }
+          }
+        }
+      },
+      "required": [
+        "authorizationId",
+        "executionContractSha256",
+        "campaignId",
+        "trancheId",
+        "batchId",
+        "planSequence",
+        "logicalId",
+        "family",
+        "path",
+        "method",
+        "requestBodySha256",
+        "investigativeQuestionId",
+        "questionLens",
+        "purposeCode",
+        "businessQuestion",
+        "selectionLineage",
+        "coverageCells",
+        "coverageKey",
+        "consumerIds",
+        "expectedCredits",
+        "worstCaseCredits",
+        "issued",
+        "issueDisposition",
+        "attempts",
+        "terminalDisposition",
+        "qualificationCounted",
+        "qualificationSequence",
+        "exclusionReason",
+        "publicCallId",
+        "normalizedIdentity",
+        "admittedResultCount",
+        "qualification_value",
+        "engineering_value",
+        "gameplay_consumer_value",
+        "competition_evidence_value"
+      ],
+      "additionalProperties": false
+    },
+    "b2AuditRecord": {
+      "type": "object",
+      "properties": {
+        "formalLeadAcceptance": {"type":"object","additionalProperties":false,"required":["receiptIdentity","leadAccepted","leadAcceptanceOrder","immutableSupplierSequence"],"properties":{"receiptIdentity":{"type":"string","pattern":"^[a-f0-9]{64}$"},"leadAccepted":{"const":true},"leadAcceptanceOrder":{"type":"integer","minimum":2,"maximum":3},"immutableSupplierSequence":{"type":"integer","minimum":5,"maximum":6}}},
+        "authorizationId": {
+          "const": "LEAD-NQ5-T1-B2-TWO-REQUEST-CANARY-001"
+        },
+        "executionContractSha256": {
+          "const": "0f4ae129ce922d4325bffd01a1347f42ca54338257f38cac2030314e5c3f8443"
+        },
+        "campaignId": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "trancheId": {
+          "const": "T1"
+        },
+        "batchId": {
+          "const": "B2"
+        },
+        "planSequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "logicalId": {
+          "enum": [
+            "20282d4d836dc8d746ac00ff1bcd408c4898259670f24d6e8e64e3f7d5206ea2",
+            "a78811744179ce394287f1c934469632446dec6521bd0bc636ac372d6acb539b"
+          ]
+        },
+        "family": {
+          "enum": [
+            "profiler/address/transactions",
+            "profiler/address/historical-balances"
+          ]
+        },
+        "path": {
+          "enum": [
+            "/api/v1/profiler/address/transactions",
+            "/api/v1/profiler/address/historical-balances"
+          ]
+        },
+        "method": {
+          "const": "POST"
+        },
+        "requestBodySha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "investigativeQuestionId": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "questionLens": {
+          "enum": [
+            "ACTIVITY",
+            "RELATIONSHIPS"
+          ]
+        },
+        "purposeCode": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "businessQuestion": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "selectionLineage": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "coverageCells": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "coverageKey": {
+          "type": "object",
+          "properties": {
+            "subject_id": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "time_window_id": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "question_lens": {
+              "enum": [
+                "ACTIVITY",
+                "RELATIONSHIPS"
+              ]
+            },
+            "page_or_partition_id": {
+              "const": "PAGE.1"
+            }
+          },
+          "required": [
+            "subject_id",
+            "time_window_id",
+            "question_lens",
+            "page_or_partition_id"
+          ],
+          "additionalProperties": false
+        },
+        "consumerIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "maxItems": 128
+        },
+        "expectedCredits": {
+          "const": 1
+        },
+        "worstCaseCredits": {
+          "const": 3
+        },
+        "issued": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "issueDisposition": {
+          "enum": [
+            "NOT_ISSUED_PRELIVE_HOLD",
+            "ISSUED_B2",
+            "NOT_ISSUED_BREAKER",
+            "ISSUE_STATE_UNKNOWN_AFTER_DURABLE_BREAKER"
+          ]
+        },
+        "attempts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "attemptNumber": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "attemptIdentity": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "startSequence": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "responseSequence": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "terminalSequence": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "issuedAtUtc": {
+                "type": "string",
+                "maxLength": 1000
+              },
+              "completedAtUtc": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 1000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "completedTimestampDisposition": {
+                "enum": [
+                  "CAPTURED",
+                  "NOT_CAPTURED_BY_B1_TRANSPORT_V1",
+                  "NO_RESPONSE"
+                ]
+              },
+              "latencyMs": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "httpStatus": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 100,
+                    "maximum": 599
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "provider_request_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "providerRequestIdDisposition": {
+                "enum": [
+                  "CAPTURED",
+                  "NOT_CAPTURED_BY_B1_TRANSPORT_V1",
+                  "MISSING_FUTURE_REQUEST_ID",
+                  "NO_RESPONSE"
+                ]
+              },
+              "safeHeaders": {
+                "type": "object",
+                "properties": {
+                  "x-request-id": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-credits-cost": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-credits-used": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-credits-remaining": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "retry-after": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-nansen-ratelimit-scope": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "ratelimit-limit": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "ratelimit-remaining": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "ratelimit-reset": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-second": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-second": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-second": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-credit-fails": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-credit-fails": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-credit-fails": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-limit-credit-fails-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-remaining-credit-fails-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  },
+                  "x-ratelimit-reset-credit-fails-minute": {
+                    "type": "string",
+                    "maxLength": 128
+                  }
+                },
+                "additionalProperties": false
+              },
+              "quotedCredits": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "actualCredits": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "remainingCredits": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "rawBytes": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "primarySha256": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "mirrorSha256": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "bytesEqual": {
+                "type": "boolean"
+              },
+              "responseSchemaIdentity": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "validation": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "schemaIdentity": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      },
+                      "stages": {
+                        "type": "object",
+                        "properties": {
+                          "json": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "providerSchema": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "pagination": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "temporal": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "normalizationProjection": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "publicSchema": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "durableStorage": {
+                            "$ref": "#/$defs/validationStage"
+                          },
+                          "diagnostic": {
+                            "$ref": "#/$defs/validationStage"
+                          }
+                        },
+                        "required": [
+                          "json",
+                          "providerSchema",
+                          "pagination",
+                          "temporal",
+                          "normalizationProjection",
+                          "publicSchema"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "safelyAdmissible": {
+                        "type": "boolean"
+                      },
+                      "admittedResultCount": {
+                        "anyOf": [
+                          {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "normalizedIdentity": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^[a-f0-9]{64}$"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "firstFailedStage": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "json",
+                              "providerSchema",
+                              "pagination",
+                              "temporal",
+                              "normalizationProjection",
+                              "publicSchema",
+                              "durableStorage",
+                              "diagnostic"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "schemaIdentity",
+                      "stages",
+                      "safelyAdmissible",
+                      "admittedResultCount",
+                      "normalizedIdentity",
+                      "firstFailedStage"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "attemptNumber",
+              "attemptIdentity",
+              "startSequence",
+              "responseSequence",
+              "terminalSequence",
+              "issuedAtUtc",
+              "completedAtUtc",
+              "completedTimestampDisposition",
+              "latencyMs",
+              "httpStatus",
+              "provider_request_id",
+              "providerRequestIdDisposition",
+              "safeHeaders",
+              "quotedCredits",
+              "actualCredits",
+              "remainingCredits",
+              "rawBytes",
+              "primarySha256",
+              "mirrorSha256",
+              "bytesEqual",
+              "responseSchemaIdentity",
+              "validation"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 128
+        },
+        "terminalDisposition": {
+          "anyOf": [
+            {
+              "enum": [
+                "TERMINAL_FAILURE",
+                "SUCCESS_NOT_COUNTED",
+                "SUCCESS_COUNTED"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "qualificationCounted": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "qualificationSequence": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 13
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "exclusionReason": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "publicCallId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^NQ5-[0-9]{6}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalizedIdentity": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "admittedResultCount": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "qualification_value": {
+          "enum": [
+            "ZERO_NOT_COUNTED",
+            "ADMITTED_BOUNDED_EVIDENCE",
+            "UNKNOWN_NOT_ADMITTED_AFTER_DURABLE_BREAKER"
+          ]
+        },
+        "engineering_value": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "AUTHENTICATED_TRANSPORT",
+              "CONCURRENCY_OBSERVATION",
+              "DURABLE_PRIMARY_MIRROR_STORAGE",
+              "BILLING_RATE_HEADER_OBSERVATION",
+              "VALIDATION_MISMATCH_DIAGNOSIS"
+            ]
+          },
+          "maxItems": 128
+        },
+        "gameplay_consumer_value": {
+          "enum": [
+            "NO_ADMITTED_GAMEPLAY_EVIDENCE_FROM_B1_V1",
+            "ADMITTED_BOUNDED_EVIDENCE_NOT_INTEGRATION_ACCEPTANCE"
+          ]
+        },
+        "competition_evidence_value": {
+          "enum": [
+            "SAFE_ENGINEERING_AUDIT_ONLY",
+            "SAFE_ADMITTED_QUALIFICATION_AUDIT",
+            "PLAN_ONLY_NOT_ISSUED"
+          ]
+        },
+        "frontierProof": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "entityId": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "role": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "evidenceRecordId": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "transactionHash": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "subjectAddress": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "publicCallId": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "providerRequestId": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "relation": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "acceptedTruthSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "logicalId": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "transferIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "sourceLeadAcceptanceReceiptIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "kind": {
+              "enum": [
+                "ACCEPTED_SEED",
+                "DURABLE_SUBJECT_COUNTERPARTY"
+              ]
+            },
+            "seedProvenanceOnly": {
+              "const": true
+            }
+          },
+          "required": [
+            "kind",
+            "transactionHash"
+          ],
+          "oneOf": [
+            {
+              "properties": {
+                "kind": {
+                  "const": "ACCEPTED_SEED"
+                },
+                "entityId": {
+                  "const": "main_trigger"
+                },
+                "evidenceRecordId": {
+                  "const": "EXACT_MAIN_RECEIVER"
+                }
+              },
+              "required": [
+                "entityId",
+                "role",
+                "evidenceRecordId",
+                "acceptedTruthSha256",
+                "seedProvenanceOnly"
+              ],
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "logicalId"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "sourceLeadAcceptanceReceiptIdentity"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "DURABLE_SUBJECT_COUNTERPARTY"
+                },
+                "logicalId": {
+                  "const": "2ba8e2f1d9c841b8781a736dbceb61ebd52eb78edbb5d6e8f04e5e39b1fad4e6"
+                }
+              },
+              "required": [
+                "logicalId",
+                "publicCallId",
+                "providerRequestId",
+                "transferIdentity",
+                "relation",
+                "sourceLeadAcceptanceReceiptIdentity"
+              ],
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "entityId"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "evidenceRecordId"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "candidateRole": {
+          "enum": [
+            "MAIN_TRIGGER_CONTEXT",
+            "EARLY_DUST_COUNTERPARTY_DEAD_END"
+          ]
+        },
+        "planIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "leadAcceptanceReceiptIdentity": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "signedFlowReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "profileIdentity",
+            "observedNullTimeProfileIdentity",
+            "stageStatuses",
+            "stats",
+            "matrixIdentity",
+            "localSupportCandidate",
+            "leadAccepted"
+          ],
+          "properties": {
+            "profileIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "observedNullTimeProfileIdentity": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "stageStatuses": {
+              "type": "object",
+              "additionalProperties": {
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "NOT_RUN"
+                ]
+              },
+              "required": [
+                "json",
+                "schema",
+                "pagination",
+                "contextualTemporal",
+                "normalization",
+                "projection",
+                "publicSchema"
+              ]
+            },
+            "stats": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "additionalProperties": false,
+              "required": [
+                "rawTransactionRecords",
+                "rawTransferRows",
+                "sentRows",
+                "receivedRows",
+                "positiveRows",
+                "negativeRows",
+                "zeroRows",
+                "subjectInvolvedRows",
+                "incidentalRows",
+                "fromRows",
+                "toRows",
+                "selfRows",
+                "bucketContradictions",
+                "eligibleNonzeroRows",
+                "duplicateRows",
+                "uniqueAdmittedRows"
+              ],
+              "properties": {
+                "rawTransactionRecords": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "rawTransferRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "sentRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "receivedRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "positiveRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "negativeRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "zeroRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "subjectInvolvedRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "incidentalRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "fromRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "toRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "selfRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "bucketContradictions": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "eligibleNonzeroRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "duplicateRows": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "uniqueAdmittedRows": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            },
+            "matrixIdentity": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "localSupportCandidate": {
+              "type": "boolean"
+            },
+            "leadAccepted": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "required": [
+        "authorizationId",
+        "executionContractSha256",
+        "campaignId",
+        "trancheId",
+        "batchId",
+        "planSequence",
+        "logicalId",
+        "family",
+        "path",
+        "method",
+        "requestBodySha256",
+        "investigativeQuestionId",
+        "questionLens",
+        "purposeCode",
+        "businessQuestion",
+        "selectionLineage",
+        "coverageCells",
+        "coverageKey",
+        "consumerIds",
+        "expectedCredits",
+        "worstCaseCredits",
+        "issued",
+        "issueDisposition",
+        "attempts",
+        "terminalDisposition",
+        "qualificationCounted",
+        "qualificationSequence",
+        "exclusionReason",
+        "publicCallId",
+        "normalizedIdentity",
+        "admittedResultCount",
+        "qualification_value",
+        "engineering_value",
+        "gameplay_consumer_value",
+        "competition_evidence_value",
+        "frontierProof",
+        "candidateRole",
+        "planIdentity",
+        "leadAcceptanceReceiptIdentity",
+        "signedFlowReview"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {"if":{"required":["formalLeadAcceptance"]},"then":{"properties":{"qualificationCounted":{"const":true},"signedFlowReview":{"properties":{"leadAccepted":{"const":true}}}},"allOf":[{"if":{"properties":{"logicalId":{"const":"20282d4d836dc8d746ac00ff1bcd408c4898259670f24d6e8e64e3f7d5206ea2"}}},"then":{"properties":{"formalLeadAcceptance":{"properties":{"leadAcceptanceOrder":{"const":2},"immutableSupplierSequence":{"const":5}}}}},"else":{"properties":{"formalLeadAcceptance":{"properties":{"leadAcceptanceOrder":{"const":3},"immutableSupplierSequence":{"const":6}}}}}}]},"else":{"properties":{"signedFlowReview":{"properties":{"leadAccepted":{"const":false}}}}}},
+        {
+          "if": {
+            "properties": {
+              "issueDisposition": {
+                "const": "ISSUE_STATE_UNKNOWN_AFTER_DURABLE_BREAKER"
+              }
+            },
+            "required": [
+              "issueDisposition"
+            ]
+          },
+          "then": {
+            "properties": {
+              "issued": {
+                "type": "null"
+              },
+              "qualificationCounted": {
+                "type": "null"
+              },
+              "terminalDisposition": {
+                "type": "null"
+              },
+              "publicCallId": {
+                "type": "null"
+              },
+              "normalizedIdentity": {
+                "type": "null"
+              },
+              "admittedResultCount": {
+                "type": "null"
+              },
+              "attempts": {
+                "maxItems": 0
+              },
+              "qualification_value": {
+                "const": "UNKNOWN_NOT_ADMITTED_AFTER_DURABLE_BREAKER"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "issued": {
+                "type": "boolean"
+              },
+              "qualificationCounted": {
+                "type": "boolean"
+              },
+              "qualification_value": {
+                "enum": [
+                  "ZERO_NOT_COUNTED",
+                  "ADMITTED_BOUNDED_EVIDENCE"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {"if":{"required":["b3ContractReview"]},"then":{"required":["b2ContractReview"],"properties":{"records":{"minItems":22,"maxItems":22}},"allOf":[{"properties":{"records":{"contains":{"$ref":"#/$defs/b3AuditRecord"},"minContains":5,"maxContains":5}}},{"properties":{"records":{"contains":{"required":["formalLeadAcceptance"]},"minContains":3,"maxContains":3}}}]},"else":{"allOf":[
+    {
+      "if": {
+        "required": [
+          "b2ContractReview"
+        ]
+      },
+      "then": {
+        "properties": {
+          "records": {
+            "minItems": 17,
+            "maxItems": 17,
+            "contains": {
+              "$ref": "#/$defs/b2AuditRecord"
+            },
+            "minContains": 2,
+            "maxContains": 2
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "records": {
+            "minItems": 15,
+            "maxItems": 15
+          }
+        }
+      }
+    }
+  ]}}
+  ]
+}

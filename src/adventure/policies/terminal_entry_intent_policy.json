@@ -1,0 +1,12 @@
+{
+  "id": "TERMINAL_ENTRY_INTENT",
+  "owner": "REQUEST_TERMINAL_ENTRY",
+  "semanticContact": "CONTACT.TERMINAL_ENTRY",
+  "semanticInteraction": "INTERACTION.TERMINAL_ENTRY",
+  "proximityTarget": "nansen-terminal",
+  "verb": "USE",
+  "surfaces": ["WORLD_USE_NANSEN_TERMINAL", "OPEN_CASE_TERMINAL", "KEYBOARD", "PLAIN_LIST"],
+  "replacementCopyKey": "TODO.STORY.INTENT_REPLACED",
+  "openGate": "ACK_TERMINAL_PRESENTATION after the replacement event is absent",
+  "quiescence": "worldQuiescent blocks office walk ticks and world commits while the terminal is open"
+}

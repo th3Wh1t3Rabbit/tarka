@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.2.0",
+  "interface": "TE-IFACE-CONTENT@1.2.0",
+  "status": "CANDIDATE_PENDING_MAIN_REVIEW",
+  "accepted_base": {
+    "commit": "f56e806e80b100245d7b5c4686786b477f2f98d8",
+    "tree": "616f54cca2d30a54148d3f442840f8ff3694b48b",
+    "accepted_archive_sha256": "ee19252a736ae96b213b9c878cb2e0c0b4bee7e9e1340ad9097b71a6e8c2cc63",
+    "interface": "TE-IFACE-CONTENT@1.1.0",
+    "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+    "entries": 409,
+    "content_sha256": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+    "implementation_sha256": "84a081161b8b3e147021ad497af0862eaf3d7fe80b92f79de8ebe57e7711b46b"
+  },
+  "design_authority": {
+    "filename": "TRACE_ESCAPE_S7_R2_LEAD_AUTHORED_PUZZLE_DIALOGUE_INTERACTION_DESIGN_v1.0.0_2026-09-18.md",
+    "sha256": "68444ef048c887f2847276d309bdeffd70fb511989efabba390222080660d9d5"
+  },
+  "stages": [
+    "STAGE.ROOK_ENTRY",
+    "STAGE.ROOK_REQUEST_DISPENSER",
+    "STAGE.ROOK_PEN_STAND",
+    "STAGE.ROOK_ARTHUR_COUNTER",
+    "STAGE.ARTHUR_DESK",
+    "STAGE.ROOK_TUBE",
+    "STAGE.ROOK_CANISTER",
+    "STAGE.ROOK_TERMINAL",
+    "STAGE.ROOK_GLOBE"
+  ],
+  "contacts": [
+    "CONTACT.REQUEST_HANDOFF",
+    "CONTACT.STAMP_DESK",
+    "CONTACT.REQUEST_RETURN",
+    "CONTACT.TUBE_INSERT",
+    "CONTACT.STRIP_TERMINAL"
+  ],
+  "sound_intents": [
+    "SFX.PAPER_PULL",
+    "SFX.PEN_SCRATCH",
+    "SFX.STAMP_THUNK",
+    "SFX.TUBE_LATCH",
+    "SFX.TUBE_DISPATCH",
+    "SFX.CANISTER_RETURN",
+    "SFX.STRIP_INSERT",
+    "SFX.CRT_WAKE",
+    "SFX.CRT_CONFIRM",
+    "SFX.GLOBE_SPIN",
+    "SFX.BELL_DING",
+    "AMBIENT.RECORDS_OFFICE",
+    "MUSIC.RECORDS_OFFICE_LOW_FI",
+    "MUSIC.CASE_TERMINAL_LOW_FI"
+  ],
+  "sound_map": {
+    "SFX.PAPER_PULL": {
+      "redundant_visual_event": "blank-request inventory state appears"
+    },
+    "SFX.PEN_SCRATCH": {
+      "redundant_visual_event": "blank request transforms to completed request"
+    },
+    "SFX.STAMP_THUNK": {
+      "caption_key": "lane_a.s7r2b.caption.stamp"
+    },
+    "SFX.TUBE_LATCH": {
+      "redundant_visual_event": "tube changes to closed state"
+    },
+    "SFX.TUBE_DISPATCH": {
+      "caption_key": "lane_a.s7r2b.caption.tube"
+    },
+    "SFX.CANISTER_RETURN": {
+      "caption_key": "lane_a.s7r2b.caption.tube"
+    },
+    "SFX.STRIP_INSERT": {
+      "redundant_visual_event": "access strip transfers at CONTACT.STRIP_TERMINAL"
+    },
+    "SFX.CRT_WAKE": {
+      "redundant_visual_event": "terminal changes to authorized active state"
+    },
+    "SFX.CRT_CONFIRM": {
+      "caption_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.2"
+    },
+    "SFX.GLOBE_SPIN": {
+      "redundant_visual_event": "globe spin intention plus exact dialogue escalation"
+    },
+    "SFX.BELL_DING": {
+      "caption_key": "lane_a.s7r2b.caption.bell",
+      "status": "DORMANT_CONDITIONAL_STRETCH"
+    },
+    "AMBIENT.RECORDS_OFFICE": {
+      "redundant_visual_event": "optional ambience; no gameplay information"
+    },
+    "MUSIC.RECORDS_OFFICE_LOW_FI": {
+      "redundant_visual_event": "optional music; no gameplay information"
+    },
+    "MUSIC.CASE_TERMINAL_LOW_FI": {
+      "redundant_visual_event": "optional music; no gameplay information"
+    }
+  },
+  "captions": {
+    "stamp": "lane_a.s7r2b.caption.stamp",
+    "tube": "lane_a.s7r2b.caption.tube",
+    "terminal_buzz": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.2",
+    "bell": "lane_a.s7r2b.caption.bell"
+  },
+  "choreography": {
+    "critical_path": [
+      "PULL:request-dispenser",
+      "USE:blank-request@pen-stand",
+      "GIVE:completed-request@mr-index",
+      "USE:stamped-request@pneumatic-tube",
+      "CLOSE:pneumatic-tube",
+      "PUSH:dispatch-plunger",
+      "OPEN:record-canister",
+      "PICK_UP:access-strip",
+      "USE:first-breach-strip@nansen-terminal",
+      "LOOK_AT:nansen-terminal",
+      "LOOK_AT:nansen-terminal:COMPLETE_REPEAT_SAFE"
+    ],
+    "pipeline": [
+      "reserve participating actors",
+      "walk to semantic marks",
+      "face participant or object",
+      "perform generic or dedicated intention",
+      "mutate game state at semantic contact",
+      "play optional sound intent + written caption",
+      "finish blocking lines",
+      "restore focus and control"
+    ],
+    "stamp": {
+      "stages": [
+        "STAGE.ROOK_ARTHUR_COUNTER",
+        "STAGE.ARTHUR_DESK"
+      ],
+      "contacts": [
+        "CONTACT.REQUEST_HANDOFF",
+        "CONTACT.STAMP_DESK",
+        "CONTACT.REQUEST_RETURN"
+      ],
+      "caption_key": "lane_a.s7r2b.caption.stamp",
+      "inventory_mutation_at": "CONTACT.REQUEST_RETURN",
+      "focus_restore": "stamped-request",
+      "fallback": "GENERIC_TALK_USE_ITEM_ICON_CROSSFADE",
+      "reduced_motion": "STATIC_POSES_ITEM_STATE_CAPTION_FOCUS"
+    },
+    "tube": {
+      "stage": "STAGE.ROOK_TUBE",
+      "contact": "CONTACT.TUBE_INSERT",
+      "caption_key": "lane_a.s7r2b.caption.tube",
+      "no_timed_input": true,
+      "returned_state": "record-canister:RETURNED"
+    },
+    "dialogue": {
+      "reveal_characters_per_second": 30,
+      "first_confirm": "REVEAL_CURRENT_LINE",
+      "second_confirm": "ADVANCE_ONE_LINE",
+      "hold_confirm": "MUST_NOT_SKIP_MULTIPLE",
+      "instant_text": "FULL_LINE_STILL_REQUIRES_ADVANCE",
+      "auto_advance_required": false,
+      "transcript": true,
+      "semantic_speaker_labels": true
+    },
+    "idle": {
+      "deterministic": true,
+      "pauses_during": [
+        "DIALOGUE",
+        "SCRIPTED_ACTION",
+        "FOCUS_SENSITIVE_TRANSITION"
+      ],
+      "rook_seconds": [
+        6,
+        14
+      ],
+      "arthur_seconds": [
+        10,
+        18
+      ],
+      "fallback_intentions": [
+        "IDLE",
+        "TALK",
+        "LISTEN",
+        "USE"
+      ],
+      "reduced_motion": "STATIC_IDLE_POSES_ONLY",
+      "production_timing_binding": false
+    }
+  },
+  "alias_map": {
+    "public_name": "Arthur",
+    "public_styling": "Arthur the Archivist",
+    "semantic_speaker": "ARCHIVIST",
+    "hotspot_public_display": {
+      "mr-index": [
+        "Arthur",
+        "Arthur the Archivist"
+      ],
+      "record-canister": [
+        "Returned canister"
+      ],
+      "nansen-terminal": [
+        "Nansen terminal"
+      ],
+      "office-globe": [
+        "Office globe"
+      ]
+    },
+    "internal_ids": {
+      "speaker": "MR_INDEX",
+      "hotspot": "mr-index",
+      "art_manifest_key": "mrIndex",
+      "semantic_id": "archivist",
+      "inventory_access_strip": "first-breach-strip"
+    },
+    "runtime_rename_authorized": false
+  },
+  "semantic_only": true,
+  "prohibited_binding_fields": [
+    "clip",
+    "frame",
+    "filename",
+    "coordinate",
+    "anchor",
+    "facing_direction",
+    "mirroring",
+    "production_timing"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "mode": "FIXTURE_ONLY_NO_NETWORK",
+  "seed": {
+    "candidateId": "fixture-candidate-alpha",
+    "label": "Synthetic acquisition-control fixture",
+    "caseCutoff": "2024-03-01T23:59:59Z",
+    "requestedWindow": { "start": "2024-03-01T00:00:00Z", "end": "2024-03-01T23:59:59Z" },
+    "purposeIds": ["fixture-route-proof"],
+    "allowedLenses": ["ROUTE_SCAN"]
+  },
+  "allowance": {
+    "schemaVersion": "1.0.0",
+    "allowanceId": "fixture-allowance-alpha",
+    "leadAuthorizationId": "fixture-only-authorization",
+    "approvedCandidateIds": ["fixture-candidate-alpha"],
+    "approvedEndpoints": ["/fixture/v1/historical/events"],
+    "maximumRequests": 3,
+    "maximumProjectedCredits": 6,
+    "maximumPerEndpointCalls": { "/fixture/v1/historical/events": 3 },
+    "validFromUtc": "2026-09-14T00:00:00Z",
+    "validUntilUtc": "2026-09-18T00:00:00Z"
+  },
+  "requests": [
+    {
+      "request": {
+        "identityVersion": "1.0.0",
+        "endpoint": "/fixture/v1/historical/events",
+        "endpointClass": "historical-events",
+        "apiVersion": "fixture-v1",
+        "requestBody": { "fixture": "events" },
+        "candidateId": "fixture-candidate-alpha",
+        "purposeId": "fixture-route-proof",
+        "temporalWindow": { "start": "2024-03-01T00:00:00Z", "end": "2024-03-01T23:59:59Z" },
+        "normalizationContractVersion": "1.0.0",
+        "pagination": { "page": 1, "cursor": null },
+        "refresh": null
+      },
+      "pages": [
+        { "page": 1, "cursor": null, "nextCursor": "fixture-cursor-2", "responseFixture": "fixtures/acquisition/pages/events-page-1.json", "httpStatus": 200, "responseHeaders": { "x-fixture": "page-1" } },
+        { "page": 2, "cursor": "fixture-cursor-2", "nextCursor": "fixture-cursor-3", "responseFixture": "fixtures/acquisition/pages/events-page-2-overlap.json", "httpStatus": 200, "responseHeaders": { "x-fixture": "page-2" } },
+        { "page": 3, "cursor": "fixture-cursor-3", "nextCursor": null, "responseFixture": "fixtures/acquisition/pages/events-page-3-empty.json", "httpStatus": 200, "responseHeaders": { "x-fixture": "page-3" } }
+      ]
+    }
+  ]
+}

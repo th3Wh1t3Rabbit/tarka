@@ -1,0 +1,47 @@
+{
+  "schema": "tarka.character-continuity-lock.v1",
+  "status": "LIVE_RUNTIME_BINDING",
+  "purpose": "Prevent partial cleanup families, cross-actor cues, and overactive ambient acting from re-entering the playable build.",
+  "characters": {
+    "rook": {
+      "screenSlot": "ROOK_ONLY",
+      "coherentCore": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames",
+      "coreUses": ["idle", "breath", "blink", "ordinary talk", "walk", "inspect", "give", "pickup", "case-file", "foot-tap", "confused"],
+      "ordinaryTalkFps": 8,
+      "selectiveLegacyExceptions": {
+        "source": "/art-packs/production/files/production/characters/rook/frames",
+        "allowedClipIds": ["rook.camera-cheeky-hold", "rook.reach.neutral"],
+        "policy": "Only the uncleaned cheeky camera grin and neutral reach may use this source, and only as sparse authored holds/contact instants."
+      },
+      "note": "The newest cleaned Rook family owns every available runtime pose. The broad frames directory is barred except for the two explicit missing-cleanup exceptions."
+    },
+    "arthur": {
+      "screenSlot": "ARTHUR_ONLY",
+      "coherentCore": "/art-packs/production/files/production/characters/arthur/coherent-core-v1.0.0/frames",
+      "coherentPaperwork": "/art-packs/production/files/production/characters/arthur/paperwork-coherent-v0.1.2/frames",
+      "coreUses": ["idle", "breath", "blink", "listen", "ordinary talk", "glance", "explain"],
+      "ordinaryTalkFps": 8,
+      "selectiveLegacyExceptions": {
+        "glasses": "/art-packs/production/files/production/characters/arthur/continuity-glasses-v0.1.5/frames",
+        "camera": "/art-packs/production/files/production/characters/arthur/continuity-camera-v0.1.0/frames",
+        "allowedClipIds": ["arthur.glasses-adjust", "arthur.glasses-wiggle", "arthur.you-incredulous", "arthur.camera-glance", "arthur.camera-talk"],
+        "policy": "Continuity-cleaned finite authored one-shots only. Never use as ordinary talk, ambient life, or repeating reactions."
+      },
+      "excludedFromLiveRuntime": [
+        "/art-packs/production/files/production/characters/arthur/conversation-v0.1.6/frames",
+        "/art-packs/production/files/production/characters/arthur/camera-v0.1.3/frames",
+        "/art-packs/production/files/production/characters/arthur/paperwork-v0.1.4/frames"
+      ],
+      "note": "Clean core owns everyday acting. The repaired glasses and camera reactions are admitted only at sparse authored beats with a deliberate return to core."
+    }
+  },
+  "runtimeRules": [
+    "A cue may render only when clip.actorId matches the receiving character slot.",
+    "Rook and Arthur positions never derive from an animation frame or speaker identity.",
+    "Ambient acting begins with a long still window and is limited to isolated blink or breath events.",
+    "The stamp sequence is up, down, up; the retired stamp-ready cel is not used.",
+    "Smirks and broad grins are silent expressions, never talking loops.",
+    "Rook and Arthur share the same 125ms closed/open speech cadence; mouth motion ends before the bubble reading hold.",
+    "Continuity-cleaned camera or glasses art may appear only through the named finite exception clips; all other partial cleanup art remains review history."
+  ]
+}

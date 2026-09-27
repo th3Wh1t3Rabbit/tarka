@@ -1,0 +1,28 @@
+import {expect,test} from '@playwright/test'
+import {setup,office,activate,button,ask,stage,drainBrowserSpeech} from '../fixtures/s2/browser-helpers'
+test('S4 Arthur display retains legacy target and player-paced office guards',async({page})=>{
+ const data=await setup(page,67);data.freeze()
+ await expect(page.getByTestId('hotspot-mr-index')).toHaveAttribute('aria-label',/Arthur/)
+ await expect(page.getByTestId('speech-panel')).toBeVisible()
+ await expect(page.getByTestId('a0-shell')).toHaveAttribute('data-intro-complete','false')
+ await office(page,'KEYBOARD','DIRECT_SOLVER')
+ await activate(page,page.getByRole('button',{name:'RETURN TO RECORDS OFFICE',exact:true}),'KEYBOARD')
+ await activate(page,page.getByTestId('verb-talk-to'),'KEYBOARD');await activate(page,page.getByTestId('hotspot-mr-index'),'KEYBOARD')
+ await expect(page.getByRole('dialog')).toContainText('Arthur the Archivist')
+ await activate(page,page.getByTestId('dialogue-nansen-benefit'),'KEYBOARD');await drainBrowserSpeech(page,'KEYBOARD')
+ await activate(page,page.getByTestId('dialogue-leave'),'KEYBOARD');await expect(page.getByRole('dialog')).toHaveCount(0)
+ expect(data.requests.filter(r=>r.forbidden)).toEqual([])
+})
+test('S4 bounded no-match stays non-proof with accepted method and recovery copy',async({page})=>{
+ const data=await setup(page,23);data.freeze();await office(page,'KEYBOARD','DIRECT_SOLVER')
+ await ask(page,'KEYBOARD');await activate(page,button(page,'DISPATCH'),'KEYBOARD')
+ await expect(page.getByTestId('case-terminal')).toHaveAttribute('data-section','RESULTS')
+ await activate(page,button(page,'CASE'),'KEYBOARD')
+ await ask(page,'KEYBOARD');await stage(page,data.fixture,'CARD.ASSET_OUT','KEYBOARD')
+ await activate(page,page.getByText('Reusable Query Tray — optional categories',{exact:true}),'KEYBOARD')
+ await activate(page,button(page,'USE First Breach amount WITH TERMINAL'),'KEYBOARD');await activate(page,button(page,'DISPATCH'),'KEYBOARD')
+ await expect(page.getByRole('heading',{name:'NO_MATCH_IN_ACCEPTED_CORPUS',exact:true})).toBeVisible()
+ await expect(page.getByTestId('case-terminal')).toHaveAttribute('data-proof-events','0')
+ await expect(page.getByTestId('case-terminal')).not.toContainText('SCOPED_NEGATIVE_CONFIRMED')
+ expect(data.requests.filter(r=>r.forbidden)).toEqual([])
+})

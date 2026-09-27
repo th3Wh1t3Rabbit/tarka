@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A DIALOGUE_BEAT_CATALOG.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "beats",
+    "opening_keys",
+    "optional_exchanges"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "beat_id",
+          "cue_id",
+          "legacy_copy_key",
+          "copy_key",
+          "speaker",
+          "advance",
+          "runtime_effects_preserved"
+        ],
+        "properties": {
+          "beat_id": {
+            "type": "string",
+            "enum": [
+              "records.no_ordinary_witnesses",
+              "records.rook_assumes_no_leads",
+              "records.event_was_onchain",
+              "records.rook_misses_implication",
+              "records.public_but_hard_to_read",
+              "records.rook_premature_confidence",
+              "records.archivist_corrects_scope",
+              "records.authorized_case_access",
+              "records.nansen_structures_not_solves",
+              "records.learn_together"
+            ]
+          },
+          "cue_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "legacy_copy_key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          },
+          "speaker": {
+            "type": "string",
+            "enum": [
+              "ROOK",
+              "ARCHIVIST",
+              "SYSTEM"
+            ]
+          },
+          "advance": {
+            "const": "PLAYER_PACED"
+          },
+          "runtime_effects_preserved": {
+            "const": true
+          }
+        }
+      }
+    },
+    "opening_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+      }
+    },
+    "optional_exchanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "copy_keys",
+          "selection",
+          "max_per_interaction",
+          "progression_role"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "copy_keys": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+            }
+          },
+          "selection": {
+            "const": "EXPLICIT_OPTIONAL"
+          },
+          "max_per_interaction": {
+            "const": 1
+          },
+          "progression_role": {
+            "const": false
+          }
+        }
+      }
+    }
+  }
+}

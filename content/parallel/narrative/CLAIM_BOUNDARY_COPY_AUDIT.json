@@ -1,0 +1,3639 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "base_commit": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41",
+  "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "content_sha256": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+  "entries": [
+    {
+      "copy_key": "lane_a.opening.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.5",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.6",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.7",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.opening.8",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.beat.records.no_ordinary_witnesses",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.rook_assumes_no_leads",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.event_was_onchain",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.rook_misses_implication",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.public_but_hard_to_read",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.rook_premature_confidence",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.archivist_corrects_scope",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.authorized_case_access",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.beat.records.nansen_structures_not_solves",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.beat.records.learn_together",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.puzzle.pull-ticket.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.START"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.complete-request.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.TICKET_PULLED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.stamp-request.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.stamp-request.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.load-tube.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.REQUEST_STAMPED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.close-tube.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.REQUEST_IN_TUBE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.dispatch-request.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.TUBE_CLOSED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.open-canister.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.DISPATCHED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.take-strip.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.CANISTER_OPEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.unlock-terminal.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.STRIP_TAKEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.read-record.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.TERMINAL_UNLOCKED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.puzzle.reread-record.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [
+        "PHASE.COMPLETE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.blank-request.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.blank-request.description",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.completed-request.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.completed-request.description",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.stamped-request.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.stamped-request.description",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.first-breach-strip.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.inventory.first-breach-strip.description",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.verb.give",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.pick_up",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.use",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.open",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.look_at",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.push",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.close",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.talk_to",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.verb.pull",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hotspot.filing-drawers.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.filing-drawers.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.historical-clock.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.historical-clock.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.request-dispenser.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.request-dispenser.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.pen-stand.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.pen-stand.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.mr-index.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.mr-index.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.pneumatic-tube.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.pneumatic-tube.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.dispatch-plunger.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.dispatch-plunger.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.record-canister.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.record-canister.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.nansen-terminal.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.nansen-terminal.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.rotunda-exit.name",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.hotspot.rotunda-exit.aria",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.record.label",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.record.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.record.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.noise.label",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.noise.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.noise.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.charge.label",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.charge.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.charge.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.leave.label",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.topic.leave.close",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.give",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.pick_up",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.use",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.open",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.look_at",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.push",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.close",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.talk_to",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.verb.pull",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.filing-drawers",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.historical-clock",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.request-dispenser",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.pen-stand",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.mr-index",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.pneumatic-tube",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.dispatch-plunger",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.record-canister",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.nansen-terminal",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.look.rotunda-exit",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.5",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.6",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.7",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.8",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.9",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.alternate.10",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.rejected_item",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.dead.drawers_reply",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.section.case",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.results",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.explore",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.source",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.ledger",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.case.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.results.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.explore.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.source.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.section.ledger.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.activity.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.activity.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.activity.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.relationships.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.relationships.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.relationships.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.state.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.state.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.state.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.receipt.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.receipt.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.lens.receipt.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_left.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_left.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_left.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_left.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_left.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.incident.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.incident.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.incident.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.incident.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.incident.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.asset_out.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.asset_out.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.asset_out.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.asset_out.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.asset_out.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.high_value.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.high_value.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.high_value.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.high_value.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.high_value.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.interactions.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.interactions.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.interactions.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.interactions.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.interactions.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.state_change.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.state_change.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.state_change.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.state_change.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.state_change.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_arrived.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_arrived.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_arrived.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_arrived.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.what_arrived.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.follow_forward.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.follow_forward.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.follow_forward.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.follow_forward.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.follow_forward.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.exact_receipt.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.exact_receipt.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.exact_receipt.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.exact_receipt.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.exact_receipt.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.compare_routes.question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "TWO_CANDIDATES_SELECTED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.compare_routes.why",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "TWO_CANDIDATES_SELECTED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.compare_routes.may_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "TWO_CANDIDATES_SELECTED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.compare_routes.cannot_establish",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "TWO_CANDIDATES_SELECTED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.card.compare_routes.next",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "TWO_CANDIDATES_SELECTED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.access_locked",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.access_earned",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.ask",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.return",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.back_to_case",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.frozen",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.terminal.attribution",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.tray.optional_categories",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.receipt.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.receipt.no_hidden_filter",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.receipt.dispatch",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.receipt.review_required",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.receipt.funnel",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.delta.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.delta.no_exclusion",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.delta.predicate",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.results.no_dispatch",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.results.show_more",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.results.sort",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.why_matched",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.may_support",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.cannot_prove",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.next_question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.source",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.save",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.pin",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.compare",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.repeat",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.saved",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.pinned",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.context",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.control",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.candidate.corroboration",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.comparison.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.comparison.two_only",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.comparison.empty",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.known",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.open_question",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.trace",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.gap",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.theory_not_fact",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.read_first",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.caseboard.read_second",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.context_rejected",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.insufficient",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.build_case",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.event_time",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.retrieval_time",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.contextual_time",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.precision",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.raw_digest",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.normalized_digest",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.lineage",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.derived",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.source.boundary",
+      "claim_class": "BOUNDARY_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Explicit nonclaims; missing data does not establish absence."
+    },
+    {
+      "copy_key": "lane_a.explore.teach",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.explore.search",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.explore.search_no_match",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.explore.manual",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.attempts",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.responses",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.supplier",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.acceptance",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.credits",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.reuse",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.fixture",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.unknown",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.coverage",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.atlas",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.ledger.why_nansen",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.query_changed",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.undo",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.redo",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.last_dispatch",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.remove_chips",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.save_query",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.load_query",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.reset_case",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.invalid_input",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.locked_identifier",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.invalid_save",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.corpus_load",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.storage_unavailable",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.recovery.reentry",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.physical.equivalent",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.physical.canister_returned",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.physical.canister_empty",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.accessibility.player_paced",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.accessibility.plain_list",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.accessibility.reduced_motion",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.accessibility.instant_text",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.accessibility.high_contrast",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.accessibility.focus",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.fictional_boundary",
+      "claim_class": "FICTIONAL_FRAMING",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Office fiction supplies access or characterization, never historical proof."
+    },
+    {
+      "copy_key": "lane_a.tray.starting_point",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.tray.when",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.tray.what_moved",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.tray.check",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.grade.exact",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.grade.corroborating",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.grade.contextual",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.folder.untested",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.folder.saved",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.folder.corroborating",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.folder.contradicted",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.folder.exact",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.locked",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.discovered",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.available",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.applied",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.related",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.pinned",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.archived",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.start",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.window",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.asset",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.amount",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.out",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.result.discovered",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.clue.family.proof.discovered",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.thread.open",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.thread.candidate_fits",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.thread.needs_exact_link",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.thread.corroborated_not_proven",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.thread.contradicted",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.thread.proved",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.continuity.chronology",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.continuity.source_destination",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.continuity.asset_or_proven_transformation",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.continuity.amount_relationship",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.continuity.exact_relationship",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.continuity.cutoff",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.coverage.planned",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.coverage.complete",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.coverage.partial",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.coverage.empty_complete",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.coverage.failed",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.coverage.not_in_scope",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.query.broad",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.query.focused",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.query.candidate",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.query.exact",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.theory.wrong",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.theory.accepted",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.theory.falsifier",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EXACT_CONVERGENCE"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.theory.recovery",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.first_amount",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_EARLY_DISCOVERED"
+      ],
+      "evidence_ids": [
+        "EXACT_EARLY_NET"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.proof.receiver",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_MAIN_DISCOVERED"
+      ],
+      "evidence_ids": [
+        "EXACT_MAIN_RECEIVER"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.proof.link",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EXACT_CONVERGENCE"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.proof.amount.label",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.amount.open",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.amount.filed",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED",
+        "SLOT.AMOUNT_FILED",
+        "EXACT_EARLY_DISCOVERED"
+      ],
+      "evidence_ids": [
+        "EXACT_EARLY_NET"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.proof.receiver.label",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.receiver.open",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.receiver.filed",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED",
+        "SLOT.RECEIVER_FILED",
+        "EXACT_MAIN_DISCOVERED"
+      ],
+      "evidence_ids": [
+        "EXACT_MAIN_RECEIVER"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.proof.link.label",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.link.open",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.proof.link.filed",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED",
+        "SLOT.LINK_FILED"
+      ],
+      "evidence_ids": [
+        "EXACT_CONVERGENCE"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.proof.repeat",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EXACT_CONVERGENCE"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.conclusion.heading",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "CASE_COMPLETE",
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EXACT_EARLY_NET",
+        "EXACT_MAIN_RECEIVER",
+        "EXACT_CONVERGENCE"
+      ],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.conclusion.boundary",
+      "claim_class": "BOUNDARY_ONLY",
+      "requires": [
+        "CASE_COMPLETE",
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Explicit nonclaims; missing data does not establish absence."
+    },
+    {
+      "copy_key": "lane_a.reaction.exact_rook",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.dead.archetype.loud_room",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.dead.archetype.right_asset_wrong_time",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.dead.archetype.right_time_wrong_direction",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.dead.archetype.familiar_counterparty",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.dead.archetype.balance_mirage",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.dead.archetype.false_terminal",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.zero.no_match_in_accepted_corpus",
+      "claim_class": "BOUNDARY_ONLY",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Explicit nonclaims; missing data does not establish absence."
+    },
+    {
+      "copy_key": "lane_a.zero.negative_evidence_supported",
+      "claim_class": "SCOPED_NEGATIVE",
+      "requires": [
+        "RESULT_CLASSIFIED",
+        "NEGATIVE_SCOPE_ACCEPTED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Existing classification plus sufficient accepted complete coverage required; no global absence and no negative fallback."
+    },
+    {
+      "copy_key": "lane_a.zero.query_outside_coverage",
+      "claim_class": "BOUNDARY_ONLY",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Explicit nonclaims; missing data does not establish absence."
+    },
+    {
+      "copy_key": "lane_a.template.receipt",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.subject",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.phase",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.results",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.delta",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.candidate",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.source",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.exact_time",
+      "claim_class": "ACCEPTED_EXACT",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Accepted public-safe Euler facts only, gated by discovered/verified evidence; exact-time token additionally requires independently accepted exact-time binding."
+    },
+    {
+      "copy_key": "lane_a.template.control",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.template.exclusion",
+      "claim_class": "BOUNDED_CONTEXT",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Candidate or method scope, not exact proof, accepted P2 result or human-identity claim."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.start.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.START"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.start.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.START"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.start.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.START"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.ticket_pulled.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TICKET_PULLED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.ticket_pulled.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TICKET_PULLED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.ticket_pulled.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TICKET_PULLED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_completed.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_completed.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_completed.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_stamped.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_STAMPED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_stamped.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_STAMPED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_stamped.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_STAMPED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_in_tube.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_IN_TUBE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_in_tube.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_IN_TUBE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.request_in_tube.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.REQUEST_IN_TUBE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.tube_closed.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TUBE_CLOSED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.tube_closed.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TUBE_CLOSED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.tube_closed.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TUBE_CLOSED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.dispatched.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.DISPATCHED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.dispatched.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.DISPATCHED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.dispatched.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.DISPATCHED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.canister_open.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.CANISTER_OPEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.canister_open.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.CANISTER_OPEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.canister_open.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.CANISTER_OPEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.strip_taken.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.STRIP_TAKEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.strip_taken.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.STRIP_TAKEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.strip_taken.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.STRIP_TAKEN"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.terminal_unlocked.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TERMINAL_UNLOCKED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.terminal_unlocked.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TERMINAL_UNLOCKED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.terminal_unlocked.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.TERMINAL_UNLOCKED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.complete.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.COMPLETE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.complete.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.COMPLETE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.puzzle.complete.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "PHASE.COMPLETE"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.investigation.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.investigation.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.investigation.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.selected_candidate.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.selected_candidate.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.selected_candidate.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "CANDIDATE_DISCOVERED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.exact_found.method_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.exact_found.case_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.exact_found.direct_hint",
+      "claim_class": "METHOD_ONLY",
+      "requires": [
+        "ACCESS_EARNED",
+        "EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.hint.unavailable",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.banter.mr_a.rook",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.banter.mr_a.arthur",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.banter.archive_ace.rook",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    },
+    {
+      "copy_key": "lane_a.banter.archive_ace.arthur",
+      "claim_class": "METHOD_ONLY",
+      "requires": [],
+      "evidence_ids": [],
+      "disposition": "AUDITED_BOUNDED_CANDIDATE",
+      "rationale": "Procedural teaching, labels or recovery; no new historical result or runtime effect."
+    }
+  ],
+  "forbidden_inferences": [
+    "common human identity",
+    "offchain coordination",
+    "intent beyond recorded actions",
+    "ultimate destination of later value",
+    "contextual timestamp as exact UTC",
+    "bounded no-match as chain-wide absence",
+    "unreviewed P2 as accepted truth"
+  ],
+  "unresolved_p0_p1": 0,
+  "manual_review_required": true
+}

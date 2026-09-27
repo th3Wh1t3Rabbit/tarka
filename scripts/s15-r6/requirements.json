@@ -1,0 +1,25 @@
+{
+  "schema": "tarka.s15-r6.qualification-requirements.v1",
+  "requirements": [
+    { "id": "R6-01", "testId": "s15-r6:one-executable-owner", "expectedObservation": "Generic and scripted routes resolve through the typed production choreography and one pose resolver." },
+    { "id": "R6-02", "testId": "s15-r6:ordinary-pickups", "expectedObservation": "Both form and pen acquisition orders show rook.use/reach and EMPTY_HAND_REACH at contact." },
+    { "id": "R6-03", "testId": "s15-r6:one-paper-handoff", "expectedObservation": "Rook offer transfers to one Arthur document owner at CONTACT.FORM_HANDOFF." },
+    { "id": "R6-04", "testId": "s15-r6:bounded-stamp-return", "expectedObservation": "Stamp use is bounded, the desk stamp is restored, and approved paper returns exactly once." },
+    { "id": "R6-05", "testId": "s15-r6:actual-browser-evidence", "expectedObservation": "Pointer, keyboard, and touch execute production dispatch with actual cue, animation, performance, contact, phase, inventory, and prop visibility." },
+    { "id": "R6-06", "testId": "s15-r6:false-success-mutations", "expectedObservation": "Eleven isolated production mutations fail for their named semantic signatures and tear down cleanly." },
+    { "id": "R6-07", "testId": "s15-r6:preservation", "expectedObservation": "Canonical unit/browser, typecheck, lint, build, output, network, and secret gates complete naturally." }
+  ],
+  "mutations": [
+    { "id": "MUT-R6-01", "targetTestId": "s15-r6:take-form-not-give" },
+    { "id": "MUT-R6-02", "targetTestId": "s15-r6:take-pen-not-give" },
+    { "id": "MUT-R6-03", "targetTestId": "s15-r6:alternate-order-independent" },
+    { "id": "MUT-R6-04", "targetTestId": "s15-r6:drawer-contact-not-give" },
+    { "id": "MUT-R6-05", "targetTestId": "s15-r6:case-file-item-pose" },
+    { "id": "MUT-R6-06", "targetTestId": "s15-r6:form-offer-present" },
+    { "id": "MUT-R6-07", "targetTestId": "s15-r6:arthur-document-present" },
+    { "id": "MUT-R6-08", "targetTestId": "s15-r6:stamp-released-before-return" },
+    { "id": "MUT-R6-09", "targetTestId": "s15-r6:desk-stamp-visibility" },
+    { "id": "MUT-R6-10", "targetTestId": "s15-r6:scripted-owner-not-registry-only" },
+    { "id": "MUT-R6-11", "targetTestId": "s15-r6:no-hardcoded-evidence-pass" }
+  ]
+}

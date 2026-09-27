@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "2.0.0",
+  "id": "placeholder",
+  "label": "A1 PROVISIONAL LOW-RES PLACEHOLDERS",
+  "status": "PROVISIONAL_PLACEHOLDER",
+  "artMode": "LOW_RES_ILLUSTRATED",
+  "nativeResolution": { "width": 480, "height": 270, "sceneHeight": 180, "interfaceHeight": 90 },
+  "browserResolution": { "width": 960, "height": 540, "sceneHeight": 360, "interfaceHeight": 180 },
+  "scalingMode": "NEAREST_NEIGHBOR",
+  "palette": ["#071014", "#203138", "#d4aa50", "#ffe092", "#9cd8d3", "#ece5cd"],
+  "scenes": {
+    "records-office": {
+      "background": { "src": "/art-packs/placeholder/backgrounds/records-office.svg", "width": 480, "height": 180 },
+      "midgroundLayers": [{ "id": "records-atmosphere", "asset": { "src": "/art-packs/placeholder/layers/records-atmosphere.svg", "width": 480, "height": 180 }, "depth": 2 }],
+      "foregroundLayers": [{ "id": "records-counter-edge", "asset": { "src": "/art-packs/placeholder/layers/records-foreground.svg", "width": 480, "height": 180 }, "depth": 8 }],
+      "walkRegionId": "records-office-walk-v1",
+      "hotspotGeometryId": "records-office-hotspots-v1",
+      "depthBands": [{ "id": "back", "minY": 250, "maxY": 292, "zIndex": 3 }, { "id": "front", "minY": 293, "maxY": 326, "zIndex": 6 }],
+      "propPlacements": [
+        { "propId": "requestDispenser", "x": 350, "y": 298, "depthBand": "back" },
+        { "propId": "penStand", "x": 432, "y": 302, "depthBand": "front" },
+        { "propId": "nansenTerminal", "x": 900, "y": 300, "depthBand": "back" }
+      ],
+      "characterAnchors": { "rookStart": { "x": 228, "y": 298 }, "mrIndex": { "x": 532, "y": 296 } }
+    },
+    "blank-shell": {
+      "background": { "src": "/art-packs/placeholder/backgrounds/blank-shell.svg", "width": 480, "height": 180 },
+      "midgroundLayers": [], "foregroundLayers": [],
+      "walkRegionId": "blank-shell-walk-v1", "hotspotGeometryId": "blank-shell-hotspots-v1",
+      "depthBands": [{ "id": "floor", "minY": 250, "maxY": 326, "zIndex": 4 }],
+      "propPlacements": [], "characterAnchors": { "rookStart": { "x": 228, "y": 298 }, "mrIndex": { "x": 532, "y": 296 } }
+    }
+  },
+  "characters": {
+    "rook": {
+      "anchor": { "x": 24, "y": 88 }, "scale": 2, "mirrorHorizontal": true,
+      "animations": {
+        "idle": { "frames": [{ "src": "/art-packs/placeholder/characters/rook.svg", "width": 48, "height": 88 }], "frameWidth": 48, "frameHeight": 88, "fps": 1, "loop": true },
+        "walkEast": { "frames": [{ "src": "/art-packs/placeholder/characters/rook-walk.svg", "width": 48, "height": 88 }, { "src": "/art-packs/placeholder/characters/rook-walk-2.svg", "width": 48, "height": 88 }], "frameWidth": 48, "frameHeight": 88, "fps": 8, "loop": true, "mirrorHorizontal": true },
+        "talkClosed": { "frames": [{ "src": "/art-packs/placeholder/characters/rook.svg", "width": 48, "height": 88 }], "frameWidth": 48, "frameHeight": 88, "fps": 8, "loop": true },
+        "talkOpen": { "frames": [{ "src": "/art-packs/placeholder/characters/rook-talk-open.svg", "width": 48, "height": 88 }], "frameWidth": 48, "frameHeight": 88, "fps": 8, "loop": true },
+        "inspect": { "frames": [{ "src": "/art-packs/placeholder/characters/rook-inspect.svg", "width": 48, "height": 88 }], "frameWidth": 48, "frameHeight": 88, "fps": 1, "loop": false },
+        "useGive": { "frames": [{ "src": "/art-packs/placeholder/characters/rook-use-give.svg", "width": 48, "height": 88 }], "frameWidth": 48, "frameHeight": 88, "fps": 1, "loop": false }
+      }
+    },
+    "mrIndex": {
+      "anchor": { "x": 29, "y": 89 }, "scale": 2, "mirrorHorizontal": false,
+      "animations": {
+        "idle": { "frames": [{ "src": "/art-packs/placeholder/characters/mr-index.svg", "width": 58, "height": 89 }], "frameWidth": 58, "frameHeight": 89, "fps": 1, "loop": true },
+        "talkClosed": { "frames": [{ "src": "/art-packs/placeholder/characters/mr-index.svg", "width": 58, "height": 89 }], "frameWidth": 58, "frameHeight": 89, "fps": 8, "loop": true },
+        "talkOpen": { "frames": [{ "src": "/art-packs/placeholder/characters/mr-index-talk-open.svg", "width": 58, "height": 89 }], "frameWidth": 58, "frameHeight": 89, "fps": 8, "loop": true },
+        "stamp": { "frames": [{ "src": "/art-packs/placeholder/characters/mr-index-stamp.svg", "width": 58, "height": 89 }], "frameWidth": 58, "frameHeight": 89, "fps": 1, "loop": false }
+      }
+    }
+  },
+  "props": {
+    "requestDispenser": { "default": { "src": "/art-packs/placeholder/props/request-dispenser.svg", "width": 47, "height": 70 }, "states": {} },
+    "penStand": { "default": { "src": "/art-packs/placeholder/props/pen-stand.svg", "width": 24, "height": 32 }, "states": {} },
+    "nansenTerminal": { "default": { "src": "/art-packs/placeholder/props/nansen-terminal.svg", "width": 56, "height": 107 }, "states": { "unlocked": { "src": "/art-packs/placeholder/props/nansen-terminal-unlocked.svg", "width": 56, "height": 107 } } }
+  },
+  "inventory": {
+    "blank-terminal-authorization-form": { "src": "/art-packs/placeholder/inventory/blank-request.svg", "width": 32, "height": 24 },
+    "loose-feather-pen": { "src": "/art-packs/placeholder/inventory/completed-request.svg", "width": 32, "height": 24 },
+    "signed-terminal-authorization-form-with-doodles": { "src": "/art-packs/placeholder/inventory/stamped-request.svg", "width": 32, "height": 24 },
+    "broken-feather-pen": { "src": "/art-packs/placeholder/inventory/first-breach-strip.svg", "width": 32, "height": 24 },
+    "approved-stamped-terminal-authorization-form": { "src": "/art-packs/placeholder/inventory/stamped-request.svg", "width": 32, "height": 24 },
+    "euler-case-file": { "src": "/art-packs/placeholder/inventory/blank-request.svg", "width": 32, "height": 24 },
+    "rubber-band": { "src": "/art-packs/placeholder/inventory/completed-request.svg", "width": 32, "height": 24 },
+    "rubiks-cube": { "src": "/art-packs/placeholder/inventory/stamped-request.svg", "width": 32, "height": 24 },
+    "sharknado-2-vhs": { "src": "/art-packs/placeholder/inventory/first-breach-strip.svg", "width": 32, "height": 24 },
+    "piggy-bank-intact": { "src": "/art-packs/placeholder/inventory/blank-request.svg", "width": 32, "height": 24 },
+    "small-toolbox-closed": { "src": "/art-packs/placeholder/inventory/completed-request.svg", "width": 32, "height": 24 },
+    "small-toolbox-open-empty": { "src": "/art-packs/placeholder/inventory/stamped-request.svg", "width": 32, "height": 24 },
+    "hammer": { "src": "/art-packs/placeholder/inventory/stamped-request.svg", "width": 32, "height": 24 },
+    "nails": { "src": "/art-packs/placeholder/inventory/first-breach-strip.svg", "width": 32, "height": 24 },
+    "fictional-token-note": { "src": "/art-packs/placeholder/inventory/blank-request.svg", "width": 32, "height": 24 }
+  },
+  "cursor": { "crosshair": { "src": "/art-packs/placeholder/cursor/crosshair.svg", "width": 16, "height": 16 } }
+}

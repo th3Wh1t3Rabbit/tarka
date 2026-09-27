@@ -1,0 +1,118 @@
+{
+  "schema": "tarka.production.clip-capability-index.v3",
+  "animationOwner": "src/adventure/animationCues.ts",
+  "routeAnimationOwner": "src/adventure/physicalChoreography.ts#routeAnimationPolicy",
+  "facingOwner": "src/app/characterFacingPolicy.ts#clipFacingPolicy",
+  "rookLive": [
+    "rook.idle.breath",
+    "rook.blink",
+    "rook.posture",
+    "rook.arms-crossed",
+    "rook.idle.still",
+    "rook.talk",
+    "rook.talk.think",
+    "rook.talk.smirk",
+    "rook.walk",
+    "rook.inspect",
+    "rook.give",
+    "rook.reach.neutral",
+    "rook.case-file",
+    "rook.foot-tap",
+    "rook.confused"
+  ],
+  "arthurLive": [
+    "arthur.idle.breath",
+    "arthur.glance-left",
+    "arthur.glance-right",
+    "arthur.idle.still",
+    "arthur.listen",
+    "arthur.talk",
+    "arthur.explain",
+    "arthur.point",
+    "arthur.stamp",
+    "arthur.document"
+  ],
+  "physicalRouteClasses": {
+    "EMPTY_HAND_REACH": "rook.reach.neutral",
+    "ITEM_REACH": "rook.case-file",
+    "PAPER_REACH": "rook.give",
+    "FORCE": null
+  },
+  "fallbackPolicy": "No generic force fallback. Unbound routes render no route clip; effort/press/pull cels require an explicitly named authored force route and creative justification.",
+  "globe": {
+    "push": "reverse traversal of the 24-position bank",
+    "pull": "forward traversal of the 24-position bank",
+    "levels": {
+      "1": {
+        "entries": 108,
+        "totalMs": 9760,
+        "surface": "sharp",
+        "promotionWindowMs": 5000
+      },
+      "2": {
+        "entries": 144,
+        "totalMs": 9159,
+        "surface": "sharp",
+        "promotionWindowMs": 4000
+      },
+      "3": {
+        "entries": 240,
+        "totalMs": 9075,
+        "surface": "sharp to soft to full, then full to soft to sharp slowdown",
+        "promotionWindowMs": 0
+      }
+    },
+    "automaticSpin": false,
+    "finalBehavior": "natural final-angle hold",
+    "sameDirectionAtLevel3": "no reset, restart, or extension",
+    "reverseBehavior": "preserve phase, synchronously clear blur, reverse at level 1",
+    "sameDirectionAfterFinalHold": "fresh level 1 from exact held angle",
+    "promotionAndReverseContinuity": "angular phase plus fractional dwell progress mapped to destination sharp entry"
+  },
+  "completeFrameInventory": "APPROVED_ANIMATION_CAPABILITY_INVENTORY.json",
+  "routeMatrix": "PRODUCTION_ROUTE_TO_ANIMATION_MATRIX.csv",
+  "ownershipIdentity": "EXACT_NORMALIZED_RUNTIME_PATH",
+  "liveRuntimeFamilies": [
+    {
+      "id": "mug.steam",
+      "owner": "src/adventure/animationCues.ts#mugSteamFrame",
+      "consumer": "src/app/App.tsx#PublishedLayoutArt",
+      "paths": [
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a__phase_01.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a__phase_02.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a__phase_04.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a__phase_05.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a__phase_06.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_a__phase_07.png",
+        "/art-packs/production/files/production/ambience/mug-steam/frames/mug_steam_b.png"
+      ]
+    },
+    {
+      "id": "drawer.official.filed.02",
+      "owner": "src/app/cabinetTransitionPolicy.ts#cabinetTransitionPlan",
+      "consumer": "src/app/App.tsx#useTransitionFrame",
+      "paths": [
+        "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_02_filed_phase_01.png",
+        "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_02_filed_phase_02.png",
+        "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_02_filed_phase_03.png",
+        "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_02_filed_phase_04.png",
+        "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_02_filed_phase_05.png",
+        "/art-packs/production/files/production/furniture/cabinet-contents/frames/cabinet_open__drawer_02_filed_phase_06.png"
+      ]
+    },
+    {
+      "id": "drawer.misc.04",
+      "owner": "src/app/cabinetTransitionPolicy.ts#cabinetTransitionPlan",
+      "consumer": "src/app/App.tsx#useTransitionFrame",
+      "paths": [
+        "/art-packs/production/files/production/furniture/lower-drawers/drawer-04/frames/cabinet_open__drawer_04_phase_01.png",
+        "/art-packs/production/files/production/furniture/lower-drawers/drawer-04/frames/cabinet_open__drawer_04_phase_02.png",
+        "/art-packs/production/files/production/furniture/lower-drawers/drawer-04/frames/cabinet_open__drawer_04_phase_03.png",
+        "/art-packs/production/files/production/furniture/lower-drawers/drawer-04/frames/cabinet_open__drawer_04_phase_04.png",
+        "/art-packs/production/files/production/furniture/lower-drawers/drawer-04/frames/cabinet_open__drawer_04_phase_05.png",
+        "/art-packs/production/files/production/furniture/lower-drawers/drawer-04/frames/cabinet_open__drawer_04_phase_06.png"
+      ]
+    }
+  ]
+}

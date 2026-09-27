@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "1.0.0",
+  "interface": "TE-IFACE-CORPUS@1.0.0",
+  "interfaceIdentity": "4c9d93c8b9b97503df4580ee72f8d19c7515a9ed29dad54d558cb258bd2c3e60",
+  "status": "SYNTHETIC_TEST_NOT_GAMEPLAY",
+  "records": [
+    {
+      "id": "SEMANTIC.0087f04e6ce7ac212a319b93dd93ae3c7a13907aec8db1bcf656dc530135f45c",
+      "identity": "0087f04e6ce7ac212a319b93dd93ae3c7a13907aec8db1bcf656dc530135f45c",
+      "conceptId": "SYNTHETIC.CONCEPT.7",
+      "role": "PROVENANCE",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.7",
+      "question": "Nonhistorical PROVENANCE contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.2629ca5d4fb73c861d223fed99d2bb294b78c612db941a021a1c0b31e20f7071",
+      "identity": "2629ca5d4fb73c861d223fed99d2bb294b78c612db941a021a1c0b31e20f7071",
+      "conceptId": "SYNTHETIC.CONCEPT.6",
+      "role": "DEAD_END",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.6",
+      "question": "Nonhistorical DEAD_END contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.52eff7bcb380ef23e5ae4a85aeeb6886c14e44f98877aed736b1db032ecad4fe",
+      "identity": "52eff7bcb380ef23e5ae4a85aeeb6886c14e44f98877aed736b1db032ecad4fe",
+      "conceptId": "SYNTHETIC.CONCEPT.0",
+      "role": "EXACT",
+      "grade": "EXACT",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.0",
+      "question": "Nonhistorical EXACT contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.69c4788a474bb77f9baac29e3ea5cc996b820dd757eb5058cf720ce65f0f1949",
+      "identity": "69c4788a474bb77f9baac29e3ea5cc996b820dd757eb5058cf720ce65f0f1949",
+      "conceptId": "SYNTHETIC.CONCEPT.1",
+      "role": "CONTEXTUAL",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.1",
+      "question": "Nonhistorical CONTEXTUAL contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.6b18e29f0c54928a5a15d809686747f68029509acaac0f168e4a8d80002c6802",
+      "identity": "6b18e29f0c54928a5a15d809686747f68029509acaac0f168e4a8d80002c6802",
+      "conceptId": "SYNTHETIC.CONCEPT.4",
+      "role": "CONTROL",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.4",
+      "question": "Nonhistorical CONTROL contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.c5943be08d45c02c6ef5713d4de6cd7318dee4fdee912b8e5fffcc2774171c26",
+      "identity": "c5943be08d45c02c6ef5713d4de6cd7318dee4fdee912b8e5fffcc2774171c26",
+      "conceptId": "SYNTHETIC.CONCEPT.2",
+      "role": "CORROBORATING",
+      "grade": "CORROBORATING",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.2",
+      "question": "Nonhistorical CORROBORATING contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.d72b59db10084b82d6c0fca2755f68c302b434c3a0c6901db68429dbcd65614c",
+      "identity": "d72b59db10084b82d6c0fca2755f68c302b434c3a0c6901db68429dbcd65614c",
+      "conceptId": "SYNTHETIC.CONCEPT.5",
+      "role": "CANDIDATE",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.5",
+      "question": "Nonhistorical CANDIDATE contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.f29d08a89ee9aabcb25231c843dbaea499280428744dfbc2a16732f0a977831f",
+      "identity": "f29d08a89ee9aabcb25231c843dbaea499280428744dfbc2a16732f0a977831f",
+      "conceptId": "SYNTHETIC.CONCEPT.3",
+      "role": "BOUNDED_NO_MATCH",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.3",
+      "question": "Nonhistorical BOUNDED_NO_MATCH contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": "NO_MATCH_IN_ACCEPTED_CORPUS",
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 0,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    },
+    {
+      "id": "SEMANTIC.fea452f8d3d12ff5238111f7c306041cf0ab38a6014c539f7cdc9cf760327ad8",
+      "identity": "fea452f8d3d12ff5238111f7c306041cf0ab38a6014c539f7cdc9cf760327ad8",
+      "conceptId": "SYNTHETIC.CONCEPT.8",
+      "role": "COVERAGE",
+      "grade": "CONTEXTUAL",
+      "temporalClass": "SYNTHETIC_NONHISTORICAL",
+      "questionId": "SYNTHETIC.QUESTION.8",
+      "question": "Nonhistorical COVERAGE contract example",
+      "lens": "ACTIVITY",
+      "zeroResultClass": null,
+      "coverage": {
+        "scope": "SYNTHETIC_BOUNDED_ONLY",
+        "cellIds": [
+          "SYNTHETIC.CELL"
+        ],
+        "key": null,
+        "status": "PARTIAL_ACCEPTED_RETRIEVED_SCOPE",
+        "supportsHistoricalNegative": false
+      },
+      "claimBoundaries": [
+        "SYNTHETIC_NOT_CANONICAL_TRUTH",
+        "NO_CONTEXTUAL_TO_EXACT_PROMOTION",
+        "NO_GLOBAL_NEGATIVE"
+      ],
+      "consumerIds": [
+        "SYNTHETIC.CONSUMER"
+      ],
+      "observedResultCount": 1,
+      "proofEligible": false,
+      "recursiveFrontierAuthority": false,
+      "runtimeProviderCalls": 0,
+      "synthetic": true
+    }
+  ],
+  "proofEligible": false,
+  "runtimeProviderCalls": 0,
+  "identity": "374d461ef905d08274fd32d4022797f75f54a2a5bc25adcfac79b99930a58575"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "tarka.s15-r5.explicit-requirement-observation.v1",
+  "requirements": [
+    { "id": "R5-01", "principalText": "Successful drawer actions are truthful and silent.", "owner": "src/adventure/reducer.ts:advancePhysicalSequence", "precondition": "authorized office; cabinet transition changes state", "expectedObservation": "drawer remains unchanged before hand contact, changes at its registered contact, and completes without dialogue", "testId": "s15-r5:drawer-contact-silence", "artifact": "review/s15-r5/SCREENSHOTS/misc-drawer-open-silent.png" },
+    { "id": "R5-02", "principalText": "Production-owned physical interaction choreography.", "owner": "src/adventure/physicalChoreography.ts:PRODUCTION_PHYSICAL_CHOREOGRAPHY", "precondition": "active PICK UP, USE, OPEN, CLOSE, PUSH, or PULL world route", "expectedObservation": "runtime selects the typed pose, contact, mutation, and post-contact speech owners", "testId": "s15-r5:physical-contact-registry", "artifact": "review/s15-r5/SCREENSHOTS/lamp-contact-state.png" },
+    { "id": "R5-03", "principalText": "Correct shared window geometry and overlap priority.", "owner": "src/adventure/interactionGeometry.ts:deriveWindowRoom", "precondition": "sealed production layout loaded", "expectedObservation": "window begins three pixels after the furthest cabinet and ends at the stanchion midpoint while stanchion wins overlap", "testId": "s15-r5:window-relational-boundaries", "artifact": "review/s15-r5/SCREENSHOTS/window-hotspot-boundaries.png" },
+    { "id": "R5-04", "principalText": "Full-delivery speech measurement and edge clamping.", "owner": "src/app/useFullDeliveryClamp.ts:useFullDeliveryClamp", "precondition": "speaker-attached blocking or nonblocking delivery at an edge", "expectedObservation": "one-character, half, and full reveal share a full-text width and remain within the logical margin after resize and font readiness", "testId": "s15-r5:full-delivery-clamp", "artifact": "review/s15-r5/SCREENSHOTS/left-edge-full-delivery.png|review/s15-r5/SCREENSHOTS/right-edge-full-delivery.png" },
+    { "id": "R5-05", "principalText": "Truthful per-requirement evidence.", "owner": "scripts/s15-r5/package-return.mjs:bound requirement observations", "precondition": "focused runtime and browser observations completed for the candidate", "expectedObservation": "each status derives from its own bound observation and all twelve isolated mutations fail semantically", "testId": "s15-r5:bound-evidence-contract", "artifact": "review/s15-r5/REQUIREMENT_OBSERVATIONS.json" },
+    { "id": "R5-06", "principalText": "Complete, backward-compatible script and interaction export.", "owner": "scripts/s15-r5/export-script-review.mjs", "precondition": "prior v1.0 review package and current production owners available", "expectedObservation": "every prior delivery ID maps to itself and complete stateful hotspot and inventory registers have owners and results", "testId": "s15-r5:script-export-coverage", "artifact": "review/s15-r5/SCRIPT_EXPORT/TARKA_SCRIPT_REVIEW_v1.1.0/ACTIVE_OWNER_COVERAGE.json" },
+    { "id": "R5-07", "principalText": "Package and report accuracy.", "owner": "scripts/s15-r5/package-return.mjs", "precondition": "one direct candidate commit and all required evidence finalized", "expectedObservation": "self-verifier reconstructs the exact candidate tree and validates final bundle, patch, manifest, and final ZIP measurements", "testId": "s15-r5:package-self-verification", "artifact": "FINAL_BINDING.json" }
+  ],
+  "mutations": [
+    { "id": "MUT-R5-01", "description": "restore nothing-to-open dialogue on successful miscellaneous drawer open", "targetTestId": "s15-r5:drawer-contact-silence" },
+    { "id": "MUT-R5-02", "description": "restore nothing-to-close dialogue on successful case drawer close", "targetTestId": "s15-r5:drawer-contact-silence" },
+    { "id": "MUT-R5-03", "description": "remove lamp empty-hand contact while retaining labels", "targetTestId": "s15-r5:physical-contact-registry" },
+    { "id": "MUT-R5-04", "description": "mutate drawer state before semantic contact", "targetTestId": "s15-r5:drawer-contact-silence" },
+    { "id": "MUT-R5-05", "description": "select paper reach for ordinary drawer action", "targetTestId": "s15-r5:physical-contact-registry" },
+    { "id": "MUT-R5-06", "description": "move window left across cabinet while expected strings survive elsewhere", "targetTestId": "s15-r5:window-relational-boundaries" },
+    { "id": "MUT-R5-07", "description": "lower stanchion priority below window overlap", "targetTestId": "s15-r5:window-relational-boundaries" },
+    { "id": "MUT-R5-08", "description": "measure current revealed substring instead of full delivery", "targetTestId": "s15-r5:full-delivery-clamp" },
+    { "id": "MUT-R5-09", "description": "remove font, scale, or speaker movement recomputation", "targetTestId": "s15-r5:full-delivery-clamp" },
+    { "id": "MUT-R5-10", "description": "omit one dynamic script owner while retaining R55 source", "targetTestId": "s15-r5:script-export-coverage" },
+    { "id": "MUT-R5-11", "description": "classify a reachable dynamic route as dormant", "targetTestId": "s15-r5:script-export-coverage" },
+    { "id": "MUT-R5-12", "description": "derive PASS from an unbound broad suite boolean", "targetTestId": "s15-r5:bound-evidence-contract" }
+  ]
+}

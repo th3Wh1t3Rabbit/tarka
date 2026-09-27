@@ -1,0 +1,3563 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inventory interactions and item combinations · Tarka</title><link rel="stylesheet" href="../../assets/site.css"></head><body data-start="docs/script/inventory-routes.md" data-base="../../" data-inline="false"><aside id="rail"><div class="brand">TARKA</div><div class="subbrand">A case worth following</div><div class="toplinks"><a href="https://play.tarka-meridian.workers.dev/">Play</a><a href="https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian">Download</a><a href="https://github.com/th3Wh1t3Rabbit/tarka">GitHub</a><a href="https://docs.tarka-meridian.workers.dev/">Docs</a></div><label for="search" class="subbrand" style="display:block;margin-bottom:7px">Search documentation</label><input id="search" class="search" type="search" placeholder="Topics, questions, tokens…"><label class="search-options"><input type="checkbox" id="spoilerSearch">Include evidence / spoilers</label><button id="menu">CONTENTS</button><nav id="nav" aria-label="Documentation"><section class="navgroup"><h2>Play &amp; story</h2><a data-doc="README.md" href="../../index.html">Welcome</a><a data-doc="docs/play.md" href="../../docs/play.html">Play / download</a><a data-doc="docs/play/saves.md" href="../../docs/play/saves.html">Keeping your progress</a><a data-doc="docs/controls.md" href="../../docs/controls.html">Player guide</a><a data-doc="docs/design/terminal-tour.md" href="../../docs/design/terminal-tour.html">Illustrated terminal guide</a><a data-doc="docs/story.md" href="../../docs/story.html">The story</a><a data-doc="docs/showcase.md" href="../../docs/showcase.html">Watch the showcase</a></section><section class="navgroup"><h2>The design</h2><a data-doc="docs/design/questions-first.md" href="../../docs/design/questions-first.html">Questions before dashboards</a><a data-doc="docs/design/terminal-character.md" href="../../docs/design/terminal-character.html">A terminal with character</a><a data-doc="docs/creator-note.md" href="../../docs/creator-note.html">A note from the creator</a></section><section class="navgroup"><h2>Nansen &amp; the evidence</h2><a data-doc="docs/data/overview.md" href="../../docs/data/overview.html">Why Nansen</a><a data-doc="docs/data/discovery.md" href="../../docs/data/discovery.html">Choosing the case</a><a data-doc="docs/data/method.md" href="../../docs/data/method.html">Collection method</a><a data-doc="docs/data/assembly.md" href="../../docs/data/assembly.html">One record, explained</a><a data-doc="docs/data/endpoints.md" href="../../docs/data/endpoints.html">Endpoint families</a><a data-doc="docs/data/counts.md" href="../../docs/data/counts.html">Calls versus records</a><a data-doc="docs/data/evidence-limits.md" href="../../docs/data/evidence-limits.html">Evidence limits</a><a data-doc="@calls" href="../../docs/data/request-log.html">Browse 101 requests</a><a data-doc="docs/data/request-log.md" href="../../docs/data/request-log.html">Linked request index</a><a data-doc="docs/data/records.md" href="../../docs/data/records.html">Compiled records</a></section><section class="navgroup"><h2>Spoilers &amp; the writing</h2><a data-doc="docs/spoilers/euler-connection.md" href="../../docs/spoilers/euler-connection.html">How the case connects</a><a data-doc="docs/spoilers/brcg.md" href="../../docs/spoilers/brcg.html">The piggy bank &amp; BRCG</a><a data-doc="docs/script/index.md" href="../../docs/script/index.html">Complete Script Explorer</a><a data-doc="docs/script/story.md" href="../../docs/script/story.html">Complete story script</a><a data-doc="docs/script/world-routes.md" href="../../docs/script/world-routes.html">World hotspot routes</a><a data-doc="docs/script/inventory-routes.md" href="../../docs/script/inventory-routes.html">Inventory combinations</a><a data-doc="docs/script/dialogue-routes.md" href="../../docs/script/dialogue-routes.html">Arthur dialogue routes</a><a data-doc="docs/script/actions-and-endings.md" href="../../docs/script/actions-and-endings.html">Actions &amp; endings</a><a data-doc="docs/script/coverage.md" href="../../docs/script/coverage.html">Script coverage proof</a></section><section class="navgroup"><h2>Project information</h2><a data-doc="docs/architecture.md" href="../../docs/architecture.html">System overview</a><a data-doc="docs/animation-assets.md" href="../../docs/animation-assets.html">Animation assets</a><a data-doc="docs/platforms.md" href="../../docs/platforms.html">Platforms</a><a data-doc="docs/testing.md" href="../../docs/testing.html">Build and test</a><a data-doc="docs/limitations.md" href="../../docs/limitations.html">Limitations</a><a data-doc="docs/credits.md" href="../../docs/credits.html">Credits &amp; licenses</a><a data-doc="docs/project/source-and-content.md" href="../../docs/project/source-and-content.html">Source snapshots &amp; game content</a><a data-doc="docs/project/release-adapter.md" href="../../docs/project/release-adapter.html">Immutable release adapter</a><a data-doc="docs/future.md" href="../../docs/future.html">Future possibilities</a><a data-doc="docs/competition/evidence-map.md" href="../../docs/competition/evidence-map.html">Buildathon evidence</a><a data-doc="docs/project/documentation.md" href="../../docs/project/documentation.html">One library, two views</a><a data-doc="docs/project/figures.md" href="../../docs/project/figures.html">About the illustrations</a><a data-doc="docs/index.md" href="../../docs/index.html">Full contents</a></section></nav></aside><main><div class="toolbar"><span id="crumb" class="crumb">Inventory interactions and item combinations</span><button id="downloadMd" class="quiet-button">Save Markdown</button></div><div class="docgrid"><article id="article" tabindex="-1"><h1 id="inventory-interactions-and-item-combinations">Inventory interactions and item combinations</h1>
+<blockquote>
+<p><strong>Full story and puzzle spoilers.</strong> Every inventory verb route and every ordered USE pairing is listed. The documentation search excludes Script Explorer pages unless <strong>Include evidence / spoilers</strong> is enabled.</p>
+</blockquote>
+<p><a href="index.html" data-doc="docs/script/index.md" data-anchor="">Script Explorer</a> · <a href="how-to-read.html" data-doc="docs/script/how-to-read.md" data-anchor="">Reading guide</a> · <a href="story.html" data-doc="docs/script/story.md" data-anchor="">Story</a> · <a href="world-routes.html" data-doc="docs/script/world-routes.md" data-anchor="">World routes</a> · <a href="inventory-routes.html" data-doc="docs/script/inventory-routes.md" data-anchor="">Inventory</a> · <a href="dialogue-routes.html" data-doc="docs/script/dialogue-routes.md" data-anchor="">Arthur dialogue</a> · <a href="actions-and-endings.html" data-doc="docs/script/actions-and-endings.md" data-anchor="">Actions &amp; endings</a> · <a href="coverage.html" data-doc="docs/script/coverage.md" data-anchor="">Coverage</a></p>
+<p>The shipped inventory defines <strong>15 item IDs</strong> and <strong>345 inventory routes</strong>, including state/repeat fallbacks represented by the effective runtime owner.</p>
+<p><a id="inventory-blank-terminal-authorization-form"></a></p>
+<h2 id="undefined">undefined</h2>
+<p>Runtime ID: <code>blank-terminal-authorization-form</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-blank-terminal-authorization-form"></a><code>inventory.GIVE.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-blank-terminal-authorization-form"></a><code>inventory.PICK_UP.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form"></a><code>inventory.USE.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-blank-terminal-authorization-form"></a><code>inventory.OPEN.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-blank-terminal-authorization-form"></a><code>inventory.LOOK_AT.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Seems relatively boilerplate.<br>ROOK: Name. Role. Reason for access. Signature.<br>ROOK: Very official. These guys don’t mess around.</td>
+<td>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-blank-terminal-authorization-form"></a><code>inventory.PUSH.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: If I could, I’d turn this into an origami swan...<br>ROOK: but I still need it for the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-blank-terminal-authorization-form"></a><code>inventory.CLOSE.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-blank-terminal-authorization-form"></a><code>inventory.TALK_TO.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case... instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-blank-terminal-authorization-form"></a><code>inventory.PULL.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: If I could, I’d turn this into an origami swan...<br>ROOK: but I still need it for the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-loose-feather-pen"></a><code>inventory.USE.blank-terminal-authorization-form.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.blank-terminal-authorization-form.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-broken-feather-pen"></a><code>inventory.USE.blank-terminal-authorization-form.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.blank-terminal-authorization-form.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-euler-case-file"></a><code>inventory.USE.blank-terminal-authorization-form.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-rubber-band"></a><code>inventory.USE.blank-terminal-authorization-form.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-rubiks-cube"></a><code>inventory.USE.blank-terminal-authorization-form.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-sharknado-2-vhs"></a><code>inventory.USE.blank-terminal-authorization-form.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-piggy-bank-intact"></a><code>inventory.USE.blank-terminal-authorization-form.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-small-toolbox-closed"></a><code>inventory.USE.blank-terminal-authorization-form.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-small-toolbox-open-empty"></a><code>inventory.USE.blank-terminal-authorization-form.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-hammer"></a><code>inventory.USE.blank-terminal-authorization-form.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-nails"></a><code>inventory.USE.blank-terminal-authorization-form.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-fictional-token-note"></a><code>inventory.USE.blank-terminal-authorization-form.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-blank-terminal-authorization-form"></a><code>inventory.USE.loose-feather-pen.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-blank-terminal-authorization-form"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-blank-terminal-authorization-form"></a><code>inventory.USE.broken-feather-pen.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-blank-terminal-authorization-form"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-blank-terminal-authorization-form"></a><code>inventory.USE.euler-case-file.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-blank-terminal-authorization-form"></a><code>inventory.USE.rubber-band.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-blank-terminal-authorization-form"></a><code>inventory.USE.rubiks-cube.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-blank-terminal-authorization-form"></a><code>inventory.USE.sharknado-2-vhs.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-blank-terminal-authorization-form"></a><code>inventory.USE.piggy-bank-intact.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-blank-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-closed.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-blank-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-open-empty.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-blank-terminal-authorization-form"></a><code>inventory.USE.hammer.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-blank-terminal-authorization-form"></a><code>inventory.USE.nails.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-blank-terminal-authorization-form"></a><code>inventory.USE.fictional-token-note.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-loose-feather-pen"></a></p>
+<h2 id="undefined-1">undefined</h2>
+<p>Runtime ID: <code>loose-feather-pen</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-loose-feather-pen"></a><code>inventory.GIVE.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-loose-feather-pen"></a><code>inventory.PICK_UP.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen"></a><code>inventory.USE.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-loose-feather-pen"></a><code>inventory.OPEN.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-loose-feather-pen"></a><code>inventory.LOOK_AT.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Fancy feather. Sharp, inked-up, little nib.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-loose-feather-pen"></a><code>inventory.PUSH.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-loose-feather-pen"></a><code>inventory.CLOSE.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-loose-feather-pen"></a><code>inventory.TALK_TO.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case... instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-loose-feather-pen"></a><code>inventory.PULL.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-loose-feather-pen"></a><code>inventory.USE.blank-terminal-authorization-form.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-blank-terminal-authorization-form"></a><code>inventory.USE.loose-feather-pen.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.loose-feather-pen.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-broken-feather-pen"></a><code>inventory.USE.loose-feather-pen.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.loose-feather-pen.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-euler-case-file"></a><code>inventory.USE.loose-feather-pen.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-rubber-band"></a><code>inventory.USE.loose-feather-pen.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-rubiks-cube"></a><code>inventory.USE.loose-feather-pen.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-sharknado-2-vhs"></a><code>inventory.USE.loose-feather-pen.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-piggy-bank-intact"></a><code>inventory.USE.loose-feather-pen.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-small-toolbox-closed"></a><code>inventory.USE.loose-feather-pen.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-small-toolbox-open-empty"></a><code>inventory.USE.loose-feather-pen.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-hammer"></a><code>inventory.USE.loose-feather-pen.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-nails"></a><code>inventory.USE.loose-feather-pen.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-fictional-token-note"></a><code>inventory.USE.loose-feather-pen.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-loose-feather-pen"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-loose-feather-pen"></a><code>inventory.USE.broken-feather-pen.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-loose-feather-pen"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-loose-feather-pen"></a><code>inventory.USE.euler-case-file.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-loose-feather-pen"></a><code>inventory.USE.rubber-band.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-loose-feather-pen"></a><code>inventory.USE.rubiks-cube.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-loose-feather-pen"></a><code>inventory.USE.sharknado-2-vhs.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-loose-feather-pen"></a><code>inventory.USE.piggy-bank-intact.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-loose-feather-pen"></a><code>inventory.USE.small-toolbox-closed.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-loose-feather-pen"></a><code>inventory.USE.small-toolbox-open-empty.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-loose-feather-pen"></a><code>inventory.USE.hammer.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-loose-feather-pen"></a><code>inventory.USE.nails.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-loose-feather-pen"></a><code>inventory.USE.fictional-token-note.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-signed-terminal-authorization-form-with-doodles"></a></p>
+<h2 id="undefined-2">undefined</h2>
+<p>Runtime ID: <code>signed-terminal-authorization-form-with-doodles</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-signed-terminal-authorization-form-with-doodles"></a><code>inventory.GIVE.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-signed-terminal-authorization-form-with-doodles"></a><code>inventory.PICK_UP.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-signed-terminal-authorization-form-with-doodles"></a><code>inventory.OPEN.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-signed-terminal-authorization-form-with-doodles"></a><code>inventory.LOOK_AT.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Signed and ready for Mr. A.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-signed-terminal-authorization-form-with-doodles"></a><code>inventory.PUSH.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-signed-terminal-authorization-form-with-doodles"></a><code>inventory.CLOSE.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-signed-terminal-authorization-form-with-doodles"></a><code>inventory.TALK_TO.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: We’re not on speaking terms.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-signed-terminal-authorization-form-with-doodles"></a><code>inventory.PULL.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.blank-terminal-authorization-form.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.loose-feather-pen.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-blank-terminal-authorization-form"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-loose-feather-pen"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-broken-feather-pen"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-euler-case-file"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-rubber-band"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-rubiks-cube"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-sharknado-2-vhs"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-piggy-bank-intact"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-small-toolbox-closed"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-small-toolbox-open-empty"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-hammer"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-nails"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-fictional-token-note"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.broken-feather-pen.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.euler-case-file.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.rubber-band.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.rubiks-cube.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.sharknado-2-vhs.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.piggy-bank-intact.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.small-toolbox-closed.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.small-toolbox-open-empty.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.hammer.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.nails.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.fictional-token-note.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-broken-feather-pen"></a></p>
+<h2 id="undefined-3">undefined</h2>
+<p>Runtime ID: <code>broken-feather-pen</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-broken-feather-pen"></a><code>inventory.GIVE.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-broken-feather-pen"></a><code>inventory.PICK_UP.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen"></a><code>inventory.USE.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-broken-feather-pen"></a><code>inventory.OPEN.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-broken-feather-pen"></a><code>inventory.LOOK_AT.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: The nib is cracked. The feather is bent.<br>ROOK: It gave everything it had to corporate authorization.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-broken-feather-pen"></a><code>inventory.PUSH.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-broken-feather-pen"></a><code>inventory.CLOSE.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-broken-feather-pen"></a><code>inventory.TALK_TO.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I have a feeling it doesn’t want to hear what I have to say.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-broken-feather-pen"></a><code>inventory.PULL.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-broken-feather-pen"></a><code>inventory.USE.blank-terminal-authorization-form.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-broken-feather-pen"></a><code>inventory.USE.loose-feather-pen.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-broken-feather-pen"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-blank-terminal-authorization-form"></a><code>inventory.USE.broken-feather-pen.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-loose-feather-pen"></a><code>inventory.USE.broken-feather-pen.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.broken-feather-pen.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.broken-feather-pen.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-euler-case-file"></a><code>inventory.USE.broken-feather-pen.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-rubber-band"></a><code>inventory.USE.broken-feather-pen.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-rubiks-cube"></a><code>inventory.USE.broken-feather-pen.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-sharknado-2-vhs"></a><code>inventory.USE.broken-feather-pen.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-piggy-bank-intact"></a><code>inventory.USE.broken-feather-pen.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-small-toolbox-closed"></a><code>inventory.USE.broken-feather-pen.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-small-toolbox-open-empty"></a><code>inventory.USE.broken-feather-pen.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-hammer"></a><code>inventory.USE.broken-feather-pen.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-nails"></a><code>inventory.USE.broken-feather-pen.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-fictional-token-note"></a><code>inventory.USE.broken-feather-pen.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-broken-feather-pen"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-broken-feather-pen"></a><code>inventory.USE.euler-case-file.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-broken-feather-pen"></a><code>inventory.USE.rubber-band.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-broken-feather-pen"></a><code>inventory.USE.rubiks-cube.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-broken-feather-pen"></a><code>inventory.USE.sharknado-2-vhs.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-broken-feather-pen"></a><code>inventory.USE.piggy-bank-intact.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-broken-feather-pen"></a><code>inventory.USE.small-toolbox-closed.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-broken-feather-pen"></a><code>inventory.USE.small-toolbox-open-empty.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-broken-feather-pen"></a><code>inventory.USE.hammer.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-broken-feather-pen"></a><code>inventory.USE.nails.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-broken-feather-pen"></a><code>inventory.USE.fictional-token-note.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-approved-stamped-terminal-authorization-form"></a></p>
+<h2 id="undefined-4">undefined</h2>
+<p>Runtime ID: <code>approved-stamped-terminal-authorization-form</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-approved-stamped-terminal-authorization-form"></a><code>inventory.GIVE.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-approved-stamped-terminal-authorization-form"></a><code>inventory.PICK_UP.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-approved-stamped-terminal-authorization-form"></a><code>inventory.OPEN.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-approved-stamped-terminal-authorization-form"></a><code>inventory.LOOK_AT.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Approved. Stamped. Fully authorized.<br>ROOK: And apparently, the dinosaurs were acceptable for the signature field.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-approved-stamped-terminal-authorization-form"></a><code>inventory.PUSH.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-approved-stamped-terminal-authorization-form"></a><code>inventory.CLOSE.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-approved-stamped-terminal-authorization-form"></a><code>inventory.TALK_TO.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case... instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-approved-stamped-terminal-authorization-form"></a><code>inventory.PULL.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.blank-terminal-authorization-form.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.loose-feather-pen.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.broken-feather-pen.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-blank-terminal-authorization-form"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-loose-feather-pen"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-broken-feather-pen"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-euler-case-file"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-rubber-band"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-rubiks-cube"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-sharknado-2-vhs"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-piggy-bank-intact"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-small-toolbox-closed"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-small-toolbox-open-empty"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-hammer"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-nails"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-fictional-token-note"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.euler-case-file.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.rubber-band.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.rubiks-cube.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.sharknado-2-vhs.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.piggy-bank-intact.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-closed.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-open-empty.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.hammer.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.nails.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.fictional-token-note.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-euler-case-file"></a></p>
+<h2 id="undefined-5">undefined</h2>
+<p>Runtime ID: <code>euler-case-file</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-euler-case-file"></a><code>inventory.GIVE.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-euler-case-file"></a><code>inventory.PICK_UP.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file"></a><code>inventory.USE.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-euler-case-file"></a><code>inventory.OPEN.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-euler-case-file"></a><code>inventory.LOOK_AT.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Euler Finance. March 13, 2023.<br>ROOK: DAI. A stablecoin built to stay close to the dollar.<br>ROOK: The first DAI entry records just over 8,877,507 DAI...<br>ROOK: about $8.8 million at the time.<br>ROOK: The wider exploit reached roughly $197 million across several assets.<br>ROOK: Now I have:<br>ROOK: the exact token, the amount, and the contract address.<br>ROOK: Time to trace the transactions.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-euler-case-file"></a><code>inventory.PUSH.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-euler-case-file"></a><code>inventory.CLOSE.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-euler-case-file"></a><code>inventory.TALK_TO.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I think this conversation would be a little one-sided.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-euler-case-file"></a><code>inventory.PULL.euler-case-file</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-euler-case-file"></a><code>inventory.USE.blank-terminal-authorization-form.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-euler-case-file"></a><code>inventory.USE.loose-feather-pen.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-euler-case-file"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-euler-case-file"></a><code>inventory.USE.broken-feather-pen.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-euler-case-file"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-blank-terminal-authorization-form"></a><code>inventory.USE.euler-case-file.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-loose-feather-pen"></a><code>inventory.USE.euler-case-file.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.euler-case-file.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-broken-feather-pen"></a><code>inventory.USE.euler-case-file.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.euler-case-file.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-rubber-band"></a><code>inventory.USE.euler-case-file.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-rubiks-cube"></a><code>inventory.USE.euler-case-file.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-sharknado-2-vhs"></a><code>inventory.USE.euler-case-file.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-piggy-bank-intact"></a><code>inventory.USE.euler-case-file.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-small-toolbox-closed"></a><code>inventory.USE.euler-case-file.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-small-toolbox-open-empty"></a><code>inventory.USE.euler-case-file.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-hammer"></a><code>inventory.USE.euler-case-file.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-nails"></a><code>inventory.USE.euler-case-file.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-fictional-token-note"></a><code>inventory.USE.euler-case-file.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-euler-case-file"></a><code>inventory.USE.rubber-band.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-euler-case-file"></a><code>inventory.USE.rubiks-cube.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-euler-case-file"></a><code>inventory.USE.sharknado-2-vhs.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-euler-case-file"></a><code>inventory.USE.piggy-bank-intact.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-euler-case-file"></a><code>inventory.USE.small-toolbox-closed.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-euler-case-file"></a><code>inventory.USE.small-toolbox-open-empty.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-euler-case-file"></a><code>inventory.USE.hammer.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-euler-case-file"></a><code>inventory.USE.nails.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-euler-case-file"></a><code>inventory.USE.fictional-token-note.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-rubber-band"></a></p>
+<h2 id="undefined-6">undefined</h2>
+<p>Runtime ID: <code>rubber-band</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-rubber-band"></a><code>inventory.GIVE.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-rubber-band"></a><code>inventory.PICK_UP.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band"></a><code>inventory.USE.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-rubber-band"></a><code>inventory.OPEN.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-rubber-band"></a><code>inventory.LOOK_AT.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: A rubber band. Currently performing its traditional role...<br>ROOK: taking up space until the exact moment someone throws it away...<br>ROOK: and immediately needs one.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-rubber-band"></a><code>inventory.PUSH.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-rubber-band"></a><code>inventory.CLOSE.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-rubber-band"></a><code>inventory.TALK_TO.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case... instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-rubber-band"></a><code>inventory.PULL.rubber-band</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-rubber-band"></a><code>inventory.USE.blank-terminal-authorization-form.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-rubber-band"></a><code>inventory.USE.loose-feather-pen.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-rubber-band"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-rubber-band"></a><code>inventory.USE.broken-feather-pen.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-rubber-band"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-rubber-band"></a><code>inventory.USE.euler-case-file.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-blank-terminal-authorization-form"></a><code>inventory.USE.rubber-band.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-loose-feather-pen"></a><code>inventory.USE.rubber-band.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.rubber-band.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-broken-feather-pen"></a><code>inventory.USE.rubber-band.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.rubber-band.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-euler-case-file"></a><code>inventory.USE.rubber-band.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-rubiks-cube"></a><code>inventory.USE.rubber-band.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-sharknado-2-vhs"></a><code>inventory.USE.rubber-band.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-piggy-bank-intact"></a><code>inventory.USE.rubber-band.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-small-toolbox-closed"></a><code>inventory.USE.rubber-band.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-small-toolbox-open-empty"></a><code>inventory.USE.rubber-band.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-hammer"></a><code>inventory.USE.rubber-band.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-nails"></a><code>inventory.USE.rubber-band.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-fictional-token-note"></a><code>inventory.USE.rubber-band.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-rubber-band"></a><code>inventory.USE.rubiks-cube.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-rubber-band"></a><code>inventory.USE.sharknado-2-vhs.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-rubber-band"></a><code>inventory.USE.piggy-bank-intact.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-rubber-band"></a><code>inventory.USE.small-toolbox-closed.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-rubber-band"></a><code>inventory.USE.small-toolbox-open-empty.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-rubber-band"></a><code>inventory.USE.hammer.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-rubber-band"></a><code>inventory.USE.nails.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-rubber-band"></a><code>inventory.USE.fictional-token-note.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-rubiks-cube"></a></p>
+<h2 id="undefined-7">undefined</h2>
+<p>Runtime ID: <code>rubiks-cube</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-rubiks-cube"></a><code>inventory.GIVE.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-rubiks-cube"></a><code>inventory.PICK_UP.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube"></a><code>inventory.USE.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-rubiks-cube"></a><code>inventory.OPEN.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-rubiks-cube"></a><code>inventory.LOOK_AT.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Still scrambled. I could solve it...<br>ROOK: if I knew how and had several uninterrupted years.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-rubiks-cube"></a><code>inventory.PUSH.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-rubiks-cube"></a><code>inventory.CLOSE.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-rubiks-cube"></a><code>inventory.TALK_TO.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: We’re not on speaking terms.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-rubiks-cube"></a><code>inventory.PULL.rubiks-cube</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-rubiks-cube"></a><code>inventory.USE.blank-terminal-authorization-form.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-rubiks-cube"></a><code>inventory.USE.loose-feather-pen.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-rubiks-cube"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-rubiks-cube"></a><code>inventory.USE.broken-feather-pen.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-rubiks-cube"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-rubiks-cube"></a><code>inventory.USE.euler-case-file.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-rubiks-cube"></a><code>inventory.USE.rubber-band.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-blank-terminal-authorization-form"></a><code>inventory.USE.rubiks-cube.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-loose-feather-pen"></a><code>inventory.USE.rubiks-cube.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.rubiks-cube.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-broken-feather-pen"></a><code>inventory.USE.rubiks-cube.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.rubiks-cube.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-euler-case-file"></a><code>inventory.USE.rubiks-cube.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-rubber-band"></a><code>inventory.USE.rubiks-cube.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-sharknado-2-vhs"></a><code>inventory.USE.rubiks-cube.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-piggy-bank-intact"></a><code>inventory.USE.rubiks-cube.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-small-toolbox-closed"></a><code>inventory.USE.rubiks-cube.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-small-toolbox-open-empty"></a><code>inventory.USE.rubiks-cube.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-hammer"></a><code>inventory.USE.rubiks-cube.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-nails"></a><code>inventory.USE.rubiks-cube.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-fictional-token-note"></a><code>inventory.USE.rubiks-cube.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-rubiks-cube"></a><code>inventory.USE.sharknado-2-vhs.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-rubiks-cube"></a><code>inventory.USE.piggy-bank-intact.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-rubiks-cube"></a><code>inventory.USE.small-toolbox-closed.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-rubiks-cube"></a><code>inventory.USE.small-toolbox-open-empty.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-rubiks-cube"></a><code>inventory.USE.hammer.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-rubiks-cube"></a><code>inventory.USE.nails.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-rubiks-cube"></a><code>inventory.USE.fictional-token-note.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-sharknado-2-vhs"></a></p>
+<h2 id="undefined-8">undefined</h2>
+<p>Runtime ID: <code>sharknado-2-vhs</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-sharknado-2-vhs"></a><code>inventory.GIVE.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-sharknado-2-vhs"></a><code>inventory.PICK_UP.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs"></a><code>inventory.USE.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: It doesn’t look like that can play VHS tapes...<br>ROOK: which may be the first piece of good news today.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-sharknado-2-vhs"></a><code>inventory.OPEN.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-sharknado-2-vhs"></a><code>inventory.LOOK_AT.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Sharknado 2. On VHS. I’m surprised the first one got made.<br>ROOK: I’m even more surprised someone green-lit a sequel...<br>ROOK: and then preserved it on obsolete plastic.<br>ROOK: I heard a rumor the leading shark...<br>ROOK: was played by Bruce’s nephew.<br>ROOK: I’m watching this when I get home.<br>ROOK: Right after I find an antique store willing to admit it still sells VCRs.</td>
+<td>rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-sharknado-2-vhs"></a><code>inventory.PUSH.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-sharknado-2-vhs"></a><code>inventory.CLOSE.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-sharknado-2-vhs"></a><code>inventory.TALK_TO.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: We’re not on speaking terms.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-sharknado-2-vhs"></a><code>inventory.PULL.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-sharknado-2-vhs"></a><code>inventory.USE.blank-terminal-authorization-form.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-sharknado-2-vhs"></a><code>inventory.USE.loose-feather-pen.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-sharknado-2-vhs"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-sharknado-2-vhs"></a><code>inventory.USE.broken-feather-pen.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-sharknado-2-vhs"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-sharknado-2-vhs"></a><code>inventory.USE.euler-case-file.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-sharknado-2-vhs"></a><code>inventory.USE.rubber-band.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-sharknado-2-vhs"></a><code>inventory.USE.rubiks-cube.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-blank-terminal-authorization-form"></a><code>inventory.USE.sharknado-2-vhs.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-loose-feather-pen"></a><code>inventory.USE.sharknado-2-vhs.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.sharknado-2-vhs.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-broken-feather-pen"></a><code>inventory.USE.sharknado-2-vhs.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.sharknado-2-vhs.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-euler-case-file"></a><code>inventory.USE.sharknado-2-vhs.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-rubber-band"></a><code>inventory.USE.sharknado-2-vhs.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-rubiks-cube"></a><code>inventory.USE.sharknado-2-vhs.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-piggy-bank-intact"></a><code>inventory.USE.sharknado-2-vhs.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-small-toolbox-closed"></a><code>inventory.USE.sharknado-2-vhs.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-small-toolbox-open-empty"></a><code>inventory.USE.sharknado-2-vhs.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-hammer"></a><code>inventory.USE.sharknado-2-vhs.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-nails"></a><code>inventory.USE.sharknado-2-vhs.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-fictional-token-note"></a><code>inventory.USE.sharknado-2-vhs.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-sharknado-2-vhs"></a><code>inventory.USE.piggy-bank-intact.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-sharknado-2-vhs"></a><code>inventory.USE.small-toolbox-closed.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-sharknado-2-vhs"></a><code>inventory.USE.small-toolbox-open-empty.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-sharknado-2-vhs"></a><code>inventory.USE.hammer.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-sharknado-2-vhs"></a><code>inventory.USE.nails.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-sharknado-2-vhs"></a><code>inventory.USE.fictional-token-note.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-piggy-bank-intact"></a></p>
+<h2 id="undefined-9">undefined</h2>
+<p>Runtime ID: <code>piggy-bank-intact</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-piggy-bank-intact"></a><code>inventory.GIVE.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-piggy-bank-intact"></a><code>inventory.PICK_UP.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact"></a><code>inventory.USE.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-piggy-bank-intact"></a><code>inventory.OPEN.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-piggy-bank-intact"></a><code>inventory.LOOK_AT.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: No clinking. So there’s no change in there.<br>ROOK: But it isn’t empty.<br>ROOK: Something light is shuffling around in there.<br>ROOK: No rubber plug on the bottom.<br>ROOK: And the slot up top is too narrow to see inside...<br>ROOK: or pull anything back out.<br>ROOK: So this little pig is hiding something...<br>ROOK: or enforcing a very strict no-withdrawals policy.</td>
+<td>rook:BODY:STAGE<br>rook:BODY:UNRESOLVED<br>rook:BODY:STAGE<br>rook:BODY:STAGE</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-piggy-bank-intact"></a><code>inventory.PUSH.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-piggy-bank-intact"></a><code>inventory.CLOSE.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-piggy-bank-intact"></a><code>inventory.TALK_TO.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Alright, piggy. One financial question.<br>ROOK: Is Bitcoin about to pump... or dump?<br>ROOK: Oink?<br>ROOK: Oink oinkity oink oink?<br>ROOK: Fine. I have Nansen™ access anyways...<br>ROOK: Some help you were, piggy.</td>
+<td>rook:BODY:UNRESOLVED | UNRESOLVED<br>rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-piggy-bank-intact"></a><code>inventory.PULL.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-piggy-bank-intact"></a><code>inventory.USE.blank-terminal-authorization-form.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-piggy-bank-intact"></a><code>inventory.USE.loose-feather-pen.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-piggy-bank-intact"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-piggy-bank-intact"></a><code>inventory.USE.broken-feather-pen.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-piggy-bank-intact"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-piggy-bank-intact"></a><code>inventory.USE.euler-case-file.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-piggy-bank-intact"></a><code>inventory.USE.rubber-band.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-piggy-bank-intact"></a><code>inventory.USE.rubiks-cube.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-piggy-bank-intact"></a><code>inventory.USE.sharknado-2-vhs.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-blank-terminal-authorization-form"></a><code>inventory.USE.piggy-bank-intact.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-loose-feather-pen"></a><code>inventory.USE.piggy-bank-intact.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.piggy-bank-intact.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-broken-feather-pen"></a><code>inventory.USE.piggy-bank-intact.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.piggy-bank-intact.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-euler-case-file"></a><code>inventory.USE.piggy-bank-intact.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-rubber-band"></a><code>inventory.USE.piggy-bank-intact.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-rubiks-cube"></a><code>inventory.USE.piggy-bank-intact.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-sharknado-2-vhs"></a><code>inventory.USE.piggy-bank-intact.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-small-toolbox-closed"></a><code>inventory.USE.piggy-bank-intact.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-small-toolbox-open-empty"></a><code>inventory.USE.piggy-bank-intact.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-hammer"></a><code>inventory.USE.piggy-bank-intact.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-nails"></a><code>inventory.USE.piggy-bank-intact.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-fictional-token-note"></a><code>inventory.USE.piggy-bank-intact.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-piggy-bank-intact"></a><code>inventory.USE.small-toolbox-closed.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-piggy-bank-intact"></a><code>inventory.USE.small-toolbox-open-empty.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-piggy-bank-intact"></a><code>inventory.USE.hammer.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-piggy-bank-intact"></a><code>inventory.USE.nails.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-piggy-bank-intact"></a><code>inventory.USE.fictional-token-note.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-small-toolbox-closed"></a></p>
+<h2 id="undefined-10">undefined</h2>
+<p>Runtime ID: <code>small-toolbox-closed</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-small-toolbox-closed"></a><code>inventory.GIVE.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-small-toolbox-closed"></a><code>inventory.PICK_UP.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed"></a><code>inventory.USE.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-small-toolbox-closed"></a><code>inventory.OPEN.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-small-toolbox-closed"></a><code>inventory.LOOK_AT.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Do-It-Herself. Small, pink, and radiating competence.<br>ROOK: This toolbox believes I can repair things without supervision.<br>ROOK: That makes one of us.<br>ROOK: Still... I admire its confidence in me.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-small-toolbox-closed"></a><code>inventory.PUSH.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-small-toolbox-closed"></a><code>inventory.CLOSE.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-small-toolbox-closed"></a><code>inventory.TALK_TO.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case... instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-small-toolbox-closed"></a><code>inventory.PULL.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-small-toolbox-closed"></a><code>inventory.USE.blank-terminal-authorization-form.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-small-toolbox-closed"></a><code>inventory.USE.loose-feather-pen.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-small-toolbox-closed"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-small-toolbox-closed"></a><code>inventory.USE.broken-feather-pen.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-small-toolbox-closed"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-small-toolbox-closed"></a><code>inventory.USE.euler-case-file.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-small-toolbox-closed"></a><code>inventory.USE.rubber-band.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-small-toolbox-closed"></a><code>inventory.USE.rubiks-cube.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-small-toolbox-closed"></a><code>inventory.USE.sharknado-2-vhs.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-small-toolbox-closed"></a><code>inventory.USE.piggy-bank-intact.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-blank-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-closed.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-loose-feather-pen"></a><code>inventory.USE.small-toolbox-closed.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.small-toolbox-closed.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-broken-feather-pen"></a><code>inventory.USE.small-toolbox-closed.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-closed.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-euler-case-file"></a><code>inventory.USE.small-toolbox-closed.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-rubber-band"></a><code>inventory.USE.small-toolbox-closed.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-rubiks-cube"></a><code>inventory.USE.small-toolbox-closed.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-sharknado-2-vhs"></a><code>inventory.USE.small-toolbox-closed.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-piggy-bank-intact"></a><code>inventory.USE.small-toolbox-closed.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-small-toolbox-open-empty"></a><code>inventory.USE.small-toolbox-closed.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-hammer"></a><code>inventory.USE.small-toolbox-closed.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-nails"></a><code>inventory.USE.small-toolbox-closed.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-fictional-token-note"></a><code>inventory.USE.small-toolbox-closed.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-small-toolbox-closed"></a><code>inventory.USE.small-toolbox-open-empty.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-small-toolbox-closed"></a><code>inventory.USE.hammer.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-small-toolbox-closed"></a><code>inventory.USE.nails.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-small-toolbox-closed"></a><code>inventory.USE.fictional-token-note.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-small-toolbox-open-empty"></a></p>
+<h2 id="undefined-11">undefined</h2>
+<p>Runtime ID: <code>small-toolbox-open-empty</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-small-toolbox-open-empty"></a><code>inventory.GIVE.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-small-toolbox-open-empty"></a><code>inventory.PICK_UP.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty"></a><code>inventory.USE.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-small-toolbox-open-empty"></a><code>inventory.OPEN.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-small-toolbox-open-empty"></a><code>inventory.LOOK_AT.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Empty now. Still pink. Still empowering.<br>ROOK: And, by default, the most organized toolbox I’ve ever owned.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-small-toolbox-open-empty"></a><code>inventory.PUSH.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-small-toolbox-open-empty"></a><code>inventory.CLOSE.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Closed tight.<br>ROOK: The little pink plastic clips snapped right into place.</td>
+<td>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-small-toolbox-open-empty"></a><code>inventory.TALK_TO.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case... instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-small-toolbox-open-empty"></a><code>inventory.PULL.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-small-toolbox-open-empty"></a><code>inventory.USE.blank-terminal-authorization-form.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-small-toolbox-open-empty"></a><code>inventory.USE.loose-feather-pen.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-small-toolbox-open-empty"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-small-toolbox-open-empty"></a><code>inventory.USE.broken-feather-pen.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-small-toolbox-open-empty"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-small-toolbox-open-empty"></a><code>inventory.USE.euler-case-file.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-small-toolbox-open-empty"></a><code>inventory.USE.rubber-band.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-small-toolbox-open-empty"></a><code>inventory.USE.rubiks-cube.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-small-toolbox-open-empty"></a><code>inventory.USE.sharknado-2-vhs.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-small-toolbox-open-empty"></a><code>inventory.USE.piggy-bank-intact.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-small-toolbox-open-empty"></a><code>inventory.USE.small-toolbox-closed.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-blank-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-open-empty.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-loose-feather-pen"></a><code>inventory.USE.small-toolbox-open-empty.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.small-toolbox-open-empty.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-broken-feather-pen"></a><code>inventory.USE.small-toolbox-open-empty.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.small-toolbox-open-empty.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-euler-case-file"></a><code>inventory.USE.small-toolbox-open-empty.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-rubber-band"></a><code>inventory.USE.small-toolbox-open-empty.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-rubiks-cube"></a><code>inventory.USE.small-toolbox-open-empty.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-sharknado-2-vhs"></a><code>inventory.USE.small-toolbox-open-empty.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-piggy-bank-intact"></a><code>inventory.USE.small-toolbox-open-empty.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-small-toolbox-closed"></a><code>inventory.USE.small-toolbox-open-empty.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-hammer"></a><code>inventory.USE.small-toolbox-open-empty.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-nails"></a><code>inventory.USE.small-toolbox-open-empty.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-fictional-token-note"></a><code>inventory.USE.small-toolbox-open-empty.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-small-toolbox-open-empty"></a><code>inventory.USE.hammer.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-small-toolbox-open-empty"></a><code>inventory.USE.nails.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-small-toolbox-open-empty"></a><code>inventory.USE.fictional-token-note.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-hammer"></a></p>
+<h2 id="undefined-12">undefined</h2>
+<p>Runtime ID: <code>hammer</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-hammer"></a><code>inventory.GIVE.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-hammer"></a><code>inventory.PICK_UP.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer"></a><code>inventory.USE.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-hammer"></a><code>inventory.OPEN.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-hammer"></a><code>inventory.LOOK_AT.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Wow. This thing has some weight to it. Properly heavy-duty.<br>ROOK: I might actually need to be careful with this.<br>ROOK: I feel like I could accidentally break something.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-hammer"></a><code>inventory.PUSH.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-hammer"></a><code>inventory.CLOSE.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-hammer"></a><code>inventory.TALK_TO.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: We’re not on speaking terms.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-hammer"></a><code>inventory.PULL.hammer</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-hammer"></a><code>inventory.USE.blank-terminal-authorization-form.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-hammer"></a><code>inventory.USE.loose-feather-pen.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-hammer"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-hammer"></a><code>inventory.USE.broken-feather-pen.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-hammer"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-hammer"></a><code>inventory.USE.euler-case-file.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-hammer"></a><code>inventory.USE.rubber-band.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-hammer"></a><code>inventory.USE.rubiks-cube.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-hammer"></a><code>inventory.USE.sharknado-2-vhs.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-hammer"></a><code>inventory.USE.piggy-bank-intact.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-hammer"></a><code>inventory.USE.small-toolbox-closed.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-hammer"></a><code>inventory.USE.small-toolbox-open-empty.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-blank-terminal-authorization-form"></a><code>inventory.USE.hammer.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-loose-feather-pen"></a><code>inventory.USE.hammer.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.hammer.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-broken-feather-pen"></a><code>inventory.USE.hammer.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.hammer.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-euler-case-file"></a><code>inventory.USE.hammer.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-rubber-band"></a><code>inventory.USE.hammer.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-rubiks-cube"></a><code>inventory.USE.hammer.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-sharknado-2-vhs"></a><code>inventory.USE.hammer.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-piggy-bank-intact"></a><code>inventory.USE.hammer.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-small-toolbox-closed"></a><code>inventory.USE.hammer.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-small-toolbox-open-empty"></a><code>inventory.USE.hammer.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-nails"></a><code>inventory.USE.hammer.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-fictional-token-note"></a><code>inventory.USE.hammer.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-hammer"></a><code>inventory.USE.nails.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-hammer"></a><code>inventory.USE.fictional-token-note.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-nails"></a></p>
+<h2 id="undefined-13">undefined</h2>
+<p>Runtime ID: <code>nails</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-nails"></a><code>inventory.GIVE.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-nails"></a><code>inventory.PICK_UP.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails"></a><code>inventory.USE.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-nails"></a><code>inventory.OPEN.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to open.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-nails"></a><code>inventory.LOOK_AT.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Small. Dainty. Very pointy. Perfect for hanging my keys by the door...<br>ROOK: or the calendar I’ve been meaning to put up all year.<br>ROOK: It’s already December, but better late than never.<br>ROOK: The possibilities are endless!</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-nails"></a><code>inventory.PUSH.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-nails"></a><code>inventory.CLOSE.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: There’s nothing to close.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-nails"></a><code>inventory.TALK_TO.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I think this conversation would be a little one-sided.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-nails"></a><code>inventory.PULL.nails</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-nails"></a><code>inventory.USE.blank-terminal-authorization-form.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-nails"></a><code>inventory.USE.loose-feather-pen.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-nails"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-nails"></a><code>inventory.USE.broken-feather-pen.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-nails"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-nails"></a><code>inventory.USE.euler-case-file.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-nails"></a><code>inventory.USE.rubber-band.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-nails"></a><code>inventory.USE.rubiks-cube.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-nails"></a><code>inventory.USE.sharknado-2-vhs.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-nails"></a><code>inventory.USE.piggy-bank-intact.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-nails"></a><code>inventory.USE.small-toolbox-closed.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-nails"></a><code>inventory.USE.small-toolbox-open-empty.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-nails"></a><code>inventory.USE.hammer.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-blank-terminal-authorization-form"></a><code>inventory.USE.nails.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-loose-feather-pen"></a><code>inventory.USE.nails.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.nails.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-broken-feather-pen"></a><code>inventory.USE.nails.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.nails.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-euler-case-file"></a><code>inventory.USE.nails.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-rubber-band"></a><code>inventory.USE.nails.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-rubiks-cube"></a><code>inventory.USE.nails.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-sharknado-2-vhs"></a><code>inventory.USE.nails.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-piggy-bank-intact"></a><code>inventory.USE.nails.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-small-toolbox-closed"></a><code>inventory.USE.nails.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-small-toolbox-open-empty"></a><code>inventory.USE.nails.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-hammer"></a><code>inventory.USE.nails.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-fictional-token-note"></a><code>inventory.USE.nails.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-nails"></a><code>inventory.USE.fictional-token-note.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a id="inventory-fictional-token-note"></a></p>
+<h2 id="undefined-14">undefined</h2>
+<p>Runtime ID: <code>fictional-token-note</code></p>
+<table>
+<thead>
+<tr>
+<th>Route / trigger</th>
+<th>Owner</th>
+<th>Player-visible delivery</th>
+<th>Performance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a id="route-inventory-give-fictional-token-note"></a><code>inventory.GIVE.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pick-up-fictional-token-note"></a><code>inventory.PICK_UP.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note"></a><code>inventory.USE.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-open-fictional-token-note"></a><code>inventory.OPEN.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t want to damage it. It might be worth something.<br>ROOK: I should check the terminal.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-look-at-fictional-token-note"></a><code>inventory.LOOK_AT.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: Bitcoin Roller Coaster Guy. 888,888,888 BRCG.<br>ROOK: There are still nine whole digits. That feels rich.<br>ROOK: I need to check this out for myself in the terminal.</td>
+<td>rook:BODY:UNRESOLVED</td>
+</tr>
+<tr>
+<td><a id="route-inventory-push-fictional-token-note"></a><code>inventory.PUSH.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-close-fictional-token-note"></a><code>inventory.CLOSE.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I don’t want to damage it. It might be worth something.<br>ROOK: I should check the terminal.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-talk-to-fictional-token-note"></a><code>inventory.TALK_TO.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: I should be focusing on the case...<br>ROOK: instead of making small talk with inanimate objects.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-pull-fictional-token-note"></a><code>inventory.PULL.fictional-token-note</code></td>
+<td><code>inventorySpeechForState</code></td>
+<td>ROOK: That won’t help.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-blank-terminal-authorization-form-with-fictional-token-note"></a><code>inventory.USE.blank-terminal-authorization-form.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-loose-feather-pen-with-fictional-token-note"></a><code>inventory.USE.loose-feather-pen.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-signed-terminal-authorization-form-with-doodles-with-fictional-token-note"></a><code>inventory.USE.signed-terminal-authorization-form-with-doodles.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-broken-feather-pen-with-fictional-token-note"></a><code>inventory.USE.broken-feather-pen.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-approved-stamped-terminal-authorization-form-with-fictional-token-note"></a><code>inventory.USE.approved-stamped-terminal-authorization-form.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-euler-case-file-with-fictional-token-note"></a><code>inventory.USE.euler-case-file.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubber-band-with-fictional-token-note"></a><code>inventory.USE.rubber-band.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-rubiks-cube-with-fictional-token-note"></a><code>inventory.USE.rubiks-cube.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-sharknado-2-vhs-with-fictional-token-note"></a><code>inventory.USE.sharknado-2-vhs.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-piggy-bank-intact-with-fictional-token-note"></a><code>inventory.USE.piggy-bank-intact.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-closed-with-fictional-token-note"></a><code>inventory.USE.small-toolbox-closed.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-small-toolbox-open-empty-with-fictional-token-note"></a><code>inventory.USE.small-toolbox-open-empty.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-hammer-with-fictional-token-note"></a><code>inventory.USE.hammer.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-nails-with-fictional-token-note"></a><code>inventory.USE.nails.with.fictional-token-note</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-blank-terminal-authorization-form"></a><code>inventory.USE.fictional-token-note.with.blank-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-loose-feather-pen"></a><code>inventory.USE.fictional-token-note.with.loose-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-signed-terminal-authorization-form-with-doodles"></a><code>inventory.USE.fictional-token-note.with.signed-terminal-authorization-form-with-doodles</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-broken-feather-pen"></a><code>inventory.USE.fictional-token-note.with.broken-feather-pen</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-approved-stamped-terminal-authorization-form"></a><code>inventory.USE.fictional-token-note.with.approved-stamped-terminal-authorization-form</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-euler-case-file"></a><code>inventory.USE.fictional-token-note.with.euler-case-file</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I should probably keep those separate.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-rubber-band"></a><code>inventory.USE.fictional-token-note.with.rubber-band</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-rubiks-cube"></a><code>inventory.USE.fictional-token-note.with.rubiks-cube</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-sharknado-2-vhs"></a><code>inventory.USE.fictional-token-note.with.sharknado-2-vhs</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-piggy-bank-intact"></a><code>inventory.USE.fictional-token-note.with.piggy-bank-intact</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t see how that helps us with the case.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-small-toolbox-closed"></a><code>inventory.USE.fictional-token-note.with.small-toolbox-closed</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: That feels like a bad idea.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-small-toolbox-open-empty"></a><code>inventory.USE.fictional-token-note.with.small-toolbox-open-empty</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: I don’t think so.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-hammer"></a><code>inventory.USE.fictional-token-note.with.hammer</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+<tr>
+<td><a id="route-inventory-use-fictional-token-note-with-nails"></a><code>inventory.USE.fictional-token-note.with.nails</code></td>
+<td><code>inventorySpeechForState:item-pair</code></td>
+<td>ROOK: Those don’t really go together.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><a href="index.html" data-doc="docs/script/index.md" data-anchor="">Back to Script Explorer</a></p>
+</article><nav id="toc" class="toc" aria-label="On this page"></nav></div></main><script src="../../assets/library.js"></script><script src="../../assets/site.js"></script></body></html>

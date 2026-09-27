@@ -1,0 +1,47 @@
+import { expect, test } from '@playwright/test'
+
+test.use({ hasTouch: true })
+
+test('independent pointer, keyboard, and real touchscreen paths step one multi-cue line', async ({ page }) => {
+  await page.goto('/?r55Review=1')
+  const panel = page.getByTestId('r55-text-panel')
+  await expect(panel).toHaveCount(1)
+  const before = await panel.innerText()
+  expect(before).toContain('This the Records Office?')
+  await expect(page.getByTestId('r55-cue-actor')).toHaveText('arthur')
+  await panel.click()
+  await expect(page.getByTestId('r55-cue-index')).toHaveText('1')
+  expect(await panel.innerText()).toBe(before)
+  await page.getByTestId('r55-reset').click()
+  await page.keyboard.press('Space')
+  await expect(page.getByTestId('r55-cue-index')).toHaveText('1')
+  expect(await panel.innerText()).toBe(before)
+  await page.getByTestId('r55-reset').click()
+  const touch = await page.getByTestId('r55-touch').boundingBox()
+  if (!touch) throw new Error('missing touch target')
+  await page.touchscreen.tap(touch.x + 4, touch.y + 4)
+  await expect(page.getByTestId('r55-cue-index')).toHaveText('1')
+  await expect(panel).toHaveCount(1)
+  await page.getByTestId('r55-reset').click()
+  await expect(page.getByTestId('r55-cue-index')).toHaveText('0')
+  expect(await panel.innerText()).toBe(before)
+})
+
+test('harness shows exact raw identity, current options, disabled reasons, and alternate state', async ({ page }) => {
+  await page.goto('/?r55Review=1')
+  await page.getByTestId('r55-entrypoint-select').selectOption({ label: 'Postauthorization root menu [menu]' })
+  await page.getByTestId('r55-alternate-state').selectOption('Q2')
+  await expect(page.getByTestId('r55-raw-sha')).toHaveText(/^[a-f0-9]{64}$/)
+  await expect(page.getByTestId('r55-raw-source')).not.toBeEmpty()
+  await expect(page.getByTestId('r55-choice')).toHaveCount(6)
+  await page.getByRole('button', { name: 'DID YOU CATCH THE GAME THIS WEEKEND?' }).click()
+  await page.getByTestId('r55-return-entry').click()
+  await expect(page.getByRole('button', { name: 'DID YOU CATCH THE GAME THIS WEEKEND?' })).toBeDisabled()
+  await expect(page.getByTestId('r55-option-status').filter({ hasText: 'already asked: WEEKEND_GAME' })).toHaveCount(1)
+})
+
+test('production review mode does not open the R55 harness', async ({ page }) => {
+  await page.goto('/?skipIntro=1&review=1')
+  await expect(page.getByTestId('r55-review')).toHaveCount(0)
+  await expect(page.getByTestId('a0-shell')).toBeVisible()
+})

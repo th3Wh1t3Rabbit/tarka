@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A DEAD_END_RESPONSE_CATALOG.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "base_commit",
+    "interface_sha256",
+    "precedence",
+    "verb_fallbacks",
+    "looks",
+    "alternates",
+    "overrides",
+    "archetypes",
+    "zero_results",
+    "repeat_keys"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "base_commit": {
+      "const": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41"
+    },
+    "interface_sha256": {
+      "const": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903"
+    },
+    "precedence": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "verb_fallbacks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "verb",
+          "copy_key"
+        ],
+        "properties": {
+          "verb": {
+            "type": "string",
+            "enum": [
+              "GIVE",
+              "PICK_UP",
+              "USE",
+              "OPEN",
+              "LOOK_AT",
+              "PUSH",
+              "CLOSE",
+              "TALK_TO",
+              "PULL"
+            ]
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          }
+        }
+      }
+    },
+    "looks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_id",
+          "copy_key"
+        ],
+        "properties": {
+          "target_id": {
+            "type": "string",
+            "enum": [
+              "filing-drawers",
+              "historical-clock",
+              "request-dispenser",
+              "pen-stand",
+              "mr-index",
+              "pneumatic-tube",
+              "dispatch-plunger",
+              "record-canister",
+              "nansen-terminal",
+              "rotunda-exit"
+            ]
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          }
+        }
+      }
+    },
+    "alternates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "selector",
+          "copy_key"
+        ],
+        "properties": {
+          "selector": {
+            "type": "string",
+            "minLength": 1
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          }
+        }
+      }
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "selector",
+          "copy_key"
+        ],
+        "properties": {
+          "selector": {
+            "type": "string",
+            "minLength": 1
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          }
+        }
+      }
+    },
+    "archetypes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "archetype",
+          "copy_key",
+          "activation"
+        ],
+        "properties": {
+          "archetype": {
+            "type": "string",
+            "enum": [
+              "LOUD_ROOM",
+              "RIGHT_ASSET_WRONG_TIME",
+              "RIGHT_TIME_WRONG_DIRECTION",
+              "FAMILIAR_COUNTERPARTY",
+              "BALANCE_MIRAGE",
+              "FALSE_TERMINAL"
+            ]
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          },
+          "activation": {
+            "const": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+          }
+        }
+      }
+    },
+    "zero_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "classification",
+          "copy_key",
+          "changes_theory"
+        ],
+        "properties": {
+          "classification": {
+            "type": "string",
+            "enum": [
+              "NO_MATCH_IN_ACCEPTED_CORPUS",
+              "NEGATIVE_EVIDENCE_SUPPORTED",
+              "QUERY_OUTSIDE_COVERAGE"
+            ]
+          },
+          "copy_key": {
+            "type": "string",
+            "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+          },
+          "changes_theory": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "repeat_keys": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^lane_a\\.[a-z0-9_.-]+$"
+      }
+    }
+  }
+}

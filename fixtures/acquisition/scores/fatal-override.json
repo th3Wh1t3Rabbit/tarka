@@ -1,0 +1,15 @@
+{
+  "candidateId": "fixture-score-fatal",
+  "categories": {
+    "proofClosureAuditability": 20,
+    "nansenIndispensability": 15,
+    "branchTransformationTopology": 15,
+    "timeMechanicPotential": 10,
+    "nonexpertNarrativeClarity": 10,
+    "replayTruthfulDepth": 10,
+    "visualWorldReadability": 10,
+    "complianceDataReliability": 10
+  },
+  "fatalDefects": ["LOOK_AHEAD_LEAKAGE"],
+  "eligibilityThreshold": 80
+}

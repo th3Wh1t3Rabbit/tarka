@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "s12-p3-r3-provenance.v1",
+  "activation": "NOT_PRODUCTION_ACTIVE_UNTIL_LATER_GATE",
+  "archiveSha256": "8613c16b6f7df8fcae312b71237729b34eb4fd01619085c3ed0d28d336b01771",
+  "a1Sha256": "c665ad8150efb170452d177aba9cfa63be79ee3b9774dc15d1c2ecff850cfca5",
+  "hotspotRegisterSha256": "ff6a2fcae4bf19b5fcfb9bb64942be419ac140ca0bf880fdab7963017552d948",
+  "inventoryRegisterSha256": "ea5780d63d4e42db6174a7fe032ab6ba11f19b208522d2af4314119bdab814bb",
+  "manifestBlob": "593d551a792faad0020a9817369b930393d49332",
+  "manifestSha256": "fc4cdcdee5efeda166da04b67f1dbdcdf5ddad05433907ab5ec1da66406a2d01",
+  "selectionBlob": "9a551a3da846cd62151c17298a653e71f87bf71d",
+  "selectionSha256": "44fb8b0135cc8d8e446f41a7e122468267c83bb96974c79d872c25c37d13f649",
+  "registrySha256": "afb12dd571a083f577a341cf209150a0302152843171c1e7f996976843702052",
+  "performanceMapSha256": "c3f5fdddeeb1bef3918245a8928a809b4cd2b7f7de1bb36d8a5a69c0a77f3fc2",
+  "sourceLedgerSha256": "3532b1335475f28594829f94cc4b49ec9fdd3ede35577360525c482b31201185",
+  "rawMismatchCount": 0,
+  "exactReconstructions": 10,
+  "graphNodes": 619,
+  "graphEdges": 416,
+  "stateMachineAuthoredOccurrences": 30,
+  "stateMachineUniqueEdges": 27,
+  "insertionFixture": false
+}

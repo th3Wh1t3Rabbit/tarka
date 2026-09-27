@@ -1,0 +1,500 @@
+{
+  "version": "3.0.0",
+  "scenarioId": "EULER_2023_FALSE_EXIT",
+  "proceduralOnly": true,
+  "activePresentationProfile": "GUIDED_PROBE_3D",
+  "implementedProfiles": [
+    "GUIDED_PROBE_3D"
+  ],
+  "fallbackOrder": [
+    "FIRST_PERSON_RAIL_3D",
+    "ORTHOGRAPHIC_2_5D",
+    "TOP_DOWN_VECTOR_2D"
+  ],
+  "nodes": [
+    {
+      "id": "entry-origin",
+      "role": "entry-origin",
+      "label": "Evidence Threshold",
+      "evidenceId": "EXACT_EARLY_NET",
+      "provenanceEvidenceIds": [
+        "EXACT_EARLY_NET"
+      ],
+      "presentation": {
+        "position": [
+          0,
+          0,
+          6
+        ],
+        "cameraLandmark": [
+          0,
+          1.2,
+          4.6
+        ],
+        "prominence": 1
+      }
+    },
+    {
+      "id": "record-gate",
+      "role": "record-gate",
+      "label": "Nansen Record Gate",
+      "evidenceId": "EXACT_EARLY_NET",
+      "provenanceEvidenceIds": [
+        "EXACT_EARLY_NET"
+      ],
+      "presentation": {
+        "position": [
+          0,
+          0,
+          2.3516666666666666
+        ],
+        "cameraLandmark": [
+          0,
+          1.2,
+          0.9516666666666667
+        ],
+        "prominence": 1
+      }
+    },
+    {
+      "id": "case-index",
+      "role": "case-index",
+      "label": "Twin Breach Index",
+      "evidenceId": "STATE_EARLY_ENGINE",
+      "provenanceEvidenceIds": [
+        "STATE_EARLY_ENGINE"
+      ],
+      "presentation": {
+        "position": [
+          0,
+          0,
+          -1.2966666666666669
+        ],
+        "cameraLandmark": [
+          0,
+          1.2,
+          -2.6966666666666668
+        ],
+        "prominence": 1
+      }
+    },
+    {
+      "id": "branch-primary",
+      "role": "branch-primary",
+      "label": "First Engine",
+      "evidenceId": "EXACT_EARLY_NET",
+      "provenanceEvidenceIds": [
+        "EXACT_EARLY_NET"
+      ],
+      "presentation": {
+        "position": [
+          -4.12,
+          0,
+          -4.945
+        ],
+        "cameraLandmark": [
+          -4.12,
+          1.2,
+          -6.345000000000001
+        ],
+        "prominence": 0.86
+      }
+    },
+    {
+      "id": "branch-secondary",
+      "role": "branch-secondary",
+      "label": "Extraction Engine",
+      "evidenceId": "EXACT_MAIN_RECEIVER",
+      "provenanceEvidenceIds": [
+        "EXACT_MAIN_RECEIVER"
+      ],
+      "presentation": {
+        "position": [
+          4.12,
+          0,
+          -4.945
+        ],
+        "cameraLandmark": [
+          4.12,
+          1.2,
+          -6.345000000000001
+        ],
+        "prominence": 1
+      }
+    },
+    {
+      "id": "protocol-subgraph",
+      "role": "protocol-subgraph",
+      "label": "Unwind Chamber",
+      "evidenceId": "EXACT_EARLY_NET",
+      "provenanceEvidenceIds": [
+        "EXACT_EARLY_NET"
+      ],
+      "presentation": {
+        "position": [
+          -4.12,
+          -0.8,
+          -9.323
+        ],
+        "cameraLandmark": [
+          -4.12,
+          0.3999999999999999,
+          -10.723
+        ],
+        "prominence": 1.2
+      }
+    },
+    {
+      "id": "joining-gate",
+      "role": "joining-gate",
+      "label": "Joining Gate",
+      "evidenceId": "EXACT_CONVERGENCE",
+      "provenanceEvidenceIds": [
+        "EXACT_CONVERGENCE"
+      ],
+      "presentation": {
+        "position": [
+          0,
+          0,
+          -11.629557407407408
+        ],
+        "cameraLandmark": [
+          0,
+          1.2,
+          -13.029557407407408
+        ],
+        "prominence": 1
+      }
+    },
+    {
+      "id": "receiving-point",
+      "role": "receiving-point",
+      "label": "Receiving Vault",
+      "evidenceId": "EXACT_CONVERGENCE",
+      "provenanceEvidenceIds": [
+        "EXACT_CONVERGENCE"
+      ],
+      "presentation": {
+        "position": [
+          0,
+          0,
+          -17.349333333333334
+        ],
+        "cameraLandmark": [
+          0,
+          1.2,
+          -18.749333333333333
+        ],
+        "prominence": 1.05
+      }
+    }
+  ],
+  "passages": [
+    {
+      "id": "approach-record",
+      "from": "entry-origin",
+      "to": "record-gate",
+      "role": "approach",
+      "initiallyHidden": false,
+      "facingHint": "FORWARD",
+      "arrivalStage": "APPROACH",
+      "provenanceRelationshipIds": [
+        "early-initiation"
+      ],
+      "selectableDestination": true,
+      "durationMs": 2957,
+      "presentation": {
+        "spline": [
+          [
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            0.28,
+            4.175833333333333
+          ],
+          [
+            0,
+            0,
+            2.3516666666666666
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "to-case-index",
+      "from": "record-gate",
+      "to": "case-index",
+      "role": "approach",
+      "initiallyHidden": false,
+      "facingHint": "FORWARD",
+      "arrivalStage": "CASE_INDEX",
+      "provenanceRelationshipIds": [],
+      "selectableDestination": true,
+      "durationMs": 2957,
+      "presentation": {
+        "spline": [
+          [
+            0,
+            0,
+            2.3516666666666666
+          ],
+          [
+            0,
+            0.28,
+            0.5274999999999999
+          ],
+          [
+            0,
+            0,
+            -1.2966666666666669
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "to-first-breach",
+      "from": "case-index",
+      "to": "branch-primary",
+      "role": "branch",
+      "initiallyHidden": false,
+      "facingHint": "LEFT",
+      "arrivalStage": "BRANCH",
+      "provenanceRelationshipIds": [
+        "early-initiation"
+      ],
+      "selectableDestination": true,
+      "durationMs": 3291,
+      "presentation": {
+        "spline": [
+          [
+            0,
+            0,
+            -1.2966666666666669
+          ],
+          [
+            -2.06,
+            0.28,
+            -3.1208333333333336
+          ],
+          [
+            -4.12,
+            0,
+            -4.945
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "return-from-first-breach",
+      "from": "protocol-subgraph",
+      "to": "case-index",
+      "role": "return",
+      "initiallyHidden": false,
+      "facingHint": "RETURN",
+      "arrivalStage": "CASE_INDEX",
+      "provenanceRelationshipIds": [
+        "early-initiation"
+      ],
+      "selectableDestination": true,
+      "durationMs": 3930,
+      "presentation": {
+        "spline": [
+          [
+            -4.12,
+            -0.8,
+            -9.323
+          ],
+          [
+            -2.06,
+            0.28,
+            -5.309833333333334
+          ],
+          [
+            0,
+            0,
+            -1.2966666666666669
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "to-second-breach",
+      "from": "case-index",
+      "to": "branch-secondary",
+      "role": "branch",
+      "initiallyHidden": false,
+      "facingHint": "RIGHT",
+      "arrivalStage": "BRANCH",
+      "provenanceRelationshipIds": [
+        "main-extraction",
+        "main-receiving-point"
+      ],
+      "selectableDestination": true,
+      "durationMs": 3291,
+      "presentation": {
+        "spline": [
+          [
+            0,
+            0,
+            -1.2966666666666669
+          ],
+          [
+            2.06,
+            0.28,
+            -3.1208333333333336
+          ],
+          [
+            4.12,
+            0,
+            -4.945
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "return-from-second-breach",
+      "from": "branch-secondary",
+      "to": "case-index",
+      "role": "return",
+      "initiallyHidden": false,
+      "facingHint": "RETURN",
+      "arrivalStage": "CASE_INDEX",
+      "provenanceRelationshipIds": [
+        "main-extraction",
+        "main-receiving-point"
+      ],
+      "selectableDestination": true,
+      "durationMs": 3291,
+      "presentation": {
+        "spline": [
+          [
+            4.12,
+            0,
+            -4.945
+          ],
+          [
+            2.06,
+            0.28,
+            -3.1208333333333336
+          ],
+          [
+            0,
+            0,
+            -1.2966666666666669
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "protocol-descent",
+      "from": "branch-primary",
+      "to": "protocol-subgraph",
+      "role": "context",
+      "initiallyHidden": true,
+      "facingHint": "FORWARD",
+      "arrivalStage": "DEEP_TRACE",
+      "provenanceRelationshipIds": [
+        "early-initiation"
+      ],
+      "selectableDestination": false,
+      "durationMs": 3101,
+      "presentation": {
+        "spline": [
+          [
+            -4.12,
+            0,
+            -4.945
+          ],
+          [
+            -4.12,
+            0.28,
+            -7.134
+          ],
+          [
+            -4.12,
+            -0.8,
+            -9.323
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "sweep-forward",
+      "from": "case-index",
+      "to": "joining-gate",
+      "role": "hypothesis-test",
+      "initiallyHidden": true,
+      "facingHint": "FORWARD",
+      "arrivalStage": "HYPOTHESIS_TEST",
+      "provenanceRelationshipIds": [
+        "route-convergence"
+      ],
+      "selectableDestination": true,
+      "durationMs": 4160,
+      "presentation": {
+        "spline": [
+          [
+            0,
+            0,
+            -1.2966666666666669
+          ],
+          [
+            0,
+            0.28,
+            -6.463112037037037
+          ],
+          [
+            0,
+            0,
+            -11.629557407407408
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    },
+    {
+      "id": "to-receiving-point",
+      "from": "joining-gate",
+      "to": "receiving-point",
+      "role": "continuation",
+      "initiallyHidden": true,
+      "facingHint": "FORWARD",
+      "arrivalStage": "RECEIVING_POINT",
+      "provenanceRelationshipIds": [
+        "route-convergence"
+      ],
+      "selectableDestination": true,
+      "durationMs": 3330,
+      "presentation": {
+        "spline": [
+          [
+            0,
+            0,
+            -11.629557407407408
+          ],
+          [
+            0,
+            0.28,
+            -14.48944537037037
+          ],
+          [
+            0,
+            0,
+            -17.349333333333334
+          ]
+        ],
+        "arrivalRadius": 0.45
+      }
+    }
+  ]
+}

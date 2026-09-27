@@ -1,0 +1,28 @@
+{
+  "schema": "TRACE_ESCAPE_STAGING_AND_FACING_POLICY",
+  "version": "1.0.0",
+  "ordinaryArthurDialogue": {
+    "forcedWalk": false,
+    "rookFacesArthur": true,
+    "arthurFacesRookWhileEngaged": true,
+    "markersRequired": false
+  },
+  "stagedCutscene": {
+    "mayDeclarePositions": true,
+    "mayDeclareWalkMarkers": true,
+    "mayDeclareFacing": true,
+    "mayDeclareBlackout": true,
+    "finalChoreography": "LATE_BOUND"
+  },
+  "nonblockingRook": {
+    "walkContinues": true,
+    "mouthIntention": "FACE:TALK",
+    "locomotionOwnsBody": true,
+    "artLayerRequired": false,
+    "fallback": "GENERIC_WALK_PLUS_SPEECH"
+  },
+  "arthurFacingOwner": "AdventureState.mrIndexFacing",
+  "arthurIdleFacing": "RIGHT",
+  "equalX": "ROOK_RIGHT_ARTHUR_LEFT",
+  "disengageOn": ["CLOSE_DIALOGUE", "dialogue topic close", "ENTER_TERMINAL", "RESET", "REVIEW_JUMP"]
+}

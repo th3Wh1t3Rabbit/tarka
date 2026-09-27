@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "candidateId": "fixture-candidate-alpha",
+  "caseCutoffUtc": "2024-03-01T23:59:59Z",
+  "evidence": [{
+    "evidenceId": "fixture-candidate-alpha:historical-events:event-001",
+    "observedEventTimeUtc": "2024-03-01T10:00:00Z",
+    "temporalClass": "HISTORICAL_AT_CUTOFF",
+    "lens": "ROUTE_SCAN",
+    "facts": { "eventId": "event-001", "smartMoneyHoldings": "REDACTED" },
+    "sourceHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  }],
+  "provenance": {
+    "schemaVersion": "1.0.0",
+    "candidateId": "fixture-candidate-alpha",
+    "caseCutoffUtc": "2024-03-01T23:59:59Z",
+    "sourceRawSha256": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],
+    "normalizedSha256": ["bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"],
+    "candidateGraphSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "publicScenarioSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "generatedAtUtc": "2026-09-14T12:00:00Z"
+  }
+}

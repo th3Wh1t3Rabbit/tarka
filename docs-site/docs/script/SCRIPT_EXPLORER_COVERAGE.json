@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "tarka.script-explorer.coverage.v1",
+  "result": "PASS",
+  "authority": "Generated from the final shipped implementation, not planning notes.",
+  "sourceHashes": {
+    "src/story/s17/generated/final-script.json": "d337a24448735e3cdc1e0dddfb42b773fca0d335021d1c222c66217640c93f89",
+    "src/story/s17/finalScript.ts": "e14553c9c61581bb45241942538525b9e17e85084892a58150f7a7e4d5d23997",
+    "src/adventure/runtimeTranscriptAuthority.ts": "2d3acdb54ada241ca24f74b6bf339f6fddbd64d89224f706f732dfa9f8ce4142",
+    "src/adventure/r55ProductionRouteRegistry.ts": "ecde57ac055e195f575fa1f080ec1fe9794ad1830a3b2f8fc61aace5623fd7f4",
+    "src/adventure/content.ts": "a423508b642b4597e1cca580087abf2d65095df69e75110cc2e4821b84e51c68",
+    "src/adventure/reducer.ts": "a12f738309e11699bd9bbf9f52dd93453cf86e9fe14ed8f5bd972fe252ec9128",
+    "src/adventure/types.ts": "4ef425411dc35725e04f0dd20b2a9e072418a8f260ce98eff1e1b07140252953",
+    "src/app/productionCopySelectors.ts": "26f35aa187e3ae389fdb3939429df76b6fd2cc5ee3ef38ee9d7d107e8ce6ca94"
+  },
+  "sourceTotals": {
+    "finalAuthorityBubbles": 724,
+    "finalAuthorityEventGroups": 148,
+    "runtimeEventKeys": 141,
+    "runtimeEventDeliveries": 730,
+    "runtimeTranscriptRoutes": 1505,
+    "runtimeTranscriptDeliveries": 2211,
+    "productionActionRoutes": 214,
+    "productionActionDeliveries": 764,
+    "hotspots": 27,
+    "verbs": 9,
+    "inventoryItems": 15
+  },
+  "publishedTotals": {
+    "finalAuthorityBubblesRepresented": 724,
+    "runtimeEventKeysRepresented": 141,
+    "runtimeEventDeliveriesRepresented": 730,
+    "runtimeTranscriptRoutesRepresented": 1505,
+    "runtimeTranscriptDeliveriesRepresented": 2211,
+    "productionActionRoutesRepresented": 214,
+    "productionActionDeliveriesRepresented": 764,
+    "worldRoutesRepresented": 1053,
+    "inventoryRoutesRepresented": 345,
+    "dialogueRoutesRepresented": 57,
+    "systemAndSpecialRoutesRepresented": 50,
+    "hotspotsRepresented": 27,
+    "verbsRepresented": 9,
+    "inventoryItemsRepresented": 15
+  },
+  "invariants": {
+    "expectedWorldRouteCount": 1053,
+    "actualWorldRouteCount": 1053,
+    "expectedInventoryRouteCount": 345,
+    "actualInventoryRouteCount": 345,
+    "missingFinalBubbleIds": [],
+    "productionActionErrors": [],
+    "unexplainedOmissions": []
+  },
+  "narrowNonDialogueExclusions": [
+    {
+      "category": "rendering and geometry data",
+      "reason": "Pixel coordinates, polygons, animation frame tables, and layout geometry are not authored dialogue; hotspot identities remain indexed."
+    },
+    {
+      "category": "terminal interface labels and evidence records",
+      "reason": "Static terminal controls and the separately published Nansen request/record catalogs are not character dialogue; terminal-triggered speech and endings remain indexed."
+    },
+    {
+      "category": "development provenance and private acquisition inputs",
+      "reason": "Historical build ledgers and private acquisition inputs are not shipped player-facing dialogue and are outside the public creative-writing explorer."
+    }
+  ],
+  "publishedFiles": {
+    "index": "docs/script/index.md",
+    "readingGuide": "docs/script/how-to-read.md",
+    "story": "docs/script/story.md",
+    "worldRoutes": "docs/script/world-routes.md",
+    "inventoryRoutes": "docs/script/inventory-routes.md",
+    "dialogueRoutes": "docs/script/dialogue-routes.md",
+    "actionsAndEndings": "docs/script/actions-and-endings.md",
+    "coverageSummary": "docs/script/coverage.md",
+    "machineReadableExplorer": "docs/script/SCRIPT_EXPLORER_INDEX.json",
+    "machineReadableCoverage": "docs/script/SCRIPT_EXPLORER_COVERAGE.json"
+  },
+  "explorerSha256": "e26df21ad79c1056a76e145d26bbee7c06bf5f9a1d770ae79b9719c39e37122a"
+}

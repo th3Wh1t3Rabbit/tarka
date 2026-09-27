@@ -1,0 +1,195 @@
+[
+  [
+    "Play & story",
+    [
+      [
+        "README.md",
+        "Welcome"
+      ],
+      [
+        "docs/play.md",
+        "Play / download"
+      ],
+      [
+        "docs/play/saves.md",
+        "Keeping your progress"
+      ],
+      [
+        "docs/controls.md",
+        "Player guide"
+      ],
+      [
+        "docs/design/terminal-tour.md",
+        "Illustrated terminal guide"
+      ],
+      [
+        "docs/story.md",
+        "The story"
+      ],
+      [
+        "docs/showcase.md",
+        "Watch the showcase"
+      ]
+    ]
+  ],
+  [
+    "The design",
+    [
+      [
+        "docs/design/questions-first.md",
+        "Questions before dashboards"
+      ],
+      [
+        "docs/design/terminal-character.md",
+        "A terminal with character"
+      ],
+      [
+        "docs/creator-note.md",
+        "A note from the creator"
+      ]
+    ]
+  ],
+  [
+    "Nansen & the evidence",
+    [
+      [
+        "docs/data/overview.md",
+        "Why Nansen"
+      ],
+      [
+        "docs/data/discovery.md",
+        "Choosing the case"
+      ],
+      [
+        "docs/data/method.md",
+        "Collection method"
+      ],
+      [
+        "docs/data/assembly.md",
+        "One record, explained"
+      ],
+      [
+        "docs/data/endpoints.md",
+        "Endpoint families"
+      ],
+      [
+        "docs/data/counts.md",
+        "Calls versus records"
+      ],
+      [
+        "docs/data/evidence-limits.md",
+        "Evidence limits"
+      ],
+      [
+        "@calls",
+        "Browse 101 requests"
+      ],
+      [
+        "docs/data/request-log.md",
+        "Linked request index"
+      ],
+      [
+        "docs/data/records.md",
+        "Compiled records"
+      ]
+    ]
+  ],
+  [
+    "Spoilers & the writing",
+    [
+      [
+        "docs/spoilers/euler-connection.md",
+        "How the case connects"
+      ],
+      [
+        "docs/spoilers/brcg.md",
+        "The piggy bank & BRCG"
+      ],
+      [
+        "docs/script/index.md",
+        "Complete Script Explorer"
+      ],
+      [
+        "docs/script/story.md",
+        "Complete story script"
+      ],
+      [
+        "docs/script/world-routes.md",
+        "World hotspot routes"
+      ],
+      [
+        "docs/script/inventory-routes.md",
+        "Inventory combinations"
+      ],
+      [
+        "docs/script/dialogue-routes.md",
+        "Arthur dialogue routes"
+      ],
+      [
+        "docs/script/actions-and-endings.md",
+        "Actions & endings"
+      ],
+      [
+        "docs/script/coverage.md",
+        "Script coverage proof"
+      ]
+    ]
+  ],
+  [
+    "Project information",
+    [
+      [
+        "docs/architecture.md",
+        "System overview"
+      ],
+      [
+        "docs/animation-assets.md",
+        "Animation assets"
+      ],
+      [
+        "docs/platforms.md",
+        "Platforms"
+      ],
+      [
+        "docs/testing.md",
+        "Build and test"
+      ],
+      [
+        "docs/limitations.md",
+        "Limitations"
+      ],
+      [
+        "docs/credits.md",
+        "Credits & licenses"
+      ],
+      [
+        "docs/project/source-and-content.md",
+        "Source snapshots & game content"
+      ],
+      [
+        "docs/project/release-adapter.md",
+        "Immutable release adapter"
+      ],
+      [
+        "docs/future.md",
+        "Future possibilities"
+      ],
+      [
+        "docs/competition/evidence-map.md",
+        "Buildathon evidence"
+      ],
+      [
+        "docs/project/documentation.md",
+        "One library, two views"
+      ],
+      [
+        "docs/project/figures.md",
+        "About the illustrations"
+      ],
+      [
+        "docs/index.md",
+        "Full contents"
+      ]
+    ]
+  ]
+]

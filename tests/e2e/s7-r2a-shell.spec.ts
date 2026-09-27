@@ -1,0 +1,70 @@
+import { expect, test } from '@playwright/test'
+import { activate, button, drainBrowserSpeech, ensureCompared, office, resolveCandidateRoute, setup } from '../fixtures/s2/browser-helpers'
+test.setTimeout(180_000)
+
+test('S7-R2A office exposes optional globe, blocking/nonblocking dialogue, transcript, hints, and stable Arthur identity', async ({ page }) => {
+  const data = await setup(page, 91)
+  await page.goto('/?skipIntro=1&review=1')
+  await expect(page.getByTestId('a0-shell')).toBeVisible()
+  data.freeze()
+
+  await activate(page, page.getByTestId('verb-push'), 'KEYBOARD')
+  await activate(page, page.getByTestId('hotspot-office-globe'), 'KEYBOARD')
+  await expect(page.getByTestId('nonblocking-speech')).toBeVisible()
+  await expect(page.getByTestId('a0-shell')).toHaveAttribute('data-phase', 'START')
+  await expect(page.getByTestId('nonblocking-speech').locator('strong')).toHaveText('Rook')
+  await page.getByTestId('nonblocking-speech').getByRole('button').click()
+  await page.getByTestId('nonblocking-speech').getByRole('button').click()
+
+  await activate(page, button(page, 'METHOD HINT'), 'KEYBOARD')
+  await expect(page.getByTestId('speech-panel').locator('strong')).toHaveText('Arthur')
+  await page.keyboard.down('Space')
+  await page.waitForTimeout(180)
+  await page.keyboard.up('Space')
+  await expect(page.getByTestId('speech-panel')).toHaveAttribute('data-line-index', '0')
+  await page.keyboard.press('Space')
+  await expect(page.getByTestId('speech-panel')).toHaveCount(0)
+
+  await activate(page, page.getByTestId('verb-talk-to'), 'KEYBOARD')
+  await activate(page, page.getByTestId('hotspot-mr-index'), 'KEYBOARD')
+  await activate(page, page.getByTestId('dialogue-sports'), 'KEYBOARD')
+  await drainBrowserSpeech(page, 'KEYBOARD')
+  await expect(page.getByTestId('dialogue-sports')).toHaveCount(0)
+  await expect(page.getByTestId('dialogue-form-reminder')).toBeVisible()
+  await expect(page.getByTestId('dialogue-leave')).toBeVisible()
+  await expect(page.getByTestId('dialogue-transcript')).toContainText('NONBLOCKING')
+  await expect(page.locator('body')).not.toContainText('Mr. Index')
+  expect(data.requests.filter((request) => request.forbidden)).toEqual([])
+})
+
+test('S7-R2A terminal exposes all named hint controls and broad-sea milestone without network', async ({ page }) => {
+  const data = await setup(page, 92)
+  data.freeze()
+  await office(page, 'KEYBOARD', 'DIRECT_SOLVER')
+  await expect(page.getByTestId('case-terminal')).toHaveAttribute('data-hint-milestone', 'TERMINAL.ACCESS_EARNED')
+  await activate(page, page.getByText('ASK THE ARCHIVIST · explanations and recovery', { exact: true }), 'KEYBOARD')
+  for (const name of ['METHOD HINT', 'CASE HINT', 'DIRECT HINT']) {
+    await activate(page, button(page, name), 'KEYBOARD')
+    await expect(page.locator('.terminal-live')).not.toBeEmpty()
+  }
+  await activate(page, button(page, 'ASK A QUESTION'), 'KEYBOARD')
+  await activate(page, page.locator('.question-cards article button').first(), 'KEYBOARD')
+  await activate(page, button(page, 'DISPATCH'), 'KEYBOARD')
+  await expect(page.getByTestId('case-terminal')).toHaveAttribute('data-section', 'RESULTS')
+  await resolveCandidateRoute(page, data.fixture, 'KEYBOARD')
+  await ensureCompared(page, data.fixture, 'KEYBOARD')
+  await activate(page, button(page, 'EXPLORE'), 'KEYBOARD')
+  await expect(page.getByTestId('semantic-evidence-sea')).toBeVisible()
+  await expect(page.getByTestId('case-terminal')).toHaveAttribute('data-hint-milestone', 'TERMINAL.COMPARISON_AVAILABLE')
+  expect(data.requests.filter((request) => request.forbidden)).toEqual([])
+})
+
+test('S7-R2A Art Lab exposes only logical placeholder capability needs', async ({ page }) => {
+  const data = await setup(page, 93)
+  await page.goto('/?artLab=1')
+  await expect(page.getByTestId('s7-r2a-placeholder-contract')).toContainText('Production art remains late-bound')
+  await expect(page.getByTestId('s7-r2a-placeholder-contract')).toContainText('STAGE.ROOK_GLOBE')
+  await expect(page.getByTestId('s7-r2a-placeholder-contract')).toContainText('office-globe')
+  data.freeze()
+  expect(data.requests.filter((request) => request.forbidden)).toEqual([])
+})

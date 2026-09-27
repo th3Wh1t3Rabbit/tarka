@@ -1,0 +1,1634 @@
+{
+  "schema_version": "1.2.0",
+  "interface": "TE-IFACE-CONTENT@1.2.0",
+  "status": "CANDIDATE_PENDING_MAIN_REVIEW",
+  "accepted_base": {
+    "commit": "f56e806e80b100245d7b5c4686786b477f2f98d8",
+    "tree": "616f54cca2d30a54148d3f442840f8ff3694b48b",
+    "accepted_archive_sha256": "ee19252a736ae96b213b9c878cb2e0c0b4bee7e9e1340ad9097b71a6e8c2cc63",
+    "interface": "TE-IFACE-CONTENT@1.1.0",
+    "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+    "entries": 409,
+    "content_sha256": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+    "implementation_sha256": "84a081161b8b3e147021ad497af0862eaf3d7fe80b92f79de8ebe57e7711b46b"
+  },
+  "design_authority": {
+    "filename": "TRACE_ESCAPE_S7_R2_LEAD_AUTHORED_PUZZLE_DIALOGUE_INTERACTION_DESIGN_v1.0.0_2026-09-18.md",
+    "sha256": "68444ef048c887f2847276d309bdeffd70fb511989efabba390222080660d9d5"
+  },
+  "hotspots": [
+    "request-dispenser",
+    "pen-stand",
+    "mr-index",
+    "pneumatic-tube",
+    "dispatch-plunger",
+    "record-canister",
+    "nansen-terminal",
+    "historical-clock",
+    "office-globe"
+  ],
+  "verbs": [
+    "GIVE",
+    "PICK_UP",
+    "USE",
+    "OPEN",
+    "LOOK_AT",
+    "PUSH",
+    "CLOSE",
+    "TALK_TO",
+    "PULL"
+  ],
+  "cell_count": 81,
+  "precedence": [
+    "REQUIRED_STATE_ACTION",
+    "WRONG_STATE_EXACT_RESPONSE",
+    "OPTIONAL_EXACT_RESPONSE",
+    "ACCEPTED_GENERIC_FALLBACK"
+  ],
+  "cells": [
+    {
+      "hotspot": "request-dispenser",
+      "verb": "GIVE",
+      "source_anchor": "§8.REQUEST_DISPENSER.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.REQUEST_DISPENSER.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "USE",
+      "source_anchor": "§8.REQUEST_DISPENSER.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.REQUEST_DISPENSER.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "PUSH",
+      "source_anchor": "§8.REQUEST_DISPENSER.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "CLOSE",
+      "source_anchor": "§8.REQUEST_DISPENSER.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.REQUEST_DISPENSER.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.talk_to"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "PULL",
+      "source_anchor": "§8.REQUEST_DISPENSER.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.TICKET_PULLED"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "GIVE",
+      "source_anchor": "§8.PEN_STAND.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.PEN_STAND.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "USE",
+      "source_anchor": "§8.PEN_STAND.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.REQUEST_COMPLETED"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "OPEN",
+      "source_anchor": "§8.PEN_STAND.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.open"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.PEN_STAND.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "PUSH",
+      "source_anchor": "§8.PEN_STAND.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "CLOSE",
+      "source_anchor": "§8.PEN_STAND.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.PEN_STAND.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.talk_to"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pen-stand",
+      "verb": "PULL",
+      "source_anchor": "§8.PEN_STAND.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pen-stand.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.ARTHUR.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "USE",
+      "source_anchor": "§8.ARTHUR.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "OPEN",
+      "source_anchor": "§8.ARTHUR.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.open"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.ARTHUR.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "PUSH",
+      "source_anchor": "§8.ARTHUR.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "CLOSE",
+      "source_anchor": "§8.ARTHUR.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "PULL",
+      "source_anchor": "§8.ARTHUR.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "GIVE",
+      "source_anchor": "§8.PNEUMATIC_TUBE.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.PNEUMATIC_TUBE.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.PNEUMATIC_TUBE.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "PUSH",
+      "source_anchor": "§8.PNEUMATIC_TUBE.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.PNEUMATIC_TUBE.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.talk_to"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "PULL",
+      "source_anchor": "§8.PNEUMATIC_TUBE.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "GIVE",
+      "source_anchor": "§8.DISPATCH_PLUNGER.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "USE",
+      "source_anchor": "§8.DISPATCH_PLUNGER.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "OPEN",
+      "source_anchor": "§8.DISPATCH_PLUNGER.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.open"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.DISPATCH_PLUNGER.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "PUSH",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.push"
+      ],
+      "behavior": "When the tube is loaded and closed, perform the accepted dispatch transition; otherwise use the exact premature response.",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.DISPATCHED"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "CLOSE",
+      "source_anchor": "§8.DISPATCH_PLUNGER.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "PULL",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "GIVE",
+      "source_anchor": "§8.RETURNED_CANISTER.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.RETURNED_CANISTER.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "USE",
+      "source_anchor": "§8.RETURNED_CANISTER.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.RETURNED_CANISTER.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "PUSH",
+      "source_anchor": "§8.RETURNED_CANISTER.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "CLOSE",
+      "source_anchor": "§8.RETURNED_CANISTER.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.RETURNED_CANISTER.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.talk_to"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "PULL",
+      "source_anchor": "§8.RETURNED_CANISTER.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.record-canister.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "GIVE",
+      "source_anchor": "§8.NANSEN_TERMINAL.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.NANSEN_TERMINAL.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "OPEN",
+      "source_anchor": "§8.NANSEN_TERMINAL.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.open"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "PUSH",
+      "source_anchor": "§8.NANSEN_TERMINAL.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "CLOSE",
+      "source_anchor": "§8.NANSEN_TERMINAL.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "PULL",
+      "source_anchor": "§8.NANSEN_TERMINAL.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "GIVE",
+      "source_anchor": "§8.HISTORICAL_CLOCK.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.HISTORICAL_CLOCK.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "USE",
+      "source_anchor": "§8.HISTORICAL_CLOCK.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.HISTORICAL_CLOCK.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "PUSH",
+      "source_anchor": "§8.HISTORICAL_CLOCK.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.push"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "CLOSE",
+      "source_anchor": "§8.HISTORICAL_CLOCK.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.HISTORICAL_CLOCK.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.talk_to"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "PULL",
+      "source_anchor": "§8.HISTORICAL_CLOCK.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "GIVE",
+      "source_anchor": "§8.OFFICE_GLOBE.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.give"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.OFFICE_GLOBE.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.pick_up"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "USE",
+      "source_anchor": "§8.OFFICE_GLOBE.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.use"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "OPEN",
+      "source_anchor": "§8.OFFICE_GLOBE.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.open"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.OFFICE_GLOBE.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.look_at"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "CLOSE",
+      "source_anchor": "§8.OFFICE_GLOBE.CLOSE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.close"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.OFFICE_GLOBE.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.talk_to"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "PULL",
+      "source_anchor": "§8.OFFICE_GLOBE.PULL",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.office-globe.pull"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "request-dispenser",
+      "verb": "OPEN",
+      "source_anchor": "§8.REQUEST_DISPENSER.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.request-dispenser.open.1",
+        "lane_a.s7r2b.matrix.request-dispenser.open.2"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "GIVE",
+      "source_anchor": "§8.ARTHUR.GIVE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.mr-index.give.1",
+        "lane_a.s7r2b.matrix.mr-index.give.2",
+        "lane_a.s7r2b.matrix.mr-index.give.3"
+      ],
+      "behavior": "GIVE completed request performs accepted stamp transition; other items use these exact lines.",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.REQUEST_STAMPED"
+    },
+    {
+      "hotspot": "mr-index",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.ARTHUR.TALK_TO",
+      "response_keys": [],
+      "behavior": "MENU.ARTHUR.OPEN",
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "USE",
+      "source_anchor": "§8.PNEUMATIC_TUBE.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.pneumatic-tube.use.1",
+        "lane_a.s7r2b.matrix.pneumatic-tube.use.2"
+      ],
+      "behavior": "USE stamped request performs accepted load transition; wrong items use these exact lines.",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.REQUEST_IN_TUBE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "OPEN",
+      "source_anchor": "§8.PNEUMATIC_TUBE.OPEN",
+      "response_keys": [],
+      "behavior": "INTERACTION.TUBE.OPEN_BY_STATE",
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "pneumatic-tube",
+      "verb": "CLOSE",
+      "source_anchor": "§8.PNEUMATIC_TUBE.CLOSE",
+      "response_keys": [],
+      "behavior": "INTERACTION.TUBE.CLOSE",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.TUBE_CLOSED"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "PICK_UP",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PICK_UP",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.1",
+        "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.2",
+        "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.3"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "dispatch-plunger",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.DISPATCH_PLUNGER.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.dispatch-plunger.talk_to.1",
+        "lane_a.s7r2b.matrix.dispatch-plunger.talk_to.2"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "record-canister",
+      "verb": "OPEN",
+      "source_anchor": "§8.RETURNED_CANISTER.OPEN",
+      "response_keys": [],
+      "behavior": "INTERACTION.CANISTER.OPEN",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.CANISTER_OPEN"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "USE",
+      "source_anchor": "§8.NANSEN_TERMINAL.USE",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.use"
+      ],
+      "behavior": "USE access strip performs accepted authorization transition; without it uses this exact line.",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "PHASE.TERMINAL_UNLOCKED"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "LOOK_AT",
+      "source_anchor": "§8.NANSEN_TERMINAL.LOOK_AT",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.look_at.locked"
+      ],
+      "behavior": "INTERACTION.TERMINAL.OPEN_CASE",
+      "accepted_fallback_key": null,
+      "required_action": true,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "OPEN_CASE_TERMINAL"
+    },
+    {
+      "hotspot": "nansen-terminal",
+      "verb": "TALK_TO",
+      "source_anchor": "§8.NANSEN_TERMINAL.TALK_TO",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.nansen-terminal.talk_to.1",
+        "lane_a.s7r2b.matrix.nansen-terminal.talk_to.2",
+        "lane_a.s7r2b.matrix.nansen-terminal.talk_to.3"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "historical-clock",
+      "verb": "OPEN",
+      "source_anchor": "§8.HISTORICAL_CLOCK.OPEN",
+      "response_keys": [
+        "lane_a.s7r2b.matrix.historical-clock.open.1",
+        "lane_a.s7r2b.matrix.historical-clock.open.2"
+      ],
+      "behavior": null,
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "REPEAT_SAFE",
+      "progression_mutation": "NONE"
+    },
+    {
+      "hotspot": "office-globe",
+      "verb": "PUSH",
+      "source_anchor": "§8.OFFICE_GLOBE.PUSH",
+      "response_keys": [
+        "lane_a.s7r2b.globe.push.1.1",
+        "lane_a.s7r2b.globe.push.1.2",
+        "lane_a.s7r2b.globe.push.2.1",
+        "lane_a.s7r2b.globe.push.2.2",
+        "lane_a.s7r2b.globe.push.3.1",
+        "lane_a.s7r2b.globe.push.3.2",
+        "lane_a.s7r2b.globe.push.3.3",
+        "lane_a.s7r2b.globe.push.3.4",
+        "lane_a.s7r2b.globe.push.loop.1",
+        "lane_a.s7r2b.globe.push.loop.2"
+      ],
+      "behavior": "Spin it; advance the exact four-stage escalation and loop stage 4.",
+      "accepted_fallback_key": null,
+      "required_action": false,
+      "state_precedence": [
+        "REQUIRED_STATE_ACTION",
+        "WRONG_STATE_EXACT_RESPONSE",
+        "OPTIONAL_EXACT_RESPONSE",
+        "ACCEPTED_GENERIC_FALLBACK"
+      ],
+      "repeat_behavior": "ESCALATING_THEN_LOOP",
+      "progression_mutation": "NONE"
+    }
+  ],
+  "globe_escalation": [
+    [
+      "lane_a.s7r2b.globe.push.1.1",
+      "lane_a.s7r2b.globe.push.1.2"
+    ],
+    [
+      "lane_a.s7r2b.globe.push.2.1",
+      "lane_a.s7r2b.globe.push.2.2"
+    ],
+    [
+      "lane_a.s7r2b.globe.push.3.1",
+      "lane_a.s7r2b.globe.push.3.2",
+      "lane_a.s7r2b.globe.push.3.3",
+      "lane_a.s7r2b.globe.push.3.4"
+    ],
+    [
+      "lane_a.s7r2b.globe.push.loop.1",
+      "lane_a.s7r2b.globe.push.loop.2"
+    ]
+  ],
+  "desk_bell": {
+    "status": "DORMANT_CONDITIONAL_STRETCH",
+    "hotspot_required": false,
+    "asset_assumed": false,
+    "progression_mutation": "NONE",
+    "look_key": "lane_a.s7r2b.desk_bell.look",
+    "push_keys": [
+      "lane_a.s7r2b.caption.bell",
+      "lane_a.s7r2b.desk_bell.push.1",
+      "lane_a.s7r2b.desk_bell.push.2",
+      "lane_a.s7r2b.desk_bell.push.3"
+    ],
+    "repeat_key": "lane_a.s7r2b.desk_bell.repeat"
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "schemaVersion": "2.0.0",
+  "id": "production",
+  "label": "S11 PRODUCTION ART FOUNDATION",
+  "status": "LEAD_SELECTED",
+  "artMode": "PIXEL_INSPIRED",
+  "nativeResolution": {
+    "width": 480,
+    "height": 270,
+    "sceneHeight": 180,
+    "interfaceHeight": 90
+  },
+  "browserResolution": {
+    "width": 960,
+    "height": 540,
+    "sceneHeight": 360,
+    "interfaceHeight": 180
+  },
+  "scalingMode": "NEAREST_NEIGHBOR",
+  "palette": [
+    "#071014",
+    "#203138",
+    "#d4aa50",
+    "#ffe092",
+    "#9cd8d3",
+    "#ece5cd"
+  ],
+  "scenes": {
+    "records-office": {
+      "background": {
+        "src": "/art-packs/production/room-plate-480x180.png",
+        "width": 480,
+        "height": 180
+      },
+      "midgroundLayers": [],
+      "foregroundLayers": [],
+      "walkRegionId": "records-office-walk-v1",
+      "hotspotGeometryId": "records-office-hotspots-v1",
+      "depthBands": [
+        {
+          "id": "back",
+          "minY": 321,
+          "maxY": 333,
+          "zIndex": 3
+        },
+        {
+          "id": "front",
+          "minY": 334,
+          "maxY": 360,
+          "zIndex": 6
+        }
+      ],
+      "propPlacements": [
+        {
+          "propId": "requestDispenser",
+          "x": 350,
+          "y": 298,
+          "depthBand": "back"
+        },
+        {
+          "propId": "penStand",
+          "x": 432,
+          "y": 302,
+          "depthBand": "front"
+        },
+        {
+          "propId": "nansenTerminal",
+          "x": 900,
+          "y": 300,
+          "depthBand": "back"
+        }
+      ],
+      "characterAnchors": {
+        "rookStart": {
+          "x": 228,
+          "y": 360
+        },
+        "mrIndex": {
+          "x": 532,
+          "y": 321
+        }
+      }
+    },
+    "blank-shell": {
+      "background": {
+        "src": "/art-packs/production/room-plate-480x180.png",
+        "width": 480,
+        "height": 180
+      },
+      "midgroundLayers": [],
+      "foregroundLayers": [],
+      "walkRegionId": "blank-shell-walk-v1",
+      "hotspotGeometryId": "blank-shell-hotspots-v1",
+      "depthBands": [
+        {
+          "id": "floor",
+          "minY": 250,
+          "maxY": 326,
+          "zIndex": 4
+        }
+      ],
+      "propPlacements": [],
+      "characterAnchors": {
+        "rookStart": {
+          "x": 228,
+          "y": 360
+        },
+        "mrIndex": {
+          "x": 532,
+          "y": 321
+        }
+      }
+    }
+  },
+  "characters": {
+    "rook": {
+      "anchor": {
+        "x": 24,
+        "y": 88
+      },
+      "scale": 2,
+      "mirrorHorizontal": true,
+      "animations": {
+        "idle": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_idle_neutral_a.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 2,
+          "loop": true
+        },
+        "walkEast": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_walk_1_contact_a.png",
+              "width": 48,
+              "height": 88
+            },
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_walk_2_passing_a.png",
+              "width": 48,
+              "height": 88
+            },
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_walk_3_contact_b.png",
+              "width": 48,
+              "height": 88
+            },
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_walk_4_passing_b.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 8,
+          "loop": true,
+          "mirrorHorizontal": true
+        },
+        "talkClosed": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_talk_neutral_closed.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 8,
+          "loop": true
+        },
+        "talkOpen": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_talk_neutral_open.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 8,
+          "loop": true
+        },
+        "inspect": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_inspect_lean.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 1,
+          "loop": false
+        },
+        "useGive": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/rook/latest-clean-v0.1.14/frames/rook_give_offer.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 1,
+          "loop": false
+        }
+      }
+    },
+    "mrIndex": {
+      "anchor": {
+        "x": 29,
+        "y": 88
+      },
+      "scale": 2,
+      "mirrorHorizontal": false,
+      "animations": {
+        "idle": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/arthur/coherent-core-v1.0.0/frames/archivist_idle_a.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 1,
+          "loop": true
+        },
+        "talkClosed": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/arthur/coherent-core-v1.0.0/frames/archivist_talk_closed.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 6,
+          "loop": true
+        },
+        "talkOpen": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/arthur/coherent-core-v1.0.0/frames/archivist_talk_open.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 6,
+          "loop": true
+        },
+        "stamp": {
+          "frames": [
+            {
+              "src": "/art-packs/production/files/production/characters/arthur/stamp-v0.1.1/frames/archivist_stamp_down.png",
+              "width": 48,
+              "height": 88
+            }
+          ],
+          "frameWidth": 48,
+          "frameHeight": 88,
+          "fps": 1,
+          "loop": false
+        }
+      }
+    }
+  },
+  "props": {
+    "requestDispenser": {
+      "default": {
+        "src": "/art-packs/production/files/included/core-v2.1/room/dispenser_with_ticket.png",
+        "width": 47,
+        "height": 70
+      },
+      "states": {}
+    },
+    "penStand": {
+      "default": {
+        "src": "/art-packs/production/files/included/core-v2.1/room/penstand.png",
+        "width": 24,
+        "height": 32
+      },
+      "states": {}
+    },
+    "nansenTerminal": {
+      "default": {
+        "src": "/art-packs/production/files/included/core-v2.1/terminal/kiosk_off.png",
+        "width": 48,
+        "height": 75
+      },
+      "states": {
+        "unlocked": {
+          "src": "/art-packs/production/files/included/core-v2.1/terminal/kiosk_on.png",
+          "width": 48,
+          "height": 75
+        }
+      }
+    }
+  },
+  "inventory": {
+    "blank-terminal-authorization-form": {
+      "src": "/art-packs/production/files/included/core-v2.1/forms/ticket_blank.png",
+      "width": 20,
+      "height": 26
+    },
+    "loose-feather-pen": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/pen_whole.png",
+      "width": 32,
+      "height": 24
+    },
+    "signed-terminal-authorization-form-with-doodles": {
+      "src": "/art-packs/production/files/included/core-v2.1/forms/ticket_filled.png",
+      "width": 32,
+      "height": 24
+    },
+    "broken-feather-pen": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/pen_broken.png",
+      "width": 34,
+      "height": 20
+    },
+    "approved-stamped-terminal-authorization-form": {
+      "src": "/art-packs/production/files/included/core-v2.1/forms/ticket_stamped_OK.png",
+      "width": 32,
+      "height": 24
+    },
+    "euler-case-file": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/euler_file.png",
+      "width": 32,
+      "height": 24
+    },
+    "rubber-band": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/rubber_band.png",
+      "width": 48,
+      "height": 48
+    },
+    "rubiks-cube": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/rubiks_cube.png",
+      "width": 48,
+      "height": 48
+    },
+    "sharknado-2-vhs": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/vhs_shark.png",
+      "width": 48,
+      "height": 48
+    },
+    "piggy-bank-intact": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/piggy_intact.png",
+      "width": 48,
+      "height": 48
+    },
+    "small-toolbox-closed": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/toolbox_closed.png",
+      "width": 48,
+      "height": 48
+    },
+    "small-toolbox-open-empty": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/toolbox_open_empty.png",
+      "width": 48,
+      "height": 48
+    },
+    "hammer": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/hammer_pink.png",
+      "width": 48,
+      "height": 48
+    },
+    "nails": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/nails.png",
+      "width": 48,
+      "height": 48
+    },
+    "fictional-token-note": {
+      "src": "/art-packs/production/files/included/core-v2.1/inventory/piggy_fragments_note.png",
+      "width": 48,
+      "height": 48
+    }
+  },
+  "cursor": {
+    "crosshair": {
+      "src": "/art-packs/production/files/included/core-v2.1/ui/cursor.png",
+      "width": 13,
+      "height": 13
+    }
+  }
+}

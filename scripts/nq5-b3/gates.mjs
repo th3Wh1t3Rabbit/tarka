@@ -1,0 +1,11 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import { execFileSync } from 'node:child_process'
+import { identity, sha } from '../nq5/schema.mjs'
+import { LOCAL_SUITES } from '../nq5-b1/live.mjs'
+import { REVIEW_LENSES } from '../nq5-r2/review-identity.mjs'
+import { gitEnv } from '../nq5-b1-r1/gates.mjs'
+import { cut, digest, REVIEWS } from './authority.mjs'
+export function assertLocalEvidence(v,readLog,now=Date.now()){const age=now-Date.parse(v.generatedAtUtc);if(v.schemaVersion!=='1.0.0'||v.status!=='PASS'||age<0||age>86400000||!Number.isFinite(age)||identity(v.suites.map(s=>s.name).sort())!==identity([...LOCAL_SUITES].sort())||v.credentialAccess!==false||v.actualPrivateStateAccess!==false||v.privateMutation!==false||v.externalRequests!==0||v.networkHold!==true)throw new Error('B3_ALL14_CURRENT_LOCAL_SUITES_REQUIRED');for(const s of v.suites){const b=readLog(s.name);if(s.status!=='PASS'||!b.toString().trim()||sha(b)!==s.sha256)throw new Error('B3_DIRECT_LOG_BINDING')}return true}
+export function localGate(root){const dir=path.join(root,'artifacts/g6p-b3/local'),v=JSON.parse(fs.readFileSync(path.join(dir,'VERIFICATION.json')));assertLocalEvidence(v,n=>fs.readFileSync(path.join(dir,n+'.log')));if(identity(v.candidate)!==identity(cut(root))||v.implementationSha256!==digest(root))throw new Error('B3_ALL14_CURRENT_LOCAL_SUITES_REQUIRED');return v}
+export function reviewGate(root,index){const r=JSON.parse(fs.readFileSync(path.join(root,REVIEWS[index])));if(r.status!=='PASS_BOUNDED_NO_CREDENTIAL_SCOPE'||r.checkpoint!==(index===0?'B3_REVIEW_A_PRELIVE':'B3_REVIEW_B_POSTLIVE')||r.implementationSha256!==digest(root)||r.unresolvedAcceptedP0P1!==0||r.credentialAccess!==false||r.actualPrivateStateAccess!==false||r.providerRequests!==0||r.externalDocumentationGets!==0||identity(r.lenses.map(l=>l.name).sort())!==identity([...REVIEW_LENSES].sort())||r.lenses.some(l=>l.status!=='PASS_BOUNDED_SCOPE'))throw new Error('B3_DEDICATED_REVIEW_REQUIRED');const env=gitEnv();if(execFileSync('git',['rev-parse',r.reviewedImplementationCommit+'^{tree}'],{cwd:root,env,encoding:'utf8'}).trim()!==r.reviewedImplementationTree)throw new Error('B3_REVIEW_TREE');execFileSync('git',['merge-base','--is-ancestor',r.reviewedImplementationCommit,'HEAD'],{cwd:root,env});return r}

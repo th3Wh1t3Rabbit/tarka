@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "provider": "FUTURE_NANSEN_BUILD_TIME",
+  "requestProtocol": { "method": "POST", "contentType": "application/json" },
+  "authentication": {
+    "method": "HEADER",
+    "headerName": "apikey",
+    "g3Resolution": "DISABLED"
+  },
+  "concurrency": 1,
+  "minimumDelayMs": 1000,
+  "retryAfterSemantics": "HONOR_SECONDS_OR_HTTP_DATE",
+  "historicalResponsePolicy": "MAY_BE_RESTATED",
+  "retry": {
+    "maximumAttempts": 3,
+    "baseDelayMs": 1000,
+    "maximumDelayMs": 8000,
+    "retryableHttpStatuses": [429, 500, 502, 503, 504],
+    "nonRetryableHttpStatuses": [400, 401, 402, 403, 404, 422]
+  },
+  "endpoints": [
+    {
+      "endpoint": "/fixture/v1/historical/events",
+      "apiVersion": "fixture-v1",
+      "endpointClass": "historical-events",
+      "planningCreditCost": 2,
+      "allowedLenses": ["ROUTE_SCAN", "CONVERSION_TRACE"],
+      "redistribution": "PUBLIC_ALLOWLISTED",
+      "maximumPages": 4,
+      "transport": "FIXTURE_ONLY_G3"
+    },
+    {
+      "endpoint": "/fixture/v1/historical/balances",
+      "apiVersion": "fixture-v1",
+      "endpointClass": "historical-balances",
+      "planningCreditCost": 1,
+      "allowedLenses": ["STATE_ECHO"],
+      "redistribution": "PUBLIC_ALLOWLISTED",
+      "maximumPages": 4,
+      "transport": "FIXTURE_ONLY_G3"
+    },
+    {
+      "endpoint": "/fixture/v1/current/relationships",
+      "apiVersion": "fixture-v1",
+      "endpointClass": "current-relationships",
+      "planningCreditCost": 2,
+      "allowedLenses": ["ECHO_ONLY"],
+      "redistribution": "RESTRICTED",
+      "maximumPages": 2,
+      "transport": "FIXTURE_ONLY_G3"
+    },
+    {
+      "endpoint": "/fixture/v1/current/portfolio",
+      "apiVersion": "fixture-v1",
+      "endpointClass": "current-portfolio",
+      "planningCreditCost": 3,
+      "allowedLenses": ["ECHO_ONLY"],
+      "redistribution": "PROHIBITED",
+      "maximumPages": 1,
+      "transport": "FIXTURE_ONLY_G3"
+    }
+  ]
+}

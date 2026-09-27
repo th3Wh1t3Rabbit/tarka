@@ -1,0 +1,208 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "base_commit": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41",
+  "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "precedence": [
+    "Existing useful rule and item/phase guards first",
+    "PUSH drawers / PULL clock overrides",
+    "GIVE Arthur with nonapproved item / TALK drawers overrides",
+    "LOOK descriptions",
+    "Verb-hotspot alternate",
+    "Verb fallback"
+  ],
+  "verb_fallbacks": [
+    {
+      "verb": "GIVE",
+      "copy_key": "lane_a.dead.verb.give"
+    },
+    {
+      "verb": "PICK_UP",
+      "copy_key": "lane_a.dead.verb.pick_up"
+    },
+    {
+      "verb": "USE",
+      "copy_key": "lane_a.dead.verb.use"
+    },
+    {
+      "verb": "OPEN",
+      "copy_key": "lane_a.dead.verb.open"
+    },
+    {
+      "verb": "LOOK_AT",
+      "copy_key": "lane_a.dead.verb.look_at"
+    },
+    {
+      "verb": "PUSH",
+      "copy_key": "lane_a.dead.verb.push"
+    },
+    {
+      "verb": "CLOSE",
+      "copy_key": "lane_a.dead.verb.close"
+    },
+    {
+      "verb": "TALK_TO",
+      "copy_key": "lane_a.dead.verb.talk_to"
+    },
+    {
+      "verb": "PULL",
+      "copy_key": "lane_a.dead.verb.pull"
+    }
+  ],
+  "looks": [
+    {
+      "target_id": "filing-drawers",
+      "copy_key": "lane_a.dead.look.filing-drawers"
+    },
+    {
+      "target_id": "historical-clock",
+      "copy_key": "lane_a.dead.look.historical-clock"
+    },
+    {
+      "target_id": "request-dispenser",
+      "copy_key": "lane_a.dead.look.request-dispenser"
+    },
+    {
+      "target_id": "pen-stand",
+      "copy_key": "lane_a.dead.look.pen-stand"
+    },
+    {
+      "target_id": "mr-index",
+      "copy_key": "lane_a.dead.look.mr-index"
+    },
+    {
+      "target_id": "pneumatic-tube",
+      "copy_key": "lane_a.dead.look.pneumatic-tube"
+    },
+    {
+      "target_id": "dispatch-plunger",
+      "copy_key": "lane_a.dead.look.dispatch-plunger"
+    },
+    {
+      "target_id": "record-canister",
+      "copy_key": "lane_a.dead.look.record-canister"
+    },
+    {
+      "target_id": "nansen-terminal",
+      "copy_key": "lane_a.dead.look.nansen-terminal"
+    },
+    {
+      "target_id": "rotunda-exit",
+      "copy_key": "lane_a.dead.look.rotunda-exit"
+    }
+  ],
+  "alternates": [
+    {
+      "selector": "PUSH:filing-drawers",
+      "copy_key": "lane_a.dead.alternate.1"
+    },
+    {
+      "selector": "PULL:historical-clock",
+      "copy_key": "lane_a.dead.alternate.2"
+    },
+    {
+      "selector": "OPEN:request-dispenser",
+      "copy_key": "lane_a.dead.alternate.3"
+    },
+    {
+      "selector": "PULL:pen-stand",
+      "copy_key": "lane_a.dead.alternate.4"
+    },
+    {
+      "selector": "PULL:mr-index",
+      "copy_key": "lane_a.dead.alternate.5"
+    },
+    {
+      "selector": "OPEN:pneumatic-tube",
+      "copy_key": "lane_a.dead.alternate.6"
+    },
+    {
+      "selector": "PULL:dispatch-plunger",
+      "copy_key": "lane_a.dead.alternate.7"
+    },
+    {
+      "selector": "CLOSE:record-canister",
+      "copy_key": "lane_a.dead.alternate.8"
+    },
+    {
+      "selector": "PUSH:nansen-terminal",
+      "copy_key": "lane_a.dead.alternate.9"
+    },
+    {
+      "selector": "OPEN:rotunda-exit",
+      "copy_key": "lane_a.dead.alternate.10"
+    }
+  ],
+  "overrides": [
+    {
+      "selector": "PUSH:filing-drawers",
+      "copy_key": "lane_a.dead.alternate.1"
+    },
+    {
+      "selector": "PULL:historical-clock",
+      "copy_key": "lane_a.dead.alternate.2"
+    },
+    {
+      "selector": "GIVE:mr-index:ANY_ITEM",
+      "copy_key": "lane_a.dead.rejected_item"
+    },
+    {
+      "selector": "TALK_TO:filing-drawers",
+      "copy_key": "lane_a.dead.drawers_reply"
+    }
+  ],
+  "archetypes": [
+    {
+      "archetype": "LOUD_ROOM",
+      "copy_key": "lane_a.dead.archetype.loud_room",
+      "activation": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+    },
+    {
+      "archetype": "RIGHT_ASSET_WRONG_TIME",
+      "copy_key": "lane_a.dead.archetype.right_asset_wrong_time",
+      "activation": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+    },
+    {
+      "archetype": "RIGHT_TIME_WRONG_DIRECTION",
+      "copy_key": "lane_a.dead.archetype.right_time_wrong_direction",
+      "activation": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+    },
+    {
+      "archetype": "FAMILIAR_COUNTERPARTY",
+      "copy_key": "lane_a.dead.archetype.familiar_counterparty",
+      "activation": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+    },
+    {
+      "archetype": "BALANCE_MIRAGE",
+      "copy_key": "lane_a.dead.archetype.balance_mirage",
+      "activation": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+    },
+    {
+      "archetype": "FALSE_TERMINAL",
+      "copy_key": "lane_a.dead.archetype.false_terminal",
+      "activation": "EXISTING_ACCEPTED_CLASSIFICATION_ONLY"
+    }
+  ],
+  "zero_results": [
+    {
+      "classification": "NO_MATCH_IN_ACCEPTED_CORPUS",
+      "copy_key": "lane_a.zero.no_match_in_accepted_corpus",
+      "changes_theory": false
+    },
+    {
+      "classification": "NEGATIVE_EVIDENCE_SUPPORTED",
+      "copy_key": "lane_a.zero.negative_evidence_supported",
+      "changes_theory": true
+    },
+    {
+      "classification": "QUERY_OUTSIDE_COVERAGE",
+      "copy_key": "lane_a.zero.query_outside_coverage",
+      "changes_theory": false
+    }
+  ],
+  "repeat_keys": [
+    "lane_a.puzzle.reread-record.1",
+    "lane_a.candidate.repeat",
+    "lane_a.proof.repeat"
+  ]
+}

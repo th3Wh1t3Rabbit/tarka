@@ -1,0 +1,29 @@
+{
+  "schema": "tarka.s15-r7.qualification-requirements.v1",
+  "requirements": [
+    { "id": "R7-01", "testId": "S15-R7 opening lock", "expectedObservation": "BLACKOUT owns frame zero, Rook entry, and every opening bubble; production world input is inert until final dismissal." },
+    { "id": "R7-02", "testId": "S15-R7 speaker-turn owner", "expectedObservation": "Exactly one current speaker owns mouth motion during reveal, revealed wait, same-speaker continuation, speaker transition, and final dismissal in AUTO and MANUAL." },
+    { "id": "R7-03", "testId": "S15-R7 staged form exchange", "expectedObservation": "The single form sequence pauses for review before stamp, commits approval at stamp, pauses for continuation, and returns once." },
+    { "id": "R7-04", "testId": "S15-R7 physical paper/stamp", "expectedObservation": "Exactly one accepted form overlay follows Rook/Arthur ownership and the desk stamp is hidden only while in use." },
+    { "id": "R7-05", "testId": "S15-R7 terminal power", "expectedObservation": "Terminal art is powered from frame zero while entry remains authorization-gated." },
+    { "id": "R7-06", "testId": "S15-R7 truthful receipts", "expectedObservation": "PICK_UP stays PICK_UP and form return records Arthur RETURN to Rook RECEIVE with contact, pose, owner, and mutation timing." },
+    { "id": "R7-07", "testId": "S15-R7 preservation", "expectedObservation": "Canonical unit/browser, typecheck, lint, build, output, network, secret, reference, and isolated-mutation gates pass naturally." }
+  ],
+  "mutations": [
+    { "id": "MUT-R7-01", "semanticFailure": "R7_FRAME_ZERO_BLACKOUT" },
+    { "id": "MUT-R7-02", "semanticFailure": "R7_ENTRY_BLACKOUT" },
+    { "id": "MUT-R7-03", "semanticFailure": "R7_FRAME_ZERO_WORLD_INERT" },
+    { "id": "MUT-R7-04", "semanticFailure": "R7_FULL_REVEAL_MOUTH_CONTINUES" },
+    { "id": "MUT-R7-05", "semanticFailure": "R7_SAME_SPEAKER_MOUTH_CONTINUES" },
+    { "id": "MUT-R7-06", "semanticFailure": "R7_STALE_OUTGOING_SPEAKER_CLEARED" },
+    { "id": "MUT-R7-07", "semanticFailure": "R7_REVIEW_DIALOGUE_BEFORE_STAMP" },
+    { "id": "MUT-R7-08", "semanticFailure": "R7_STAMP_CANNOT_PRECEDE_REVIEW" },
+    { "id": "MUT-R7-09", "semanticFailure": "R7_REVIEW_DIALOGUE_NO_DUPLICATE_REPLAY" },
+    { "id": "MUT-R7-10", "semanticFailure": "R7_TERMINAL_POWERED_FROM_FRAME_ZERO" },
+    { "id": "MUT-R7-11", "semanticFailure": "R7_TERMINAL_BLOCKED_BEFORE_AUTHORIZATION" },
+    { "id": "MUT-R7-12", "semanticFailure": "R7_VISIBLE_PAPER_OVERLAY_RENDERED" },
+    { "id": "MUT-R7-13", "semanticFailure": "R7_RETURN_DIRECTION_ARTHUR_TO_ROOK" },
+    { "id": "MUT-R7-14", "semanticFailure": "R7_PICKUP_RECEIPT_NOT_USE" },
+    { "id": "MUT-R7-15", "semanticFailure": "R7_DESK_STAMP_RESTORED_AFTER_USE" }
+  ]
+}

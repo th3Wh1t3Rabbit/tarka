@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "scenarioId": "EULER_2023_FALSE_EXIT",
+  "sourceFamilies": [
+    "ADDRESS_ACTIVITY",
+    "TOKEN_TRANSFERS"
+  ],
+  "rawResponseHashes": [
+    "43286c209b76e15365a1a0268aa73294998806dd845dceeac6abf54027805ce4",
+    "ad6b19d8a26226dd394bd2d14845bac2a2df9b5dce2b7c547f5ad4f10a7139e7",
+    "b35f77a345248b804ca6783974d83226f49b5bef9bb42b4ff6e15c03b6593910",
+    "ce4b2eb4a87e23b86a73dd40b4795decc68f5136c2eb463fbac58ed005ed40fe",
+    "e5f2d6701598192b560a1f179fedc7450bcf3d00588a2efcd564f80963c32e32"
+  ],
+  "normalizedObjectHashes": [
+    "0bd03b8d5f940f5d2d5c76cbc346b3d868e181f90c03865521b594bf3bcdc273",
+    "1ad68ecbfef9f7b8c66b66e552e661f2de37be9414a5fb214616a13c9412cfa5",
+    "74359334f194603a0e8fd4544b91e82faf66ac12e6db9d0f66e59afd2674c790",
+    "c868921b09f3e409c08149a7b8ae94279411c4564e7f2a6fe1df51d08293c1e5",
+    "f17aca4ceb39d4bb486a77886b986d5783d33bc4175cb96bbf8eae35909646c0"
+  ],
+  "normalizedGraphHash": "sha256:e851527dc0188db0b4b83da40968b2dfb74a23c4633ccb410b168e1aa20fadd0",
+  "compilerVersion": "2.0.0",
+  "worldVersion": "3.0.0",
+  "scenarioHash": "sha256:9626f18b64f5a705524af46709e9ee9dff529a7cd6eead0884fe7c98736c594d",
+  "worldHash": "sha256:868a7fb8d5a0e7a08c73fbcb5e4ac53795d3b4dfecd6ee25de448dd07bf96c7c",
+  "generatedAt": "2026-09-15T10:42:37.000Z"
+}

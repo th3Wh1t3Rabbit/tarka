@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "allowanceId": "G5-BYBIT-RESERVE-AUDITION",
+  "leadAuthorizationId": "LEAD-G5-BYBIT-RESERVE-AUDITION-001",
+  "approvedCandidateIds": ["G5_BYBIT_ACCOUNT_PREFLIGHT", "BYBIT_2025_DRAIN_FALLBACK"],
+  "approvedEndpoints": [
+    "/api/v1/account",
+    "/api/v1/transaction-with-token-transfer-lookup"
+  ],
+  "maximumRequests": 18,
+  "maximumProjectedCredits": 60,
+  "maximumPerEndpointCalls": {
+    "/api/v1/account": 13,
+    "/api/v1/transaction-with-token-transfer-lookup": 5
+  },
+  "validFromUtc": "2026-09-14T00:00:00Z",
+  "validUntilUtc": "2026-09-21T19:00:00Z"
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="180" viewBox="0 0 960 360">
+  <defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#111d22"/><stop offset="1" stop-color="#263138"/></linearGradient><pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0v48" fill="none" stroke="#9bc2bd" stroke-opacity=".06"/></pattern></defs>
+  <rect width="960" height="360" fill="url(#wall)"/><rect width="960" height="360" fill="url(#grid)"/>
+  <path d="M0 305H960V360H0z" fill="#111719"/><path d="M0 305L180 265H790L960 305" fill="#1b2528" stroke="#b88636" stroke-opacity=".35"/>
+  <path d="M0 24H82V90H0M10 96H174V288H10M470 76H594V298H470" fill="#172226" stroke="#c9993f" stroke-width="2"/>
+  <path d="M14 112H170M14 154H170M14 196H170M14 238H170" stroke="#71918f" stroke-opacity=".42"/>
+  <circle cx="240" cy="95" r="46" fill="#0b1113" stroke="#d0ae5b" stroke-width="3"/><path d="M240 95V66M240 95l22 13" stroke="#e7d9a1" stroke-width="3"/>
+  <path d="M448 212H612V305H448z" fill="#3a2a1b" stroke="#d1a853" stroke-width="2"/><path d="M0 328H960" stroke="#88b9b3" stroke-opacity=".25"/>
+</svg>

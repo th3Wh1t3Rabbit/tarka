@@ -1,0 +1,808 @@
+{
+  "schemaVersion": "1.0.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "interfaceIdentity": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "contentIdentity": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+  "implementationIdentity": "84a081161b8b3e147021ad497af0862eaf3d7fe80b92f79de8ebe57e7711b46b",
+  "alias": {
+    "schema_version": "1.1.0",
+    "interface": "TE-IFACE-CONTENT@1.1.0",
+    "public_name": "Arthur",
+    "public_styling": "Arthur the Archivist",
+    "semantic_id": "archivist",
+    "semantic_speaker": "ARCHIVIST",
+    "legacy": {
+      "speaker": "MR_INDEX",
+      "hotspot": "mr-index",
+      "art_manifest_key": "mrIndex",
+      "historical_display": "Mr. Index"
+    },
+    "rook_primary_nickname": "Mr. A",
+    "runtime_rename_authorized": false,
+    "integration_rule": "Resolve public display independently; preserve opaque runtime and art identifiers. Lane A changes no production identifier."
+  },
+  "dead": {
+    "verb_fallbacks": [
+      {
+        "verb": "GIVE",
+        "copy_key": "lane_a.dead.verb.give"
+      },
+      {
+        "verb": "PICK_UP",
+        "copy_key": "lane_a.dead.verb.pick_up"
+      },
+      {
+        "verb": "USE",
+        "copy_key": "lane_a.dead.verb.use"
+      },
+      {
+        "verb": "OPEN",
+        "copy_key": "lane_a.dead.verb.open"
+      },
+      {
+        "verb": "PUSH",
+        "copy_key": "lane_a.dead.verb.push"
+      },
+      {
+        "verb": "CLOSE",
+        "copy_key": "lane_a.dead.verb.close"
+      },
+      {
+        "verb": "TALK_TO",
+        "copy_key": "lane_a.dead.verb.talk_to"
+      },
+      {
+        "verb": "PULL",
+        "copy_key": "lane_a.dead.verb.pull"
+      }
+    ],
+    "looks": [
+      {
+        "target_id": "filing-drawers",
+        "copy_key": "lane_a.dead.look.filing-drawers"
+      },
+      {
+        "target_id": "historical-clock",
+        "copy_key": "lane_a.dead.look.historical-clock"
+      },
+      {
+        "target_id": "request-dispenser",
+        "copy_key": "lane_a.dead.look.request-dispenser"
+      },
+      {
+        "target_id": "pen-stand",
+        "copy_key": "lane_a.dead.look.pen-stand"
+      },
+      {
+        "target_id": "mr-index",
+        "copy_key": "lane_a.dead.look.mr-index"
+      },
+      {
+        "target_id": "pneumatic-tube",
+        "copy_key": "lane_a.dead.look.pneumatic-tube"
+      },
+      {
+        "target_id": "dispatch-plunger",
+        "copy_key": "lane_a.dead.look.dispatch-plunger"
+      },
+      {
+        "target_id": "record-canister",
+        "copy_key": "lane_a.dead.look.record-canister"
+      },
+      {
+        "target_id": "nansen-terminal",
+        "copy_key": "lane_a.dead.look.nansen-terminal"
+      },
+      {
+        "target_id": "rotunda-exit",
+        "copy_key": "lane_a.dead.look.rotunda-exit"
+      }
+    ],
+    "alternates": [
+      {
+        "selector": "PUSH:filing-drawers",
+        "copy_key": "lane_a.dead.alternate.1"
+      },
+      {
+        "selector": "PULL:historical-clock",
+        "copy_key": "lane_a.dead.alternate.2"
+      },
+      {
+        "selector": "OPEN:request-dispenser",
+        "copy_key": "lane_a.dead.alternate.3"
+      },
+      {
+        "selector": "PULL:pen-stand",
+        "copy_key": "lane_a.dead.alternate.4"
+      },
+      {
+        "selector": "PULL:mr-index",
+        "copy_key": "lane_a.dead.alternate.5"
+      },
+      {
+        "selector": "OPEN:pneumatic-tube",
+        "copy_key": "lane_a.dead.alternate.6"
+      },
+      {
+        "selector": "PULL:dispatch-plunger",
+        "copy_key": "lane_a.dead.alternate.7"
+      },
+      {
+        "selector": "CLOSE:record-canister",
+        "copy_key": "lane_a.dead.alternate.8"
+      },
+      {
+        "selector": "PUSH:nansen-terminal",
+        "copy_key": "lane_a.dead.alternate.9"
+      },
+      {
+        "selector": "OPEN:rotunda-exit",
+        "copy_key": "lane_a.dead.alternate.10"
+      }
+    ],
+    "overrides": [
+      {
+        "selector": "PUSH:filing-drawers",
+        "copy_key": "lane_a.dead.alternate.1"
+      },
+      {
+        "selector": "PULL:historical-clock",
+        "copy_key": "lane_a.dead.alternate.2"
+      },
+      {
+        "selector": "GIVE:mr-index:ANY_ITEM",
+        "copy_key": "lane_a.dead.rejected_item"
+      },
+      {
+        "selector": "TALK_TO:filing-drawers",
+        "copy_key": "lane_a.dead.drawers_reply"
+      }
+    ],
+    "zero_results": [
+      {
+        "classification": "NO_MATCH_IN_ACCEPTED_CORPUS",
+        "copy_key": "lane_a.zero.no_match_in_accepted_corpus",
+        "changes_theory": false
+      },
+      {
+        "classification": "NEGATIVE_EVIDENCE_SUPPORTED",
+        "copy_key": "lane_a.zero.negative_evidence_supported",
+        "changes_theory": true
+      },
+      {
+        "classification": "QUERY_OUTSIDE_COVERAGE",
+        "copy_key": "lane_a.zero.query_outside_coverage",
+        "changes_theory": false
+      }
+    ]
+  },
+  "entries": {
+    "lane_a.beat.records.archivist_corrects_scope": {
+      "text": "Public is not self-explanatory. A match is a lead, not a verdict.",
+      "fallback": "Public is not self-explanatory. A match is a lead, not a verdict.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.authorized_case_access": {
+      "text": "This case artifact authorizes access to the records prepared for this investigation.",
+      "fallback": "This case artifact authorizes access to the records prepared for this investigation.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.beat.records.event_was_onchain": {
+      "text": "The event happened onchain: its recorded activity is public.",
+      "fallback": "The event happened onchain: its recorded activity is public.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.learn_together": {
+      "text": "Then we read the record before we write the ending.",
+      "fallback": "Then we read the record before we write the ending.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.nansen_structures_not_solves": {
+      "text": "Nansen structures the onchain evidence. It does not solve the case or establish offchain intent.",
+      "fallback": "Nansen structures the onchain evidence. It does not solve the case or establish offchain intent.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.no_ordinary_witnesses": {
+      "text": "No ordinary witnesses. No useful camera record.",
+      "fallback": "No ordinary witnesses. No useful camera record.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.public_but_hard_to_read": {
+      "text": "The records are public. Reading a useful trail through them takes work.",
+      "fallback": "The records are public. Reading a useful trail through them takes work.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.rook_assumes_no_leads": {
+      "text": "So we have a case without a trail.",
+      "fallback": "So we have a case without a trail.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.rook_misses_implication": {
+      "text": "I heard “public.” I may have missed the useful part.",
+      "fallback": "I heard “public.” I may have missed the useful part.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.beat.records.rook_premature_confidence": {
+      "text": "Public records. Good. We can have this filed by lunch.",
+      "fallback": "Public records. Good. We can have this filed by lunch.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.dead.alternate.1": {
+      "text": "It has seniority.",
+      "fallback": "It has seniority.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.10": {
+      "text": "That route is outside the current investigation.",
+      "fallback": "That route is outside the current investigation.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.2": {
+      "text": "That feels like a conversation with facilities.",
+      "fallback": "That feels like a conversation with facilities.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.3": {
+      "text": "No player-serviceable panel. I will leave its filing intact.",
+      "fallback": "No player-serviceable panel. I will leave its filing intact.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.4": {
+      "text": "The pen stand is fixed to the counter.",
+      "fallback": "The pen stand is fixed to the counter.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.5": {
+      "text": "Arthur remains behind the counter.",
+      "fallback": "Arthur remains behind the counter.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.6": {
+      "text": "The tube does not open further.",
+      "fallback": "The tube does not open further.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.7": {
+      "text": "The dispatch control only moves forward.",
+      "fallback": "The dispatch control only moves forward.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.8": {
+      "text": "The canister does not close further.",
+      "fallback": "The canister does not close further.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.alternate.9": {
+      "text": "The terminal remains in place.",
+      "fallback": "The terminal remains in place.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.drawers_reply": {
+      "text": "It remains professionally unavailable.",
+      "fallback": "It remains professionally unavailable.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.dispatch-plunger": {
+      "text": "The plunger dispatches a sealed tube.",
+      "fallback": "The plunger dispatches a sealed tube.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.filing-drawers": {
+      "text": "Filed records. Nothing here supplies an exact link for this case.",
+      "fallback": "Filed records. Nothing here supplies an exact link for this case.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.historical-clock": {
+      "text": "A historical clock. The accepted record, not this prop, establishes event time.",
+      "fallback": "A historical clock. The accepted record, not this prop, establishes event time.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.mr-index": {
+      "text": "Arthur the Archivist. Meticulous, helpful, and stationed behind the counter.",
+      "fallback": "Arthur the Archivist. Meticulous, helpful, and stationed behind the counter.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.nansen-terminal": {
+      "text": "A frozen Nansen case terminal. Before access is earned, it needs the First Breach strip.",
+      "fallback": "A frozen Nansen case terminal. Before access is earned, it needs the First Breach strip.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.pen-stand": {
+      "text": "A pen for completing record requests.",
+      "fallback": "A pen for completing record requests.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.pneumatic-tube": {
+      "text": "The tube carries approved requests.",
+      "fallback": "The tube carries approved requests.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.record-canister": {
+      "text": "The receiving canister holds returned records.",
+      "fallback": "The receiving canister holds returned records.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.request-dispenser": {
+      "text": "Blank requests come from this dispenser.",
+      "fallback": "Blank requests come from this dispenser.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.look.rotunda-exit": {
+      "text": "The Breach Rotunda exit. This case remains inside the Records Office.",
+      "fallback": "The Breach Rotunda exit. This case remains inside the Records Office.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.rejected_item": {
+      "text": "This is not the completed request Arthur needs for approval.",
+      "fallback": "This is not the completed request Arthur needs for approval.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.close": {
+      "text": "It does not close further.",
+      "fallback": "It does not close further.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.give": {
+      "text": "That item is not accepted here.",
+      "fallback": "That item is not accepted here.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.open": {
+      "text": "It does not open.",
+      "fallback": "It does not open.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.pick_up": {
+      "text": "It is fixed in place.",
+      "fallback": "It is fixed in place.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.pull": {
+      "text": "It does not move.",
+      "fallback": "It does not move.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.push": {
+      "text": "It does not move.",
+      "fallback": "It does not move.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.talk_to": {
+      "text": "There is no reply.",
+      "fallback": "There is no reply.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.dead.verb.use": {
+      "text": "Those objects do not interact.",
+      "fallback": "Those objects do not interact.",
+      "requires": [],
+      "lineClass": "DEAD_END",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.hint.unavailable": {
+      "text": "Inspect an available object or discovered record. Ask what it supports before drawing a conclusion.",
+      "fallback": "Inspect an available object or discovered record. Ask what it supports before drawing a conclusion.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.hotspot.mr-index.aria": {
+      "text": "Arthur, Records Office archivist",
+      "fallback": "Arthur, Records Office archivist",
+      "requires": [],
+      "lineClass": "SYSTEM",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.ledger.atlas": {
+      "text": "Call Atlas maps known source lineage to evidence consumers. One source can produce several views of an event.",
+      "fallback": "Call Atlas maps known source lineage to evidence consumers. One source can produce several views of an event.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.opening.1": {
+      "text": "Where am I—and why do I taste envelope glue?",
+      "fallback": "Where am I—and why do I taste envelope glue?",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.2": {
+      "text": "Records Office. You were misfiled.",
+      "fallback": "Records Office. You were misfiled.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.3": {
+      "text": "That explains the postage. Not the room.",
+      "fallback": "That explains the postage. Not the room.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.4": {
+      "text": "A trail stopped where it shouldn't have.\nYour name was attached to the request.",
+      "fallback": "A trail stopped where it shouldn't have.\nYour name was attached to the request.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.5": {
+      "text": "By whom?",
+      "fallback": "By whom?",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.6": {
+      "text": "Unsigned.",
+      "fallback": "Unsigned.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.7": {
+      "text": "Of course it was.",
+      "fallback": "Of course it was.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.opening.8": {
+      "text": "Find the First Breach record.\nThen we can discuss your return postage.",
+      "fallback": "Find the First Breach record.\nThen we can discuss your return postage.",
+      "requires": [],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.close-tube.1": {
+      "text": "Sealed.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.REQUEST_IN_TUBE"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.complete-request.1": {
+      "text": "First Breach record requested.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.TICKET_PULLED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.dispatch-request.1": {
+      "text": "Request dispatched. A returned canister is in the receiving cradle.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.TUBE_CLOSED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.load-tube.1": {
+      "text": "The stamped request is inside the tube.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.REQUEST_STAMPED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.open-canister.1": {
+      "text": "A locator strip. Something I can actually use.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.DISPATCHED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.pull-ticket.1": {
+      "text": "A blank request. The office prefers its questions in writing.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.START"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.read-record.1": {
+      "text": "First record secured. Now the questions can be specific.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.TERMINAL_UNLOCKED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.reread-record.1": {
+      "text": "The First Breach record is already archived. I can read it again.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.COMPLETE"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.stamp-request.1": {
+      "text": "Completed request.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.stamp-request.2": {
+      "text": "Approved. The stamp goes before the tube.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.REQUEST_COMPLETED"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.take-strip.1": {
+      "text": "First Breach strip secured.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.CANISTER_OPEN"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.puzzle.unlock-terminal.1": {
+      "text": "The case artifact is recognized. The frozen record is ready to inspect.",
+      "fallback": "Inspect the request, tube and returned record to see the current office step.",
+      "requires": [
+        "PHASE.STRIP_TAKEN"
+      ],
+      "lineClass": "CORE",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.recovery.invalid_save": {
+      "text": "Local save could not be restored. No clue or proof was inferred.",
+      "fallback": "Local save could not be restored. No clue or proof was inferred.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.recovery.query_changed": {
+      "text": "Query changed. Review all active filters in the Query Receipt.",
+      "fallback": "Query changed. Review all active filters in the Query Receipt.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.recovery.redo": {
+      "text": "Query redone. Review its active filters before dispatch.",
+      "fallback": "Query redone. Review its active filters before dispatch.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.recovery.reentry": {
+      "text": "Return to the available case state. Inspect the staged query before continuing.",
+      "fallback": "Return to the available case state. Inspect the staged query before continuing.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.recovery.save_query": {
+      "text": "Local query saved. It is not a new provider call.",
+      "fallback": "Local query saved. It is not a new provider call.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.recovery.undo": {
+      "text": "Query undone. Discovered evidence is unchanged.",
+      "fallback": "Query undone. Discovered evidence is unchanged.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "METHOD_ONLY",
+      "optional": false
+    },
+    "lane_a.topic.record.1": {
+      "text": "I need the First Breach record.",
+      "fallback": "I need the First Breach record.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.topic.record.2": {
+      "text": "A completed request needs approval. Put the stamped request in the tube; close it before dispatch.",
+      "fallback": "A completed request needs approval. Put the stamped request in the tube; close it before dispatch.",
+      "requires": [],
+      "lineClass": "METHOD",
+      "claimClass": "FICTIONAL_FRAMING",
+      "optional": false
+    },
+    "lane_a.zero.negative_evidence_supported": {
+      "text": "The accepted complete scope supports negative evidence only for the question and coverage cell shown. This is not chain-wide absence.",
+      "fallback": "Inspect the result classification and accepted coverage. No absence is established by missing information.",
+      "requires": [
+        "RESULT_CLASSIFIED",
+        "NEGATIVE_SCOPE_ACCEPTED"
+      ],
+      "lineClass": "DEAD_END",
+      "claimClass": "SCOPED_NEGATIVE",
+      "optional": false
+    },
+    "lane_a.zero.no_match_in_accepted_corpus": {
+      "text": "No matching record in the accepted corpus. This is not proof that no event occurred. Inspect the filters or ask a different bounded question.",
+      "fallback": "Inspect the result classification and accepted coverage. No absence is established by missing information.",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "lineClass": "DEAD_END",
+      "claimClass": "BOUNDARY_ONLY",
+      "optional": false
+    },
+    "lane_a.zero.query_outside_coverage": {
+      "text": "This question is outside accepted coverage. No historical absence may be inferred. Inspect coverage before changing the question.",
+      "fallback": "Inspect the result classification and accepted coverage. No absence is established by missing information.",
+      "requires": [
+        "RESULT_CLASSIFIED"
+      ],
+      "lineClass": "DEAD_END",
+      "claimClass": "BOUNDARY_ONLY",
+      "optional": false
+    }
+  },
+  "optionalIncluded": false,
+  "exactLiteralIncluded": false,
+  "authoringEntries": 409,
+  "compiledEntries": 74
+}

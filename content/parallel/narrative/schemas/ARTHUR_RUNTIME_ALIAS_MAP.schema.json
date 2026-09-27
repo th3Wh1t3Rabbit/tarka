@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lane A ARTHUR_RUNTIME_ALIAS_MAP.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "interface",
+    "public_name",
+    "public_styling",
+    "semantic_id",
+    "semantic_speaker",
+    "legacy",
+    "rook_primary_nickname",
+    "runtime_rename_authorized",
+    "integration_rule"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.1.0"
+    },
+    "interface": {
+      "const": "TE-IFACE-CONTENT@1.1.0"
+    },
+    "public_name": {
+      "const": "Arthur"
+    },
+    "public_styling": {
+      "const": "Arthur the Archivist"
+    },
+    "semantic_id": {
+      "const": "archivist"
+    },
+    "semantic_speaker": {
+      "const": "ARCHIVIST"
+    },
+    "legacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "speaker",
+        "hotspot",
+        "art_manifest_key",
+        "historical_display"
+      ],
+      "properties": {
+        "speaker": {
+          "const": "MR_INDEX"
+        },
+        "hotspot": {
+          "const": "mr-index"
+        },
+        "art_manifest_key": {
+          "const": "mrIndex"
+        },
+        "historical_display": {
+          "const": "Mr. Index"
+        }
+      }
+    },
+    "rook_primary_nickname": {
+      "const": "Mr. A"
+    },
+    "runtime_rename_authorized": {
+      "const": false
+    },
+    "integration_rule": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

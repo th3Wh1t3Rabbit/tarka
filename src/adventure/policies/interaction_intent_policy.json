@@ -1,0 +1,27 @@
+{
+  "schema": "TRACE_ESCAPE_INTERACTION_INTENT_POLICY",
+  "version": "1.0.0",
+  "model": "SINGLE_ACTIVE_UNCOMMITTED_INTENT",
+  "queue": false,
+  "owner": "walk.pendingInteraction",
+  "commitBoundary": "before reach/contact/active sequence: replaceable; after the action sequence commits: policy-controlled blocking",
+  "replacementAnnouncement": {
+    "copyKey": "TODO.STORY.INTENT_REPLACED",
+    "text": "Prior action replaced. [PLACEHOLDER — Story binds final copy]",
+    "completed": false
+  },
+  "proximityVerbs": ["OPEN", "USE", "PULL", "PICK_UP", "GIVE", "CLOSE", "PUSH"],
+  "remoteVerbs": ["LOOK_AT", "TALK_TO"],
+  "proximityTargets": [
+    "official-case-file-cabinet",
+    "miscellaneous-drawer-cabinet",
+    "disorderly-stack-of-confidential-files",
+    "miscellaneous-catch-all-contents",
+    "pen-stand",
+    "request-dispenser",
+    "nansen-terminal",
+    "mr-index"
+  ],
+  "inventoryItemRules": "No declared interaction point. Toolbox, piggy, and note actions commit in place and do not join the walk intent.",
+  "reload": "Uncommitted intent is not persisted and cannot resurrect."
+}

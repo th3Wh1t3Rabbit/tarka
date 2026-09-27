@@ -1,0 +1,3023 @@
+{
+  "schema_version": "1.2.0",
+  "interface": "TE-IFACE-CONTENT@1.2.0",
+  "status": "CANDIDATE_PENDING_MAIN_REVIEW",
+  "accepted_base": {
+    "commit": "f56e806e80b100245d7b5c4686786b477f2f98d8",
+    "tree": "616f54cca2d30a54148d3f442840f8ff3694b48b",
+    "accepted_archive_sha256": "ee19252a736ae96b213b9c878cb2e0c0b4bee7e9e1340ad9097b71a6e8c2cc63",
+    "interface": "TE-IFACE-CONTENT@1.1.0",
+    "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+    "entries": 409,
+    "content_sha256": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+    "implementation_sha256": "84a081161b8b3e147021ad497af0862eaf3d7fe80b92f79de8ebe57e7711b46b"
+  },
+  "design_authority": {
+    "filename": "TRACE_ESCAPE_S7_R2_LEAD_AUTHORED_PUZZLE_DIALOGUE_INTERACTION_DESIGN_v1.0.0_2026-09-18.md",
+    "sha256": "68444ef048c887f2847276d309bdeffd70fb511989efabba390222080660d9d5"
+  },
+  "runtime_sha256": "a6beea06b5e97a8292640c3f1ccbe198634036c828e65af71050e26e648c64af",
+  "objective_key": "lane_a.s7r2b.objective.opening",
+  "sequences": {
+    "opening": [
+      "lane_a.s7r2b.opening.1",
+      "lane_a.s7r2b.opening.2",
+      "lane_a.s7r2b.opening.3",
+      "lane_a.s7r2b.opening.4",
+      "lane_a.s7r2b.opening.5",
+      "lane_a.s7r2b.opening.6",
+      "lane_a.s7r2b.opening.7",
+      "lane_a.s7r2b.opening.8",
+      "lane_a.s7r2b.opening.9"
+    ],
+    "wrong_theory": [
+      "lane_a.s7r2b.wrong_theory.1",
+      "lane_a.s7r2b.wrong_theory.2",
+      "lane_a.s7r2b.wrong_theory.3",
+      "lane_a.s7r2b.wrong_theory.4",
+      "lane_a.s7r2b.wrong_theory.5"
+    ],
+    "exact_correction": [
+      "lane_a.s7r2b.exact_correction.1",
+      "lane_a.s7r2b.exact_correction.2",
+      "lane_a.s7r2b.exact_correction.3",
+      "lane_a.s7r2b.exact_correction.4",
+      "lane_a.s7r2b.exact_correction.5",
+      "lane_a.s7r2b.exact_correction.6"
+    ],
+    "return": [
+      "lane_a.s7r2b.return.1",
+      "lane_a.s7r2b.return.2",
+      "lane_a.s7r2b.return.3",
+      "lane_a.s7r2b.return.4"
+    ],
+    "return_tag": [
+      "lane_a.s7r2b.return_tag.1",
+      "lane_a.s7r2b.return_tag.2",
+      "lane_a.s7r2b.return_tag.3",
+      "lane_a.s7r2b.return_tag.4"
+    ]
+  },
+  "menus": [
+    {
+      "id": "PRE_STAMP",
+      "context": "OFFICE.BEFORE_STAMP",
+      "topics": [
+        {
+          "id": "WHERE_AM_I",
+          "label_key": "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "MISFILED",
+          "label_key": "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "REQUEST",
+          "label_key": "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "MR_A",
+          "label_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.1",
+            "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.2",
+            "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.3"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "EXIT",
+          "label_key": "lane_a.s7r2b.menu.PRE_STAMP.EXIT.label",
+          "reply_keys": [],
+          "completion": "PERSISTENT",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": "MENU.ARTHUR.EXIT"
+        }
+      ]
+    },
+    {
+      "id": "POST_ACCESS",
+      "context": "TERMINAL.ACCESS_EARNED",
+      "topics": [
+        {
+          "id": "LOOKING_AT",
+          "label_key": "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "PUBLIC_SOLVED",
+          "label_key": "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "LENSES",
+          "label_key": "lane_a.s7r2b.menu.POST_ACCESS.LENSES.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.POST_ACCESS.LENSES.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "EXACT_RECEIPT",
+          "label_key": "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.label",
+          "reply_keys": [
+            "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.reply.1"
+          ],
+          "completion": "REMOVE_AFTER_USE",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": null
+        },
+        {
+          "id": "GUIDANCE",
+          "label_key": "lane_a.s7r2b.menu.POST_ACCESS.GUIDANCE.label",
+          "reply_keys": [],
+          "completion": "PERSISTENT",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": "HINT.CURRENT_MILESTONE"
+        },
+        {
+          "id": "EXIT",
+          "label_key": "lane_a.s7r2b.menu.POST_ACCESS.EXIT.label",
+          "reply_keys": [],
+          "completion": "PERSISTENT",
+          "focus_after_completion": "NEXT_AVAILABLE_TOPIC",
+          "semantic_action": "MENU.ARTHUR.EXIT"
+        }
+      ]
+    }
+  ],
+  "menu_exit_representation": {
+    "semantic_action": "MENU.ARTHUR.EXIT",
+    "availability": "ALWAYS",
+    "visible_labels_by_context": {
+      "GENERAL": "lane_a.s7r2b.menu.exit.general",
+      "PRE_STAMP": "lane_a.s7r2b.menu.PRE_STAMP.EXIT.label",
+      "POST_ACCESS": "lane_a.s7r2b.menu.POST_ACCESS.EXIT.label"
+    },
+    "interpretation": "One persistent exit action is always available; its exact Lead-authored visible label varies by declared menu context. No string is merged, hidden, or paraphrased."
+  },
+  "inventory": [
+    {
+      "internal_id": "blank-request",
+      "display_name_key": "lane_a.s7r2b.inventory.blank-request.name",
+      "description_key": "lane_a.s7r2b.inventory.blank-request.description",
+      "guidance_key": "lane_a.s7r2b.inventory.blank-request.guidance",
+      "discardable": false,
+      "display_alias_only": false
+    },
+    {
+      "internal_id": "completed-request",
+      "display_name_key": "lane_a.s7r2b.inventory.completed-request.name",
+      "description_key": "lane_a.s7r2b.inventory.completed-request.description",
+      "guidance_key": "lane_a.s7r2b.inventory.completed-request.guidance",
+      "discardable": false,
+      "display_alias_only": false
+    },
+    {
+      "internal_id": "stamped-request",
+      "display_name_key": "lane_a.s7r2b.inventory.stamped-request.name",
+      "description_key": "lane_a.s7r2b.inventory.stamped-request.description",
+      "guidance_key": "lane_a.s7r2b.inventory.stamped-request.guidance",
+      "discardable": false,
+      "display_alias_only": false
+    },
+    {
+      "internal_id": "first-breach-strip",
+      "display_name_key": "lane_a.s7r2b.inventory.first-breach-strip.name",
+      "description_key": "lane_a.s7r2b.inventory.first-breach-strip.description",
+      "guidance_key": "lane_a.s7r2b.inventory.first-breach-strip.guidance",
+      "discardable": false,
+      "display_alias_only": true
+    }
+  ],
+  "hints": [
+    {
+      "milestone": "OFFICE.START",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.start.method_hint",
+        "CASE": "lane_a.hint.puzzle.start.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.start.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.TICKET_PULLED",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.ticket_pulled.method_hint",
+        "CASE": "lane_a.hint.puzzle.ticket_pulled.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.ticket_pulled.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.REQUEST_COMPLETED",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.request_completed.method_hint",
+        "CASE": "lane_a.hint.puzzle.request_completed.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.request_completed.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.REQUEST_STAMPED",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.request_stamped.method_hint",
+        "CASE": "lane_a.hint.puzzle.request_stamped.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.request_stamped.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.REQUEST_IN_TUBE",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.request_in_tube.method_hint",
+        "CASE": "lane_a.hint.puzzle.request_in_tube.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.request_in_tube.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.TUBE_CLOSED",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.tube_closed.method_hint",
+        "CASE": "lane_a.hint.puzzle.tube_closed.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.tube_closed.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.DISPATCHED",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.dispatched.method_hint",
+        "CASE": "lane_a.hint.puzzle.dispatched.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.dispatched.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.CANISTER_OPEN",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.canister_open.method_hint",
+        "CASE": "lane_a.hint.puzzle.canister_open.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.canister_open.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.STRIP_TAKEN",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.strip_taken.method_hint",
+        "CASE": "lane_a.hint.puzzle.strip_taken.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.strip_taken.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.TERMINAL_UNLOCKED",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.terminal_unlocked.method_hint",
+        "CASE": "lane_a.hint.puzzle.terminal_unlocked.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.terminal_unlocked.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "OFFICE.COMPLETE",
+      "tiers": {
+        "METHOD": "lane_a.hint.puzzle.complete.method_hint",
+        "CASE": "lane_a.hint.puzzle.complete.case_hint",
+        "DIRECT": "lane_a.hint.puzzle.complete.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.ACCESS_EARNED",
+      "tiers": {
+        "METHOD": "lane_a.hint.investigation.method_hint",
+        "CASE": "lane_a.hint.investigation.case_hint",
+        "DIRECT": "lane_a.hint.investigation.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.BROAD_SEA_SEEN",
+      "tiers": {
+        "METHOD": "lane_a.hint.investigation.method_hint",
+        "CASE": "lane_a.hint.investigation.case_hint",
+        "DIRECT": "lane_a.hint.investigation.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.CANDIDATES_AVAILABLE",
+      "tiers": {
+        "METHOD": "lane_a.hint.selected_candidate.method_hint",
+        "CASE": "lane_a.hint.selected_candidate.case_hint",
+        "DIRECT": "lane_a.hint.selected_candidate.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.COMPARISON_AVAILABLE",
+      "tiers": {
+        "METHOD": "lane_a.hint.selected_candidate.method_hint",
+        "CASE": "lane_a.hint.selected_candidate.case_hint",
+        "DIRECT": "lane_a.hint.selected_candidate.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.WORKING_THEORY_SELECTED",
+      "tiers": {
+        "METHOD": "lane_a.hint.selected_candidate.method_hint",
+        "CASE": "lane_a.hint.selected_candidate.case_hint",
+        "DIRECT": "lane_a.hint.selected_candidate.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.THEORY_REJECTED",
+      "tiers": {
+        "METHOD": "lane_a.hint.selected_candidate.method_hint",
+        "CASE": "lane_a.hint.selected_candidate.case_hint",
+        "DIRECT": "lane_a.hint.selected_candidate.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.EXACT_CONVERGENCE_VERIFIED",
+      "tiers": {
+        "METHOD": "lane_a.hint.exact_found.method_hint",
+        "CASE": "lane_a.hint.exact_found.case_hint",
+        "DIRECT": "lane_a.hint.exact_found.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    },
+    {
+      "milestone": "TERMINAL.PROOF_COMPLETE",
+      "tiers": {
+        "METHOD": "lane_a.hint.exact_found.method_hint",
+        "CASE": "lane_a.hint.exact_found.case_hint",
+        "DIRECT": "lane_a.hint.exact_found.direct_hint"
+      },
+      "copy_source": "ACCEPTED_V1_1_REUSED",
+      "no_undiscovered_value": true
+    }
+  ],
+  "runtime_map_groups": {
+    "theory_choices": {
+      "trigger": "TERMINAL.COMPARISON_AVAILABLE",
+      "members": [
+        "lane_a.s7r2b.theory.wrong",
+        "lane_a.s7r2b.theory.correct",
+        "lane_a.s7r2b.theory.defer"
+      ]
+    },
+    "initial_foreground_cards": {
+      "trigger": "TERMINAL.BROAD_SEA_SEEN",
+      "members": [
+        "lane_a.s7r2b.question.what_left",
+        "lane_a.s7r2b.question.incident_dai",
+        "lane_a.s7r2b.question.interactions"
+      ]
+    },
+    "post_result_cards": {
+      "trigger": "TERMINAL.FIRST_USEFUL_RESULT",
+      "members": [
+        "lane_a.s7r2b.question.amount",
+        "lane_a.s7r2b.question.compare",
+        "lane_a.card.state_change.question"
+      ]
+    },
+    "guided_exact_link_card": {
+      "trigger": "TERMINAL.GUIDED_EXACT_LINK_AVAILABLE",
+      "prerequisites": [
+        "SLOT.AMOUNT_FILED",
+        "SLOT.RECEIVER_FILED",
+        "EXACT_MAIN_RECEIVER_DISCOVERED"
+      ],
+      "members": [
+        "lane_a.s7r2b.question.exact_link"
+      ]
+    }
+  },
+  "cross_version_semantic_ownership": [
+    {
+      "id": "THEORY.WRONG.SUPERSEDES_V1_1",
+      "candidate_source_item": "source.lane_a.s7r2b.theory.wrong",
+      "candidate_key": "lane_a.s7r2b.theory.wrong",
+      "candidate_semantic_selector": "theory.FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+      "accepted_key": "lane_a.theory.wrong",
+      "accepted_surface": "theory.FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+      "relationship": "SUPERSEDES",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+      "rationale": "The Lead-authored punctuated v1.2 theory choice is the selected owner for this exact theory surface; the byte-identical v1.1 key remains preserved but is not selected on that surface."
+    },
+    {
+      "id": "THEORY.CORRECT.SUPERSEDES_V1_1",
+      "candidate_source_item": "source.lane_a.s7r2b.theory.correct",
+      "candidate_key": "lane_a.s7r2b.theory.correct",
+      "candidate_semantic_selector": "theory.FIRST_TRAIL_JOINS_SECOND_ROUTE",
+      "accepted_key": "lane_a.theory.accepted",
+      "accepted_surface": "theory.FIRST_TRAIL_JOINS_SECOND_ROUTE",
+      "relationship": "SUPERSEDES",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+      "rationale": "The Lead-authored punctuated v1.2 theory choice is the selected owner for this exact theory surface; the byte-identical v1.1 key remains preserved but is not selected on that surface."
+    },
+    {
+      "id": "THEORY.DEFER.DISTINCT_V1_2",
+      "candidate_source_item": "source.lane_a.s7r2b.theory.defer",
+      "candidate_key": "lane_a.s7r2b.theory.defer",
+      "candidate_semantic_selector": "S7R2B.THEORY.DEFER_EXACT_RECEIPT",
+      "accepted_key": null,
+      "accepted_surface": null,
+      "relationship": "DISTINCT",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "NOT_APPLICABLE_NO_V1_1_SURFACE",
+      "rationale": "The defer-until-exact-receipt choice is a new v1.2 theory action and has no accepted v1.1 semantic surface."
+    },
+    {
+      "id": "QUESTION.WHAT_LEFT.SUPERSEDES_V1_1",
+      "candidate_source_item": "source.lane_a.s7r2b.question.what_left",
+      "candidate_key": "lane_a.s7r2b.question.what_left",
+      "candidate_semantic_selector": "CARD.WHAT_LEFT.question",
+      "accepted_key": "lane_a.card.what_left.question",
+      "accepted_surface": "CARD.WHAT_LEFT.question",
+      "relationship": "SUPERSEDES",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+      "rationale": "The First Engine-specific Lead label is selected for the v1.2 What Left foreground card; the generic accepted label remains preserved but inactive on this surface."
+    },
+    {
+      "id": "QUESTION.INCIDENT_DAI.DISTINCT_FROM_INCIDENT",
+      "candidate_source_item": "source.lane_a.s7r2b.question.incident_dai",
+      "candidate_key": "lane_a.s7r2b.question.incident_dai",
+      "candidate_semantic_selector": "S7R2B.CARD.INCIDENT_DAI.question",
+      "accepted_key": "lane_a.card.incident.question",
+      "accepted_surface": "CARD.INCIDENT.question",
+      "relationship": "DISTINCT",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+      "rationale": "The v1.2 selector combines a bounded incident window with DAI movement; the accepted generic incident question remains active only on its separate legacy surface."
+    },
+    {
+      "id": "QUESTION.INCIDENT_DAI.DISTINCT_FROM_ASSET_OUT",
+      "candidate_source_item": "source.lane_a.s7r2b.question.incident_dai",
+      "candidate_key": "lane_a.s7r2b.question.incident_dai",
+      "candidate_semantic_selector": "S7R2B.CARD.INCIDENT_DAI.question",
+      "accepted_key": "lane_a.card.asset_out.question",
+      "accepted_surface": "CARD.ASSET_OUT.question",
+      "relationship": "DISTINCT",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+      "rationale": "The v1.2 selector combines asset identity with an incident window; the accepted generic asset-out question remains active only on its separate legacy surface."
+    },
+    {
+      "id": "QUESTION.INTERACTIONS.SUPERSEDES_V1_1",
+      "candidate_source_item": "source.lane_a.s7r2b.question.interactions",
+      "candidate_key": "lane_a.s7r2b.question.interactions",
+      "candidate_semantic_selector": "CARD.INTERACTIONS.question",
+      "accepted_key": "lane_a.card.interactions.question",
+      "accepted_surface": "CARD.INTERACTIONS.question",
+      "relationship": "SUPERSEDES",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+      "rationale": "The First Engine-specific Lead label is selected for the v1.2 Interactions foreground card; the accepted generic label remains preserved but inactive on this surface."
+    },
+    {
+      "id": "QUESTION.AMOUNT.DISTINCT_FROM_HIGH_VALUE",
+      "candidate_source_item": "source.lane_a.s7r2b.question.amount",
+      "candidate_key": "lane_a.s7r2b.question.amount",
+      "candidate_semantic_selector": "S7R2B.CARD.RECORDED_AMOUNT.question",
+      "accepted_key": "lane_a.card.high_value.question",
+      "accepted_surface": "CARD.HIGH_VALUE.question",
+      "relationship": "DISTINCT",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+      "rationale": "Matching a discovered recorded amount is not the accepted generic high-value threshold question; both remain active on separate selectors."
+    },
+    {
+      "id": "QUESTION.COMPARE.SUPERSEDES_V1_1",
+      "candidate_source_item": "source.lane_a.s7r2b.question.compare",
+      "candidate_key": "lane_a.s7r2b.question.compare",
+      "candidate_semantic_selector": "CARD.COMPARE_ROUTES.question",
+      "accepted_key": "lane_a.card.compare_routes.question",
+      "accepted_surface": "CARD.COMPARE_ROUTES.question",
+      "relationship": "SUPERSEDES",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+      "rationale": "The Lead-authored strongest-routes label is selected for the v1.2 comparison card; the accepted generic label remains preserved but inactive on this surface."
+    },
+    {
+      "id": "QUESTION.STATE.REUSES_V1_1",
+      "candidate_source_item": "source.accepted.CARD.STATE_CHANGE.question",
+      "candidate_key": null,
+      "candidate_semantic_selector": "CARD.STATE_CHANGE.question",
+      "accepted_key": "lane_a.card.state_change.question",
+      "accepted_surface": "CARD.STATE_CHANGE.question",
+      "relationship": "REUSED",
+      "candidate_selection_state": "NOT_APPLICABLE_REUSED_ACCEPTED_KEY",
+      "accepted_selection_state": "ACTIVE_REUSED_V1_1_OWNER",
+      "rationale": "The Lead wording exactly matches the accepted v1.1 key, so the accepted key remains the sole active owner and no redundant v1.2 key exists."
+    },
+    {
+      "id": "QUESTION.EXACT_LINK.DISTINCT_FROM_EXACT_RECEIPT",
+      "candidate_source_item": "source.lane_a.s7r2b.question.exact_link",
+      "candidate_key": "lane_a.s7r2b.question.exact_link",
+      "candidate_semantic_selector": "S7R2B.CARD.GUIDED_EXACT_LINK.question",
+      "accepted_key": "lane_a.card.exact_receipt.question",
+      "accepted_surface": "CARD.EXACT_RECEIPT.question",
+      "relationship": "DISTINCT",
+      "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+      "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+      "rationale": "The guided v1.2 question binds filed amount, receiver and case window after discovery; the accepted generic exact-receipt card remains active on its separate legacy selector."
+    }
+  ],
+  "active_runtime_map": {
+    "interface": "TE-IFACE-CONTENT@1.2.0",
+    "semantic_owner_policy": "ONE_ACTIVE_OWNER_PER_SURFACE",
+    "sequences": {
+      "opening": {
+        "active_keys": [
+          "lane_a.s7r2b.opening.1",
+          "lane_a.s7r2b.opening.2",
+          "lane_a.s7r2b.opening.3",
+          "lane_a.s7r2b.opening.4",
+          "lane_a.s7r2b.opening.5",
+          "lane_a.s7r2b.opening.6",
+          "lane_a.s7r2b.opening.7",
+          "lane_a.s7r2b.opening.8",
+          "lane_a.s7r2b.opening.9"
+        ],
+        "legacy_v1_1_keys": [
+          "lane_a.opening.1",
+          "lane_a.opening.2",
+          "lane_a.opening.3",
+          "lane_a.opening.4",
+          "lane_a.opening.5",
+          "lane_a.opening.6",
+          "lane_a.opening.7",
+          "lane_a.opening.8"
+        ],
+        "legacy_selection_state": "PRESERVED_INACTIVE_SUPERSEDED"
+      },
+      "wrong_theory": {
+        "active_keys": [
+          "lane_a.s7r2b.wrong_theory.1",
+          "lane_a.s7r2b.wrong_theory.2",
+          "lane_a.s7r2b.wrong_theory.3",
+          "lane_a.s7r2b.wrong_theory.4",
+          "lane_a.s7r2b.wrong_theory.5"
+        ],
+        "legacy_v1_1_keys": [],
+        "legacy_selection_state": "NOT_APPLICABLE"
+      },
+      "exact_correction": {
+        "active_keys": [
+          "lane_a.s7r2b.exact_correction.1",
+          "lane_a.s7r2b.exact_correction.2",
+          "lane_a.s7r2b.exact_correction.3",
+          "lane_a.s7r2b.exact_correction.4",
+          "lane_a.s7r2b.exact_correction.5",
+          "lane_a.s7r2b.exact_correction.6"
+        ],
+        "legacy_v1_1_keys": [],
+        "legacy_selection_state": "NOT_APPLICABLE"
+      },
+      "return": {
+        "active_keys": [
+          "lane_a.s7r2b.return.1",
+          "lane_a.s7r2b.return.2",
+          "lane_a.s7r2b.return.3",
+          "lane_a.s7r2b.return.4"
+        ],
+        "legacy_v1_1_keys": [],
+        "legacy_selection_state": "NOT_APPLICABLE"
+      },
+      "return_tag": {
+        "active_keys": [
+          "lane_a.s7r2b.return_tag.1",
+          "lane_a.s7r2b.return_tag.2",
+          "lane_a.s7r2b.return_tag.3",
+          "lane_a.s7r2b.return_tag.4"
+        ],
+        "legacy_v1_1_keys": [],
+        "legacy_selection_state": "NOT_APPLICABLE"
+      }
+    },
+    "menus": [
+      {
+        "id": "PRE_STAMP",
+        "active_topic_keys": [
+          "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.label",
+          "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.reply.1",
+          "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.label",
+          "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.reply.1",
+          "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.label",
+          "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.reply.1",
+          "lane_a.s7r2b.menu.PRE_STAMP.MR_A.label",
+          "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.1",
+          "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.2",
+          "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.3",
+          "lane_a.s7r2b.menu.PRE_STAMP.EXIT.label"
+        ],
+        "exit_action": "MENU.ARTHUR.EXIT"
+      },
+      {
+        "id": "POST_ACCESS",
+        "active_topic_keys": [
+          "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.label",
+          "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.reply.1",
+          "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.label",
+          "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.reply.1",
+          "lane_a.s7r2b.menu.POST_ACCESS.LENSES.label",
+          "lane_a.s7r2b.menu.POST_ACCESS.LENSES.reply.1",
+          "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.label",
+          "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.reply.1",
+          "lane_a.s7r2b.menu.POST_ACCESS.GUIDANCE.label",
+          "lane_a.s7r2b.menu.POST_ACCESS.EXIT.label"
+        ],
+        "exit_action": "MENU.ARTHUR.EXIT"
+      }
+    ],
+    "comparison_columns": [
+      "lane_a.s7r2b.comparison.column.1",
+      "lane_a.s7r2b.comparison.column.2",
+      "lane_a.s7r2b.comparison.column.3",
+      "lane_a.s7r2b.comparison.column.4",
+      "lane_a.s7r2b.comparison.column.5",
+      "lane_a.s7r2b.comparison.column.6",
+      "lane_a.s7r2b.comparison.column.7",
+      "lane_a.s7r2b.comparison.column.8"
+    ],
+    "runtime_map_groups": {
+      "theory_choices": {
+        "trigger": "TERMINAL.COMPARISON_AVAILABLE",
+        "members": [
+          "lane_a.s7r2b.theory.wrong",
+          "lane_a.s7r2b.theory.correct",
+          "lane_a.s7r2b.theory.defer"
+        ]
+      },
+      "initial_foreground_cards": {
+        "trigger": "TERMINAL.BROAD_SEA_SEEN",
+        "members": [
+          "lane_a.s7r2b.question.what_left",
+          "lane_a.s7r2b.question.incident_dai",
+          "lane_a.s7r2b.question.interactions"
+        ]
+      },
+      "post_result_cards": {
+        "trigger": "TERMINAL.FIRST_USEFUL_RESULT",
+        "members": [
+          "lane_a.s7r2b.question.amount",
+          "lane_a.s7r2b.question.compare",
+          "lane_a.card.state_change.question"
+        ]
+      },
+      "guided_exact_link_card": {
+        "trigger": "TERMINAL.GUIDED_EXACT_LINK_AVAILABLE",
+        "prerequisites": [
+          "SLOT.AMOUNT_FILED",
+          "SLOT.RECEIVER_FILED",
+          "EXACT_MAIN_RECEIVER_DISCOVERED"
+        ],
+        "members": [
+          "lane_a.s7r2b.question.exact_link"
+        ]
+      }
+    },
+    "cross_version_semantic_ownership": [
+      {
+        "id": "THEORY.WRONG.SUPERSEDES_V1_1",
+        "candidate_source_item": "source.lane_a.s7r2b.theory.wrong",
+        "candidate_key": "lane_a.s7r2b.theory.wrong",
+        "candidate_semantic_selector": "theory.FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+        "accepted_key": "lane_a.theory.wrong",
+        "accepted_surface": "theory.FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+        "relationship": "SUPERSEDES",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+        "rationale": "The Lead-authored punctuated v1.2 theory choice is the selected owner for this exact theory surface; the byte-identical v1.1 key remains preserved but is not selected on that surface."
+      },
+      {
+        "id": "THEORY.CORRECT.SUPERSEDES_V1_1",
+        "candidate_source_item": "source.lane_a.s7r2b.theory.correct",
+        "candidate_key": "lane_a.s7r2b.theory.correct",
+        "candidate_semantic_selector": "theory.FIRST_TRAIL_JOINS_SECOND_ROUTE",
+        "accepted_key": "lane_a.theory.accepted",
+        "accepted_surface": "theory.FIRST_TRAIL_JOINS_SECOND_ROUTE",
+        "relationship": "SUPERSEDES",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+        "rationale": "The Lead-authored punctuated v1.2 theory choice is the selected owner for this exact theory surface; the byte-identical v1.1 key remains preserved but is not selected on that surface."
+      },
+      {
+        "id": "THEORY.DEFER.DISTINCT_V1_2",
+        "candidate_source_item": "source.lane_a.s7r2b.theory.defer",
+        "candidate_key": "lane_a.s7r2b.theory.defer",
+        "candidate_semantic_selector": "S7R2B.THEORY.DEFER_EXACT_RECEIPT",
+        "accepted_key": null,
+        "accepted_surface": null,
+        "relationship": "DISTINCT",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "NOT_APPLICABLE_NO_V1_1_SURFACE",
+        "rationale": "The defer-until-exact-receipt choice is a new v1.2 theory action and has no accepted v1.1 semantic surface."
+      },
+      {
+        "id": "QUESTION.WHAT_LEFT.SUPERSEDES_V1_1",
+        "candidate_source_item": "source.lane_a.s7r2b.question.what_left",
+        "candidate_key": "lane_a.s7r2b.question.what_left",
+        "candidate_semantic_selector": "CARD.WHAT_LEFT.question",
+        "accepted_key": "lane_a.card.what_left.question",
+        "accepted_surface": "CARD.WHAT_LEFT.question",
+        "relationship": "SUPERSEDES",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+        "rationale": "The First Engine-specific Lead label is selected for the v1.2 What Left foreground card; the generic accepted label remains preserved but inactive on this surface."
+      },
+      {
+        "id": "QUESTION.INCIDENT_DAI.DISTINCT_FROM_INCIDENT",
+        "candidate_source_item": "source.lane_a.s7r2b.question.incident_dai",
+        "candidate_key": "lane_a.s7r2b.question.incident_dai",
+        "candidate_semantic_selector": "S7R2B.CARD.INCIDENT_DAI.question",
+        "accepted_key": "lane_a.card.incident.question",
+        "accepted_surface": "CARD.INCIDENT.question",
+        "relationship": "DISTINCT",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+        "rationale": "The v1.2 selector combines a bounded incident window with DAI movement; the accepted generic incident question remains active only on its separate legacy surface."
+      },
+      {
+        "id": "QUESTION.INCIDENT_DAI.DISTINCT_FROM_ASSET_OUT",
+        "candidate_source_item": "source.lane_a.s7r2b.question.incident_dai",
+        "candidate_key": "lane_a.s7r2b.question.incident_dai",
+        "candidate_semantic_selector": "S7R2B.CARD.INCIDENT_DAI.question",
+        "accepted_key": "lane_a.card.asset_out.question",
+        "accepted_surface": "CARD.ASSET_OUT.question",
+        "relationship": "DISTINCT",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+        "rationale": "The v1.2 selector combines asset identity with an incident window; the accepted generic asset-out question remains active only on its separate legacy surface."
+      },
+      {
+        "id": "QUESTION.INTERACTIONS.SUPERSEDES_V1_1",
+        "candidate_source_item": "source.lane_a.s7r2b.question.interactions",
+        "candidate_key": "lane_a.s7r2b.question.interactions",
+        "candidate_semantic_selector": "CARD.INTERACTIONS.question",
+        "accepted_key": "lane_a.card.interactions.question",
+        "accepted_surface": "CARD.INTERACTIONS.question",
+        "relationship": "SUPERSEDES",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+        "rationale": "The First Engine-specific Lead label is selected for the v1.2 Interactions foreground card; the accepted generic label remains preserved but inactive on this surface."
+      },
+      {
+        "id": "QUESTION.AMOUNT.DISTINCT_FROM_HIGH_VALUE",
+        "candidate_source_item": "source.lane_a.s7r2b.question.amount",
+        "candidate_key": "lane_a.s7r2b.question.amount",
+        "candidate_semantic_selector": "S7R2B.CARD.RECORDED_AMOUNT.question",
+        "accepted_key": "lane_a.card.high_value.question",
+        "accepted_surface": "CARD.HIGH_VALUE.question",
+        "relationship": "DISTINCT",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+        "rationale": "Matching a discovered recorded amount is not the accepted generic high-value threshold question; both remain active on separate selectors."
+      },
+      {
+        "id": "QUESTION.COMPARE.SUPERSEDES_V1_1",
+        "candidate_source_item": "source.lane_a.s7r2b.question.compare",
+        "candidate_key": "lane_a.s7r2b.question.compare",
+        "candidate_semantic_selector": "CARD.COMPARE_ROUTES.question",
+        "accepted_key": "lane_a.card.compare_routes.question",
+        "accepted_surface": "CARD.COMPARE_ROUTES.question",
+        "relationship": "SUPERSEDES",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE",
+        "rationale": "The Lead-authored strongest-routes label is selected for the v1.2 comparison card; the accepted generic label remains preserved but inactive on this surface."
+      },
+      {
+        "id": "QUESTION.STATE.REUSES_V1_1",
+        "candidate_source_item": "source.accepted.CARD.STATE_CHANGE.question",
+        "candidate_key": null,
+        "candidate_semantic_selector": "CARD.STATE_CHANGE.question",
+        "accepted_key": "lane_a.card.state_change.question",
+        "accepted_surface": "CARD.STATE_CHANGE.question",
+        "relationship": "REUSED",
+        "candidate_selection_state": "NOT_APPLICABLE_REUSED_ACCEPTED_KEY",
+        "accepted_selection_state": "ACTIVE_REUSED_V1_1_OWNER",
+        "rationale": "The Lead wording exactly matches the accepted v1.1 key, so the accepted key remains the sole active owner and no redundant v1.2 key exists."
+      },
+      {
+        "id": "QUESTION.EXACT_LINK.DISTINCT_FROM_EXACT_RECEIPT",
+        "candidate_source_item": "source.lane_a.s7r2b.question.exact_link",
+        "candidate_key": "lane_a.s7r2b.question.exact_link",
+        "candidate_semantic_selector": "S7R2B.CARD.GUIDED_EXACT_LINK.question",
+        "accepted_key": "lane_a.card.exact_receipt.question",
+        "accepted_surface": "CARD.EXACT_RECEIPT.question",
+        "relationship": "DISTINCT",
+        "candidate_selection_state": "ACTIVE_V1_2_OWNER",
+        "accepted_selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE",
+        "rationale": "The guided v1.2 question binds filed amount, receiver and case window after discovery; the accepted generic exact-receipt card remains active on its separate legacy selector."
+      }
+    ],
+    "accepted_key_reuse": [
+      {
+        "source_anchor": "§5.ACT2.FOREGROUND.3",
+        "source_text": "What changed before and after?",
+        "mapped_key": "lane_a.card.state_change.question",
+        "semantic_ref": "CARD.STATE_CHANGE.question",
+        "selection_state": "ACTIVE_REUSED_ACCEPTED_V1_1_OWNER"
+      }
+    ],
+    "interaction_matrix": "S7_R2B_INTERACTION_MATRIX",
+    "inventory": "S7_R2B_INVENTORY",
+    "hints": "S7_R2B_NAMED_HINT_MILESTONES",
+    "optional_content": [
+      "office-globe",
+      "desk-bell"
+    ],
+    "accepted_fallback_catalog": "DEAD_END_RESPONSE_CATALOG@1.1.0"
+  },
+  "source_runtime_accounting": [
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.1",
+      "source_anchor": "§5.ACT0.1",
+      "source_text": "This is the Records Office?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.1",
+      "semantic_ref": "S7R2B.OPENING.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.2",
+      "source_anchor": "§5.ACT0.2",
+      "source_text": "It is the office in which records are kept. The sign was our first record.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.2",
+      "semantic_ref": "S7R2B.OPENING.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.3",
+      "source_anchor": "§5.ACT0.3",
+      "source_text": "Right. Mr. A—",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.3",
+      "semantic_ref": "S7R2B.OPENING.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.4",
+      "source_anchor": "§5.ACT0.4",
+      "source_text": "Arthur.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.4",
+      "semantic_ref": "S7R2B.OPENING.4",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.5",
+      "source_anchor": "§5.ACT0.5",
+      "source_text": "Efficient.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.5",
+      "semantic_ref": "S7R2B.OPENING.5",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.6",
+      "source_anchor": "§5.ACT0.6",
+      "source_text": "Less efficient now.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.6",
+      "semantic_ref": "S7R2B.OPENING.6",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.7",
+      "source_anchor": "§5.ACT0.7",
+      "source_text": "Your case was misfiled. To retrieve its opening record, submit a request.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.7",
+      "semantic_ref": "S7R2B.OPENING.7",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.8",
+      "source_anchor": "§5.ACT0.8",
+      "source_text": "To request a record, I need a record requesting the record.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.8",
+      "semantic_ref": "S7R2B.OPENING.8",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.opening.9",
+      "source_anchor": "§5.ACT0.9",
+      "source_text": "You are learning the system.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.opening.9",
+      "semantic_ref": "S7R2B.OPENING.9",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.objective.opening",
+      "source_anchor": "§5.ACT0.OBJECTIVE",
+      "source_text": "RETRIEVE THE OPENING CASE RECORD.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.objective.opening",
+      "semantic_ref": "S7R2B.OBJECTIVE.OPENING",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.sea.accepted_views",
+      "source_anchor": "§5.ACT2.SEA.1",
+      "source_text": "25 accepted evidence views",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.sea.accepted_views",
+      "semantic_ref": "S7R2B.SEA.ACCEPTED.VIEWS",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.sea.no_match_views",
+      "source_anchor": "§5.ACT2.SEA.2",
+      "source_text": "7 bounded no-match views",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.sea.no_match_views",
+      "semantic_ref": "S7R2B.SEA.NO.MATCH.VIEWS",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.sea.exact_proof",
+      "source_anchor": "§5.ACT2.SEA.3",
+      "source_text": "exact proof records remain separately verified",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.sea.exact_proof",
+      "semantic_ref": "S7R2B.SEA.EXACT.PROOF",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.question.what_left",
+      "source_anchor": "§5.ACT2.QUESTION.1",
+      "source_text": "What left the First Engine?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.question.what_left",
+      "semantic_ref": "S7R2B.QUESTION.WHAT.LEFT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.question.incident_dai",
+      "source_anchor": "§5.ACT2.QUESTION.2",
+      "source_text": "Which DAI movements match the incident window?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.question.incident_dai",
+      "semantic_ref": "S7R2B.QUESTION.INCIDENT.DAI",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.question.interactions",
+      "source_anchor": "§5.ACT2.QUESTION.3",
+      "source_text": "Who interacted with the First Engine?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.question.interactions",
+      "semantic_ref": "S7R2B.QUESTION.INTERACTIONS",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.question.amount",
+      "source_anchor": "§5.ACT2.FOREGROUND.1",
+      "source_text": "Which results match the recorded amount?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.question.amount",
+      "semantic_ref": "S7R2B.QUESTION.AMOUNT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.question.compare",
+      "source_anchor": "§5.ACT2.FOREGROUND.2",
+      "source_text": "Compare the two strongest routes.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.question.compare",
+      "semantic_ref": "S7R2B.QUESTION.COMPARE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.folder.receiving_vault",
+      "source_anchor": "§5.ACT3.FOLDER.1",
+      "source_text": "the route that reaches the Receiving Vault",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.folder.receiving_vault",
+      "semantic_ref": "S7R2B.FOLDER.RECEIVING.VAULT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.folder.first_engine",
+      "source_anchor": "§5.ACT3.FOLDER.2",
+      "source_text": "the First Engine as a plausible apparent endpoint",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.folder.first_engine",
+      "semantic_ref": "S7R2B.FOLDER.FIRST.ENGINE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.folder.contextual",
+      "source_anchor": "§5.ACT3.FOLDER.3",
+      "source_text": "one contextual alternative, such as the later 100 ETH secondary-receiver context or another accepted bounded dead-end",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.folder.contextual",
+      "semantic_ref": "S7R2B.FOLDER.CONTEXTUAL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.theory.wrong",
+      "source_anchor": "§5.ACT3.THEORY.1",
+      "source_text": "IT STOPPED AT THE FIRST ENGINE.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.theory.wrong",
+      "semantic_ref": "S7R2B.THEORY.WRONG",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.theory.correct",
+      "source_anchor": "§5.ACT3.THEORY.2",
+      "source_text": "IT JOINED THE SECOND ROUTE.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.theory.correct",
+      "semantic_ref": "S7R2B.THEORY.CORRECT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.theory.defer",
+      "source_anchor": "§5.ACT3.THEORY.3",
+      "source_text": "I NEED AN EXACT RECEIPT BEFORE I FILE A THEORY.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.theory.defer",
+      "semantic_ref": "S7R2B.THEORY.DEFER",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.question.exact_link",
+      "source_anchor": "§5.ACT4.EXACT_LINK_QUESTION",
+      "source_text": "Which exact record shows the First Engine sending the recorded DAI amount to the Receiving Vault inside the case window?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.question.exact_link",
+      "semantic_ref": "S7R2B.QUESTION.EXACT.LINK",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.1",
+      "source_anchor": "§5.ACT3.COMPARISON.1",
+      "source_text": "TIME",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.1",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.2",
+      "source_anchor": "§5.ACT3.COMPARISON.2",
+      "source_text": "DIRECTION",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.2",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.3",
+      "source_anchor": "§5.ACT3.COMPARISON.3",
+      "source_text": "ASSET",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.3",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.4",
+      "source_anchor": "§5.ACT3.COMPARISON.4",
+      "source_text": "AMOUNT",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.4",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.4",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.5",
+      "source_anchor": "§5.ACT3.COMPARISON.5",
+      "source_text": "RELATIONSHIP",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.5",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.5",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.6",
+      "source_anchor": "§5.ACT3.COMPARISON.6",
+      "source_text": "EVIDENCE GRADE",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.6",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.6",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.7",
+      "source_anchor": "§5.ACT3.COMPARISON.7",
+      "source_text": "COVERAGE",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.7",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.7",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.comparison.column.8",
+      "source_anchor": "§5.ACT3.COMPARISON.8",
+      "source_text": "EXACT RECEIPT AVAILABLE",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.comparison.column.8",
+      "semantic_ref": "S7R2B.COMPARISON.COLUMN.8",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.wrong_theory.1",
+      "source_anchor": "§5.ACT3.WRONG_THEORY.1",
+      "source_text": "It stopped at the First Engine.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.wrong_theory.1",
+      "semantic_ref": "S7R2B.WRONG.THEORY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.wrong_theory.2",
+      "source_anchor": "§5.ACT3.WRONG_THEORY.2",
+      "source_text": "A plausible filing.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.wrong_theory.2",
+      "semantic_ref": "S7R2B.WRONG.THEORY.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.wrong_theory.3",
+      "source_anchor": "§5.ACT3.WRONG_THEORY.3",
+      "source_text": "That sounded almost supportive.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.wrong_theory.3",
+      "semantic_ref": "S7R2B.WRONG.THEORY.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.wrong_theory.4",
+      "source_anchor": "§5.ACT3.WRONG_THEORY.4",
+      "source_text": "It was not.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.wrong_theory.4",
+      "semantic_ref": "S7R2B.WRONG.THEORY.4",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.wrong_theory.5",
+      "source_anchor": "§5.ACT3.WRONG_THEORY.5",
+      "source_text": "What record would have to exist for your filing to be wrong?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.wrong_theory.5",
+      "semantic_ref": "S7R2B.WRONG.THEORY.5",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.exact_correction.1",
+      "source_anchor": "§5.ACT4.CORRECTION.1",
+      "source_text": "11:38:11. The recorded amount leaves the First Engine and reaches the vault.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.exact_correction.1",
+      "semantic_ref": "S7R2B.EXACT.CORRECTION.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.exact_correction.2",
+      "source_anchor": "§5.ACT4.CORRECTION.2",
+      "source_text": "Then file what the record proves.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.exact_correction.2",
+      "semantic_ref": "S7R2B.EXACT.CORRECTION.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.exact_correction.3",
+      "source_anchor": "§5.ACT4.CORRECTION.3",
+      "source_text": "The first trail joined the second route.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.exact_correction.3",
+      "semantic_ref": "S7R2B.EXACT.CORRECTION.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.exact_correction.4",
+      "source_anchor": "§5.ACT4.CORRECTION.4",
+      "source_text": "Good.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.exact_correction.4",
+      "semantic_ref": "S7R2B.EXACT.CORRECTION.4",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.exact_correction.5",
+      "source_anchor": "§5.ACT4.CORRECTION.5",
+      "source_text": "That’s it?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.exact_correction.5",
+      "semantic_ref": "S7R2B.EXACT.CORRECTION.5",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.exact_correction.6",
+      "source_anchor": "§5.ACT4.CORRECTION.6",
+      "source_text": "Accuracy is not improved by applause.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.exact_correction.6",
+      "semantic_ref": "S7R2B.EXACT.CORRECTION.6",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return.1",
+      "source_anchor": "§5.ACT5.RETURN.1",
+      "source_text": "Case closed.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return.1",
+      "semantic_ref": "S7R2B.RETURN.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return.2",
+      "source_anchor": "§5.ACT5.RETURN.2",
+      "source_text": "Bounded.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return.2",
+      "semantic_ref": "S7R2B.RETURN.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return.3",
+      "source_anchor": "§5.ACT5.RETURN.3",
+      "source_text": "Case bounded.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return.3",
+      "semantic_ref": "S7R2B.RETURN.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return.4",
+      "source_anchor": "§5.ACT5.RETURN.4",
+      "source_text": "Now it is closed.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return.4",
+      "semantic_ref": "S7R2B.RETURN.4",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return_tag.1",
+      "source_anchor": "§5.ACT5.TAG.1",
+      "source_text": "Thanks, Mr. A.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return_tag.1",
+      "semantic_ref": "S7R2B.RETURN.TAG.1",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return_tag.2",
+      "source_anchor": "§5.ACT5.TAG.2",
+      "source_text": "Arthur.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return_tag.2",
+      "semantic_ref": "S7R2B.RETURN.TAG.2",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return_tag.3",
+      "source_anchor": "§5.ACT5.TAG.3",
+      "source_text": "Mr. Arthur.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return_tag.3",
+      "semantic_ref": "S7R2B.RETURN.TAG.3",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.return_tag.4",
+      "source_anchor": "§5.ACT5.TAG.4",
+      "source_text": "You have made it worse.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.return_tag.4",
+      "semantic_ref": "S7R2B.RETURN.TAG.4",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.label",
+      "source_anchor": "§6.MENU.PRE_STAMP.1.LABEL",
+      "source_text": "Where am I?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.label",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.WHERE.AM.I.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.reply.1",
+      "source_anchor": "§6.MENU.PRE_STAMP.1.REPLY.1",
+      "source_text": "The Records Office. Where events become records, records become questions, and questions become more records.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.reply.1",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.WHERE.AM.I.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.MISFILED.label",
+      "source_anchor": "§6.MENU.PRE_STAMP.2.LABEL",
+      "source_text": "Why was I misfiled?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.label",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.MISFILED.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.MISFILED.reply.1",
+      "source_anchor": "§6.MENU.PRE_STAMP.2.REPLY.1",
+      "source_text": "Someone filed a person under Pending. I corrected the category, not the condition.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.reply.1",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.MISFILED.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.REQUEST.label",
+      "source_anchor": "§6.MENU.PRE_STAMP.3.LABEL",
+      "source_text": "How do I request a record?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.label",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.REQUEST.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.REQUEST.reply.1",
+      "source_anchor": "§6.MENU.PRE_STAMP.3.REPLY.1",
+      "source_text": "Blank request. Pen. My stamp. Tube. In that order. The order is the system.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.reply.1",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.REQUEST.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.MR_A.label",
+      "source_anchor": "§6.MENU.PRE_STAMP.4.LABEL",
+      "source_text": "Mr. A—",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.label",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.MR.A.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.1",
+      "source_anchor": "§6.MENU.PRE_STAMP.4.REPLY.1",
+      "source_text": "Arthur.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.1",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.MR.A.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.2",
+      "source_anchor": "§6.MENU.PRE_STAMP.4.REPLY.2",
+      "source_text": "I had not finished.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.2",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.MR.A.REPLY.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.3",
+      "source_anchor": "§6.MENU.PRE_STAMP.4.REPLY.3",
+      "source_text": "I have.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.3",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.MR.A.REPLY.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.PRE_STAMP.EXIT.label",
+      "source_anchor": "§6.MENU.PRE_STAMP.5.LABEL",
+      "source_text": "I’ll figure it out.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.PRE_STAMP.EXIT.label",
+      "semantic_ref": "S7R2B.MENU.PRE.STAMP.EXIT.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.label",
+      "source_anchor": "§6.MENU.POST_ACCESS.1.LABEL",
+      "source_text": "What am I looking at?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.label",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.LOOKING.AT.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.reply.1",
+      "source_anchor": "§6.MENU.POST_ACCESS.1.REPLY.1",
+      "source_text": "A bounded record set. Public is not the same as simple.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.reply.1",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.LOOKING.AT.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.label",
+      "source_anchor": "§6.MENU.POST_ACCESS.2.LABEL",
+      "source_text": "Public means solved, right?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.label",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.PUBLIC.SOLVED.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.reply.1",
+      "source_anchor": "§6.MENU.POST_ACCESS.2.REPLY.1",
+      "source_text": "Public means observable. Solved requires a question.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.reply.1",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.PUBLIC.SOLVED.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.LENSES.label",
+      "source_anchor": "§6.MENU.POST_ACCESS.3.LABEL",
+      "source_text": "What do the lenses do?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.LENSES.label",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.LENSES.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.LENSES.reply.1",
+      "source_anchor": "§6.MENU.POST_ACCESS.3.REPLY.1",
+      "source_text": "Activity asks what happened. Relationships ask who interacted. State asks what changed. Receipt asks which exact record establishes the link.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.LENSES.reply.1",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.LENSES.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.label",
+      "source_anchor": "§6.MENU.POST_ACCESS.4.LABEL",
+      "source_text": "What makes a receipt exact?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.label",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.EXACT.RECEIPT.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.reply.1",
+      "source_anchor": "§6.MENU.POST_ACCESS.4.REPLY.1",
+      "source_text": "A specific record establishes a specific link. Context can point. It cannot sign.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.reply.1",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.EXACT.RECEIPT.REPLY.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.GUIDANCE.label",
+      "source_anchor": "§6.MENU.POST_ACCESS.5.LABEL",
+      "source_text": "What should I do next?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.GUIDANCE.label",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.GUIDANCE.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.POST_ACCESS.EXIT.label",
+      "source_anchor": "§6.MENU.POST_ACCESS.6.LABEL",
+      "source_text": "Back to the terminal.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.POST_ACCESS.EXIT.label",
+      "semantic_ref": "S7R2B.MENU.POST.ACCESS.EXIT.LABEL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.exit.general",
+      "source_anchor": "§6.MENU.GENERAL_EXIT",
+      "source_text": "I’ll get back to it.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.exit.general",
+      "semantic_ref": "S7R2B.MENU.EXIT.GENERAL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.menu.topic_completed",
+      "source_anchor": "§6.MENU.SCREEN_READER",
+      "source_text": "Topic completed. N topics remain.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.menu.topic_completed",
+      "semantic_ref": "S7R2B.MENU.TOPIC.COMPLETED",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.give",
+      "source_anchor": "§8.REQUEST_DISPENSER.GIVE",
+      "source_text": "It only gives. It does not accept returns, criticism, or personal growth.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.give",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.pick_up",
+      "source_anchor": "§8.REQUEST_DISPENSER.PICK_UP",
+      "source_text": "It appears to be holding up several regulations.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.use",
+      "source_anchor": "§8.REQUEST_DISPENSER.USE",
+      "source_text": "I need something worth combining with a machine that already has a purpose.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.use",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.look_at",
+      "source_anchor": "§8.REQUEST_DISPENSER.LOOK_AT",
+      "source_text": "A request dispenser. One sheet per problem, which feels optimistic.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.look_at",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.push",
+      "source_anchor": "§8.REQUEST_DISPENSER.PUSH",
+      "source_text": "It pushes back with the confidence of policy.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.push",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.close",
+      "source_anchor": "§8.REQUEST_DISPENSER.CLOSE",
+      "source_text": "It is closed in every meaningful bureaucratic sense.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.close",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.talk_to",
+      "source_anchor": "§8.REQUEST_DISPENSER.TALK_TO",
+      "source_text": "I ask for expedited service. It dispenses silence.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.talk_to",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.TALK.TO",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.pull",
+      "source_anchor": "§8.REQUEST_DISPENSER.PULL",
+      "source_text": "One blank request. It already looks disappointed in me.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.pull",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.give",
+      "source_anchor": "§8.PEN_STAND.GIVE",
+      "source_text": "The pens belong to the desk. Arthur has documentation.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.give",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.pick_up",
+      "source_anchor": "§8.PEN_STAND.PICK_UP",
+      "source_text": "Arthur clears his throat before my hand gets there.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.use",
+      "source_anchor": "§8.PEN_STAND.USE",
+      "source_text": "The pen scratches my request into official existence.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.use",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.open",
+      "source_anchor": "§8.PEN_STAND.OPEN",
+      "source_text": "There is no lid. Bureaucracy has finally simplified something.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.open",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.OPEN",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.look_at",
+      "source_anchor": "§8.PEN_STAND.LOOK_AT",
+      "source_text": "Four pens chained to one idea.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.look_at",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.push",
+      "source_anchor": "§8.PEN_STAND.PUSH",
+      "source_text": "It remains upright and morally superior.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.push",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.close",
+      "source_anchor": "§8.PEN_STAND.CLOSE",
+      "source_text": "The pens are uncapped only emotionally.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.close",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.talk_to",
+      "source_anchor": "§8.PEN_STAND.TALK_TO",
+      "source_text": "Blue ink has always been aloof.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.talk_to",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.TALK.TO",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pen-stand.pull",
+      "source_anchor": "§8.PEN_STAND.PULL",
+      "source_text": "The chain is exactly one optimism long.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pen-stand.pull",
+      "semantic_ref": "S7R2B.MATRIX.PEN.STAND.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.pick_up",
+      "source_anchor": "§8.ARTHUR.PICK_UP",
+      "source_text": "He would file an objection before leaving the floor.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.use",
+      "source_anchor": "§8.ARTHUR.USE",
+      "source_text": "Conversation first. Equipment second.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.use",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.open",
+      "source_anchor": "§8.ARTHUR.OPEN",
+      "source_text": "I am not opening Arthur.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.open",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.OPEN",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.look_at",
+      "source_anchor": "§8.ARTHUR.LOOK_AT",
+      "source_text": "Arthur the Archivist. He has alphabetized his patience.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.look_at",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.push",
+      "source_anchor": "§8.ARTHUR.PUSH",
+      "source_text": "I choose not to test the load-bearing capacity of civil service.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.push",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.close",
+      "source_anchor": "§8.ARTHUR.CLOSE",
+      "source_text": "He looks pre-closed.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.close",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.pull",
+      "source_anchor": "§8.ARTHUR.PULL",
+      "source_text": "Arthur is not a drawer.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.pull",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.give",
+      "source_anchor": "§8.PNEUMATIC_TUBE.GIVE",
+      "source_text": "The tube accepts documents, not gifts.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.give",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.pick_up",
+      "source_anchor": "§8.PNEUMATIC_TUBE.PICK_UP",
+      "source_text": "It is attached to the wall and several decades of procedure.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.look_at",
+      "source_anchor": "§8.PNEUMATIC_TUBE.LOOK_AT",
+      "source_text": "A pneumatic tube. Bureaucracy, but aerodynamic.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.look_at",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.push",
+      "source_anchor": "§8.PNEUMATIC_TUBE.PUSH",
+      "source_text": "Nothing happens. It has standards.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.push",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.talk_to",
+      "source_anchor": "§8.PNEUMATIC_TUBE.TALK_TO",
+      "source_text": "I whisper ‘expedite.’ It has heard that one.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.talk_to",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.TALK.TO",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.pull",
+      "source_anchor": "§8.PNEUMATIC_TUBE.PULL",
+      "source_text": "The tube is attached to wherever forms go to become consequences.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.pull",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.give",
+      "source_anchor": "§8.DISPATCH_PLUNGER.GIVE",
+      "source_text": "It has a job and no pockets.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.give",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.use",
+      "source_anchor": "§8.DISPATCH_PLUNGER.USE",
+      "source_text": "A button by another name is still waiting to be pushed.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.use",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.open",
+      "source_anchor": "§8.DISPATCH_PLUNGER.OPEN",
+      "source_text": "No seam. Just intent.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.open",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.OPEN",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.look_at",
+      "source_anchor": "§8.DISPATCH_PLUNGER.LOOK_AT",
+      "source_text": "A brass plunger labeled DISPATCH, as if regret needed typography.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.look_at",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.push",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PUSH",
+      "source_text": "The mechanism refuses empty enthusiasm.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.push",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.close",
+      "source_anchor": "§8.DISPATCH_PLUNGER.CLOSE",
+      "source_text": "It is not open. It is merely expectant.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.close",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.pull",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PULL",
+      "source_text": "Wrong direction. Also the wrong kind of plunger.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.pull",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.give",
+      "source_anchor": "§8.RETURNED_CANISTER.GIVE",
+      "source_text": "It has already been through enough.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.give",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.pick_up",
+      "source_anchor": "§8.RETURNED_CANISTER.PICK_UP",
+      "source_text": "Too large for a pocket, too official for a souvenir.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.use",
+      "source_anchor": "§8.RETURNED_CANISTER.USE",
+      "source_text": "I should find out what it contains before improving it.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.use",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.look_at",
+      "source_anchor": "§8.RETURNED_CANISTER.LOOK_AT",
+      "source_text": "A returned record canister. Travel-worn, paperwork-fresh.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.look_at",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.push",
+      "source_anchor": "§8.RETURNED_CANISTER.PUSH",
+      "source_text": "It rolls half an inch and files no complaint.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.push",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.close",
+      "source_anchor": "§8.RETURNED_CANISTER.CLOSE",
+      "source_text": "I can close it, but the answer will not climb back inside.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.close",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.talk_to",
+      "source_anchor": "§8.RETURNED_CANISTER.TALK_TO",
+      "source_text": "It has traveled farther than I have today.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.talk_to",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.TALK.TO",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.record-canister.pull",
+      "source_anchor": "§8.RETURNED_CANISTER.PULL",
+      "source_text": "The latch is the polite part.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.record-canister.pull",
+      "semantic_ref": "S7R2B.MATRIX.RECORD.CANISTER.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.give",
+      "source_anchor": "§8.NANSEN_TERMINAL.GIVE",
+      "source_text": "No mouth. Probably for the best.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.give",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.pick_up",
+      "source_anchor": "§8.NANSEN_TERMINAL.PICK_UP",
+      "source_text": "It is desk-sized in the way a desk is floor-sized.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.open",
+      "source_anchor": "§8.NANSEN_TERMINAL.OPEN",
+      "source_text": "I am not voiding the warranty on history.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.open",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.OPEN",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.push",
+      "source_anchor": "§8.NANSEN_TERMINAL.PUSH",
+      "source_text": "The screen blooms green, then judges me.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.push",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.close",
+      "source_anchor": "§8.NANSEN_TERMINAL.CLOSE",
+      "source_text": "I can leave the screen. The case stays.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.close",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.pull",
+      "source_anchor": "§8.NANSEN_TERMINAL.PULL",
+      "source_text": "The terminal is attached to the part of the building with electricity.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.pull",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.give",
+      "source_anchor": "§8.HISTORICAL_CLOCK.GIVE",
+      "source_text": "Time already has everything I own.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.give",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.pick_up",
+      "source_anchor": "§8.HISTORICAL_CLOCK.PICK_UP",
+      "source_text": "It is bolted down, presumably against hindsight.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.use",
+      "source_anchor": "§8.HISTORICAL_CLOCK.USE",
+      "source_text": "No item in my pockets can improve chronology.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.use",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.look_at",
+      "source_anchor": "§8.HISTORICAL_CLOCK.LOOK_AT",
+      "source_text": "It keeps historical time, which is just time with paperwork.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.look_at",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.push",
+      "source_anchor": "§8.HISTORICAL_CLOCK.PUSH",
+      "source_text": "Time advances only in the usual, expensive direction.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.push",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.PUSH",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.close",
+      "source_anchor": "§8.HISTORICAL_CLOCK.CLOSE",
+      "source_text": "The case can close. The clock remains open for business.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.close",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.talk_to",
+      "source_anchor": "§8.HISTORICAL_CLOCK.TALK_TO",
+      "source_text": "It ticks in short, well-documented statements.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.talk_to",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.TALK.TO",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.pull",
+      "source_anchor": "§8.HISTORICAL_CLOCK.PULL",
+      "source_text": "The minute hand refuses informal discovery.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.pull",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.give",
+      "source_anchor": "§8.OFFICE_GLOBE.GIVE",
+      "source_text": "Arthur already has jurisdiction.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.give",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.GIVE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.pick_up",
+      "source_anchor": "§8.OFFICE_GLOBE.PICK_UP",
+      "source_text": "Arthur’s left eyebrow files a prior restraint.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.pick_up",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.PICK.UP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.use",
+      "source_anchor": "§8.OFFICE_GLOBE.USE",
+      "source_text": "I do not yet have a world-sized problem. Give it a minute.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.use",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.open",
+      "source_anchor": "§8.OFFICE_GLOBE.OPEN",
+      "source_text": "No seam. Probably classified.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.open",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.OPEN",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.look_at",
+      "source_anchor": "§8.OFFICE_GLOBE.LOOK_AT",
+      "source_text": "The world, reduced to something Arthur can keep on a desk.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.look_at",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.LOOK.AT",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.close",
+      "source_anchor": "§8.OFFICE_GLOBE.CLOSE",
+      "source_text": "It is already a closed world.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.close",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.CLOSE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.talk_to",
+      "source_anchor": "§8.OFFICE_GLOBE.TALK_TO",
+      "source_text": "I ask where the money went. The globe remains broadly unhelpful.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.talk_to",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.TALK.TO",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.office-globe.pull",
+      "source_anchor": "§8.OFFICE_GLOBE.PULL",
+      "source_text": "It rotates. The planet remains attached.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.office-globe.pull",
+      "semantic_ref": "S7R2B.MATRIX.OFFICE.GLOBE.PULL",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.open.1",
+      "source_anchor": "§8.REQUEST_DISPENSER.OPEN.1",
+      "source_text": "The service panel is not a shortcut.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.open.1",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.OPEN.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.request-dispenser.open.2",
+      "source_anchor": "§8.REQUEST_DISPENSER.OPEN.2",
+      "source_text": "So it is a long cut.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.request-dispenser.open.2",
+      "semantic_ref": "S7R2B.MATRIX.REQUEST.DISPENSER.OPEN.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.give.1",
+      "source_anchor": "§8.ARTHUR.GIVE.1",
+      "source_text": "This is not a recognized request.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.give.1",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.GIVE.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.give.2",
+      "source_anchor": "§8.ARTHUR.GIVE.2",
+      "source_text": "It is recognizable.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.give.2",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.GIVE.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.mr-index.give.3",
+      "source_anchor": "§8.ARTHUR.GIVE.3",
+      "source_text": "That is not the same thing.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.mr-index.give.3",
+      "semantic_ref": "S7R2B.MATRIX.MR.INDEX.GIVE.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.use.1",
+      "source_anchor": "§8.PNEUMATIC_TUBE.USE.1",
+      "source_text": "The tube transports records.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.use.1",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.USE.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.pneumatic-tube.use.2",
+      "source_anchor": "§8.PNEUMATIC_TUBE.USE.2",
+      "source_text": "It has strict taste.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.pneumatic-tube.use.2",
+      "semantic_ref": "S7R2B.MATRIX.PNEUMATIC.TUBE.USE.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.pick_up.1",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PICK_UP.1",
+      "source_text": "Fixed equipment.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.1",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.PICK.UP.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.pick_up.2",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PICK_UP.2",
+      "source_text": "Emotionally or physically?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.2",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.PICK.UP.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.pick_up.3",
+      "source_anchor": "§8.DISPATCH_PLUNGER.PICK_UP.3",
+      "source_text": "Both.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.3",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.PICK.UP.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.talk_to.1",
+      "source_anchor": "§8.DISPATCH_PLUNGER.TALK_TO.1",
+      "source_text": "Dispatch.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.talk_to.1",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.TALK.TO.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.dispatch-plunger.talk_to.2",
+      "source_anchor": "§8.DISPATCH_PLUNGER.TALK_TO.2",
+      "source_text": "It prefers verbs.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.dispatch-plunger.talk_to.2",
+      "semantic_ref": "S7R2B.MATRIX.DISPATCH.PLUNGER.TALK.TO.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.use",
+      "source_anchor": "§8.NANSEN_TERMINAL.USE",
+      "source_text": "It wants authorization, not enthusiasm.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.use",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.USE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.look_at.locked",
+      "source_anchor": "§8.NANSEN_TERMINAL.LOOK_AT.LOCKED",
+      "source_text": "A terminal with the posture of a locked filing cabinet.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.look_at.locked",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.LOOK.AT.LOCKED",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.talk_to.1",
+      "source_anchor": "§8.NANSEN_TERMINAL.TALK_TO.1",
+      "source_text": "Hello?",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.1",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.TALK.TO.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.talk_to.2",
+      "source_anchor": "§8.NANSEN_TERMINAL.TALK_TO.2",
+      "source_text": "[BZZZT.]",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.2",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.TALK.TO.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.nansen-terminal.talk_to.3",
+      "source_anchor": "§8.NANSEN_TERMINAL.TALK_TO.3",
+      "source_text": "It prefers structured questions.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.3",
+      "semantic_ref": "S7R2B.MATRIX.NANSEN.TERMINAL.TALK.TO.3",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.open.1",
+      "source_anchor": "§8.HISTORICAL_CLOCK.OPEN.1",
+      "source_text": "Do not audit the clock.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.open.1",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.OPEN.1",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.matrix.historical-clock.open.2",
+      "source_anchor": "§8.HISTORICAL_CLOCK.OPEN.2",
+      "source_text": "That sounds like clock talk.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.matrix.historical-clock.open.2",
+      "semantic_ref": "S7R2B.MATRIX.HISTORICAL.CLOCK.OPEN.2",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.1.1",
+      "source_anchor": "§8.GLOBE_PUSH.1.1",
+      "source_text": "Continents in motion.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.1.1",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.1.1",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.1.2",
+      "source_anchor": "§8.GLOBE_PUSH.1.2",
+      "source_text": "They were correctly filed.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.1.2",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.1.2",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.2.1",
+      "source_anchor": "§8.GLOBE_PUSH.2.1",
+      "source_text": "I am checking for alternate routes.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.2.1",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.2.1",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.2.2",
+      "source_anchor": "§8.GLOBE_PUSH.2.2",
+      "source_text": "You are checking my patience.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.2.2",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.2.2",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.3.1",
+      "source_anchor": "§8.GLOBE_PUSH.3.1",
+      "source_text": "Mr. A—",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.3.1",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.3.1",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.3.2",
+      "source_anchor": "§8.GLOBE_PUSH.3.2",
+      "source_text": "Arthur.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.3.2",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.3.2",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.3.3",
+      "source_anchor": "§8.GLOBE_PUSH.3.3",
+      "source_text": "The globe likes me.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.3.3",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.3.3",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.3.4",
+      "source_anchor": "§8.GLOBE_PUSH.3.4",
+      "source_text": "The globe has no standards.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.3.4",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.3.4",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.loop.1",
+      "source_anchor": "§8.GLOBE_PUSH.4.1",
+      "source_text": "Mr. Rook.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.loop.1",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.LOOP.1",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.globe.push.loop.2",
+      "source_anchor": "§8.GLOBE_PUSH.4.2",
+      "source_text": "That is first-name progress.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.globe.push.loop.2",
+      "semantic_ref": "S7R2B.GLOBE.PUSH.LOOP.2",
+      "requiredness": "OPTIONAL"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.blank-request.name",
+      "source_anchor": "§9.INVENTORY.BLANK_REQUEST.NAME",
+      "source_text": "Blank request",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.blank-request.name",
+      "semantic_ref": "S7R2B.INVENTORY.BLANK.REQUEST.NAME",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.blank-request.description",
+      "source_anchor": "§9.INVENTORY.BLANK_REQUEST.LOOK_AT",
+      "source_text": "A blank request for a record I have not been allowed to see.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.blank-request.description",
+      "semantic_ref": "S7R2B.INVENTORY.BLANK.REQUEST.DESCRIPTION",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.blank-request.guidance",
+      "source_anchor": "§9.INVENTORY.BLANK_REQUEST.GUIDANCE",
+      "source_text": "It needs information, ink, and apparently confidence.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.blank-request.guidance",
+      "semantic_ref": "S7R2B.INVENTORY.BLANK.REQUEST.GUIDANCE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.completed-request.name",
+      "source_anchor": "§9.INVENTORY.COMPLETED_REQUEST.NAME",
+      "source_text": "Completed request",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.completed-request.name",
+      "semantic_ref": "S7R2B.INVENTORY.COMPLETED.REQUEST.NAME",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.completed-request.description",
+      "source_anchor": "§9.INVENTORY.COMPLETED_REQUEST.LOOK_AT",
+      "source_text": "All filled out. I have converted uncertainty into handwriting.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.completed-request.description",
+      "semantic_ref": "S7R2B.INVENTORY.COMPLETED.REQUEST.DESCRIPTION",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.completed-request.guidance",
+      "source_anchor": "§9.INVENTORY.COMPLETED_REQUEST.GUIDANCE",
+      "source_text": "Give to Arthur for the official stamp.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.completed-request.guidance",
+      "semantic_ref": "S7R2B.INVENTORY.COMPLETED.REQUEST.GUIDANCE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.stamped-request.name",
+      "source_anchor": "§9.INVENTORY.STAMPED_REQUEST.NAME",
+      "source_text": "Stamped request",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.stamped-request.name",
+      "semantic_ref": "S7R2B.INVENTORY.STAMPED.REQUEST.NAME",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.stamped-request.description",
+      "source_anchor": "§9.INVENTORY.STAMPED_REQUEST.LOOK_AT",
+      "source_text": "Official. The ink has authority now.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.stamped-request.description",
+      "semantic_ref": "S7R2B.INVENTORY.STAMPED.REQUEST.DESCRIPTION",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.stamped-request.guidance",
+      "source_anchor": "§9.INVENTORY.STAMPED_REQUEST.GUIDANCE",
+      "source_text": "Load into the pneumatic tube.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.stamped-request.guidance",
+      "semantic_ref": "S7R2B.INVENTORY.STAMPED.REQUEST.GUIDANCE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.first-breach-strip.name",
+      "source_anchor": "§9.INVENTORY.ACCESS_STRIP.NAME",
+      "source_text": "Access strip",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.first-breach-strip.name",
+      "semantic_ref": "S7R2B.INVENTORY.FIRST.BREACH.STRIP.NAME",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.first-breach-strip.description",
+      "source_anchor": "§9.INVENTORY.ACCESS_STRIP.LOOK_AT",
+      "source_text": "A narrow strip granting access to a much wider problem.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.first-breach-strip.description",
+      "semantic_ref": "S7R2B.INVENTORY.FIRST.BREACH.STRIP.DESCRIPTION",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.inventory.first-breach-strip.guidance",
+      "source_anchor": "§9.INVENTORY.ACCESS_STRIP.GUIDANCE",
+      "source_text": "Use with the Nansen terminal.",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.inventory.first-breach-strip.guidance",
+      "semantic_ref": "S7R2B.INVENTORY.FIRST.BREACH.STRIP.GUIDANCE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.caption.stamp",
+      "source_anchor": "§10.STAMP.5",
+      "source_text": "[THUNK.]",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.caption.stamp",
+      "semantic_ref": "S7R2B.CAPTION.STAMP",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.caption.tube",
+      "source_anchor": "§10.TUBE.4",
+      "source_text": "[WHIRRRR—FWOOMP—THUNK.]",
+      "disposition": "MAPPED_TO_NEW_STABLE_KEY",
+      "runtime_resolution": "ACTIVE_CANDIDATE_KEY",
+      "mapped_key": "lane_a.s7r2b.caption.tube",
+      "semantic_ref": "S7R2B.CAPTION.TUBE",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.caption.bell",
+      "source_anchor": "§8.DESK_BELL.PUSH.CAPTION",
+      "source_text": "[DING.]",
+      "disposition": "OPTIONAL_CONDITIONAL_STRETCH",
+      "runtime_resolution": "DORMANT_CONDITIONAL_STRETCH",
+      "mapped_key": "lane_a.s7r2b.caption.bell",
+      "semantic_ref": "S7R2B.CAPTION.BELL",
+      "requiredness": "CONDITIONAL_STRETCH"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.desk_bell.look",
+      "source_anchor": "§8.DESK_BELL.LOOK_AT",
+      "source_text": "A bell for summoning someone already here.",
+      "disposition": "OPTIONAL_CONDITIONAL_STRETCH",
+      "runtime_resolution": "DORMANT_CONDITIONAL_STRETCH",
+      "mapped_key": "lane_a.s7r2b.desk_bell.look",
+      "semantic_ref": "S7R2B.DESK.BELL.LOOK",
+      "requiredness": "CONDITIONAL_STRETCH"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.desk_bell.push.1",
+      "source_anchor": "§8.DESK_BELL.PUSH.1",
+      "source_text": "I am present.",
+      "disposition": "OPTIONAL_CONDITIONAL_STRETCH",
+      "runtime_resolution": "DORMANT_CONDITIONAL_STRETCH",
+      "mapped_key": "lane_a.s7r2b.desk_bell.push.1",
+      "semantic_ref": "S7R2B.DESK.BELL.PUSH.1",
+      "requiredness": "CONDITIONAL_STRETCH"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.desk_bell.push.2",
+      "source_anchor": "§8.DESK_BELL.PUSH.2",
+      "source_text": "The bell confirmed it.",
+      "disposition": "OPTIONAL_CONDITIONAL_STRETCH",
+      "runtime_resolution": "DORMANT_CONDITIONAL_STRETCH",
+      "mapped_key": "lane_a.s7r2b.desk_bell.push.2",
+      "semantic_ref": "S7R2B.DESK.BELL.PUSH.2",
+      "requiredness": "CONDITIONAL_STRETCH"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.desk_bell.push.3",
+      "source_anchor": "§8.DESK_BELL.PUSH.3",
+      "source_text": "The bell is now redundant.",
+      "disposition": "OPTIONAL_CONDITIONAL_STRETCH",
+      "runtime_resolution": "DORMANT_CONDITIONAL_STRETCH",
+      "mapped_key": "lane_a.s7r2b.desk_bell.push.3",
+      "semantic_ref": "S7R2B.DESK.BELL.PUSH.3",
+      "requiredness": "CONDITIONAL_STRETCH"
+    },
+    {
+      "source_item_id": "source.lane_a.s7r2b.desk_bell.repeat",
+      "source_anchor": "§8.DESK_BELL.REPEAT",
+      "source_text": "So are you, at the moment.",
+      "disposition": "OPTIONAL_CONDITIONAL_STRETCH",
+      "runtime_resolution": "DORMANT_CONDITIONAL_STRETCH",
+      "mapped_key": "lane_a.s7r2b.desk_bell.repeat",
+      "semantic_ref": "S7R2B.DESK.BELL.REPEAT",
+      "requiredness": "CONDITIONAL_STRETCH"
+    },
+    {
+      "source_item_id": "source.accepted.CARD.STATE_CHANGE.question",
+      "source_anchor": "§5.ACT2.FOREGROUND.3",
+      "source_text": "What changed before and after?",
+      "disposition": "MAPPED_TO_EXISTING_ACCEPTED_KEY",
+      "runtime_resolution": "REUSED_ACCEPTED_V1_1_KEY",
+      "mapped_key": "lane_a.card.state_change.question",
+      "semantic_ref": "CARD.STATE_CHANGE.question",
+      "requiredness": "REQUIRED"
+    },
+    {
+      "source_item_id": "source.matrix.mr-index.talk_to",
+      "source_anchor": "§8.ARTHUR.TALK_TO",
+      "source_text": "Open the current Arthur dialogue menu.",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "MENU.ARTHUR.OPEN",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.matrix.pneumatic-tube.open",
+      "source_anchor": "§8.PNEUMATIC_TUBE.OPEN",
+      "source_text": "Open only when the current logical state permits; otherwise explain the latch state.",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "INTERACTION.TUBE.OPEN_BY_STATE",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.matrix.pneumatic-tube.close",
+      "source_anchor": "§8.PNEUMATIC_TUBE.CLOSE",
+      "source_text": "Required after loading; repeat-safe afterward.",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "INTERACTION.TUBE.CLOSE",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.matrix.record-canister.open",
+      "source_anchor": "§8.RETURNED_CANISTER.OPEN",
+      "source_text": "Required when returned.",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "INTERACTION.CANISTER.OPEN",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.matrix.nansen-terminal.look_at.authorized",
+      "source_anchor": "§8.NANSEN_TERMINAL.LOOK_AT.AUTHORIZED",
+      "source_text": "Authorized: open or return to the Case Terminal.",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "INTERACTION.TERMINAL.OPEN_CASE",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.pull_request",
+      "source_anchor": "§5.ACT1.1",
+      "source_text": "PULL blank request",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.PULL.REQUEST",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.complete_request",
+      "source_anchor": "§5.ACT1.2",
+      "source_text": "USE blank request with pen stand",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.COMPLETE.REQUEST",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.stamp_request",
+      "source_anchor": "§5.ACT1.3",
+      "source_text": "GIVE completed request to Arthur",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.STAMP.REQUEST",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.load_tube",
+      "source_anchor": "§5.ACT1.4",
+      "source_text": "USE stamped request with pneumatic tube",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.LOAD.TUBE",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.close_tube",
+      "source_anchor": "§5.ACT1.5",
+      "source_text": "CLOSE tube",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.CLOSE.TUBE",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.dispatch",
+      "source_anchor": "§5.ACT1.6",
+      "source_text": "PUSH dispatch plunger",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.DISPATCH",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.open_canister",
+      "source_anchor": "§5.ACT1.7",
+      "source_text": "OPEN returned canister",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.OPEN.CANISTER",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.take_strip",
+      "source_anchor": "§5.ACT1.8",
+      "source_text": "PICK UP access strip",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.TAKE.STRIP",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.authorize",
+      "source_anchor": "§5.ACT1.9",
+      "source_text": "USE access strip with terminal",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.AUTHORIZE",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.read",
+      "source_anchor": "§5.ACT1.10",
+      "source_text": "LOOK AT terminal record",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.READ",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    },
+    {
+      "source_item_id": "source.critical.reread",
+      "source_anchor": "§5.ACT1.11",
+      "source_text": "reread safely at completion",
+      "disposition": "SEMANTIC_BEHAVIOR_NO_NEW_SPOKEN_COPY",
+      "requiredness": "REQUIRED",
+      "semantic_ref": "S7R2B.CRITICAL.REREAD",
+      "runtime_resolution": "EXPLICIT_BEHAVIOR_NO_SPOKEN_COPY"
+    }
+  ],
+  "accepted_v1_1_selection": {
+    "preserved_entries": 409,
+    "evaluated_entries": 409,
+    "evaluated_surface_references": 429,
+    "evaluated_unique_surfaces": 425,
+    "explicitly_superseded": [
+      {
+        "key": "lane_a.theory.wrong",
+        "surface": "theory.FIRST_TRAIL_STOPS_AT_FIRST_ENGINE",
+        "selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE"
+      },
+      {
+        "key": "lane_a.theory.accepted",
+        "surface": "theory.FIRST_TRAIL_JOINS_SECOND_ROUTE",
+        "selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE"
+      },
+      {
+        "key": "lane_a.card.what_left.question",
+        "surface": "CARD.WHAT_LEFT.question",
+        "selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE"
+      },
+      {
+        "key": "lane_a.card.interactions.question",
+        "surface": "CARD.INTERACTIONS.question",
+        "selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE"
+      },
+      {
+        "key": "lane_a.card.compare_routes.question",
+        "surface": "CARD.COMPARE_ROUTES.question",
+        "selection_state": "PRESERVED_INACTIVE_SUPERSEDED_FOR_V1_2_SURFACE"
+      }
+    ],
+    "explicitly_reused": [
+      {
+        "key": "lane_a.card.state_change.question",
+        "surface": "CARD.STATE_CHANGE.question",
+        "selection_state": "ACTIVE_REUSED_V1_1_OWNER"
+      }
+    ],
+    "active_distinct_legacy_surfaces": [
+      {
+        "key": "lane_a.card.incident.question",
+        "surface": "CARD.INCIDENT.question",
+        "selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE"
+      },
+      {
+        "key": "lane_a.card.asset_out.question",
+        "surface": "CARD.ASSET_OUT.question",
+        "selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE"
+      },
+      {
+        "key": "lane_a.card.high_value.question",
+        "surface": "CARD.HIGH_VALUE.question",
+        "selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE"
+      },
+      {
+        "key": "lane_a.card.exact_receipt.question",
+        "surface": "CARD.EXACT_RECEIPT.question",
+        "selection_state": "ACTIVE_DISTINCT_LEGACY_SURFACE"
+      }
+    ],
+    "all_other_accepted_surfaces": "ACTIVE_UNCHANGED_AFTER_COMPLETE_409_ENTRY_425_SURFACE_CROSS_VERSION_AUDIT"
+  }
+}

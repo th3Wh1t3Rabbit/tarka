@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "allowanceId": "G4A-DISCOVERY-AUDITION",
+  "leadAuthorizationId": "LEAD-G4A-NANSEN-DISCOVERY-001",
+  "approvedCandidateIds": ["G4A_ACCOUNT_PREFLIGHT", "EULER_2023_INITIAL_EXPLOIT", "BYBIT_2025_DRAIN_FALLBACK"],
+  "approvedEndpoints": [
+    "/api/v1/account",
+    "/api/v1/profiler/address/transactions",
+    "/api/v1/transaction-with-token-transfer-lookup",
+    "/api/v1/profiler/address/historical-balances"
+  ],
+  "maximumRequests": 64,
+  "maximumProjectedCredits": 200,
+  "maximumPerEndpointCalls": {
+    "/api/v1/account": 1,
+    "/api/v1/profiler/address/transactions": 18,
+    "/api/v1/transaction-with-token-transfer-lookup": 18,
+    "/api/v1/profiler/address/historical-balances": 12
+  },
+  "validFromUtc": "2026-09-14T00:00:00Z",
+  "validUntilUtc": "2026-09-17T06:00:00Z"
+}

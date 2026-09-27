@@ -1,0 +1,10 @@
+{
+  "ids": [
+    "NONESSENTIAL_PROTOCOL_TRANSFERS",
+    "POST_CUTOFF_ACTIVITY",
+    "UNEXPLAINED_NEGATIVE_BALANCE_ROWS",
+    "UNRELATED_COUNTERPARTIES"
+  ],
+  "count": 4,
+  "reason": "Omitted as nonessential context or outside the bounded playable proof."
+}

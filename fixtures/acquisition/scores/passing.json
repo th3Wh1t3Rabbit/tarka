@@ -1,0 +1,15 @@
+{
+  "candidateId": "fixture-score-passing",
+  "categories": {
+    "proofClosureAuditability": 18,
+    "nansenIndispensability": 14,
+    "branchTransformationTopology": 14,
+    "timeMechanicPotential": 9,
+    "nonexpertNarrativeClarity": 9,
+    "replayTruthfulDepth": 9,
+    "visualWorldReadability": 9,
+    "complianceDataReliability": 10
+  },
+  "fatalDefects": [],
+  "eligibilityThreshold": 80
+}

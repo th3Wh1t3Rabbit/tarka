@@ -1,0 +1,23 @@
+.c1-corpus { color: #172016; background: #fff; font: 1rem/1.6 system-ui, sans-serif; padding: 1rem; min-width: 0; overflow-wrap: anywhere; }
+.c1-corpus * { box-sizing: border-box; }
+.c1-corpus h1 { font-size: 1.6rem; line-height: 1.3; }
+.c1-corpus h2, .c1-corpus h3 { font-size: 1.15rem; line-height: 1.5; }
+.c1-corpus fieldset { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; border: 2px solid currentColor; min-width: 0; }
+.c1-corpus label { display: flex; flex-direction: column; min-width: 0; }
+.c1-control { display: flex; flex-direction: column; min-width: 0; }
+.c1-corpus input, .c1-corpus select, .c1-corpus button { font: inherit; color: inherit; background: inherit; border: 2px solid currentColor; border-radius: .2rem; padding: .4rem; min-width: 0; max-width: 100%; min-height: 2.75rem; }
+.c1-corpus button { align-self: end; cursor: pointer; }
+.c1-corpus :focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.c1-corpus article { border: 1px solid currentColor; padding: 1rem; margin-block: 1rem; }
+.c1-corpus dl { margin: 0; }
+.c1-corpus dt { font-weight: 700; margin-top: .6rem; }
+.c1-corpus dd { margin-inline-start: 1rem; }
+.c1-corpus ul { padding-inline-start: 1.2rem; margin-block: 0; }
+.c1-corpus code { font: inherit; user-select: text; }
+.c1-boundary { border-inline-start: .3rem solid currentColor; padding-inline-start: .75rem; }
+.c1-corpus a { color: inherit; text-decoration: underline; }
+.c1-fullscreen_crt { background: #101b13; color: #e0ffe5; min-height: 100vh; font-family: ui-monospace, monospace; border: .25rem double currentColor; }
+.c1-docked_overlay { max-width: 52rem; margin-inline: auto; border: .25rem solid currentColor; background: #f5f4e9; }
+.c1-plain_list { max-width: 80rem; margin-inline: auto; }
+@media (prefers-reduced-motion: reduce) { .c1-corpus, .c1-corpus * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media (forced-colors: active) { .c1-corpus { color: CanvasText; background: Canvas; border-color: CanvasText; } .c1-corpus :focus-visible { outline-color: Highlight; } }

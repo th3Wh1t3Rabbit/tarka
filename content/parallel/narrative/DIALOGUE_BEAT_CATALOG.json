@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "base_commit": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41",
+  "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "beats": [
+    {
+      "beat_id": "records.no_ordinary_witnesses",
+      "cue_id": "onboarding.01",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.no_ordinary_witnesses",
+      "copy_key": "lane_a.beat.records.no_ordinary_witnesses",
+      "speaker": "ARCHIVIST",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.rook_assumes_no_leads",
+      "cue_id": "onboarding.02",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.rook_assumes_no_leads",
+      "copy_key": "lane_a.beat.records.rook_assumes_no_leads",
+      "speaker": "ROOK",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.event_was_onchain",
+      "cue_id": "onboarding.03",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.event_was_onchain",
+      "copy_key": "lane_a.beat.records.event_was_onchain",
+      "speaker": "ARCHIVIST",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.rook_misses_implication",
+      "cue_id": "onboarding.04",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.rook_misses_implication",
+      "copy_key": "lane_a.beat.records.rook_misses_implication",
+      "speaker": "ROOK",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.public_but_hard_to_read",
+      "cue_id": "onboarding.05",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.public_but_hard_to_read",
+      "copy_key": "lane_a.beat.records.public_but_hard_to_read",
+      "speaker": "ARCHIVIST",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.rook_premature_confidence",
+      "cue_id": "onboarding.06",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.rook_premature_confidence",
+      "copy_key": "lane_a.beat.records.rook_premature_confidence",
+      "speaker": "ROOK",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.archivist_corrects_scope",
+      "cue_id": "onboarding.07",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.archivist_corrects_scope",
+      "copy_key": "lane_a.beat.records.archivist_corrects_scope",
+      "speaker": "ARCHIVIST",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.authorized_case_access",
+      "cue_id": "onboarding.08",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.authorized_case_access",
+      "copy_key": "lane_a.beat.records.authorized_case_access",
+      "speaker": "ARCHIVIST",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.nansen_structures_not_solves",
+      "cue_id": "onboarding.09",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.nansen_structures_not_solves",
+      "copy_key": "lane_a.beat.records.nansen_structures_not_solves",
+      "speaker": "ARCHIVIST",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    },
+    {
+      "beat_id": "records.learn_together",
+      "cue_id": "onboarding.10",
+      "legacy_copy_key": "TODO.LEAD_COPY.records.learn_together",
+      "copy_key": "lane_a.beat.records.learn_together",
+      "speaker": "ROOK",
+      "advance": "PLAYER_PACED",
+      "runtime_effects_preserved": true
+    }
+  ],
+  "opening_keys": [
+    "lane_a.opening.1",
+    "lane_a.opening.2",
+    "lane_a.opening.3",
+    "lane_a.opening.4",
+    "lane_a.opening.5",
+    "lane_a.opening.6",
+    "lane_a.opening.7",
+    "lane_a.opening.8"
+  ],
+  "optional_exchanges": [
+    {
+      "id": "banter.mr_a",
+      "copy_keys": [
+        "lane_a.banter.mr_a.rook",
+        "lane_a.banter.mr_a.arthur"
+      ],
+      "selection": "EXPLICIT_OPTIONAL",
+      "max_per_interaction": 1,
+      "progression_role": false
+    },
+    {
+      "id": "banter.archive_ace",
+      "copy_keys": [
+        "lane_a.banter.archive_ace.rook",
+        "lane_a.banter.archive_ace.arthur"
+      ],
+      "selection": "EXPLICIT_OPTIONAL",
+      "max_per_interaction": 1,
+      "progression_role": false
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "base_commit": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41",
+  "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "ladders": [
+    {
+      "id": "HINT.PUZZLE.START",
+      "selector": "PHASE.START",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.start.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.start.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.start.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.TICKET_PULLED",
+      "selector": "PHASE.TICKET_PULLED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.ticket_pulled.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.ticket_pulled.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.ticket_pulled.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.REQUEST_COMPLETED",
+      "selector": "PHASE.REQUEST_COMPLETED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.request_completed.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.request_completed.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.request_completed.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.REQUEST_STAMPED",
+      "selector": "PHASE.REQUEST_STAMPED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.request_stamped.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.request_stamped.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.request_stamped.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.REQUEST_IN_TUBE",
+      "selector": "PHASE.REQUEST_IN_TUBE",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.request_in_tube.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.request_in_tube.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.request_in_tube.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.TUBE_CLOSED",
+      "selector": "PHASE.TUBE_CLOSED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.tube_closed.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.tube_closed.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.tube_closed.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.DISPATCHED",
+      "selector": "PHASE.DISPATCHED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.dispatched.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.dispatched.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.dispatched.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.CANISTER_OPEN",
+      "selector": "PHASE.CANISTER_OPEN",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.canister_open.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.canister_open.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.canister_open.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.STRIP_TAKEN",
+      "selector": "PHASE.STRIP_TAKEN",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.strip_taken.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.strip_taken.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.strip_taken.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.TERMINAL_UNLOCKED",
+      "selector": "PHASE.TERMINAL_UNLOCKED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.terminal_unlocked.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.terminal_unlocked.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.terminal_unlocked.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.PUZZLE.COMPLETE",
+      "selector": "PHASE.COMPLETE",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.puzzle.complete.method_hint",
+        "CASE_HINT": "lane_a.hint.puzzle.complete.case_hint",
+        "DIRECT_HINT": "lane_a.hint.puzzle.complete.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.INVESTIGATION",
+      "selector": "ACCESS_EARNED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.investigation.method_hint",
+        "CASE_HINT": "lane_a.hint.investigation.case_hint",
+        "DIRECT_HINT": "lane_a.hint.investigation.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.SELECTED_CANDIDATE",
+      "selector": "CANDIDATE_DISCOVERED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.selected_candidate.method_hint",
+        "CASE_HINT": "lane_a.hint.selected_candidate.case_hint",
+        "DIRECT_HINT": "lane_a.hint.selected_candidate.direct_hint"
+      },
+      "no_undiscovered_value": true
+    },
+    {
+      "id": "HINT.EXACT_FOUND",
+      "selector": "EXACT_CONVERGENCE_VERIFIED",
+      "tiers": {
+        "METHOD_HINT": "lane_a.hint.exact_found.method_hint",
+        "CASE_HINT": "lane_a.hint.exact_found.case_hint",
+        "DIRECT_HINT": "lane_a.hint.exact_found.direct_hint"
+      },
+      "no_undiscovered_value": true
+    }
+  ],
+  "unavailable_fallback": "lane_a.hint.unavailable"
+}

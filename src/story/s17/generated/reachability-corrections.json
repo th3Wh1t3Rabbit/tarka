@@ -1,0 +1,438 @@
+{
+  "schema": "tarka.s17-p1.reachability-corrections.v1",
+  "sourceFile": "SCRIPT_BINDING_DELTA.json",
+  "sourceSha256": "032488d30d486b31ee73a3d3d6be472ff4df7b8c867efb85734964b3a7b37c18",
+  "count": 43,
+  "routes": [
+    {
+      "trigger_id": "TRG-H-filing-drawers-01",
+      "object_id": "filing-drawers",
+      "display_label": "filing drawers",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-filing-drawers-05",
+      "object_id": "filing-drawers",
+      "display_label": "filing drawers",
+      "verb": "LOOK_AT",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "OBJECT_SPECIFIC_LOOK_REQUIRED",
+      "required_copy_or_behavior": "Never use an unreachable fallback for LOOK AT."
+    },
+    {
+      "trigger_id": "TRG-H-filing-drawers-08",
+      "object_id": "filing-drawers",
+      "display_label": "filing drawers",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-request-dispenser-01",
+      "object_id": "request-dispenser",
+      "display_label": "form dispenser",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-request-dispenser-08",
+      "object_id": "request-dispenser",
+      "display_label": "form dispenser",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-pen-stand-01",
+      "object_id": "pen-stand",
+      "display_label": "historical-looking feather pen",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-pen-stand-09",
+      "object_id": "pen-stand",
+      "display_label": "historical-looking feather pen",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-mr-index-01",
+      "object_id": "mr-index",
+      "display_label": "Arthur",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "DELEGATE_TO_ARTHUR_ITEM_MATRIX",
+      "required_copy_or_behavior": "Item-specific Arthur response; bare/global unreachable copy prohibited."
+    },
+    {
+      "trigger_id": "TRG-H-mr-index-05",
+      "object_id": "mr-index",
+      "display_label": "Arthur",
+      "verb": "LOOK_AT",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "PRINCIPAL_COPY_HOLDOUT_ARTHUR_LOOK",
+      "required_copy_or_behavior": "One remaining Principal-authored line."
+    },
+    {
+      "trigger_id": "TRG-H-mr-index-08",
+      "object_id": "mr-index",
+      "display_label": "Arthur",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "OPEN_ARTHUR_DIALOGUE_MENU",
+      "required_copy_or_behavior": "Arthur conversation owner; no fallback speech."
+    },
+    {
+      "trigger_id": "TRG-H-official-case-file-cabinet-01",
+      "object_id": "official-case-file-cabinet",
+      "display_label": "office cabinet",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-official-case-file-cabinet-14",
+      "object_id": "official-case-file-cabinet",
+      "display_label": "office cabinet",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-disorderly-stack-of-confidential-files-01",
+      "object_id": "disorderly-stack-of-confidential-files",
+      "display_label": "disorderly stack of confidential files",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-disorderly-stack-of-confidential-files-07",
+      "object_id": "disorderly-stack-of-confidential-files",
+      "display_label": "disorderly stack of confidential files",
+      "verb": "LOOK_AT",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "OBJECT_SPECIFIC_LOOK_REQUIRED",
+      "required_copy_or_behavior": "Never use an unreachable fallback for LOOK AT."
+    },
+    {
+      "trigger_id": "TRG-H-disorderly-stack-of-confidential-files-11",
+      "object_id": "disorderly-stack-of-confidential-files",
+      "display_label": "disorderly stack of confidential files",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-miscellaneous-drawer-cabinet-01",
+      "object_id": "miscellaneous-drawer-cabinet",
+      "display_label": "office cabinet",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-miscellaneous-drawer-cabinet-14",
+      "object_id": "miscellaneous-drawer-cabinet",
+      "display_label": "office cabinet",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-miscellaneous-catch-all-contents-01",
+      "object_id": "miscellaneous-catch-all-contents",
+      "display_label": "miscellaneous catch-all contents",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-miscellaneous-catch-all-contents-07",
+      "object_id": "miscellaneous-catch-all-contents",
+      "display_label": "miscellaneous catch-all contents",
+      "verb": "LOOK_AT",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "OBJECT_SPECIFIC_LOOK_REQUIRED",
+      "required_copy_or_behavior": "Never use an unreachable fallback for LOOK AT."
+    },
+    {
+      "trigger_id": "TRG-H-miscellaneous-catch-all-contents-11",
+      "object_id": "miscellaneous-catch-all-contents",
+      "display_label": "miscellaneous catch-all contents",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-nansen-terminal-01",
+      "object_id": "nansen-terminal",
+      "display_label": "Nansen™ terminal",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "DELEGATE_TO_ITEM_TARGET_MATRIX",
+      "required_copy_or_behavior": "Item-specific target handling; no unreachable copy."
+    },
+    {
+      "trigger_id": "TRG-H-nansen-terminal-06",
+      "object_id": "nansen-terminal",
+      "display_label": "Nansen™ terminal",
+      "verb": "LOOK_AT",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "DEFER_TO_S16_TERMINAL_LOOK",
+      "required_copy_or_behavior": "Terminal presentation/copy is owned by S16."
+    },
+    {
+      "trigger_id": "TRG-H-nansen-terminal-09",
+      "object_id": "nansen-terminal",
+      "display_label": "Nansen™ terminal",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-coffee-mug-01",
+      "object_id": "coffee-mug",
+      "display_label": "coffee mug",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-desk-lamp-01",
+      "object_id": "desk-lamp",
+      "display_label": "desk lamp",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-desk-lamp-10",
+      "object_id": "desk-lamp",
+      "display_label": "desk lamp",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-tall-books-01",
+      "object_id": "tall-books",
+      "display_label": "tall books",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-book-shelf-01",
+      "object_id": "book-shelf",
+      "display_label": "crowded book shelf",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-blank-authorization-form-01",
+      "object_id": "blank-authorization-form",
+      "display_label": "blank authorization form",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-blank-authorization-form-09",
+      "object_id": "blank-authorization-form",
+      "display_label": "blank authorization form",
+      "verb": "TALK_TO",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_INANIMATE_TALK_FALLBACK",
+      "required_copy_or_behavior": "It probably wouldn’t respond."
+    },
+    {
+      "trigger_id": "TRG-H-wall-employee-01",
+      "object_id": "wall-employee",
+      "display_label": "framed workplace acknowledgement",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-wall-employee-03",
+      "object_id": "wall-employee",
+      "display_label": "framed workplace acknowledgement",
+      "verb": "USE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NO_EFFECT_FALLBACK",
+      "required_copy_or_behavior": "That won’t help."
+    },
+    {
+      "trigger_id": "TRG-H-wall-employee-04",
+      "object_id": "wall-employee",
+      "display_label": "framed workplace acknowledgement",
+      "verb": "OPEN",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NOT_OPENABLE_FALLBACK",
+      "required_copy_or_behavior": "There’s nothing to open."
+    },
+    {
+      "trigger_id": "TRG-H-wall-employee-06",
+      "object_id": "wall-employee",
+      "display_label": "framed workplace acknowledgement",
+      "verb": "PUSH",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NO_EFFECT_FALLBACK",
+      "required_copy_or_behavior": "That won’t help."
+    },
+    {
+      "trigger_id": "TRG-H-wall-employee-07",
+      "object_id": "wall-employee",
+      "display_label": "framed workplace acknowledgement",
+      "verb": "CLOSE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NOT_CLOSABLE_FALLBACK",
+      "required_copy_or_behavior": "There’s nothing to close."
+    },
+    {
+      "trigger_id": "TRG-H-wall-employee-09",
+      "object_id": "wall-employee",
+      "display_label": "framed workplace acknowledgement",
+      "verb": "PULL",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NO_EFFECT_FALLBACK",
+      "required_copy_or_behavior": "That won’t help."
+    },
+    {
+      "trigger_id": "TRG-H-wall-preserve-06",
+      "object_id": "wall-preserve",
+      "display_label": "oddly mounted frame",
+      "verb": "PUSH",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NO_EFFECT_FALLBACK",
+      "required_copy_or_behavior": "That won’t help."
+    },
+    {
+      "trigger_id": "TRG-H-wall-preserve-07",
+      "object_id": "wall-preserve",
+      "display_label": "oddly mounted frame",
+      "verb": "CLOSE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NOT_CLOSABLE_FALLBACK",
+      "required_copy_or_behavior": "There’s nothing to close."
+    },
+    {
+      "trigger_id": "TRG-H-wall-not-a-number-01",
+      "object_id": "wall-not-a-number",
+      "display_label": "stanchion sign",
+      "verb": "GIVE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_GIVE_FALLBACK",
+      "required_copy_or_behavior": "It’s not mine to give."
+    },
+    {
+      "trigger_id": "TRG-H-wall-not-a-number-04",
+      "object_id": "wall-not-a-number",
+      "display_label": "stanchion sign",
+      "verb": "OPEN",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NOT_OPENABLE_FALLBACK",
+      "required_copy_or_behavior": "There’s nothing to open."
+    },
+    {
+      "trigger_id": "TRG-H-wall-not-a-number-06",
+      "object_id": "wall-not-a-number",
+      "display_label": "stanchion sign",
+      "verb": "PUSH",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NO_EFFECT_FALLBACK",
+      "required_copy_or_behavior": "That won’t help."
+    },
+    {
+      "trigger_id": "TRG-H-wall-not-a-number-07",
+      "object_id": "wall-not-a-number",
+      "display_label": "stanchion sign",
+      "verb": "CLOSE",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NOT_CLOSABLE_FALLBACK",
+      "required_copy_or_behavior": "There’s nothing to close."
+    },
+    {
+      "trigger_id": "TRG-H-wall-not-a-number-09",
+      "object_id": "wall-not-a-number",
+      "display_label": "stanchion sign",
+      "verb": "PULL",
+      "states": "PREAUTH_CLOSED | COMPLETE_CLOSED | COMPLETE_OPEN | COMPLETE_DEPLETED",
+      "current_wrong_copy": "I can’t reach it.",
+      "required_disposition": "REACHABLE_NO_EFFECT_FALLBACK",
+      "required_copy_or_behavior": "That won’t help."
+    }
+  ]
+}

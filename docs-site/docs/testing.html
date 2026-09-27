@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build and test · Tarka</title><link rel="stylesheet" href="../assets/site.css"></head><body data-start="docs/testing.md" data-base="../" data-inline="false"><aside id="rail"><div class="brand">TARKA</div><div class="subbrand">A case worth following</div><div class="toplinks"><a href="https://play.tarka-meridian.workers.dev/">Play</a><a href="https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian">Download</a><a href="https://github.com/th3Wh1t3Rabbit/tarka">GitHub</a><a href="https://docs.tarka-meridian.workers.dev/">Docs</a></div><label for="search" class="subbrand" style="display:block;margin-bottom:7px">Search documentation</label><input id="search" class="search" type="search" placeholder="Topics, questions, tokens…"><label class="search-options"><input type="checkbox" id="spoilerSearch">Include evidence / spoilers</label><button id="menu">CONTENTS</button><nav id="nav" aria-label="Documentation"><section class="navgroup"><h2>Play &amp; story</h2><a data-doc="README.md" href="../index.html">Welcome</a><a data-doc="docs/play.md" href="../docs/play.html">Play / download</a><a data-doc="docs/play/saves.md" href="../docs/play/saves.html">Keeping your progress</a><a data-doc="docs/controls.md" href="../docs/controls.html">Player guide</a><a data-doc="docs/design/terminal-tour.md" href="../docs/design/terminal-tour.html">Illustrated terminal guide</a><a data-doc="docs/story.md" href="../docs/story.html">The story</a><a data-doc="docs/showcase.md" href="../docs/showcase.html">Watch the showcase</a></section><section class="navgroup"><h2>The design</h2><a data-doc="docs/design/questions-first.md" href="../docs/design/questions-first.html">Questions before dashboards</a><a data-doc="docs/design/terminal-character.md" href="../docs/design/terminal-character.html">A terminal with character</a><a data-doc="docs/creator-note.md" href="../docs/creator-note.html">A note from the creator</a></section><section class="navgroup"><h2>Nansen &amp; the evidence</h2><a data-doc="docs/data/overview.md" href="../docs/data/overview.html">Why Nansen</a><a data-doc="docs/data/discovery.md" href="../docs/data/discovery.html">Choosing the case</a><a data-doc="docs/data/method.md" href="../docs/data/method.html">Collection method</a><a data-doc="docs/data/assembly.md" href="../docs/data/assembly.html">One record, explained</a><a data-doc="docs/data/endpoints.md" href="../docs/data/endpoints.html">Endpoint families</a><a data-doc="docs/data/counts.md" href="../docs/data/counts.html">Calls versus records</a><a data-doc="docs/data/evidence-limits.md" href="../docs/data/evidence-limits.html">Evidence limits</a><a data-doc="@calls" href="../docs/data/request-log.html">Browse 101 requests</a><a data-doc="docs/data/request-log.md" href="../docs/data/request-log.html">Linked request index</a><a data-doc="docs/data/records.md" href="../docs/data/records.html">Compiled records</a></section><section class="navgroup"><h2>Spoilers &amp; the writing</h2><a data-doc="docs/spoilers/euler-connection.md" href="../docs/spoilers/euler-connection.html">How the case connects</a><a data-doc="docs/spoilers/brcg.md" href="../docs/spoilers/brcg.html">The piggy bank &amp; BRCG</a><a data-doc="docs/script/index.md" href="../docs/script/index.html">Complete Script Explorer</a><a data-doc="docs/script/story.md" href="../docs/script/story.html">Complete story script</a><a data-doc="docs/script/world-routes.md" href="../docs/script/world-routes.html">World hotspot routes</a><a data-doc="docs/script/inventory-routes.md" href="../docs/script/inventory-routes.html">Inventory combinations</a><a data-doc="docs/script/dialogue-routes.md" href="../docs/script/dialogue-routes.html">Arthur dialogue routes</a><a data-doc="docs/script/actions-and-endings.md" href="../docs/script/actions-and-endings.html">Actions &amp; endings</a><a data-doc="docs/script/coverage.md" href="../docs/script/coverage.html">Script coverage proof</a></section><section class="navgroup"><h2>Project information</h2><a data-doc="docs/architecture.md" href="../docs/architecture.html">System overview</a><a data-doc="docs/animation-assets.md" href="../docs/animation-assets.html">Animation assets</a><a data-doc="docs/platforms.md" href="../docs/platforms.html">Platforms</a><a data-doc="docs/testing.md" href="../docs/testing.html">Build and test</a><a data-doc="docs/limitations.md" href="../docs/limitations.html">Limitations</a><a data-doc="docs/credits.md" href="../docs/credits.html">Credits &amp; licenses</a><a data-doc="docs/project/source-and-content.md" href="../docs/project/source-and-content.html">Source snapshots &amp; game content</a><a data-doc="docs/project/release-adapter.md" href="../docs/project/release-adapter.html">Immutable release adapter</a><a data-doc="docs/future.md" href="../docs/future.html">Future possibilities</a><a data-doc="docs/competition/evidence-map.md" href="../docs/competition/evidence-map.html">Buildathon evidence</a><a data-doc="docs/project/documentation.md" href="../docs/project/documentation.html">One library, two views</a><a data-doc="docs/project/figures.md" href="../docs/project/figures.html">About the illustrations</a><a data-doc="docs/index.md" href="../docs/index.html">Full contents</a></section></nav></aside><main><div class="toolbar"><span id="crumb" class="crumb">Build and test</span><button id="downloadMd" class="quiet-button">Save Markdown</button></div><div class="docgrid"><article id="article" tabindex="-1"><h1 id="build-and-test">Build and test</h1>
+<p>This page is for developers. Players should use <a href="play.html" data-doc="docs/play.md" data-anchor="">the hosted game or prepared download</a>.</p>
+<h2 id="reproduce-the-source-build">Reproduce the source build</h2>
+<p>Use the release's tested tool versions and committed lockfile. Installing source dependencies is a different route from launching the prepared offline game.</p>
+<p>Install Node.js 20.19+ and npm 10+, then use the committed lockfile:</p>
+<pre><code class="language-text">git clone https://github.com/th3Wh1t3Rabbit/tarka.git
+cd tarka
+npm ci
+npm run dev
+</code></pre>
+<p>For the production gate, run <code>npm run release:verify</code>. Developers can also run
+<code>npm run check</code>, <code>npm test</code>, and <code>npm run test:e2e</code>. The final release repeats
+installation and production verification from a fresh anonymous clone.</p>
+<h2 id="what-a-check-establishes">What a check establishes</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>What it tells you</th>
+<th>What it does not establish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source and artifact identity</td>
+<td>Which source and output files were examined</td>
+<td>That the game is correct or ready to publish</td>
+</tr>
+<tr>
+<td>Production build</td>
+<td>The documented build command completed</td>
+<td>That every path through the game was exercised</td>
+</tr>
+<tr>
+<td>Asset delivery</td>
+<td>The requested files exist and have the expected bytes and media types</td>
+<td>That all files are used, or that every runtime request was observed</td>
+</tr>
+<tr>
+<td>Launch smoke</td>
+<td>The tested input path reaches the title and room</td>
+<td>That authorization, investigation, audio and ending all work</td>
+</tr>
+<tr>
+<td>Complete journeys</td>
+<td>The recorded puzzle and investigation paths complete</td>
+<td>Compatibility with untested browsers or devices</td>
+</tr>
+<tr>
+<td>Published-build checks</td>
+<td>The actual public URL and downloadable archives were tested</td>
+<td>An unconditional availability or performance guarantee</td>
+</tr>
+</tbody>
+</table>
+<p>A release report should identify the exact source and built artifact, test environment, command, result and any remaining limitations. Reference screenshots and development-test counts must not impersonate final-game qualification.</p>
+<h2 id="pre-release-delivery-rehearsal">Pre-release delivery rehearsal</h2>
+<p>Before the final game archive existed, the delivery mechanism was exercised with a harmless synthetic site. A static-host rehearsal verified two separate origins, revision replacement and restoration, relative navigation, browser storage separation, and complete cleanup. Native loopback-launcher mechanics were also exercised on Linux, Windows 2025 x64, and macOS 15 ARM64.</p>
+<p>Those checks establish that the proposed plumbing can work. They do <strong>not</strong> establish that Tarka's actual assets, saves, complete journeys, signing, notarization, double-click behavior, or operating-system security prompts are ready. The real release must repeat the relevant checks against exact game and documentation artifact hashes.</p>
+<h2 id="gameplay-coverage">Gameplay coverage</h2>
+<p>Check office authorization, inventory interactions, every result page, query/history identity, detail/back navigation, exact-proof eligibility, report saving and closure cancellation. Exercise both guided progress and optional record exploration. After a return to the office, verify the retained investigation and the correct audio track.</p>
+<p>Record keyboard, pointer and touch coverage at the level actually tested. Browser-emulated touch is not a physical-device result. A blocked-provider journey verifies that gameplay does not need fresh Nansen calls; local asset requests remain necessary.</p>
+<p>Release qualification records 479 passing unit checks with three
+private-provenance-only checks skipped, plus 127 passing browser journeys. The
+browser result combines the complete 127-test sweep with focused green reruns
+of five expectations updated for the final mobile settings menu, exact public
+link casing, and uninterrupted globe timing; no failing current expectation is
+waived. TypeScript, ESLint, the browser/provider boundary, release portability,
+required-art/audio identity, documentation integrity, and local-path scans
+pass. Browser journeys cover opening, office routes, drawers, inventory
+combinations, terminal investigation, closeout, mobile layouts, and the
+globe's repeated touch/promotion/reversal behavior. The release report keeps
+those results separate from operating systems and physical devices that were
+not tested.</p>
+<h2 id="size-and-loading">Size and loading</h2>
+<p>Keep uncompressed archive bytes, compressed transfer bytes, first-load requests and whole-session requests distinct. An asset inventory is not a browser loading trace. Developer source maps may be included in a build without being requested by an ordinary player; removing one does not establish an equal startup-speed gain.</p>
+<h2 id="documentation-checks">Documentation checks</h2>
+<p>The documentation build checks links, public terminology, stable request/record references, image provenance and unresolved publication tasks. The searchable website is generated from the same Markdown library as the repository documentation.</p>
+<p><a href="limitations.html" data-doc="docs/limitations.md" data-anchor="">Known limitations</a> · <a href="data/method.html" data-doc="docs/data/method.md" data-anchor="">Data method</a> · <a href="play/saves.html" data-doc="docs/play/saves.md" data-anchor="">Local saves</a></p>
+</article><nav id="toc" class="toc" aria-label="On this page"></nav></div></main><script src="../assets/library.js"></script><script src="../assets/site.js"></script></body></html>

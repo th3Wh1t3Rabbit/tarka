@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "contributorDisposition": "CONTRIBUTOR_METADATA_NOT_YET_BOUND",
+  "contributors": [],
+  "createdBy": {
+    "displayName": "th3Wh1t3Rabbit",
+    "authority": "PRINCIPAL_DIRECT_2026-09-26",
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/th3Wh1t3Rabbit/tarka"
+      },
+      {
+        "label": "X",
+        "href": "https://x.com/th3Wh1t3Rabbit"
+      },
+      {
+        "label": "Buy Me a Coffee",
+        "href": "https://buymeacoffee.com/th3Wh1t3Rabbit"
+      }
+    ]
+  },
+  "sections": {
+    "createdFor": ["NANSEN MERIDIAN BUILDATHON", "SEPTEMBER 14–27, 2026"],
+    "poweredBy": ["NANSEN API"],
+    "dataSources": [
+      "NANSEN API",
+      "ETHEREUM",
+      "EULER FINANCE · MARCH 13, 2023",
+      "FROZEN HISTORICAL CASE SNAPSHOT"
+    ],
+    "aboutTitle": "TARKA (तर्क) — REASONING, LOGIC, INQUIRY. TEST A VIEW, EXCLUDE UNTENABLE ALTERNATIVES, AND CLOSE ONLY WHAT EXACT EVIDENCE SUPPORTS."
+  },
+  "bindings": [
+    {
+      "visibleLine": "NANSEN MERIDIAN BUILDATHON",
+      "sourcePath": "AUTHORITY/R55_TARKA_TITLE_CREDITS_CONTRACT.md",
+      "sourceSha256": "07e664c1755a3a0ebec537186adfca6b0ebfb2e11933d926870d7ed3008a5aa8",
+      "sourceFieldOrLine": "Credits contract / CREATED FOR THE",
+      "claimBoundary": "Competition name only."
+    },
+    {
+      "visibleLine": "SEPTEMBER 14–27, 2026",
+      "sourcePath": "AUTHORITY/R55_TARKA_TITLE_CREDITS_CONTRACT.md",
+      "sourceSha256": "07e664c1755a3a0ebec537186adfca6b0ebfb2e11933d926870d7ed3008a5aa8",
+      "sourceFieldOrLine": "Credits contract / CREATED FOR THE",
+      "claimBoundary": "Buildathon dates only."
+    },
+    {
+      "visibleLine": "NANSEN API",
+      "sourcePath": "06_COMPETITION_RELEASE_AND_SUBMISSION.md",
+      "sourceSha256": "7997ce31fbf33176e9a230adadd570122e583a5a641d7c637786e2d4f4262bcc",
+      "sourceFieldOrLine": "line 36: Powered by Nansen API",
+      "claimBoundary": "Public attribution label only; no endpoint, live-call, or ownership claim."
+    },
+    {
+      "visibleLine": "ETHEREUM",
+      "sourcePath": "07_PUBLIC_SAFE_EULER_CASE_TRUTH.md",
+      "sourceSha256": "d8ba33c26be0a1c073e6227b48458db6de30436d42e3a27ce231dea9e22de3cf",
+      "sourceFieldOrLine": "lines 31–35 / chain: ETHEREUM",
+      "claimBoundary": "Chain identity for the frozen Euler case only."
+    },
+    {
+      "visibleLine": "EULER FINANCE · MARCH 13, 2023",
+      "sourcePath": "07_PUBLIC_SAFE_EULER_CASE_TRUTH.md",
+      "sourceSha256": "d8ba33c26be0a1c073e6227b48458db6de30436d42e3a27ce231dea9e22de3cf",
+      "sourceFieldOrLine": "lines 31–35 / scenario and incident window",
+      "claimBoundary": "Case subject and incident date only; no actor identity or unbounded attribution."
+    },
+    {
+      "visibleLine": "FROZEN HISTORICAL CASE SNAPSHOT",
+      "sourcePath": "06_COMPETITION_RELEASE_AND_SUBMISSION.md",
+      "sourceSha256": "7997ce31fbf33176e9a230adadd570122e583a5a641d7c637786e2d4f4262bcc",
+      "sourceFieldOrLine": "line 9: deterministically compiled from a frozen historical snapshot",
+      "claimBoundary": "Snapshot posture only; no live-provider or completeness claim."
+    },
+    {
+      "visibleLine": "TARKA (तर्क) — REASONING, LOGIC, INQUIRY. TEST A VIEW, EXCLUDE UNTENABLE ALTERNATIVES, AND CLOSE ONLY WHAT EXACT EVIDENCE SUPPORTS.",
+      "sourcePath": "AUTHORITY/R55_TARKA_TITLE_CREDITS_CONTRACT.md",
+      "sourceSha256": "07e664c1755a3a0ebec537186adfca6b0ebfb2e11933d926870d7ed3008a5aa8",
+      "sourceFieldOrLine": "Sanskrit title rationale",
+      "claimBoundary": "Approved public title rationale only."
+    }
+  ],
+  "contributorSearch": {
+    "result": "NO_EXACT_ACCEPTED_CONTRIBUTOR_DISPLAY_METADATA_FOUND",
+    "searched": [
+      {"path": "package.json", "sha256": "c6e87064d5c6225e7bf5478c20cbe146847d40ad67a7b57649a13e09cb0158ee"},
+      {"path": "README.md", "sha256": "f6e7076eff844fcc24a08b3eaf23b2ed453491916ea3b3c33e00fc9c12f63949"},
+      {"path": "LICENSE", "sha256": "3d719d1953a86851974c2910a01701db471dedb290d683a0e31455da5c7b1f6d"}
+    ],
+    "note": "The generic LICENSE term ‘TRACE//ESCAPE contributors’ is not an accepted display name or label."
+  }
+}

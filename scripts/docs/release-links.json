@@ -1,0 +1,8 @@
+{
+  "links": {
+    "play": { "url": "https://play.tarka-meridian.workers.dev/" },
+    "downloads": { "url": "https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian" },
+    "repository": { "url": "https://github.com/th3Wh1t3Rabbit/tarka" },
+    "documentation": { "url": "https://docs.tarka-meridian.workers.dev/" }
+  }
+}

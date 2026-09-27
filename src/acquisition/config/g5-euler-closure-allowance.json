@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "allowanceId": "G5-EULER-EVIDENCE-CLOSURE",
+  "leadAuthorizationId": "LEAD-G5-EULER-EVIDENCE-CLOSURE-001",
+  "approvedCandidateIds": ["EULER_2023_FALSE_EXIT_CLOSURE"],
+  "approvedEndpoints": ["/api/v1/profiler/address/historical-balances"],
+  "maximumRequests": 6,
+  "maximumProjectedCredits": 20,
+  "maximumPerEndpointCalls": {
+    "/api/v1/profiler/address/historical-balances": 6
+  },
+  "validFromUtc": "2026-09-15T00:00:00Z",
+  "validUntilUtc": "2026-09-20T06:00:00Z"
+}

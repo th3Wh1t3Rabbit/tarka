@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "packs": [
+    {
+      "id": "placeholder",
+      "label": "A1 PROVISIONAL LOW-RES PLACEHOLDERS",
+      "status": "PROVISIONAL_PLACEHOLDER"
+    },
+    {
+      "id": "deco-archive-noir",
+      "label": "Deco Archive Noir \u2014 empty audition slot",
+      "status": "AUDITION_EMPTY"
+    },
+    {
+      "id": "industrial-bureaucratic-retro",
+      "label": "Industrial Bureaucratic Retro \u2014 empty audition slot",
+      "status": "AUDITION_EMPTY"
+    },
+    {
+      "id": "whimsical-forensic-gothic",
+      "label": "Whimsical Forensic Gothic \u2014 empty audition slot",
+      "status": "AUDITION_EMPTY"
+    },
+    {
+      "id": "production",
+      "label": "S11 PRODUCTION ART FOUNDATION",
+      "status": "LEAD_SELECTED"
+    }
+  ]
+}

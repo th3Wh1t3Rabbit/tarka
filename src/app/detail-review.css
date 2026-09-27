@@ -1,0 +1,11 @@
+.detail-review { min-height: 100%; overflow: auto; background: #121416; color: #e7ecea; font: 16px/1.4 'Trebuchet MS', system-ui, sans-serif; padding: 24px; }
+.detail-review header { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; margin-bottom: 20px; }
+.detail-review h1 { margin: 0; font-size: 22px; }
+.detail-review header p { margin: 0; max-width: 42rem; color: #b7c2be; }
+.detail-review button { min-height: 32px; margin-right: 8px; border: 1px solid #8ec8dc; background: #0c2836; color: #d4f1f8; }
+.detail-review button[aria-pressed='true'] { background: #d4f1f8; color: #071820; }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.detail-grid figure { margin: 0; display: grid; align-content: start; }
+.detail-grid img { width: 100%; height: 220px; object-fit: contain; }
+.detail-grid figcaption { padding: 8px 0 0; color: #e7ecea; }
+.detail-grid small { display: block; color: #8ea099; }

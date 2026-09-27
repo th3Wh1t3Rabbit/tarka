@@ -1,0 +1,2073 @@
+{
+  "schema_version": "1.2.0",
+  "interface": "TE-IFACE-CONTENT@1.2.0",
+  "status": "CANDIDATE_PENDING_MAIN_REVIEW",
+  "accepted_base": {
+    "commit": "f56e806e80b100245d7b5c4686786b477f2f98d8",
+    "tree": "616f54cca2d30a54148d3f442840f8ff3694b48b",
+    "accepted_archive_sha256": "ee19252a736ae96b213b9c878cb2e0c0b4bee7e9e1340ad9097b71a6e8c2cc63",
+    "interface": "TE-IFACE-CONTENT@1.1.0",
+    "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+    "entries": 409,
+    "content_sha256": "540623c9e7f973f0f1cfa4bd4aa5b27f5150247004a05b61ab3a8791b87e0a2e",
+    "implementation_sha256": "84a081161b8b3e147021ad497af0862eaf3d7fe80b92f79de8ebe57e7711b46b"
+  },
+  "design_authority": {
+    "filename": "TRACE_ESCAPE_S7_R2_LEAD_AUTHORED_PUZZLE_DIALOGUE_INTERACTION_DESIGN_v1.0.0_2026-09-18.md",
+    "sha256": "68444ef048c887f2847276d309bdeffd70fb511989efabba390222080660d9d5"
+  },
+  "content_sha256": "2e7f4f9e88d558c88ac9984a8e5ddb37fb6493145ede8b03bdcf29c795f368cc",
+  "entries": [
+    {
+      "copy_key": "lane_a.s7r2b.opening.1",
+      "semantic_id": "S7R2B.OPENING.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "This is the Records Office?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.2",
+      "semantic_id": "S7R2B.OPENING.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is the office in which records are kept. The sign was our first record.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.3",
+      "semantic_id": "S7R2B.OPENING.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Right. Mr. A—",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.4",
+      "semantic_id": "S7R2B.OPENING.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.5",
+      "semantic_id": "S7R2B.OPENING.5",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Efficient.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.6",
+      "semantic_id": "S7R2B.OPENING.6",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Less efficient now.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.7",
+      "semantic_id": "S7R2B.OPENING.7",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Your case was misfiled. To retrieve its opening record, submit a request.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.8",
+      "semantic_id": "S7R2B.OPENING.8",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "To request a record, I need a record requesting the record.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.opening.9",
+      "semantic_id": "S7R2B.OPENING.9",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "You are learning the system.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.objective.opening",
+      "semantic_id": "S7R2B.OBJECTIVE.OPENING",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "RETRIEVE THE OPENING CASE RECORD.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.sea.accepted_views",
+      "semantic_id": "S7R2B.SEA.ACCEPTED.VIEWS",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED",
+        "TERMINAL.BROAD_SEA_SEEN"
+      ],
+      "evidence_gates": [
+        "ACCEPTED_CORPUS_METADATA"
+      ],
+      "fallback": "Accepted evidence views are unavailable until the bounded corpus metadata is admitted.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.sea.no_match_views",
+      "semantic_id": "S7R2B.SEA.NO.MATCH.VIEWS",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED",
+        "TERMINAL.BROAD_SEA_SEEN"
+      ],
+      "evidence_gates": [
+        "ACCEPTED_CORPUS_METADATA"
+      ],
+      "fallback": "Bounded no-match view count is unavailable until the corpus metadata is admitted.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.sea.exact_proof",
+      "semantic_id": "S7R2B.SEA.EXACT.PROOF",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "exact proof records remain separately verified",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.question.what_left",
+      "semantic_id": "S7R2B.QUESTION.WHAT.LEFT",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "What left the First Engine?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.question.incident_dai",
+      "semantic_id": "S7R2B.QUESTION.INCIDENT.DAI",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "Which DAI movements match the incident window?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.question.interactions",
+      "semantic_id": "S7R2B.QUESTION.INTERACTIONS",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "Who interacted with the First Engine?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.question.amount",
+      "semantic_id": "S7R2B.QUESTION.AMOUNT",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "Which results match the recorded amount?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.question.compare",
+      "semantic_id": "S7R2B.QUESTION.COMPARE",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "Compare the two strongest routes.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.folder.receiving_vault",
+      "semantic_id": "S7R2B.FOLDER.RECEIVING.VAULT",
+      "claim_class": "BOUNDED_CONTEXT",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.CANDIDATES_AVAILABLE",
+        "EXACT_MAIN_RECEIVER_DISCOVERED"
+      ],
+      "evidence_gates": [
+        "EXACT_MAIN_RECEIVER"
+      ],
+      "fallback": "Inspect this discovered folder’s evidence grade, match reasons and claim limits. No grade or role is inferred.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.folder.first_engine",
+      "semantic_id": "S7R2B.FOLDER.FIRST.ENGINE",
+      "claim_class": "BOUNDED_CONTEXT",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "the First Engine as a plausible apparent endpoint",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.folder.contextual",
+      "semantic_id": "S7R2B.FOLDER.CONTEXTUAL",
+      "claim_class": "BOUNDED_CONTEXT",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.CANDIDATES_AVAILABLE",
+        "CONTEXT_SECONDARY_DISCOVERED"
+      ],
+      "evidence_gates": [
+        "CONTEXT_SECONDARY"
+      ],
+      "fallback": "one contextual alternative from accepted discovered data",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.theory.wrong",
+      "semantic_id": "S7R2B.THEORY.WRONG",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "IT STOPPED AT THE FIRST ENGINE.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.theory.correct",
+      "semantic_id": "S7R2B.THEORY.CORRECT",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "IT JOINED THE SECOND ROUTE.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.theory.defer",
+      "semantic_id": "S7R2B.THEORY.DEFER",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.ACCESS_EARNED"
+      ],
+      "evidence_gates": [],
+      "fallback": "I NEED AN EXACT RECEIPT BEFORE I FILE A THEORY.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.question.exact_link",
+      "semantic_id": "S7R2B.QUESTION.EXACT.LINK",
+      "claim_class": "BOUNDED_CONTEXT",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "SLOT.AMOUNT_FILED",
+        "SLOT.RECEIVER_FILED",
+        "EXACT_MAIN_RECEIVER_DISCOVERED"
+      ],
+      "evidence_gates": [
+        "EXACT_EARLY_NET",
+        "EXACT_MAIN_RECEIVER"
+      ],
+      "fallback": "Use an available Question Card based on discovered clues.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.1",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.1",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "TIME",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.2",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.2",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "DIRECTION",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.3",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.3",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "ASSET",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.4",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.4",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "AMOUNT",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.5",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.5",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "RELATIONSHIP",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.6",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.6",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "EVIDENCE GRADE",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.7",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.7",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "COVERAGE",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.comparison.column.8",
+      "semantic_id": "S7R2B.COMPARISON.COLUMN.8",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.COMPARISON_AVAILABLE"
+      ],
+      "evidence_gates": [],
+      "fallback": "EXACT RECEIPT AVAILABLE",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.wrong_theory.1",
+      "semantic_id": "S7R2B.WRONG.THEORY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.WORKING_THEORY_SELECTED"
+      ],
+      "evidence_gates": [],
+      "fallback": "It stopped at the First Engine.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.wrong_theory.2",
+      "semantic_id": "S7R2B.WRONG.THEORY.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.WORKING_THEORY_SELECTED"
+      ],
+      "evidence_gates": [],
+      "fallback": "A plausible filing.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.wrong_theory.3",
+      "semantic_id": "S7R2B.WRONG.THEORY.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.WORKING_THEORY_SELECTED"
+      ],
+      "evidence_gates": [],
+      "fallback": "That sounded almost supportive.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.wrong_theory.4",
+      "semantic_id": "S7R2B.WRONG.THEORY.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.WORKING_THEORY_SELECTED"
+      ],
+      "evidence_gates": [],
+      "fallback": "It was not.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.wrong_theory.5",
+      "semantic_id": "S7R2B.WRONG.THEORY.5",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.WORKING_THEORY_SELECTED"
+      ],
+      "evidence_gates": [],
+      "fallback": "What record would have to exist for your filing to be wrong?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.exact_correction.1",
+      "semantic_id": "S7R2B.EXACT.CORRECTION.1",
+      "claim_class": "ACCEPTED_EXACT",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_gates": [
+        "EXACT_CONVERGENCE"
+      ],
+      "fallback": "The exact continuation is not yet verified. Inspect the accepted exact receipt.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.exact_correction.2",
+      "semantic_id": "S7R2B.EXACT.CORRECTION.2",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_gates": [
+        "EXACT_CONVERGENCE"
+      ],
+      "fallback": "Then file what the record proves.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.exact_correction.3",
+      "semantic_id": "S7R2B.EXACT.CORRECTION.3",
+      "claim_class": "ACCEPTED_EXACT",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_gates": [
+        "EXACT_CONVERGENCE"
+      ],
+      "fallback": "The case is not complete. Check Amount, Receiver and Link against the required exact records.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.exact_correction.4",
+      "semantic_id": "S7R2B.EXACT.CORRECTION.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_gates": [
+        "EXACT_CONVERGENCE"
+      ],
+      "fallback": "Good.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.exact_correction.5",
+      "semantic_id": "S7R2B.EXACT.CORRECTION.5",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_gates": [
+        "EXACT_CONVERGENCE"
+      ],
+      "fallback": "That’s it?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.exact_correction.6",
+      "semantic_id": "S7R2B.EXACT.CORRECTION.6",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.EXACT_CONVERGENCE_VERIFIED"
+      ],
+      "evidence_gates": [
+        "EXACT_CONVERGENCE"
+      ],
+      "fallback": "Accuracy is not improved by applause.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return.1",
+      "semantic_id": "S7R2B.RETURN.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Case closed.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return.2",
+      "semantic_id": "S7R2B.RETURN.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Bounded.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return.3",
+      "semantic_id": "S7R2B.RETURN.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Case bounded.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return.4",
+      "semantic_id": "S7R2B.RETURN.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Now it is closed.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return_tag.1",
+      "semantic_id": "S7R2B.RETURN.TAG.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Thanks, Mr. A.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return_tag.2",
+      "semantic_id": "S7R2B.RETURN.TAG.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Arthur.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return_tag.3",
+      "semantic_id": "S7R2B.RETURN.TAG.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "Mr. Arthur.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.return_tag.4",
+      "semantic_id": "S7R2B.RETURN.TAG.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [
+        "TERMINAL.PROOF_COMPLETE"
+      ],
+      "evidence_gates": [],
+      "fallback": "You have made it worse.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.label",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.WHERE.AM.I.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Where am I?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.WHERE_AM_I.reply.1",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.WHERE.AM.I.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The Records Office. Where events become records, records become questions, and questions become more records.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.label",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.MISFILED.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Why was I misfiled?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.MISFILED.reply.1",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.MISFILED.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Someone filed a person under Pending. I corrected the category, not the condition.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.label",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.REQUEST.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "How do I request a record?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.REQUEST.reply.1",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.REQUEST.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Blank request. Pen. My stamp. Tube. In that order. The order is the system.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.label",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.MR.A.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Mr. A—",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.1",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.MR.A.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.2",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.MR.A.REPLY.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I had not finished.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.MR_A.reply.3",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.MR.A.REPLY.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I have.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.PRE_STAMP.EXIT.label",
+      "semantic_id": "S7R2B.MENU.PRE.STAMP.EXIT.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I’ll figure it out.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.label",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.LOOKING.AT.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "What am I looking at?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.LOOKING_AT.reply.1",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.LOOKING.AT.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A bounded record set. Public is not the same as simple.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.label",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.PUBLIC.SOLVED.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Public means solved, right?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.PUBLIC_SOLVED.reply.1",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.PUBLIC.SOLVED.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Public means observable. Solved requires a question.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.LENSES.label",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.LENSES.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "What do the lenses do?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.LENSES.reply.1",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.LENSES.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Activity asks what happened. Relationships ask who interacted. State asks what changed. Receipt asks which exact record establishes the link.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.label",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.EXACT.RECEIPT.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "What makes a receipt exact?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.EXACT_RECEIPT.reply.1",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.EXACT.RECEIPT.REPLY.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A specific record establishes a specific link. Context can point. It cannot sign.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.GUIDANCE.label",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.GUIDANCE.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "What should I do next?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.POST_ACCESS.EXIT.label",
+      "semantic_id": "S7R2B.MENU.POST.ACCESS.EXIT.LABEL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Back to the terminal.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.exit.general",
+      "semantic_id": "S7R2B.MENU.EXIT.GENERAL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I’ll get back to it.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.menu.topic_completed",
+      "semantic_id": "S7R2B.MENU.TOPIC.COMPLETED",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Topic completed.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.give",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It only gives. It does not accept returns, criticism, or personal growth.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.pick_up",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It appears to be holding up several regulations.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.use",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I need something worth combining with a machine that already has a purpose.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.look_at",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A request dispenser. One sheet per problem, which feels optimistic.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.push",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It pushes back with the confidence of policy.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.close",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is closed in every meaningful bureaucratic sense.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.talk_to",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.TALK.TO",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I ask for expedited service. It dispenses silence.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.pull",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "One blank request. It already looks disappointed in me.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.give",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The pens belong to the desk. Arthur has documentation.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.pick_up",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur clears his throat before my hand gets there.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.use",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The pen scratches my request into official existence.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.open",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.OPEN",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "There is no lid. Bureaucracy has finally simplified something.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.look_at",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Four pens chained to one idea.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.push",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It remains upright and morally superior.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.close",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The pens are uncapped only emotionally.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.talk_to",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.TALK.TO",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Blue ink has always been aloof.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pen-stand.pull",
+      "semantic_id": "S7R2B.MATRIX.PEN.STAND.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The chain is exactly one optimism long.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.pick_up",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "He would file an objection before leaving the floor.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.use",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Conversation first. Equipment second.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.open",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.OPEN",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I am not opening Arthur.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.look_at",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur the Archivist. He has alphabetized his patience.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.push",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I choose not to test the load-bearing capacity of civil service.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.close",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "He looks pre-closed.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.pull",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur is not a drawer.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.give",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The tube accepts documents, not gifts.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.pick_up",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is attached to the wall and several decades of procedure.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.look_at",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A pneumatic tube. Bureaucracy, but aerodynamic.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.push",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Nothing happens. It has standards.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.talk_to",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.TALK.TO",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I whisper ‘expedite.’ It has heard that one.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.pull",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The tube is attached to wherever forms go to become consequences.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.give",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It has a job and no pockets.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.use",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A button by another name is still waiting to be pushed.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.open",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.OPEN",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "No seam. Just intent.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.look_at",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A brass plunger labeled DISPATCH, as if regret needed typography.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.push",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The mechanism refuses empty enthusiasm.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.close",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is not open. It is merely expectant.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.pull",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Wrong direction. Also the wrong kind of plunger.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.give",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It has already been through enough.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.pick_up",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Too large for a pocket, too official for a souvenir.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.use",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I should find out what it contains before improving it.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.look_at",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A returned record canister. Travel-worn, paperwork-fresh.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.push",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It rolls half an inch and files no complaint.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.close",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I can close it, but the answer will not climb back inside.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.talk_to",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.TALK.TO",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It has traveled farther than I have today.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.record-canister.pull",
+      "semantic_id": "S7R2B.MATRIX.RECORD.CANISTER.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The latch is the polite part.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.give",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "No mouth. Probably for the best.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.pick_up",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is desk-sized in the way a desk is floor-sized.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.open",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.OPEN",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I am not voiding the warranty on history.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.push",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The screen blooms green, then judges me.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.close",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I can leave the screen. The case stays.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.pull",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The terminal is attached to the part of the building with electricity.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.give",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Time already has everything I own.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.pick_up",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is bolted down, presumably against hindsight.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.use",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "No item in my pockets can improve chronology.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.look_at",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It keeps historical time, which is just time with paperwork.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.push",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.PUSH",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Time advances only in the usual, expensive direction.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.close",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The case can close. The clock remains open for business.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.talk_to",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.TALK.TO",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It ticks in short, well-documented statements.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.pull",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The minute hand refuses informal discovery.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.give",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.GIVE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur already has jurisdiction.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.pick_up",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.PICK.UP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur’s left eyebrow files a prior restraint.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.use",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I do not yet have a world-sized problem. Give it a minute.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.open",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.OPEN",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "No seam. Probably classified.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.look_at",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.LOOK.AT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The world, reduced to something Arthur can keep on a desk.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.close",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.CLOSE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is already a closed world.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.talk_to",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.TALK.TO",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I ask where the money went. The globe remains broadly unhelpful.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.office-globe.pull",
+      "semantic_id": "S7R2B.MATRIX.OFFICE.GLOBE.PULL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It rotates. The planet remains attached.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.open.1",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.OPEN.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The service panel is not a shortcut.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.request-dispenser.open.2",
+      "semantic_id": "S7R2B.MATRIX.REQUEST.DISPENSER.OPEN.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "So it is a long cut.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.give.1",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.GIVE.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "This is not a recognized request.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.give.2",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.GIVE.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It is recognizable.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.mr-index.give.3",
+      "semantic_id": "S7R2B.MATRIX.MR.INDEX.GIVE.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "That is not the same thing.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.use.1",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.USE.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The tube transports records.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.pneumatic-tube.use.2",
+      "semantic_id": "S7R2B.MATRIX.PNEUMATIC.TUBE.USE.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It has strict taste.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.1",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.PICK.UP.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Fixed equipment.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.2",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.PICK.UP.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Emotionally or physically?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.pick_up.3",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.PICK.UP.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Both.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.talk_to.1",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.TALK.TO.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Dispatch.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.dispatch-plunger.talk_to.2",
+      "semantic_id": "S7R2B.MATRIX.DISPATCH.PLUNGER.TALK.TO.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It prefers verbs.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.use",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.USE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It wants authorization, not enthusiasm.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.look_at.locked",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.LOOK.AT.LOCKED",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A terminal with the posture of a locked filing cabinet.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.1",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.TALK.TO.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Hello?",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.2",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.TALK.TO.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "[BZZZT.]",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.nansen-terminal.talk_to.3",
+      "semantic_id": "S7R2B.MATRIX.NANSEN.TERMINAL.TALK.TO.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It prefers structured questions.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.open.1",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.OPEN.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Do not audit the clock.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.matrix.historical-clock.open.2",
+      "semantic_id": "S7R2B.MATRIX.HISTORICAL.CLOCK.OPEN.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "That sounds like clock talk.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.1.1",
+      "semantic_id": "S7R2B.GLOBE.PUSH.1.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Continents in motion.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.1.2",
+      "semantic_id": "S7R2B.GLOBE.PUSH.1.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "They were correctly filed.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.2.1",
+      "semantic_id": "S7R2B.GLOBE.PUSH.2.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I am checking for alternate routes.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.2.2",
+      "semantic_id": "S7R2B.GLOBE.PUSH.2.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "You are checking my patience.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.3.1",
+      "semantic_id": "S7R2B.GLOBE.PUSH.3.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Mr. A—",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.3.2",
+      "semantic_id": "S7R2B.GLOBE.PUSH.3.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Arthur.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.3.3",
+      "semantic_id": "S7R2B.GLOBE.PUSH.3.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The globe likes me.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.3.4",
+      "semantic_id": "S7R2B.GLOBE.PUSH.3.4",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The globe has no standards.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.loop.1",
+      "semantic_id": "S7R2B.GLOBE.PUSH.LOOP.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Mr. Rook.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.globe.push.loop.2",
+      "semantic_id": "S7R2B.GLOBE.PUSH.LOOP.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "That is first-name progress.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.blank-request.name",
+      "semantic_id": "S7R2B.INVENTORY.BLANK.REQUEST.NAME",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Blank request",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.blank-request.description",
+      "semantic_id": "S7R2B.INVENTORY.BLANK.REQUEST.DESCRIPTION",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A blank request for a record I have not been allowed to see.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.blank-request.guidance",
+      "semantic_id": "S7R2B.INVENTORY.BLANK.REQUEST.GUIDANCE",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "It needs information, ink, and apparently confidence.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.completed-request.name",
+      "semantic_id": "S7R2B.INVENTORY.COMPLETED.REQUEST.NAME",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Completed request",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.completed-request.description",
+      "semantic_id": "S7R2B.INVENTORY.COMPLETED.REQUEST.DESCRIPTION",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "All filled out. I have converted uncertainty into handwriting.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.completed-request.guidance",
+      "semantic_id": "S7R2B.INVENTORY.COMPLETED.REQUEST.GUIDANCE",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Give to Arthur for the official stamp.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.stamped-request.name",
+      "semantic_id": "S7R2B.INVENTORY.STAMPED.REQUEST.NAME",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Stamped request",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.stamped-request.description",
+      "semantic_id": "S7R2B.INVENTORY.STAMPED.REQUEST.DESCRIPTION",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Official. The ink has authority now.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.stamped-request.guidance",
+      "semantic_id": "S7R2B.INVENTORY.STAMPED.REQUEST.GUIDANCE",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Load into the pneumatic tube.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.first-breach-strip.name",
+      "semantic_id": "S7R2B.INVENTORY.FIRST.BREACH.STRIP.NAME",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Access strip",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.first-breach-strip.description",
+      "semantic_id": "S7R2B.INVENTORY.FIRST.BREACH.STRIP.DESCRIPTION",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A narrow strip granting access to a much wider problem.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.inventory.first-breach-strip.guidance",
+      "semantic_id": "S7R2B.INVENTORY.FIRST.BREACH.STRIP.GUIDANCE",
+      "claim_class": "METHOD_ONLY",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "Use with the Nansen terminal.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.caption.stamp",
+      "semantic_id": "S7R2B.CAPTION.STAMP",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "[THUNK.]",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.caption.tube",
+      "semantic_id": "S7R2B.CAPTION.TUBE",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "[WHIRRRR—FWOOMP—THUNK.]",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.caption.bell",
+      "semantic_id": "S7R2B.CAPTION.BELL",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "[DING.]",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.desk_bell.look",
+      "semantic_id": "S7R2B.DESK.BELL.LOOK",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "A bell for summoning someone already here.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.desk_bell.push.1",
+      "semantic_id": "S7R2B.DESK.BELL.PUSH.1",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "I am present.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.desk_bell.push.2",
+      "semantic_id": "S7R2B.DESK.BELL.PUSH.2",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The bell confirmed it.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.desk_bell.push.3",
+      "semantic_id": "S7R2B.DESK.BELL.PUSH.3",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "The bell is now redundant.",
+      "disposition": "AUDITED_CANDIDATE"
+    },
+    {
+      "copy_key": "lane_a.s7r2b.desk_bell.repeat",
+      "semantic_id": "S7R2B.DESK.BELL.REPEAT",
+      "claim_class": "FICTIONAL_FRAMING",
+      "no_undiscovered_value": true,
+      "prerequisites": [],
+      "evidence_gates": [],
+      "fallback": "So are you, at the moment.",
+      "disposition": "AUDITED_CANDIDATE"
+    }
+  ],
+  "exact_bindings": {
+    "EXACT_CONVERGENCE_TIME": {
+      "accepted_value": "11:38:11",
+      "source_evidence": "EXACT_CONVERGENCE",
+      "prerequisite": "TERMINAL.EXACT_CONVERGENCE_VERIFIED",
+      "early_render": "WHOLE_LINE_FALLBACK"
+    },
+    "EXACT_MAIN_RECEIVER_DISPLAY": {
+      "accepted_value": "Receiving Vault",
+      "source_evidence": "EXACT_MAIN_RECEIVER",
+      "prerequisite": "EXACT_MAIN_RECEIVER_DISCOVERED",
+      "early_render": "WHOLE_LINE_FALLBACK"
+    }
+  },
+  "forbidden_fillers": [
+    "CONTEXTUAL",
+    "CORROBORATING_STATE",
+    "BOUNDED_NO_MATCH",
+    "OPTIONAL_INTERACTION",
+    "SOUND",
+    "STAGING"
+  ],
+  "proof_slots": [
+    "AMOUNT",
+    "RECEIVER",
+    "LINK"
+  ],
+  "unresolved_p0_p1": 0
+}

@@ -1,0 +1,30 @@
+import {readFileSync} from 'node:fs'
+import {createHash} from 'node:crypto'
+import {describe,it,expect} from 'vitest'
+import {deriveBlueprint,validatePreArchiveBeat} from '../../src/controller/foundation/blueprint'
+type Beat=Record<string,unknown>
+const bytes=readFileSync('artifacts/g6p-s5/REPORTS/MVP_BLUEPRINT.json')
+const blueprint=JSON.parse(bytes.toString())
+const paths=['copyRefs','provenance','requiredClueIds','requiredCardIds','acceptedCorpus.before.displayIds','acceptedCorpus.before.questionIds','acceptedCorpus.after.displayIds','acceptedCorpus.after.questionIds']
+const at=(b:Beat,p:string):unknown[]=>p.split('.').reduce((v,k)=>(v as Record<string,unknown>)[k],b as unknown) as unknown[]
+const fresh=():Beat=>structuredClone(blueprint.beats[0])
+describe('RES3 descriptor-first authoritative arrays',()=>{
+ for(const p of paths){
+  it('prototype decision precedes property/descriptor/iterator reads '+p,()=>{const b=fresh(),a=at(b,p);Object.setPrototypeOf(a,Object.create(Array.prototype));let reads=0,descriptors=0,keys=0;const proxy=new Proxy(a,{get(target,key,receiver){reads++;return Reflect.get(target,key,receiver)},getOwnPropertyDescriptor(target,key){descriptors++;return Reflect.getOwnPropertyDescriptor(target,key)},ownKeys(target){keys++;return Reflect.ownKeys(target)}});const parts=p.split('.'),key=parts.pop()!;const parent=parts.reduce((v,k)=>(v as Record<string,unknown>)[k],b as unknown) as Record<string,unknown>;parent[key]=proxy;expect(()=>validatePreArchiveBeat(b)).toThrow();expect([reads,descriptors,keys]).toEqual([0,0,0])})
+  for(const method of [Symbol.iterator,'every','forEach','map'])it('own overridable method never called '+p+':'+String(method),()=>{const b=fresh(),a=at(b,p);let calls=0;Object.defineProperty(a,method,{value:()=>{calls++;return true},configurable:true});expect(()=>validatePreArchiveBeat(b)).toThrow();expect(calls).toBe(0)})
+  it('huge sparse length rejects without element allocation '+p,()=>{const b=fresh();at(b,p).length=4294967295;expect(()=>validatePreArchiveBeat(b)).toThrow()})
+  for(const field of ['filename','transition','requiredVisualCapability','facing'])it('inherited alias '+p+':'+field,()=>{const b=fresh(),a=at(b,p),proto=Object.create(Array.prototype);Object.defineProperty(proto,field,{value:field==='facing'?'LEFT':'UNAPPROVED',enumerable:true});Object.setPrototypeOf(a,proto);expect(()=>validatePreArchiveBeat(b)).toThrow()})
+  it('method overrides cannot suppress malicious element '+p,()=>{const b=fresh(),a=at(b,p),proto=Object.create(Array.prototype);let calls=0;a[0]={filename:'UNAPPROVED'};Object.defineProperty(proto,'every',{value:()=>{calls++;return true}});Object.defineProperty(proto,'forEach',{value:()=>{calls++}});Object.setPrototypeOf(a,proto);expect(()=>validatePreArchiveBeat(b)).toThrow();expect(calls).toBe(0)})
+  for(const method of [Symbol.iterator,'every','forEach','map'])it('inherited getter zero invocation '+p+':'+String(method),()=>{const b=fresh(),a=at(b,p),proto=Object.create(Array.prototype);let calls=0;Object.defineProperty(proto,method,{get(){calls++;throw Error('INHERITED_GETTER_EXECUTED')}});Object.setPrototypeOf(a,proto);expect(()=>validatePreArchiveBeat(b)).toThrow('S6_R1_PREARCHIVE_BINDING_REJECTED');expect(calls).toBe(0)})
+  for(const method of [Symbol.iterator,'every','forEach','map'])it('own method getter zero invocation '+p+':'+String(method),()=>{const b=fresh(),a=at(b,p);let calls=0;Object.defineProperty(a,method,{get(){calls++;throw Error('OWN_METHOD_GETTER_EXECUTED')},configurable:true});expect(()=>validatePreArchiveBeat(b)).toThrow('S6_R1_PREARCHIVE_BINDING_REJECTED');expect(calls).toBe(0)})
+  for(const kind of ['get','set','get-set'])it('own index non-data descriptor '+p+':'+kind,()=>{const b=fresh(),a=at(b,p);let calls=0;const get=()=>{calls++;throw Error('INDEX_GETTER_EXECUTED')},set=()=>{calls++};Object.defineProperty(a,'0',{enumerable:true,configurable:true,...(kind==='get'?{get}:kind==='set'?{set}:{get,set})});expect(()=>validatePreArchiveBeat(b)).toThrow('S6_R1_PREARCHIVE_BINDING_REJECTED');expect(calls).toBe(0)})
+  for(const key of ['filename','00','-1','+1','1.0','1e0','NaN','4294967295'])it('rejects custom/noncanonical/out-of-range own key '+p+':'+key,()=>{const b=fresh();Object.defineProperty(at(b,p),key,{value:'UNAPPROVED',enumerable:true,configurable:true});expect(()=>validatePreArchiveBeat(b)).toThrow()})
+  it('own symbols rejected '+p,()=>{const b=fresh();Object.defineProperty(at(b,p),Symbol('authority'),{value:'UNAPPROVED'});expect(()=>validatePreArchiveBeat(b)).toThrow()})
+  it('sparse array rejected without iterator '+p,()=>{const b=fresh(),a=at(b,p);if(a.length===0)a.length=1;else delete a[0];expect(()=>validatePreArchiveBeat(b)).toThrow()})
+  it('null array prototype rejected '+p,()=>{const b=fresh();Object.setPrototypeOf(at(b,p),null);expect(()=>validatePreArchiveBeat(b)).toThrow()})
+  for(const mode of ['sealed','frozen','non-enumerable-data'])it('standard data array remains accepted '+p+':'+mode,()=>{const b=fresh(),a=at(b,p);if(mode==='sealed')Object.seal(a);else if(mode==='frozen')Object.freeze(a);else if(a.length>0)Object.defineProperty(a,'0',{value:a[0],enumerable:false,writable:false,configurable:false});expect(validatePreArchiveBeat(b)).toBe(true)})
+  it('non-array impostor length getter never invoked '+p,()=>{const b=fresh(),parts=p.split('.'),key=parts.pop()!;const parent=parts.reduce((v,k)=>(v as Record<string,unknown>)[k],b as unknown) as Record<string,unknown>;let calls=0;parent[key]=Object.create(Array.prototype,{length:{get(){calls++;return 1}},0:{get(){calls++;return 'UNAPPROVED'}}});expect(()=>validatePreArchiveBeat(b)).toThrow();expect(calls).toBe(0)})
+ }
+ for(const [i,beat]of blueprint.beats.entries())it('governed beat '+i+' remains accepted',()=>expect(validatePreArchiveBeat(beat)).toBe(true))
+ it('exact42-beat byte-preserved derivation',async()=>{expect(createHash('sha256').update(bytes).digest('hex')).toBe('397660b78184a697e21925220287fc1087f742d7f0cef572d0dc040f1f46587a');const bp=await deriveBlueprint();expect(JSON.stringify(bp,null,2)+'\n').toBe(bytes.toString());expect(bp.beats).toHaveLength(42)})
+})

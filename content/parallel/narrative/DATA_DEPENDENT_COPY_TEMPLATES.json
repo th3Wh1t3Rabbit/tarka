@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.1.0",
+  "interface": "TE-IFACE-CONTENT@1.1.0",
+  "base_commit": "a1bf6689b9ba6a3c7077869ee03be1926b2e1c41",
+  "interface_sha256": "7d682d883fc55b80ed3c5ea752ea942d94000942257dd93a3eddc22a66c36903",
+  "token_contract": {
+    "QUESTION_LENS": {
+      "type": "enum",
+      "values": [
+        "ACTIVITY",
+        "RELATIONSHIPS",
+        "STATE",
+        "RECEIPT"
+      ]
+    },
+    "SUBJECT_ROLE": {
+      "type": "enum",
+      "values": [
+        "Early Trigger",
+        "First Engine",
+        "Main Trigger",
+        "Extraction Engine",
+        "Receiving Vault",
+        "Secondary Receiver Context"
+      ]
+    },
+    "NARRATIVE_PHASE": {
+      "type": "enum",
+      "values": [
+        "BREACH_OPEN",
+        "ROUTE_DEVELOPMENT",
+        "POST_FALSIFIER_TO_CUTOFF"
+      ]
+    },
+    "RESULT_COUNT": {
+      "type": "count"
+    },
+    "PREVIOUS_COUNT": {
+      "type": "count"
+    },
+    "FILTER_EFFECT": {
+      "type": "enum",
+      "values": [
+        "asset filter",
+        "time-window filter",
+        "outgoing-direction filter",
+        "incoming-direction filter",
+        "amount filter",
+        "receipt filter",
+        "comparison selection"
+      ]
+    },
+    "EVIDENCE_GRADE": {
+      "type": "enum",
+      "values": [
+        "EXACT",
+        "CORROBORATING",
+        "CONTEXTUAL"
+      ]
+    },
+    "COVERAGE_SCOPE": {
+      "type": "enum",
+      "values": [
+        "accepted frozen records within the incident window",
+        "the accepted subject, lens and time window shown in SOURCE",
+        "the accepted complete coverage cell shown in LEDGER"
+      ]
+    },
+    "CANDIDATE_ROLE": {
+      "type": "enum",
+      "values": [
+        "a candidate continuation",
+        "a contextual lead",
+        "a corroborating view",
+        "a control",
+        "a bounded dead end"
+      ]
+    },
+    "PUBLIC_CALL_ID": {
+      "type": "public_call_id"
+    },
+    "EXACT_TIME_IF_ACCEPTED": {
+      "type": "exact_time",
+      "values": [
+        "2023-03-13T08:50:59Z",
+        "2023-03-13T09:12:23Z",
+        "2023-03-13T11:38:11Z"
+      ]
+    }
+  },
+  "template_keys": [
+    "lane_a.template.receipt",
+    "lane_a.template.subject",
+    "lane_a.template.phase",
+    "lane_a.template.results",
+    "lane_a.template.delta",
+    "lane_a.template.candidate",
+    "lane_a.template.source",
+    "lane_a.template.exact_time",
+    "lane_a.template.control",
+    "lane_a.template.exclusion"
+  ],
+  "fallback_policy": "WHOLE_LINE_IF_ANY_BINDING_INVALID",
+  "input_policy": "ACCEPTED_PUBLIC_SAFE_DISCOVERED_BOUNDINGS_ONLY",
+  "output": "PLAIN_TEXT"
+}
