@@ -95,10 +95,10 @@ Runtime ID: `historical-clock` · Scene: `records-office`
 | <a id="route-world-use-historical-clock-item-nails"></a>`world.USE.historical-clock.item.nails` | `deadEndSpeech:selected-item` | ROOK: That feels like a bad idea. | — |
 | <a id="route-world-use-historical-clock-item-fictional-token-note"></a>`world.USE.historical-clock.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-open-historical-clock-bare"></a>`world.OPEN.historical-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-look-at-historical-clock-bare"></a>`world.LOOK_AT.historical-clock.bare` | `deadEndSpeech` | ROOK: Ah. It’s a dash past a line.<br>ROOK: I’m right on time.<br>ROOK: Probably. | rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-historical-clock-bare"></a>`world.LOOK_AT.historical-clock.bare` | `deadEndSpeech` | ROOK: Ah. It’s a dash past a line.<br>ROOK: I’m right on time.<br>ROOK: Probably. | rook:BODY:generic runtime fallback; no bespoke cue bound<br>rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-historical-clock-bare"></a>`world.PUSH.historical-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-close-historical-clock-bare"></a>`world.CLOSE.historical-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-talk-to-historical-clock-bare"></a>`world.TALK_TO.historical-clock.bare` | `deadEndSpeech` | ROOK: Alexa... what time is it?<br>ROOK: Ah. Not one of those clocks.<br>ROOK: Those are the only kind I actually know how to use. | rook:BODY:UNRESOLVED |
+| <a id="route-world-talk-to-historical-clock-bare"></a>`world.TALK_TO.historical-clock.bare` | `deadEndSpeech` | ROOK: Alexa... what time is it?<br>ROOK: Ah. Not one of those clocks.<br>ROOK: Those are the only kind I actually know how to use. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-pull-historical-clock-bare"></a>`world.PULL.historical-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-office-globe"></a>
@@ -565,7 +565,7 @@ Runtime ID: `window` · Scene: `records-office`
 | <a id="route-world-use-window-item-nails"></a>`world.USE.window.item.nails` | `deadEndSpeech:selected-item` | ROOK: I don’t see how that helps us with the case. | — |
 | <a id="route-world-use-window-item-fictional-token-note"></a>`world.USE.window.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: That feels like a bad idea. | — |
 | <a id="route-world-open-window-bare"></a>`world.OPEN.window.bare` | `deadEndSpeech` | ROOK: I should leave it alone.<br>ROOK: It’s the only thing in here with an outside perspective. | — |
-| <a id="route-world-look-at-window-bare"></a>`world.LOOK_AT.window.bare` | `deadEndSpeech` | ROOK: Blue sky. Puffy clouds. Sunlight.<br>ROOK: Somewhere out there, people are doing things...<br>ROOK: without filling out an authorization form first. | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-window-bare"></a>`world.LOOK_AT.window.bare` | `deadEndSpeech` | ROOK: Blue sky. Puffy clouds. Sunlight.<br>ROOK: Somewhere out there, people are doing things...<br>ROOK: without filling out an authorization form first. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-window-bare"></a>`world.PUSH.window.bare` | `deadEndSpeech` | ROOK: I should leave it alone.<br>ROOK: It’s the only thing in here with an outside perspective. | — |
 | <a id="route-world-close-window-bare"></a>`world.CLOSE.window.bare` | `deadEndSpeech` | ROOK: I should leave it alone.<br>ROOK: It’s the only thing in here with an outside perspective. | — |
 | <a id="route-world-talk-to-window-bare"></a>`world.TALK_TO.window.bare` | `deadEndSpeech` | ROOK: I’m lonely... but not ‘talk to the window’ lonely. | — |
@@ -642,7 +642,7 @@ Runtime ID: `desk-lamp` · Scene: `records-office`
 | <a id="route-world-give-desk-lamp-item-nails"></a>`world.GIVE.desk-lamp.item.nails` | `deadEndSpeech:selected-item` | ROOK: I should hang onto this. | — |
 | <a id="route-world-give-desk-lamp-item-fictional-token-note"></a>`world.GIVE.desk-lamp.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: I should hang onto this. | — |
 | <a id="route-world-pick-up-desk-lamp-bare"></a>`world.PICK_UP.desk-lamp.bare` | `deadEndSpeech` | ROOK: It has a permanent position on this desk.<br>ROOK: I respect seniority. | — |
-| <a id="route-world-use-desk-lamp-bare"></a>`world.USE.desk-lamp.bare` | `deadEndSpeech` | ROOK: No better way to set the mood than dimming the lights.<br>ROOK: Though... I don’t want Mr. A to get the wrong idea. | rook:BODY:UNRESOLVED |
+| <a id="route-world-use-desk-lamp-bare"></a>`world.USE.desk-lamp.bare` | `deadEndSpeech` | ROOK: No better way to set the mood than dimming the lights.<br>ROOK: Though... I don’t want Mr. A to get the wrong idea. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-use-desk-lamp-item-blank-terminal-authorization-form"></a>`world.USE.desk-lamp.item.blank-terminal-authorization-form` | `deadEndSpeech:selected-item` | ROOK: That feels like a bad idea. | — |
 | <a id="route-world-use-desk-lamp-item-loose-feather-pen"></a>`world.USE.desk-lamp.item.loose-feather-pen` | `deadEndSpeech:selected-item` | ROOK: I should save the ink for something official. Or official-looking...<br>ROOK: like the authorization form. | — |
 | <a id="route-world-use-desk-lamp-item-signed-terminal-authorization-form-with-doodles"></a>`world.USE.desk-lamp.item.signed-terminal-authorization-form-with-doodles` | `deadEndSpeech:selected-item` | ROOK: I should probably keep those separate. | — |
@@ -894,10 +894,10 @@ Runtime ID: `wall-clock` · Scene: `records-office`
 | <a id="route-world-use-wall-clock-item-nails"></a>`world.USE.wall-clock.item.nails` | `deadEndSpeech:selected-item` | ROOK: I don’t see how that helps us with the case. | — |
 | <a id="route-world-use-wall-clock-item-fictional-token-note"></a>`world.USE.wall-clock.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: I don’t see how that helps us with the case. | — |
 | <a id="route-world-open-wall-clock-bare"></a>`world.OPEN.wall-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-look-at-wall-clock-bare"></a>`world.LOOK_AT.wall-clock.bare` | `deadEndSpeech` | ROOK: Ah. It’s a dash past a line.<br>ROOK: I’m right on time.<br>ROOK: Probably. | rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-clock-bare"></a>`world.LOOK_AT.wall-clock.bare` | `deadEndSpeech` | ROOK: Ah. It’s a dash past a line.<br>ROOK: I’m right on time.<br>ROOK: Probably. | rook:BODY:generic runtime fallback; no bespoke cue bound<br>rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-clock-bare"></a>`world.PUSH.wall-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-close-wall-clock-bare"></a>`world.CLOSE.wall-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-talk-to-wall-clock-bare"></a>`world.TALK_TO.wall-clock.bare` | `deadEndSpeech` | ROOK: Alexa... what time is it?<br>ROOK: Ah. Not one of those clocks.<br>ROOK: Those are the only kind I actually know how to use. | rook:BODY:UNRESOLVED |
+| <a id="route-world-talk-to-wall-clock-bare"></a>`world.TALK_TO.wall-clock.bare` | `deadEndSpeech` | ROOK: Alexa... what time is it?<br>ROOK: Ah. Not one of those clocks.<br>ROOK: Those are the only kind I actually know how to use. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-pull-wall-clock-bare"></a>`world.PULL.wall-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-be-the-change"></a>
@@ -941,7 +941,7 @@ Runtime ID: `wall-be-the-change` · Scene: `records-office`
 | <a id="route-world-use-wall-be-the-change-item-nails"></a>`world.USE.wall-be-the-change.item.nails` | `deadEndSpeech:selected-item` | ROOK: I don’t see how that helps us with the case. | — |
 | <a id="route-world-use-wall-be-the-change-item-fictional-token-note"></a>`world.USE.wall-be-the-change.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-open-wall-be-the-change-bare"></a>`world.OPEN.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-look-at-wall-be-the-change-bare"></a>`world.LOOK_AT.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: ‘Be the change. Submit a revision request. Form ID 10T.’<br>ROOK: Apparently, even personal growth needs managerial approval. | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-be-the-change-bare"></a>`world.LOOK_AT.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: ‘Be the change. Submit a revision request. Form ID 10T.’<br>ROOK: Apparently, even personal growth needs managerial approval. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-be-the-change-bare"></a>`world.PUSH.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-close-wall-be-the-change-bare"></a>`world.CLOSE.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-talk-to-wall-be-the-change-bare"></a>`world.TALK_TO.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: I’m not discussing personal growth with a poster.<br>ROOK: That’s what performance reviews are for.<br>ROOK: Nah.<br>ROOK: It’d probably want to put whatever I’d say to it into that box, too. | — |
@@ -988,7 +988,7 @@ Runtime ID: `wall-think-outside` · Scene: `records-office`
 | <a id="route-world-use-wall-think-outside-item-nails"></a>`world.USE.wall-think-outside.item.nails` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-use-wall-think-outside-item-fictional-token-note"></a>`world.USE.wall-think-outside.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: I don’t see how that helps us with the case. | — |
 | <a id="route-world-open-wall-think-outside-bare"></a>`world.OPEN.wall-think-outside.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-look-at-wall-think-outside-bare"></a>`world.LOOK_AT.wall-think-outside.bare` | `deadEndSpeech` | ROOK: ‘Think outside the box... Then put it back.’<br>ROOK: I think you’re gonna need a bigger box. | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-think-outside-bare"></a>`world.LOOK_AT.wall-think-outside.bare` | `deadEndSpeech` | ROOK: ‘Think outside the box... Then put it back.’<br>ROOK: I think you’re gonna need a bigger box. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-think-outside-bare"></a>`world.PUSH.wall-think-outside.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-close-wall-think-outside-bare"></a>`world.CLOSE.wall-think-outside.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-talk-to-wall-think-outside-bare"></a>`world.TALK_TO.wall-think-outside.bare` | `deadEndSpeech` | ROOK: Nah.<br>ROOK: It’d probably want to put whatever I’d say to it into that box, too. | — |
@@ -1035,7 +1035,7 @@ Runtime ID: `wall-employee` · Scene: `records-office`
 | <a id="route-world-use-wall-employee-item-nails"></a>`world.USE.wall-employee.item.nails` | `deadEndSpeech:selected-item` | ROOK: I don’t think so. | — |
 | <a id="route-world-use-wall-employee-item-fictional-token-note"></a>`world.USE.wall-employee.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: I don’t see how that helps us with the case. | — |
 | <a id="route-world-open-wall-employee-bare"></a>`world.OPEN.wall-employee.bare` | `deadEndSpeech` | ROOK: There’s nothing to open. | — |
-| <a id="route-world-look-at-wall-employee-bare"></a>`world.LOOK_AT.wall-employee.bare` | `deadEndSpeech` | ROOK: ‘Employee of the Month: Ron Gilbert.’<br>ROOK: Hmm... Why does that name sound so familiar? | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-employee-bare"></a>`world.LOOK_AT.wall-employee.bare` | `deadEndSpeech` | ROOK: ‘Employee of the Month: Ron Gilbert.’<br>ROOK: Hmm... Why does that name sound so familiar? | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-employee-bare"></a>`world.PUSH.wall-employee.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 | <a id="route-world-close-wall-employee-bare"></a>`world.CLOSE.wall-employee.bare` | `deadEndSpeech` | ROOK: There’s nothing to close. | — |
 | <a id="route-world-talk-to-wall-employee-bare"></a>`world.TALK_TO.wall-employee.bare` | `deadEndSpeech` | ROOK: Congratulations, Ron. Still humble. I respect that. | — |
@@ -1082,7 +1082,7 @@ Runtime ID: `wall-city-bridge` · Scene: `records-office`
 | <a id="route-world-use-wall-city-bridge-item-nails"></a>`world.USE.wall-city-bridge.item.nails` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-use-wall-city-bridge-item-fictional-token-note"></a>`world.USE.wall-city-bridge.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-open-wall-city-bridge-bare"></a>`world.OPEN.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-look-at-wall-city-bridge-bare"></a>`world.LOOK_AT.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: It’s the sort of view people hang indoors...<br>ROOK: to remind themselves they could be somewhere else. | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-city-bridge-bare"></a>`world.LOOK_AT.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: It’s the sort of view people hang indoors...<br>ROOK: to remind themselves they could be somewhere else. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-city-bridge-bare"></a>`world.PUSH.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-close-wall-city-bridge-bare"></a>`world.CLOSE.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-talk-to-wall-city-bridge-bare"></a>`world.TALK_TO.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: The picture says a thousand words. That’s already plenty. | — |
@@ -1159,7 +1159,7 @@ Runtime ID: `wall-preserve` · Scene: `records-office`
 | <a id="route-world-give-wall-preserve-item-nails"></a>`world.GIVE.wall-preserve.item.nails` | `deadEndSpeech:selected-item` | ROOK: I should hang onto this. | — |
 | <a id="route-world-give-wall-preserve-item-fictional-token-note"></a>`world.GIVE.wall-preserve.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: I should hang onto this. | — |
 | <a id="route-world-pick-up-wall-preserve-bare"></a>`world.PICK_UP.wall-preserve.bare` | `deadEndSpeech` | ROOK: I don’t need it. | — |
-| <a id="route-world-use-wall-preserve-bare"></a>`world.USE.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:UNRESOLVED |
+| <a id="route-world-use-wall-preserve-bare"></a>`world.USE.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-use-wall-preserve-item-blank-terminal-authorization-form"></a>`world.USE.wall-preserve.item.blank-terminal-authorization-form` | `deadEndSpeech:selected-item` | ROOK: I should probably keep those separate. | — |
 | <a id="route-world-use-wall-preserve-item-loose-feather-pen"></a>`world.USE.wall-preserve.item.loose-feather-pen` | `deadEndSpeech:selected-item` | ROOK: I should save the ink for something official. Or official-looking...<br>ROOK: like the authorization form. | — |
 | <a id="route-world-use-wall-preserve-item-signed-terminal-authorization-form-with-doodles"></a>`world.USE.wall-preserve.item.signed-terminal-authorization-form-with-doodles` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
@@ -1175,12 +1175,12 @@ Runtime ID: `wall-preserve` · Scene: `records-office`
 | <a id="route-world-use-wall-preserve-item-hammer"></a>`world.USE.wall-preserve.item.hammer` | `deadEndSpeech:selected-item` | ROOK: I should probably keep those separate. | — |
 | <a id="route-world-use-wall-preserve-item-nails"></a>`world.USE.wall-preserve.item.nails` | `deadEndSpeech:selected-item` | ROOK: I don’t think so. | — |
 | <a id="route-world-use-wall-preserve-item-fictional-token-note"></a>`world.USE.wall-preserve.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
-| <a id="route-world-open-wall-preserve-bare"></a>`world.OPEN.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:UNRESOLVED |
-| <a id="route-world-look-at-wall-preserve-bare"></a>`world.LOOK_AT.wall-preserve.bare` | `deadEndSpeech` | ROOK: ‘Preserve. Serve. Remember.’<br>ROOK: Either a Records Office motto...<br>ROOK: or a taxidermist’s business plan. | rook:BODY:UNRESOLVED |
+| <a id="route-world-open-wall-preserve-bare"></a>`world.OPEN.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:generic runtime fallback; no bespoke cue bound |
+| <a id="route-world-look-at-wall-preserve-bare"></a>`world.LOOK_AT.wall-preserve.bare` | `deadEndSpeech` | ROOK: ‘Preserve. Serve. Remember.’<br>ROOK: Either a Records Office motto...<br>ROOK: or a taxidermist’s business plan. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-preserve-bare"></a>`world.PUSH.wall-preserve.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 | <a id="route-world-close-wall-preserve-bare"></a>`world.CLOSE.wall-preserve.bare` | `deadEndSpeech` | ROOK: There’s nothing to close. | — |
 | <a id="route-world-talk-to-wall-preserve-bare"></a>`world.TALK_TO.wall-preserve.bare` | `deadEndSpeech` | ROOK: I was going to ask it something...<br>ROOK: I forgot... Maybe it’ll come back to me later. | — |
-| <a id="route-world-pull-wall-preserve-bare"></a>`world.PULL.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:UNRESOLVED |
+| <a id="route-world-pull-wall-preserve-bare"></a>`world.PULL.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 
 <a id="hotspot-wall-records-sign"></a>
 ## Records Office sign
@@ -1223,7 +1223,7 @@ Runtime ID: `wall-records-sign` · Scene: `records-office`
 | <a id="route-world-use-wall-records-sign-item-nails"></a>`world.USE.wall-records-sign.item.nails` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-use-wall-records-sign-item-fictional-token-note"></a>`world.USE.wall-records-sign.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: I should probably keep those separate. | — |
 | <a id="route-world-open-wall-records-sign-bare"></a>`world.OPEN.wall-records-sign.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-look-at-wall-records-sign-bare"></a>`world.LOOK_AT.wall-records-sign.bare` | `deadEndSpeech` | ROOK: ‘Records Office. Everything. Archived. Forever.<br>ROOK: Like it or not.’<br>ROOK: That’s either a slogan... or a warning. | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-records-sign-bare"></a>`world.LOOK_AT.wall-records-sign.bare` | `deadEndSpeech` | ROOK: ‘Records Office. Everything. Archived. Forever.<br>ROOK: Like it or not.’<br>ROOK: That’s either a slogan... or a warning. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-records-sign-bare"></a>`world.PUSH.wall-records-sign.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-close-wall-records-sign-bare"></a>`world.CLOSE.wall-records-sign.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 | <a id="route-world-talk-to-wall-records-sign-bare"></a>`world.TALK_TO.wall-records-sign.bare` | `deadEndSpeech` | ROOK: I’m not making small talk with office signage.<br>ROOK: That’s how mandatory training videos start. | — |
@@ -1270,7 +1270,7 @@ Runtime ID: `wall-not-a-number` · Scene: `records-office`
 | <a id="route-world-use-wall-not-a-number-item-nails"></a>`world.USE.wall-not-a-number.item.nails` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-use-wall-not-a-number-item-fictional-token-note"></a>`world.USE.wall-not-a-number.item.fictional-token-note` | `deadEndSpeech:selected-item` | ROOK: Those don’t really go together. | — |
 | <a id="route-world-open-wall-not-a-number-bare"></a>`world.OPEN.wall-not-a-number.bare` | `deadEndSpeech` | ROOK: There’s nothing to open. | — |
-| <a id="route-world-look-at-wall-not-a-number-bare"></a>`world.LOOK_AT.wall-not-a-number.bare` | `deadEndSpeech` | ROOK: ‘You are not a number. Please take one.’<br>ROOK: I feel seen... then sequentially processed. | rook:BODY:UNRESOLVED |
+| <a id="route-world-look-at-wall-not-a-number-bare"></a>`world.LOOK_AT.wall-not-a-number.bare` | `deadEndSpeech` | ROOK: ‘You are not a number. Please take one.’<br>ROOK: I feel seen... then sequentially processed. | rook:BODY:generic runtime fallback; no bespoke cue bound |
 | <a id="route-world-push-wall-not-a-number-bare"></a>`world.PUSH.wall-not-a-number.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 | <a id="route-world-close-wall-not-a-number-bare"></a>`world.CLOSE.wall-not-a-number.bare` | `deadEndSpeech` | ROOK: There’s nothing to close. | — |
 | <a id="route-world-talk-to-wall-not-a-number-bare"></a>`world.TALK_TO.wall-not-a-number.bare` | `deadEndSpeech` | ROOK: It probably wouldn’t respond anyways until my number was called. | — |

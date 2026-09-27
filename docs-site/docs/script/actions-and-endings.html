@@ -1561,7 +1561,7 @@
 <td><a id="route-useful-give-form"></a><code>useful.give-form</code></td>
 <td><code>usefulRules:give-form</code></td>
 <td>MR_INDEX: Let’s see here.<br>MR_INDEX: This is barely legible.<br>ROOK: Legible enough to be legally binding?<br>MR_INDEX: My two-year-old grandson has better handwriting than this.<br>ROOK: Does he do contract work?<br>MR_INDEX: And what exactly are these?<br>MR_INDEX: Did you draw...<br>MR_INDEX: DINOSAURS...<br>MR_INDEX: and SMILEY FACES...<br>MR_INDEX: on my corporate authorization form!?<br>ROOK: Ah. So some of it is legible.<br>MR_INDEX: Unfortunately...<br>MR_INDEX: you did complete the required fields.<br>MR_INDEX: Barely.<br>MR_INDEX: Against my better judgment...<br>MR_INDEX: and in the interest of getting you out of this office faster...<br>MR_INDEX: I’m approving it.<br>MR_INDEX: There.<br>MR_INDEX: You’re authorized to use the Nansen™ terminal.<br>MR_INDEX: But just for TODAY.<br>ROOK: Knew the dinosaurs would win you over.<br>MR_INDEX: They did not.<br>MR_INDEX: And since you left your case brief in the car...<br>MR_INDEX: the office copy is in that filing cabinet.<br>MR_INDEX: Take the Euler file ONLY.<br>MR_INDEX: The others are confidential.<br>MR_INDEX: Do not snoop.<br>ROOK: How much snooping counts as snooping?<br>MR_INDEX: Any amount performed by you.<br>ROOK: What if I need another case file?<br>MR_INDEX: Then you’ll need to submit another authorization form...<br>MR_INDEX: which management will promptly deny.<br>ROOK: Euler only. Got it.<br>MR_INDEX: Good. Let’s see how long that lasts.</td>
-<td>arthur:BODY:PROP<br>arthur:BODY:GAZE<br>arthur:BODY:UNRESOLVED<br>arthur:PROP:arthur.document-adjust<br>arthur:BODY:PROP | EXPRESSION<br>rook:FACE:rook.camera-cheeky-hold<br>arthur:BODY:UNRESOLVED<br>arthur:BODY:PROP<br>arthur:BODY:GAZE</td>
+<td>arthur:BODY:PROP<br>arthur:BODY:GAZE<br>arthur:BODY:generic runtime fallback; no bespoke cue bound<br>arthur:PROP:arthur.document-adjust<br>arthur:BODY:PROP | EXPRESSION<br>rook:FACE:rook.camera-cheeky-hold<br>arthur:BODY:generic runtime fallback; no bespoke cue bound<br>arthur:BODY:PROP<br>arthur:BODY:GAZE</td>
 </tr>
 <tr>
 <td><a id="route-useful-reprimand-start"></a><code>useful.reprimand-start</code></td>
@@ -1741,7 +1741,7 @@
 <td><a id="route-item-smash-piggy"></a><code>item.smash-piggy</code></td>
 <td><code>itemRules:smash-piggy</code></td>
 <td>ROOK: Sorry, little pig. This might sting a little.<br>ROOK: One gentle tap.<br>ROOK: Just enough to take a tiny chip out of the bottom.<br>ROOK: ...I...I was aiming for one little chip.<br>ROOK: I may have underestimated the ‘heavy-duty’ part.<br>MR_INDEX: What did you do?<br>ROOK: Made a withdrawal.<br>MR_INDEX: With a hammer?<br>ROOK: Let’s call it a hostile withdrawal.<br>ROOK: Huh. Not coins. A little strip of paper.<br>ROOK: So that’s what was shuffling around in there.</td>
-<td>rook:BODY:rook.embarrassed-reaction<br>rook:BODY:UNRESOLVED<br>rook:FACE:rook.camera-cheeky-hold</td>
+<td>rook:BODY:rook.embarrassed-reaction<br>rook:BODY:generic runtime fallback; no bespoke cue bound<br>rook:FACE:rook.camera-cheeky-hold</td>
 </tr>
 <tr>
 <td><a id="route-blocked-give-mr-index-broken-feather-pen"></a><code>blocked.GIVE.mr-index.broken-feather-pen</code></td>
@@ -1795,19 +1795,19 @@
 <td><a id="route-brcg-untested"></a><code>brcg.UNTESTED</code></td>
 <td><code>selectBrcgTerminalSpeech</code></td>
 <td>ROOK: Bitcoin Roller Coaster Guy. 888,888,888 BRCG.<br>ROOK: There are still nine whole digits. That feels rich.<br>ROOK: I need to check this out for myself in the terminal.</td>
-<td>rook:BODY:UNRESOLVED</td>
+<td>rook:BODY:generic runtime fallback; no bespoke cue bound</td>
 </tr>
 <tr>
 <td><a id="route-brcg-resolved"></a><code>brcg.RESOLVED</code></td>
 <td><code>selectBrcgTerminalSpeech</code></td>
 <td>ROOK: Eight hundred eighty-eight million BRCG.<br>ROOK: About $7.10 at the snapshot’s price.<br>ROOK: That’s a lot of digits doing very little work.<br>ROOK: People say something isn’t worth the paper it’s printed on.<br>ROOK: Here... the paper might be the strongest asset.<br>ROOK: Somewhere, the U.S. dollar is taking notes.</td>
-<td>rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED</td>
+<td>rook:BODY:generic runtime fallback; no bespoke cue bound<br>rook:BODY:generic runtime fallback; no bespoke cue bound</td>
 </tr>
 <tr>
 <td><a id="route-ending-universal"></a><code>ending.universal</code></td>
 <td><code>R55_ENDING_UNIVERSAL</code></td>
 <td>ROOK: Mr. A!<br>MR_INDEX: What now?<br>ROOK: I cracked the case!<br>MR_INDEX: You identified who did it?<br>ROOK: Well, no...<br>ROOK: BUT, I traced the wallet movements and the transactions connecting them.<br>ROOK: Whoever was behind the wallets is still unknown.<br>ROOK: Could be one person. Could be several.<br>ROOK: Could be the same dog that ate that ransomware gang’s decryption key.<br>MR_INDEX: The dog is not a suspect.<br>ROOK: Breed still unknown and at large.<br>MR_INDEX: Then what did you find?<br>ROOK: The route. I traced it all. The first DAI trail reached the First Engine...<br>ROOK: the second route reached the Receiving Vault... and best of all...<br>ROOK: I found the exact transaction that connected them.<br>MR_INDEX: Good. So you did your job. Barely.<br>MR_INDEX: And arguably, Nansen™ did most of the heavy lifting.<br>ROOK: I asked the right question.<br>MR_INDEX: And let the evidence answer it.<br>MR_INDEX: Considering that this morning you did not know what a blockchain was...<br>MR_INDEX: that is progress.<br>ROOK: That sounded dangerously close to praise.<br>MR_INDEX: It was an observation.<br>ROOK: I’ll take it.<br>ROOK: So... now that I cracked the case, can I call you Arthur?<br>MR_INDEX: You may not.<br>ROOK: But your friends call you Arthur, and we made a pretty good team today.<br>MR_INDEX: You completed one assignment. That barely establishes competence...<br>MR_INDEX: let alone friendship.<br>ROOK: So friendship is still under review?<br>MR_INDEX: It never entered review.<br>ROOK: How about a celebratory pizza, then?<br>MR_INDEX: This is still not a pizza restaurant.<br>MR_INDEX: But...<br>MR_INDEX: there is a place around the corner.<br>ROOK: I knew you’d warm up to me.<br>MR_INDEX: We just happen to both be hungry at the same time.<br>ROOK: That’s how the best of teams start!<br>MR_INDEX: No. It really isn’t.<br>ROOK: So you’re buying?</td>
-<td>rook:BODY:UNRESOLVED | generic runtime fallback; no bespoke cue bound | MOVEMENT<br>rook:BODY:rook.case-cracked-delivery<br>rook:BODY:rook.emphasis-delivery<br>arthur:BODY:STAGE | generic runtime fallback; no bespoke cue bound<br>rook:BODY:rook.shrug-delivery<br>arthur:BODY:arthur.present-delivery<br>rook:BODY:rook.pizza-invite-delivery<br>arthur:BODY:arthur.present-delivery<br>arthur:BODY:GAZE | generic runtime fallback; no bespoke cue bound | STAGE<br>arthur:BODY:arthur.glasses-wiggle<br>arthur:BODY:One short beat after, Arthur will look at the camera, blink, then turn back to Rook's position, then he will deliver the next scheduled line.</td>
+<td>rook:BODY:generic runtime fallback; no bespoke cue bound | generic runtime fallback; no bespoke cue bound | MOVEMENT<br>rook:BODY:rook.case-cracked-delivery<br>rook:BODY:rook.emphasis-delivery<br>arthur:BODY:STAGE | generic runtime fallback; no bespoke cue bound<br>rook:BODY:rook.shrug-delivery<br>arthur:BODY:arthur.present-delivery<br>rook:BODY:rook.pizza-invite-delivery<br>arthur:BODY:arthur.present-delivery<br>arthur:BODY:GAZE | generic runtime fallback; no bespoke cue bound | STAGE<br>arthur:BODY:arthur.glasses-wiggle<br>arthur:BODY:One short beat after, Arthur will look at the camera, blink, then turn back to Rook's position, then he will deliver the next scheduled line.</td>
 </tr>
 <tr>
 <td><a id="route-ending-variant-default"></a><code>ending.variant.default</code></td>
@@ -1819,13 +1819,13 @@
 <td><a id="route-ending-variant-brcg"></a><code>ending.variant.brcg</code></td>
 <td><code>selectEndingVariantSpeech</code></td>
 <td>MR_INDEX: You broke my pen. I’d say you owe me.<br>MR_INDEX: And besides, you’re rolling in the dough now...<br>MR_INDEX: with all that BRCG you somehow came across. Right?<br>ROOK: That’s right! That should cover one slice...<br>ROOK: to share.<br>ROOK: This one’s on me!</td>
-<td>arthur:BODY:UNRESOLVED</td>
+<td>arthur:BODY:generic runtime fallback; no bespoke cue bound</td>
 </tr>
 <tr>
 <td><a id="route-ending-brcg-payoff"></a><code>ending.brcg-payoff</code></td>
 <td><code>R55_BRCG_PAYOFF</code></td>
 <td>MR_INDEX: Well?<br>ROOK: At the frozen quoted price: 888,888,888 BRCG comes to about...<br>ROOK: $7.10.<br>MR_INDEX: That’s some ‘fortune’ you got there!<br>MR_INDEX: And the note still does not prove that the balance exists...<br>MR_INDEX: belongs to you... or could even be sold for that amount.<br>ROOK: So I shattered a pig for seven hypothetical dollars.<br>MR_INDEX: And a useful lesson.<br>ROOK: Can the lesson pay for a new pig?<br>MR_INDEX: It cannot.</td>
-<td>arthur:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED</td>
+<td>arthur:BODY:generic runtime fallback; no bespoke cue bound<br>rook:BODY:generic runtime fallback; no bespoke cue bound</td>
 </tr>
 </tbody>
 </table>
