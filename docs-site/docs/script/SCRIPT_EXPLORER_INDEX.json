@@ -1,7 +1,7 @@
 {
   "schemaVersion": "tarka.script-explorer.v1",
   "authority": "FINAL_SHIPPED_IMPLEMENTATION",
-  "generatedFromCommit": "0342f53dd64d2ec54ba62eb4549ac9925224d699",
+  "generatedFromCommit": "2ab0b6b3ad03b85455c618b6eb5aaacd0c3997a2",
   "sourceHashes": {
     "src/story/s17/generated/final-script.json": "d337a24448735e3cdc1e0dddfb42b773fca0d335021d1c222c66217640c93f89",
     "src/story/s17/finalScript.ts": "e14553c9c61581bb45241942538525b9e17e85084892a58150f7a7e4d5d23997",
