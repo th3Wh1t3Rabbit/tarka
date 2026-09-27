@@ -1,6 +1,7 @@
 {
   "schemaVersion": "tarka.script-explorer.v1",
   "authority": "FINAL_SHIPPED_IMPLEMENTATION",
+  "generatedFromCommit": "0342f53dd64d2ec54ba62eb4549ac9925224d699",
   "sourceHashes": {
     "src/story/s17/generated/final-script.json": "d337a24448735e3cdc1e0dddfb42b773fca0d335021d1c222c66217640c93f89",
     "src/story/s17/finalScript.ts": "e14553c9c61581bb45241942538525b9e17e85084892a58150f7a7e4d5d23997",
@@ -60033,110 +60034,164 @@
   "hotspots": [
     {
       "id": "filing-drawers",
+      "displayName": "filing drawers",
+      "sceneId": "records-office",
       "polygon": "48,136 148,136 148,246 48,246"
     },
     {
       "id": "historical-clock",
+      "displayName": "historical clock",
+      "sceneId": "records-office",
       "polygon": "280,50 342,50 342,126 280,126"
     },
     {
       "id": "office-globe",
+      "displayName": "office globe",
+      "sceneId": "records-office",
       "polygon": "390,30 434,30 434,90 390,90"
     },
     {
       "id": "request-dispenser",
+      "displayName": "form dispenser",
+      "sceneId": "records-office",
       "polygon": "315,164 383,164 383,292 315,292"
     },
     {
       "id": "pen-stand",
+      "displayName": "historical-looking feather pen",
+      "sceneId": "records-office",
       "polygon": "406,232 464,232 464,310 406,310"
     },
     {
       "id": "mr-index",
+      "displayName": "Mr. Index",
+      "sceneId": "records-office",
       "polygon": "492,163 550,163 550,313 492,313"
     },
     {
       "id": "official-case-file-cabinet",
+      "displayName": "office cabinet",
+      "sceneId": "records-office",
       "polygon": "639,169 703,169 703,286 639,286"
     },
     {
       "id": "disorderly-stack-of-confidential-files",
+      "displayName": "disorderly stack of confidential files",
+      "sceneId": "records-office",
       "polygon": "643,173 699,173 699,205 643,205"
     },
     {
       "id": "miscellaneous-drawer-cabinet",
+      "displayName": "office cabinet",
+      "sceneId": "records-office",
       "polygon": "758,175 820,175 820,289 758,289"
     },
     {
       "id": "miscellaneous-catch-all-contents",
+      "displayName": "miscellaneous catch-all contents",
+      "sceneId": "records-office",
       "polygon": "764,179 814,179 814,209 764,209"
     },
     {
       "id": "nansen-terminal",
+      "displayName": "Nansen™ terminal",
+      "sceneId": "records-office",
       "polygon": "860,154 940,154 940,300 860,300"
     },
     {
       "id": "window",
+      "displayName": "window",
+      "sceneId": "records-office",
       "polygon": "848,28 946,28 946,240 848,240"
     },
     {
       "id": "coffee-mug",
+      "displayName": "coffee mug",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "desk-lamp",
+      "displayName": "desk lamp",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "tall-books",
+      "displayName": "tall books",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "book-shelf",
+      "displayName": "crowded book shelf",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "arthur-stamp",
+      "displayName": "Arthur's stamp",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "blank-authorization-form",
+      "displayName": "blank authorization form",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-clock",
+      "displayName": "historical clock",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-be-the-change",
+      "displayName": "office poster",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-think-outside",
+      "displayName": "motivational poster",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-employee",
+      "displayName": "framed workplace acknowledgement",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-city-bridge",
+      "displayName": "scenic painting",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-building",
+      "displayName": "architectural drawing",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-preserve",
+      "displayName": "oddly mounted frame",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-records-sign",
+      "displayName": "Records Office sign",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     },
     {
       "id": "wall-not-a-number",
+      "displayName": "stanchion sign",
+      "sceneId": "records-office",
       "polygon": "0,0 8,0 8,8 0,8"
     }
   ],
@@ -60154,93 +60209,123 @@
   "inventoryItems": [
     {
       "id": "blank-terminal-authorization-form",
-      "name": "blank authorization form",
-      "description": "Seems relatively boilerplate.",
-      "assetSlot": "blank-terminal-authorization-form"
+      "displayName": "blank authorization form",
+      "assetSlot": "blank-terminal-authorization-form",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.blank-terminal-authorization-form"
+      ]
     },
     {
       "id": "loose-feather-pen",
-      "name": "historical-looking feather pen",
-      "description": "Very official. These guys don’t mess around.",
-      "assetSlot": "loose-feather-pen"
+      "displayName": "historical-looking feather pen",
+      "assetSlot": "loose-feather-pen",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.loose-feather-pen"
+      ]
     },
     {
       "id": "signed-terminal-authorization-form-with-doodles",
-      "name": "scribbled authorization form",
-      "description": "It’s basically a printer... but with more authority.",
-      "assetSlot": "signed-terminal-authorization-form-with-doodles"
+      "displayName": "scribbled authorization form",
+      "assetSlot": "signed-terminal-authorization-form-with-doodles",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.signed-terminal-authorization-form-with-doodles"
+      ]
     },
     {
       "id": "broken-feather-pen",
-      "name": "poorly-handled broken feather pen",
-      "description": "Signed and ready for Mr. A.",
-      "assetSlot": "broken-feather-pen"
+      "displayName": "poorly-handled broken feather pen",
+      "assetSlot": "broken-feather-pen",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.broken-feather-pen"
+      ]
     },
     {
       "id": "approved-stamped-terminal-authorization-form",
-      "name": "approved dinosaur-doodled authorization form",
-      "description": "Approved. Stamped. Fully authorized.",
-      "assetSlot": "approved-stamped-terminal-authorization-form"
+      "displayName": "approved dinosaur-doodled authorization form",
+      "assetSlot": "approved-stamped-terminal-authorization-form",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.approved-stamped-terminal-authorization-form"
+      ]
     },
     {
       "id": "euler-case-file",
-      "name": "Euler case file",
-      "description": "Euler Finance. March 13, 2023.",
-      "assetSlot": "euler-case-file"
+      "displayName": "Euler case file",
+      "assetSlot": "euler-case-file",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.euler-case-file"
+      ]
     },
     {
       "id": "rubber-band",
-      "name": "rubber band",
-      "description": "And apparently, the dinosaurs were acceptable for the signature field.",
-      "assetSlot": "rubber-band"
+      "displayName": "rubber band",
+      "assetSlot": "rubber-band",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.rubber-band"
+      ]
     },
     {
       "id": "rubiks-cube",
-      "name": "Rubik's Cube",
-      "description": "A rubber band. Currently performing its traditional role...",
-      "assetSlot": "rubiks-cube"
+      "displayName": "Rubik's Cube",
+      "assetSlot": "rubiks-cube",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.rubiks-cube"
+      ]
     },
     {
       "id": "sharknado-2-vhs",
-      "name": "Sharknado 2 VHS",
-      "description": "taking up space until the exact moment someone throws it away...",
-      "assetSlot": "sharknado-2-vhs"
+      "displayName": "Sharknado 2 VHS",
+      "assetSlot": "sharknado-2-vhs",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.sharknado-2-vhs"
+      ]
     },
     {
       "id": "piggy-bank-intact",
-      "name": "piggy bank",
-      "description": "I’m even more surprised someone green-lit a sequel...",
-      "assetSlot": "piggy-bank-intact"
+      "displayName": "piggy bank",
+      "assetSlot": "piggy-bank-intact",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.piggy-bank-intact"
+      ]
     },
     {
       "id": "small-toolbox-closed",
-      "name": "small toolbox",
-      "description": "Do-It-Herself. Small. Pink. Radiating competence.",
-      "assetSlot": "small-toolbox-closed"
+      "displayName": "small toolbox",
+      "assetSlot": "small-toolbox-closed",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.small-toolbox-closed"
+      ]
     },
     {
       "id": "small-toolbox-open-empty",
-      "name": "open empty toolbox",
-      "description": "“Empty now.\n\nStill pink.\n\nStill empowering.\n\nAnd, by default...\n\nthe most organized\ntoolbox I’ve ever owned.”",
-      "assetSlot": "small-toolbox-open-empty"
+      "displayName": "open empty toolbox",
+      "assetSlot": "small-toolbox-open-empty",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.small-toolbox-open-empty"
+      ]
     },
     {
       "id": "hammer",
-      "name": "hammer",
-      "description": "if I knew how and had several uninterrupted years.",
-      "assetSlot": "hammer"
+      "displayName": "hammer",
+      "assetSlot": "hammer",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.hammer"
+      ]
     },
     {
       "id": "nails",
-      "name": "nails",
-      "description": "Sharknado 2. On VHS. I’m surprised the first one got made.",
-      "assetSlot": "nails"
+      "displayName": "nails",
+      "assetSlot": "nails",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.nails"
+      ]
     },
     {
       "id": "fictional-token-note",
-      "name": "office-note token lead",
-      "description": "“Let’s see...”",
-      "assetSlot": "fictional-token-note"
+      "displayName": "office-note token lead",
+      "assetSlot": "fictional-token-note",
+      "lookAtAuthorityRouteIds": [
+        "inventory.LOOK_AT.fictional-token-note"
+      ]
     }
   ]
 }

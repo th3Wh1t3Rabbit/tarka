@@ -8,9 +8,9 @@
 The runtime exposes **27 hotspots**, **9 verbs**, and **1053 world routes**. Stable route anchors support direct review.
 
 <a id="hotspot-filing-drawers"></a>
-## undefined
+## filing drawers
 
-Runtime ID: `filing-drawers` · Scene: ``
+Runtime ID: `filing-drawers` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -55,9 +55,9 @@ Runtime ID: `filing-drawers` · Scene: ``
 | <a id="route-world-pull-filing-drawers-bare"></a>`world.PULL.filing-drawers.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-historical-clock"></a>
-## undefined
+## historical clock
 
-Runtime ID: `historical-clock` · Scene: ``
+Runtime ID: `historical-clock` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -102,9 +102,9 @@ Runtime ID: `historical-clock` · Scene: ``
 | <a id="route-world-pull-historical-clock-bare"></a>`world.PULL.historical-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-office-globe"></a>
-## undefined
+## office globe
 
-Runtime ID: `office-globe` · Scene: ``
+Runtime ID: `office-globe` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -149,9 +149,9 @@ Runtime ID: `office-globe` · Scene: ``
 | <a id="route-world-pull-office-globe-bare"></a>`world.PULL.office-globe.bare` | `deadEndSpeech` | ROOK: Wow. This spins so easily! Barely any friction at all. | — |
 
 <a id="hotspot-request-dispenser"></a>
-## undefined
+## form dispenser
 
-Runtime ID: `request-dispenser` · Scene: ``
+Runtime ID: `request-dispenser` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -196,9 +196,9 @@ Runtime ID: `request-dispenser` · Scene: ``
 | <a id="route-world-pull-request-dispenser-bare"></a>`world.PULL.request-dispenser.bare` | `deadEndSpeech` | ROOK: Nope. It weighs more than it looks... | — |
 
 <a id="hotspot-pen-stand"></a>
-## undefined
+## historical-looking feather pen
 
-Runtime ID: `pen-stand` · Scene: ``
+Runtime ID: `pen-stand` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -243,14 +243,14 @@ Runtime ID: `pen-stand` · Scene: ``
 | <a id="route-world-pull-pen-stand-bare"></a>`world.PULL.pen-stand.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-mr-index"></a>
-## undefined
+## Mr. Index
 
-Runtime ID: `mr-index` · Scene: ``
+Runtime ID: `mr-index` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
 | <a id="route-world-give-mr-index-bare"></a>`world.GIVE.mr-index.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
-| <a id="route-world-give-mr-index-item-blank-terminal-authorization-form"></a>`world.GIVE.mr-index.item.blank-terminal-authorization-form` | `deadEndSpeech:selected-item` | MR_INDEX: It’s blank.<br>ROOK: I figured that’d save us both time and be more efficient.<br>MR_INDEX: Funny. All you seem to do is WASTE time.<br>MR_INDEX: I will only consider a properly filled out and signed form.<br>MR_INDEX: Complete it... or leave. | arthur:BODY:MOVEMENT \| UNRESOLVED \| MOVEMENT |
+| <a id="route-world-give-mr-index-item-blank-terminal-authorization-form"></a>`world.GIVE.mr-index.item.blank-terminal-authorization-form` | `deadEndSpeech:selected-item` | MR_INDEX: It’s blank.<br>ROOK: I figured that’d save us both time and be more efficient.<br>MR_INDEX: Funny. All you seem to do is WASTE time.<br>MR_INDEX: I will only consider a properly filled out and signed form.<br>MR_INDEX: Complete it... or leave. | arthur:BODY:MOVEMENT \| generic runtime fallback; no bespoke cue bound \| MOVEMENT |
 | <a id="route-world-give-mr-index-item-loose-feather-pen"></a>`world.GIVE.mr-index.item.loose-feather-pen` | `deadEndSpeech:selected-item` | ROOK: Sure. I’ll give it back to him.<br>ROOK: Just as soon as I finish filling out the authorization form. | — |
 | <a id="route-world-give-mr-index-item-signed-terminal-authorization-form-with-doodles"></a>`world.GIVE.mr-index.item.signed-terminal-authorization-form-with-doodles` | `deadEndSpeech:selected-item` | ROOK: He already approved it.<br>ROOK: Giving it back feels like asking for a second opinion. | — |
 | <a id="route-world-give-mr-index-item-broken-feather-pen"></a>`world.GIVE.mr-index.item.broken-feather-pen` | `deadEndSpeech:selected-item` | ROOK: Umm... I think I’ll hang onto this for now.<br>ROOK: I don’t want to upset Arthur.<br>ROOK: He already seems to have a bad case of the Mondays. | — |
@@ -290,9 +290,9 @@ Runtime ID: `mr-index` · Scene: ``
 | <a id="route-world-pull-mr-index-bare"></a>`world.PULL.mr-index.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-official-case-file-cabinet"></a>
-## undefined
+## office cabinet
 
-Runtime ID: `official-case-file-cabinet` · Scene: ``
+Runtime ID: `official-case-file-cabinet` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -337,9 +337,9 @@ Runtime ID: `official-case-file-cabinet` · Scene: ``
 | <a id="route-world-pull-official-case-file-cabinet-bare"></a>`world.PULL.official-case-file-cabinet.bare` | `deadEndSpeech` | ROOK: It’s already open. | — |
 
 <a id="hotspot-disorderly-stack-of-confidential-files"></a>
-## undefined
+## disorderly stack of confidential files
 
-Runtime ID: `disorderly-stack-of-confidential-files` · Scene: ``
+Runtime ID: `disorderly-stack-of-confidential-files` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -384,9 +384,9 @@ Runtime ID: `disorderly-stack-of-confidential-files` · Scene: ``
 | <a id="route-world-pull-disorderly-stack-of-confidential-files-bare"></a>`world.PULL.disorderly-stack-of-confidential-files.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-miscellaneous-drawer-cabinet"></a>
-## undefined
+## office cabinet
 
-Runtime ID: `miscellaneous-drawer-cabinet` · Scene: ``
+Runtime ID: `miscellaneous-drawer-cabinet` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -431,9 +431,9 @@ Runtime ID: `miscellaneous-drawer-cabinet` · Scene: ``
 | <a id="route-world-pull-miscellaneous-drawer-cabinet-bare"></a>`world.PULL.miscellaneous-drawer-cabinet.bare` | `deadEndSpeech` | ROOK: It’s already open. | — |
 
 <a id="hotspot-miscellaneous-catch-all-contents"></a>
-## undefined
+## miscellaneous catch-all contents
 
-Runtime ID: `miscellaneous-catch-all-contents` · Scene: ``
+Runtime ID: `miscellaneous-catch-all-contents` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -478,9 +478,9 @@ Runtime ID: `miscellaneous-catch-all-contents` · Scene: ``
 | <a id="route-world-pull-miscellaneous-catch-all-contents-bare"></a>`world.PULL.miscellaneous-catch-all-contents.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-nansen-terminal"></a>
-## undefined
+## Nansen™ terminal
 
-Runtime ID: `nansen-terminal` · Scene: ``
+Runtime ID: `nansen-terminal` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -525,9 +525,9 @@ Runtime ID: `nansen-terminal` · Scene: ``
 | <a id="route-world-pull-nansen-terminal-bare"></a>`world.PULL.nansen-terminal.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-window"></a>
-## undefined
+## window
 
-Runtime ID: `window` · Scene: ``
+Runtime ID: `window` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -572,9 +572,9 @@ Runtime ID: `window` · Scene: ``
 | <a id="route-world-pull-window-bare"></a>`world.PULL.window.bare` | `deadEndSpeech` | ROOK: I should leave it alone.<br>ROOK: It’s the only thing in here with an outside perspective. | — |
 
 <a id="hotspot-coffee-mug"></a>
-## undefined
+## coffee mug
 
-Runtime ID: `coffee-mug` · Scene: ``
+Runtime ID: `coffee-mug` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -619,9 +619,9 @@ Runtime ID: `coffee-mug` · Scene: ``
 | <a id="route-world-pull-coffee-mug-bare"></a>`world.PULL.coffee-mug.bare` | `deadEndSpeech` | ROOK: I’m not spilling Mr. A’s coffee.<br>ROOK: Though by the look of his desk...<br>ROOK: I don’t think it’d be the first time that’s happened. | — |
 
 <a id="hotspot-desk-lamp"></a>
-## undefined
+## desk lamp
 
-Runtime ID: `desk-lamp` · Scene: ``
+Runtime ID: `desk-lamp` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -666,9 +666,9 @@ Runtime ID: `desk-lamp` · Scene: ``
 | <a id="route-world-pull-desk-lamp-bare"></a>`world.PULL.desk-lamp.bare` | `deadEndSpeech` | ROOK: I don’t want to knock it over. | — |
 
 <a id="hotspot-tall-books"></a>
-## undefined
+## tall books
 
-Runtime ID: `tall-books` · Scene: ``
+Runtime ID: `tall-books` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -713,9 +713,9 @@ Runtime ID: `tall-books` · Scene: ``
 | <a id="route-world-pull-tall-books-bare"></a>`world.PULL.tall-books.bare` | `deadEndSpeech` | ROOK: I don’t need one.<br>ROOK: I already have unread books at home depending on me. | — |
 
 <a id="hotspot-book-shelf"></a>
-## undefined
+## crowded book shelf
 
-Runtime ID: `book-shelf` · Scene: ``
+Runtime ID: `book-shelf` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -760,9 +760,9 @@ Runtime ID: `book-shelf` · Scene: ``
 | <a id="route-world-pull-book-shelf-bare"></a>`world.PULL.book-shelf.bare` | `deadEndSpeech` | ROOK: I don’t need one.<br>ROOK: I already have unread books at home depending on me. | — |
 
 <a id="hotspot-arthur-stamp"></a>
-## undefined
+## Arthur's stamp
 
-Runtime ID: `arthur-stamp` · Scene: ``
+Runtime ID: `arthur-stamp` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -807,9 +807,9 @@ Runtime ID: `arthur-stamp` · Scene: ``
 | <a id="route-world-pull-arthur-stamp-bare"></a>`world.PULL.arthur-stamp.bare` | `deadEndSpeech` | ROOK: I don’t want to break the very thing...<br>ROOK: that arguably carries the most authority in this entire office. | — |
 
 <a id="hotspot-blank-authorization-form"></a>
-## undefined
+## blank authorization form
 
-Runtime ID: `blank-authorization-form` · Scene: ``
+Runtime ID: `blank-authorization-form` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -854,9 +854,9 @@ Runtime ID: `blank-authorization-form` · Scene: ``
 | <a id="route-world-pull-blank-authorization-form-bare"></a>`world.PULL.blank-authorization-form.bare` | `deadEndSpeech` | ROOK: If I could, I’d turn this into an origami swan...<br>ROOK: but I still need it for the case. | — |
 
 <a id="hotspot-wall-clock"></a>
-## undefined
+## historical clock
 
-Runtime ID: `wall-clock` · Scene: ``
+Runtime ID: `wall-clock` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -901,9 +901,9 @@ Runtime ID: `wall-clock` · Scene: ``
 | <a id="route-world-pull-wall-clock-bare"></a>`world.PULL.wall-clock.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-be-the-change"></a>
-## undefined
+## office poster
 
-Runtime ID: `wall-be-the-change` · Scene: ``
+Runtime ID: `wall-be-the-change` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -948,9 +948,9 @@ Runtime ID: `wall-be-the-change` · Scene: ``
 | <a id="route-world-pull-wall-be-the-change-bare"></a>`world.PULL.wall-be-the-change.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-think-outside"></a>
-## undefined
+## motivational poster
 
-Runtime ID: `wall-think-outside` · Scene: ``
+Runtime ID: `wall-think-outside` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -995,9 +995,9 @@ Runtime ID: `wall-think-outside` · Scene: ``
 | <a id="route-world-pull-wall-think-outside-bare"></a>`world.PULL.wall-think-outside.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-employee"></a>
-## undefined
+## framed workplace acknowledgement
 
-Runtime ID: `wall-employee` · Scene: ``
+Runtime ID: `wall-employee` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -1042,9 +1042,9 @@ Runtime ID: `wall-employee` · Scene: ``
 | <a id="route-world-pull-wall-employee-bare"></a>`world.PULL.wall-employee.bare` | `deadEndSpeech` | ROOK: That won’t help. | — |
 
 <a id="hotspot-wall-city-bridge"></a>
-## undefined
+## scenic painting
 
-Runtime ID: `wall-city-bridge` · Scene: ``
+Runtime ID: `wall-city-bridge` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -1089,9 +1089,9 @@ Runtime ID: `wall-city-bridge` · Scene: ``
 | <a id="route-world-pull-wall-city-bridge-bare"></a>`world.PULL.wall-city-bridge.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-building"></a>
-## undefined
+## architectural drawing
 
-Runtime ID: `wall-building` · Scene: ``
+Runtime ID: `wall-building` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -1136,9 +1136,9 @@ Runtime ID: `wall-building` · Scene: ``
 | <a id="route-world-pull-wall-building-bare"></a>`world.PULL.wall-building.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-preserve"></a>
-## undefined
+## oddly mounted frame
 
-Runtime ID: `wall-preserve` · Scene: ``
+Runtime ID: `wall-preserve` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -1183,9 +1183,9 @@ Runtime ID: `wall-preserve` · Scene: ``
 | <a id="route-world-pull-wall-preserve-bare"></a>`world.PULL.wall-preserve.bare` | `deadEndSpeech` | ROOK: Maybe there’s a secret vault behind it. Let me see.<br>ROOK: Nah. We’ll save that for the next game. | rook:BODY:UNRESOLVED |
 
 <a id="hotspot-wall-records-sign"></a>
-## undefined
+## Records Office sign
 
-Runtime ID: `wall-records-sign` · Scene: ``
+Runtime ID: `wall-records-sign` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -1230,9 +1230,9 @@ Runtime ID: `wall-records-sign` · Scene: ``
 | <a id="route-world-pull-wall-records-sign-bare"></a>`world.PULL.wall-records-sign.bare` | `deadEndSpeech` | ROOK: I can’t reach it. | — |
 
 <a id="hotspot-wall-not-a-number"></a>
-## undefined
+## stanchion sign
 
-Runtime ID: `wall-not-a-number` · Scene: ``
+Runtime ID: `wall-not-a-number` · Scene: `records-office`
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|

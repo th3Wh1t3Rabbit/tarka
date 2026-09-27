@@ -8,8 +8,14 @@ html:not(.js) #nav{display:block}html:not(.js) #menu{display:none}
 /* Figures have real relative paths in Markdown/static output; the review file embeds them. */
 #article img[data-image]{display:block;width:100%;max-width:960px;height:auto;image-rendering:pixelated;margin:22px auto 8px;border:1px solid var(--line,#344c47)}
 .figure-caption{font-size:.86rem;line-height:1.5;color:#4b665e;margin-top:8px;margin-bottom:26px}
+.script-explorer-card{margin:24px 0;padding:20px 22px;border:2px solid #8f7336;border-left-width:7px;background:linear-gradient(135deg,#fff8df 0%,#f1f4e8 100%);box-shadow:0 4px 14px rgba(16,38,41,.08)}
+.script-explorer-card h2,.script-explorer-card h3{margin:0 0 8px;font:800 22px/1.25 ui-monospace,monospace;letter-spacing:.02em;color:#24413f}
+.script-explorer-card p{margin:8px 0}
+.script-explorer-card a{font-weight:750}
+.script-explorer-card .meta{display:block;margin-top:12px;color:#596a58}
 .article-navigation{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid #31443d;padding-top:20px;margin-top:32px;font-size:.9rem}
 .image-dialog{max-width:min(1120px,96vw);max-height:95vh;background:#101c19;color:#e2f0e8;border:1px solid #63796e;padding:14px;overflow:auto}
 .image-dialog::backdrop{background:rgba(0,0,0,.82)}
 .image-dialog form{text-align:right;margin-bottom:10px}.image-dialog button{padding:8px 18px;cursor:pointer;background:#294039;color:#fff;border:1px solid #6f877b}
 .image-dialog img{display:block;max-width:100%;width:960px;height:auto;image-rendering:pixelated}.image-dialog p{font-size:.86rem;max-width:900px}
+@media(max-width:760px){.script-explorer-card{padding:16px;margin:18px 0}.script-explorer-card h2,.script-explorer-card h3{font-size:19px}}

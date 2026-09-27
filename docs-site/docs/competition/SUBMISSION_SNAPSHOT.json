@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "tarka.competition-submission-snapshot.v1",
+  "competition": "Nansen Meridian Buildathon",
+  "publicSubmissionStatus": "SUBMITTED",
+  "submissionDate": "2026-09-27",
+  "submittedSnapshot": {
+    "tag": "v1.0.0-meridian",
+    "commit": "3fe68360d59cfb553cd431da96d3e0238e8027c2",
+    "tree": "090ba53b27e53e56938da185f1ac34b7f945f23b",
+    "releaseUrl": "https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian",
+    "video": {
+      "name": "TARKA_FINAL_SUBMISSION.mp4",
+      "sha256": "14a3431de976eb299f38ee8776700de2a4b4921ae8f200379cf2283015d00858",
+      "durationSeconds": 59.97
+    }
+  },
+  "publicLinks": {
+    "game": "https://play.tarka-meridian.workers.dev/",
+    "documentation": "https://docs.tarka-meridian.workers.dev/",
+    "repository": "https://github.com/th3Wh1t3Rabbit/tarka",
+    "release": "https://github.com/th3Wh1t3Rabbit/tarka/releases/tag/v1.0.0-meridian",
+    "xPost": "https://x.com/th3Wh1t3Rabbit/status/2104292991699681304"
+  },
+  "postSubmissionMaintenance": {
+    "mobileGlobeCommit": "0f6d0c5a9cc2deeed316e781426f9ede297d4ec1",
+    "submittedSnapshotRewritten": false,
+    "releaseAssetsReplaced": false
+  },
+  "privacy": "No private email, account, or form-response details are included."
+}

@@ -14,6 +14,10 @@
 
 Each story delivery records the authored panel boundary, speaker, text, before/after beat duration, and any represented animation/expression cue. Runtime route pages preserve effective output after dialogue normalization. A dash means no extra timing or performance cue is authored for that delivery.
 
+Raw machine-readable cue authority preserves the token `UNRESOLVED`. In the human tables, that token is rendered as **generic runtime fallback; no bespoke cue bound**: the shipped runtime falls back to its ordinary speaker/talking presentation rather than selecting a dedicated authored expression or body clip.
+
+Inventory metadata intentionally omits the legacy `description` field because several values are stale or shifted. The exact `LOOK AT` route shown for each item is the authoritative player-facing writing.
+
 ## Source authority
 
 The explorer is regenerated from the final script authority, final runtime corrections, transcript route authority, production action registry, hotspot/verb inventory, and runtime selectors. The coverage receipt hashes each source input and fails generation if a final bubble disappears, an executable action errors, or expected world/inventory route totals drift.

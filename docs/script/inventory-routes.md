@@ -8,9 +8,9 @@
 The shipped inventory defines **15 item IDs** and **345 inventory routes**, including state/repeat fallbacks represented by the effective runtime owner.
 
 <a id="inventory-blank-terminal-authorization-form"></a>
-## undefined
+## blank authorization form
 
-Runtime ID: `blank-terminal-authorization-form`
+Runtime ID: `blank-terminal-authorization-form` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -53,9 +53,9 @@ Runtime ID: `blank-terminal-authorization-form`
 | <a id="route-inventory-use-fictional-token-note-with-blank-terminal-authorization-form"></a>`inventory.USE.fictional-token-note.with.blank-terminal-authorization-form` | `inventorySpeechForState:item-pair` | ROOK: Those don’t really go together. | — |
 
 <a id="inventory-loose-feather-pen"></a>
-## undefined
+## historical-looking feather pen
 
-Runtime ID: `loose-feather-pen`
+Runtime ID: `loose-feather-pen` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -98,9 +98,9 @@ Runtime ID: `loose-feather-pen`
 | <a id="route-inventory-use-fictional-token-note-with-loose-feather-pen"></a>`inventory.USE.fictional-token-note.with.loose-feather-pen` | `inventorySpeechForState:item-pair` | ROOK: That feels like a bad idea. | — |
 
 <a id="inventory-signed-terminal-authorization-form-with-doodles"></a>
-## undefined
+## scribbled authorization form
 
-Runtime ID: `signed-terminal-authorization-form-with-doodles`
+Runtime ID: `signed-terminal-authorization-form-with-doodles` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -143,9 +143,9 @@ Runtime ID: `signed-terminal-authorization-form-with-doodles`
 | <a id="route-inventory-use-fictional-token-note-with-signed-terminal-authorization-form-with-doodles"></a>`inventory.USE.fictional-token-note.with.signed-terminal-authorization-form-with-doodles` | `inventorySpeechForState:item-pair` | ROOK: I should probably keep those separate. | — |
 
 <a id="inventory-broken-feather-pen"></a>
-## undefined
+## poorly-handled broken feather pen
 
-Runtime ID: `broken-feather-pen`
+Runtime ID: `broken-feather-pen` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -188,9 +188,9 @@ Runtime ID: `broken-feather-pen`
 | <a id="route-inventory-use-fictional-token-note-with-broken-feather-pen"></a>`inventory.USE.fictional-token-note.with.broken-feather-pen` | `inventorySpeechForState:item-pair` | ROOK: Those don’t really go together. | — |
 
 <a id="inventory-approved-stamped-terminal-authorization-form"></a>
-## undefined
+## approved dinosaur-doodled authorization form
 
-Runtime ID: `approved-stamped-terminal-authorization-form`
+Runtime ID: `approved-stamped-terminal-authorization-form` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -233,9 +233,9 @@ Runtime ID: `approved-stamped-terminal-authorization-form`
 | <a id="route-inventory-use-fictional-token-note-with-approved-stamped-terminal-authorization-form"></a>`inventory.USE.fictional-token-note.with.approved-stamped-terminal-authorization-form` | `inventorySpeechForState:item-pair` | ROOK: I should probably keep those separate. | — |
 
 <a id="inventory-euler-case-file"></a>
-## undefined
+## Euler case file
 
-Runtime ID: `euler-case-file`
+Runtime ID: `euler-case-file` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -278,9 +278,9 @@ Runtime ID: `euler-case-file`
 | <a id="route-inventory-use-fictional-token-note-with-euler-case-file"></a>`inventory.USE.fictional-token-note.with.euler-case-file` | `inventorySpeechForState:item-pair` | ROOK: I should probably keep those separate. | — |
 
 <a id="inventory-rubber-band"></a>
-## undefined
+## rubber band
 
-Runtime ID: `rubber-band`
+Runtime ID: `rubber-band` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -323,9 +323,9 @@ Runtime ID: `rubber-band`
 | <a id="route-inventory-use-fictional-token-note-with-rubber-band"></a>`inventory.USE.fictional-token-note.with.rubber-band` | `inventorySpeechForState:item-pair` | ROOK: That feels like a bad idea. | — |
 
 <a id="inventory-rubiks-cube"></a>
-## undefined
+## Rubik's Cube
 
-Runtime ID: `rubiks-cube`
+Runtime ID: `rubiks-cube` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -368,9 +368,9 @@ Runtime ID: `rubiks-cube`
 | <a id="route-inventory-use-fictional-token-note-with-rubiks-cube"></a>`inventory.USE.fictional-token-note.with.rubiks-cube` | `inventorySpeechForState:item-pair` | ROOK: I don’t see how that helps us with the case. | — |
 
 <a id="inventory-sharknado-2-vhs"></a>
-## undefined
+## Sharknado 2 VHS
 
-Runtime ID: `sharknado-2-vhs`
+Runtime ID: `sharknado-2-vhs` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -413,9 +413,9 @@ Runtime ID: `sharknado-2-vhs`
 | <a id="route-inventory-use-fictional-token-note-with-sharknado-2-vhs"></a>`inventory.USE.fictional-token-note.with.sharknado-2-vhs` | `inventorySpeechForState:item-pair` | ROOK: Those don’t really go together. | — |
 
 <a id="inventory-piggy-bank-intact"></a>
-## undefined
+## piggy bank
 
-Runtime ID: `piggy-bank-intact`
+Runtime ID: `piggy-bank-intact` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -426,7 +426,7 @@ Runtime ID: `piggy-bank-intact`
 | <a id="route-inventory-look-at-piggy-bank-intact"></a>`inventory.LOOK_AT.piggy-bank-intact` | `inventorySpeechForState` | ROOK: No clinking. So there’s no change in there.<br>ROOK: But it isn’t empty.<br>ROOK: Something light is shuffling around in there.<br>ROOK: No rubber plug on the bottom.<br>ROOK: And the slot up top is too narrow to see inside...<br>ROOK: or pull anything back out.<br>ROOK: So this little pig is hiding something...<br>ROOK: or enforcing a very strict no-withdrawals policy. | rook:BODY:STAGE<br>rook:BODY:UNRESOLVED<br>rook:BODY:STAGE<br>rook:BODY:STAGE |
 | <a id="route-inventory-push-piggy-bank-intact"></a>`inventory.PUSH.piggy-bank-intact` | `inventorySpeechForState` | ROOK: That won’t help. | — |
 | <a id="route-inventory-close-piggy-bank-intact"></a>`inventory.CLOSE.piggy-bank-intact` | `inventorySpeechForState` | ROOK: There’s nothing to close. | — |
-| <a id="route-inventory-talk-to-piggy-bank-intact"></a>`inventory.TALK_TO.piggy-bank-intact` | `inventorySpeechForState` | ROOK: Alright, piggy. One financial question.<br>ROOK: Is Bitcoin about to pump... or dump?<br>ROOK: Oink?<br>ROOK: Oink oinkity oink oink?<br>ROOK: Fine. I have Nansen™ access anyways...<br>ROOK: Some help you were, piggy. | rook:BODY:UNRESOLVED \| UNRESOLVED<br>rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED |
+| <a id="route-inventory-talk-to-piggy-bank-intact"></a>`inventory.TALK_TO.piggy-bank-intact` | `inventorySpeechForState` | ROOK: Alright, piggy. One financial question.<br>ROOK: Is Bitcoin about to pump... or dump?<br>ROOK: Oink?<br>ROOK: Oink oinkity oink oink?<br>ROOK: Fine. I have Nansen™ access anyways...<br>ROOK: Some help you were, piggy. | rook:BODY:UNRESOLVED \| generic runtime fallback; no bespoke cue bound<br>rook:BODY:UNRESOLVED<br>rook:BODY:UNRESOLVED |
 | <a id="route-inventory-pull-piggy-bank-intact"></a>`inventory.PULL.piggy-bank-intact` | `inventorySpeechForState` | ROOK: That won’t help. | — |
 | <a id="route-inventory-use-blank-terminal-authorization-form-with-piggy-bank-intact"></a>`inventory.USE.blank-terminal-authorization-form.with.piggy-bank-intact` | `inventorySpeechForState:item-pair` | ROOK: I don’t think so. | — |
 | <a id="route-inventory-use-loose-feather-pen-with-piggy-bank-intact"></a>`inventory.USE.loose-feather-pen.with.piggy-bank-intact` | `inventorySpeechForState:item-pair` | ROOK: I should probably keep those separate. | — |
@@ -458,9 +458,9 @@ Runtime ID: `piggy-bank-intact`
 | <a id="route-inventory-use-fictional-token-note-with-piggy-bank-intact"></a>`inventory.USE.fictional-token-note.with.piggy-bank-intact` | `inventorySpeechForState:item-pair` | ROOK: I don’t see how that helps us with the case. | — |
 
 <a id="inventory-small-toolbox-closed"></a>
-## undefined
+## small toolbox
 
-Runtime ID: `small-toolbox-closed`
+Runtime ID: `small-toolbox-closed` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -503,9 +503,9 @@ Runtime ID: `small-toolbox-closed`
 | <a id="route-inventory-use-fictional-token-note-with-small-toolbox-closed"></a>`inventory.USE.fictional-token-note.with.small-toolbox-closed` | `inventorySpeechForState:item-pair` | ROOK: That feels like a bad idea. | — |
 
 <a id="inventory-small-toolbox-open-empty"></a>
-## undefined
+## open empty toolbox
 
-Runtime ID: `small-toolbox-open-empty`
+Runtime ID: `small-toolbox-open-empty` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -548,9 +548,9 @@ Runtime ID: `small-toolbox-open-empty`
 | <a id="route-inventory-use-fictional-token-note-with-small-toolbox-open-empty"></a>`inventory.USE.fictional-token-note.with.small-toolbox-open-empty` | `inventorySpeechForState:item-pair` | ROOK: I don’t think so. | — |
 
 <a id="inventory-hammer"></a>
-## undefined
+## hammer
 
-Runtime ID: `hammer`
+Runtime ID: `hammer` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -593,9 +593,9 @@ Runtime ID: `hammer`
 | <a id="route-inventory-use-fictional-token-note-with-hammer"></a>`inventory.USE.fictional-token-note.with.hammer` | `inventorySpeechForState:item-pair` | ROOK: Those don’t really go together. | — |
 
 <a id="inventory-nails"></a>
-## undefined
+## nails
 
-Runtime ID: `nails`
+Runtime ID: `nails` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|
@@ -638,9 +638,9 @@ Runtime ID: `nails`
 | <a id="route-inventory-use-fictional-token-note-with-nails"></a>`inventory.USE.fictional-token-note.with.nails` | `inventorySpeechForState:item-pair` | ROOK: Those don’t really go together. | — |
 
 <a id="inventory-fictional-token-note"></a>
-## undefined
+## office-note token lead
 
-Runtime ID: `fictional-token-note`
+Runtime ID: `fictional-token-note` · Writing authority: exact `LOOK AT` route listed below
 
 | Route / trigger | Owner | Player-visible delivery | Performance |
 |---|---|---|---|

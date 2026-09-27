@@ -2,6 +2,7 @@
   "schemaVersion": "tarka.script-explorer.coverage.v1",
   "result": "PASS",
   "authority": "Generated from the final shipped implementation, not planning notes.",
+  "generatedFromCommit": "0342f53dd64d2ec54ba62eb4549ac9925224d699",
   "sourceHashes": {
     "src/story/s17/generated/final-script.json": "d337a24448735e3cdc1e0dddfb42b773fca0d335021d1c222c66217640c93f89",
     "src/story/s17/finalScript.ts": "e14553c9c61581bb45241942538525b9e17e85084892a58150f7a7e4d5d23997",
@@ -76,5 +77,5 @@
     "machineReadableExplorer": "docs/script/SCRIPT_EXPLORER_INDEX.json",
     "machineReadableCoverage": "docs/script/SCRIPT_EXPLORER_COVERAGE.json"
   },
-  "explorerSha256": "e26df21ad79c1056a76e145d26bbee7c06bf5f9a1d770ae79b9719c39e37122a"
+  "explorerSha256": "464f5cf247c9cb469fa56b028de0c9069e36f0b7b24b5c6e260472022c4bd4df"
 }
