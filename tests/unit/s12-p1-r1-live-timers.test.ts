@@ -151,4 +151,52 @@ describe('S12-P1-R1 live semantic timers', () => {
     stop()
     nowSpy.mockRestore()
   })
+
+  it('recovers a visible mobile globe when the browser strands its animation frame', () => {
+    const run = harness()
+    let now = 0
+    const nowSpy = vi.spyOn(performance, 'now').mockImplementation(() => (now += 50))
+    run.state = { ...run.state, globePose: 'PUSH', globeMotion: 'SPINNING', globeLevel: 1, globeBoostRemainingMs: 5000 }
+    const stop = bindGlobeTimer(run.owner, run.clock, run.state, run.dispatch)
+
+    // Model the Android symptom: the registered callback disappears without
+    // firing, while ordinary foreground timers remain alive.
+    run.clock.animationFrames.clear()
+    run.clock.advance(250)
+
+    expect(run.state.globeElapsedMs).toBeGreaterThan(0)
+    expect(run.clock.animationFrames.size).toBe(1)
+    stop()
+    expect(run.owner.activeHandles()).toEqual([])
+    nowSpy.mockRestore()
+  })
+
+  it('restarts exactly one globe driver after a terminal pause', () => {
+    const run = harness()
+    let now = 0
+    const nowSpy = vi.spyOn(performance, 'now').mockImplementation(() => (now += 34))
+    run.state = { ...run.state, globePose: 'PUSH', globeMotion: 'SPINNING', globeLevel: 1, globeBoostRemainingMs: 5000 }
+    const stopBeforeTerminal = bindGlobeTimer(run.owner, run.clock, run.state, run.dispatch)
+    run.clock.advance(34)
+    run.clock.advance(34)
+    const beforeTerminal = run.state.globeElapsedMs
+    expect(beforeTerminal).toBeGreaterThan(0)
+
+    stopBeforeTerminal()
+    expect(run.owner.activeHandles()).toEqual([])
+    const whileTerminalOpen = bindGlobeTimer(run.owner, run.clock, { ...run.state, worldQuiescent: true }, run.dispatch)
+    run.clock.advance(250)
+    expect(run.state.globeElapsedMs).toBe(beforeTerminal)
+    whileTerminalOpen()
+
+    const stopAfterTerminal = bindGlobeTimer(run.owner, run.clock, { ...run.state, worldQuiescent: false }, run.dispatch)
+    run.clock.advance(34)
+    run.clock.advance(34)
+    expect(run.state.globeElapsedMs).toBeGreaterThan(beforeTerminal)
+    expect(run.clock.animationFrames.size).toBe(1)
+    expect(run.owner.activeHandles().filter(handle => handle.kind === 'INTERVAL')).toHaveLength(1)
+    stopAfterTerminal()
+    expect(run.owner.activeHandles()).toEqual([])
+    nowSpy.mockRestore()
+  })
 })

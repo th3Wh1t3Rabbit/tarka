@@ -35,31 +35,35 @@ export function bindGlobeTimer(owner: LiveTimerOwner, clock: TimerClock, state: 
   if (state.globeMotion !== 'SPINNING' || state.worldQuiescent) return () => undefined
   // Keep one live frame driver across in-flight promotion/reversal. Rebinding
   // on every globe revision created a visible one-or-more-frame pause on some
-  // mobile browsers immediately after a repeated touch.
+  // mobile browsers immediately after a repeated touch. A small independent
+  // watchdog covers the opposite Android failure mode: a visible tab can
+  // occasionally strand its requestAnimationFrame chain until another scene
+  // transition remounts the timer. The watchdog advances only after two missed
+  // frames and uses the same bounded wall-clock accumulator, so it cannot add a
+  // second speed source or create a catch-up burst.
   const token = owner.arm('GLOBE_TICK', state.globeMotion)
   const targetFrameMs = 1000 / 30
+  const watchdogIntervalMs = 50
+  const stalledFrameMs = 90
   let live = true
   let frameId = 0
   let previousAt: number | null = null
+  let lastAnimationFrameAt: number | null = null
+  let animationFrameStalled = false
   let accumulatedMs = 0
   const now = () => typeof performance === 'undefined' ? Date.now() : performance.now()
   const foreground = () => typeof document === 'undefined' || document.visibilityState !== 'hidden'
   const schedule = () => {
     frameId = owner.track('ANIMATION_FRAME', clock.requestAnimationFrame(tick))
   }
-  const tick = () => {
-    owner.release('ANIMATION_FRAME', frameId)
-    if (!live || !owner.allow(token)) return
-    const currentAt = now()
+  const advance = (currentAt: number) => {
     if (!foreground()) {
       previousAt = currentAt
       accumulatedMs = 0
-      schedule()
       return
     }
     if (previousAt == null) {
       previousAt = currentAt
-      schedule()
       return
     }
     const wallDelta = Math.max(0, currentAt - previousAt)
@@ -73,13 +77,45 @@ export function bindGlobeTimer(owner: LiveTimerOwner, clock: TimerClock, state: 
       accumulatedMs = Math.max(0, accumulatedMs - deltaMs)
       dispatch({ type: 'GLOBE_TICK', deltaMs })
     }
+  }
+  const tick = () => {
+    owner.release('ANIMATION_FRAME', frameId)
+    if (!live || !owner.allow(token)) return
+    const currentAt = now()
+    lastAnimationFrameAt = currentAt
+    animationFrameStalled = false
+    advance(currentAt)
     schedule()
   }
+  const watchdogId = owner.track('INTERVAL', clock.setInterval(() => {
+    if (!live || !owner.allow(token)) return
+    const currentAt = now()
+    if (!foreground()) {
+      previousAt = currentAt
+      lastAnimationFrameAt = currentAt
+      animationFrameStalled = false
+      accumulatedMs = 0
+      return
+    }
+    if (lastAnimationFrameAt == null) lastAnimationFrameAt = currentAt
+    if (!animationFrameStalled && currentAt - lastAnimationFrameAt < stalledFrameMs) return
+    if (!animationFrameStalled) {
+      animationFrameStalled = true
+      // Replace a stranded callback once. The watchdog remains authoritative
+      // until the replacement frame actually arrives.
+      clock.cancelAnimationFrame(frameId)
+      owner.release('ANIMATION_FRAME', frameId)
+      schedule()
+    }
+    advance(currentAt)
+  }, watchdogIntervalMs))
   schedule()
   return () => {
     live = false
     clock.cancelAnimationFrame(frameId)
     owner.release('ANIMATION_FRAME', frameId)
+    clock.clearInterval(watchdogId)
+    owner.release('INTERVAL', watchdogId)
     owner.retire(token)
   }
 }
