@@ -53,10 +53,8 @@ const inventoryLookAtRouteIds = (itemId: string) => runtimeRoutes
   .filter((route) => route.routeId.startsWith(`inventory.LOOK_AT.${itemId}`))
   .map((route) => route.routeId)
 
-const humanPerformance = (value: string) => value
-  .split(' | ')
-  .map((token) => token === 'UNRESOLVED' ? 'generic runtime fallback; no bespoke cue bound' : token)
-  .join(' | ')
+const FALLBACK_PERFORMANCE_LABEL = 'generic runtime fallback; no bespoke cue bound'
+const humanPerformance = (value: string) => value.replaceAll('UNRESOLVED', FALLBACK_PERFORMANCE_LABEL)
 
 const publicRuntimeDelivery = (delivery: typeof RUNTIME_TRANSCRIPT_AUTHORITY[number]['deliveries'][number]) => ({
   routeId: delivery.routeId,
@@ -465,6 +463,7 @@ if (coverage.result !== 'PASS') {
 
 const publicMarkdown = { index, guide, story, world, inventory, dialogue, actions, coverageSummary }
 const publicMarkdownText = Object.entries(publicMarkdown).map(([name, text]) => `\n<!-- ${name} -->\n${text}`).join('\n')
+const publicPerformanceTables = [story, world, inventory, dialogue, actions].join('\n')
 const invalidPublicPatterns: Array<[RegExp, string]> = [
   [/\bundefined\b/i, 'literal undefined'],
   [/^#{1,6}\s*$/m, 'empty heading'],
@@ -474,6 +473,9 @@ const invalidPublicPatterns: Array<[RegExp, string]> = [
 ]
 for (const [pattern, label] of invalidPublicPatterns) {
   if (pattern.test(publicMarkdownText)) throw new Error(`SCRIPT_EXPLORER_PUBLIC_MARKDOWN_INVALID:${label}`)
+}
+if (/\bUNRESOLVED\b/.test(publicPerformanceTables)) {
+  throw new Error('SCRIPT_EXPLORER_RAW_UNRESOLVED_CUE_PUBLISHED')
 }
 if (explorerIndex.hotspots.some((entry) => !entry.displayName || !entry.sceneId)) {
   throw new Error('SCRIPT_EXPLORER_HOTSPOT_DISPLAY_METADATA_MISSING')
