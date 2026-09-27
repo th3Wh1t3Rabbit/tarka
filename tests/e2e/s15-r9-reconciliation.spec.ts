@@ -114,6 +114,24 @@ test('R9-B04 same-direction globe touch promotes L1 to L2 inside 5000ms', async 
   await capture(page, info, 'globe-l2-promoted', 'PUSH globe L1 → same-direction touch inside 5000ms → L2')
 })
 
+test('R9-B04b repeated USE keeps the globe moving before Rook reaches it again', async ({ page }) => {
+  await start(page)
+  await act(page, 'use', 'office-globe')
+  await settleSequence(page)
+  const shell = page.getByTestId('a0-shell')
+  await expect(shell).toHaveAttribute('data-globe-motion', 'SPINNING')
+  const beforeSecondUse = Number(await shell.getAttribute('data-globe-elapsed'))
+
+  await page.getByTestId('verb-use').click()
+  await page.getByTestId('hotspot-office-globe').click({ force: true })
+  await expect.poll(async () => Number(await shell.getAttribute('data-globe-elapsed')), {
+    message: 'the active spin must survive the second interaction lifecycle before contact',
+    timeout: 450,
+  }).toBeGreaterThan(beforeSecondUse)
+  await expect(page.getByTestId('active-sequence')).toBeVisible({ timeout: 2_000 })
+  await expect(shell).toHaveAttribute('data-globe-motion', 'SPINNING')
+})
+
 test('R9-B05 same-direction L3 touch does not reset, restart, or extend', async ({ page }, info) => {
   await start(page)
   for (let index = 0; index < 3; index += 1) { await act(page, 'push', 'office-globe'); await settleSequence(page) }

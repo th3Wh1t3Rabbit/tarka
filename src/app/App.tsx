@@ -639,7 +639,7 @@ function ProductionGame({ onComplete = () => undefined }: { onComplete?: (status
   useEffect(() => bindGlobeTimer(timers, clock, {
     globeMotion: state.globeMotion,
     worldQuiescent: semanticPaused,
-  }, dispatch), [state.globeMotion, semanticPaused, timers, clock, dispatch])
+  }, dispatch), [state.globeMotion, state.lifecycleEpoch, semanticPaused, timers, clock, dispatch])
   useEffect(() => bindTerminalPresentationTimer(timers, clock, state.terminalEntryPending, state.introSkipConfirmationOpen || Boolean(state.intentReplacement || state.walk || state.activeSequence || state.phase !== 'COMPLETE'), dispatch), [state.terminalEntryPending, state.introSkipConfirmationOpen, state.intentReplacement, state.walk, state.activeSequence, state.phase, timers, clock, dispatch])
   const terminalWasOpen = useRef(false)
   const terminalLandingReset = useRef(false)

@@ -132,7 +132,7 @@ describe('S12-P1-R1 live semantic timers', () => {
 
   it('keeps a single globe frame driver alive across in-flight promotion', () => {
     const source = readFileSync('src/app/App.tsx', 'utf8')
-    expect(source).toContain('[state.globeMotion, semanticPaused, timers, clock, dispatch]')
+    expect(source).toContain('[state.globeMotion, state.lifecycleEpoch, semanticPaused, timers, clock, dispatch]')
     expect(source).not.toContain('[state.globeMotion, state.globeRevision, semanticPaused')
 
     const run = harness()
@@ -149,6 +149,34 @@ describe('S12-P1-R1 live semantic timers', () => {
     expect(run.state.globeElapsedMs).toBeGreaterThan(before)
     expect(run.clock.animationFrames.size).toBe(1)
     stop()
+    nowSpy.mockRestore()
+  })
+
+  it('rebinds the globe after a newer interaction retires the previous lifecycle', () => {
+    const run = harness()
+    let now = 0
+    const nowSpy = vi.spyOn(performance, 'now').mockImplementation(() => (now += 34))
+    run.state = { ...run.state, globePose: 'PUSH', globeMotion: 'SPINNING', globeLevel: 1, globeBoostRemainingMs: 5000 }
+    const stopBeforeInteraction = bindGlobeTimer(run.owner, run.clock, run.state, run.dispatch)
+    run.clock.advance(34)
+    run.clock.advance(34)
+    const beforeInteraction = run.state.globeElapsedMs
+    expect(beforeInteraction).toBeGreaterThan(0)
+
+    // A second world interaction clears the preceding nonblocking line and
+    // increments lifecycleEpoch. App invalidates every previous callback, then
+    // must bind a fresh globe driver even though globeMotion is still SPINNING.
+    run.owner.invalidateAll()
+    stopBeforeInteraction()
+    run.state = { ...run.state, lifecycleEpoch: run.state.lifecycleEpoch + 1 }
+    const stopAfterInteraction = bindGlobeTimer(run.owner, run.clock, run.state, run.dispatch)
+    run.clock.advance(34)
+    run.clock.advance(34)
+
+    expect(run.state.globeElapsedMs).toBeGreaterThan(beforeInteraction)
+    expect(run.clock.animationFrames.size).toBe(1)
+    stopAfterInteraction()
+    expect(run.owner.activeHandles()).toEqual([])
     nowSpy.mockRestore()
   })
 

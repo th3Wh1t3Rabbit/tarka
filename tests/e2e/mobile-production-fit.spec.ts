@@ -103,6 +103,20 @@ test('Pixel 8 keeps native zoomable geometry, paints original detail crops, and 
   }
   expect(new Set([phaseBefore, ...samples]).size).toBeGreaterThanOrEqual(6)
   expect(globeResponses.size).toBeGreaterThanOrEqual(70)
+
+  // Exact Pixel 8 regression: the first contact leaves a nonblocking quip.
+  // Reusing the globe clears that quip and advances lifecycleEpoch, but the
+  // already-running globe must keep moving before Rook's next hand contact.
+  await expect(page.getByTestId('active-sequence')).toHaveCount(0, { timeout: 10_000 })
+  const elapsedBeforeSecondUse = Number(await shell.getAttribute('data-globe-elapsed'))
+  await page.getByTestId('verb-use').tap()
+  await page.getByTestId('hotspot-office-globe').tap()
+  await expect.poll(async () => Number(await shell.getAttribute('data-globe-elapsed')), {
+    message: 'Pixel 8 globe must not stall between the second tap and Rook contact',
+    timeout: 450,
+  }).toBeGreaterThan(elapsedBeforeSecondUse)
+  await expect(shell).toHaveAttribute('data-globe-motion', 'SPINNING')
+
   const elapsedBeforeStall = Number(await shell.getAttribute('data-globe-elapsed'))
   await page.evaluate(() => {
     const until = performance.now() + 800
