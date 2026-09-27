@@ -1,5 +1,4 @@
 import { createHash } from 'node:crypto'
-import { execFileSync } from 'node:child_process'
 import { readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
@@ -42,8 +41,8 @@ const sourcePaths = [
 ] as const
 
 const sourceHashes = Object.fromEntries(sourcePaths.map((path) => [path, fileHash(path)]))
-const generatedFromCommit = process.env.GITHUB_SHA
-  ?? execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim()
+const generatedFromCommit = readFileSync(resolve(ROOT, 'scripts/docs/SCRIPT_EXPLORER_SOURCE_COMMIT'), 'utf8').trim()
+if (!/^[0-9a-f]{40}$/.test(generatedFromCommit)) throw new Error('SCRIPT_EXPLORER_SOURCE_COMMIT_INVALID')
 
 const hotspotDisplayName = (hotspot: typeof hotspots[number]) => hotspot.id === 'wall-think-outside'
   ? 'motivational poster'
